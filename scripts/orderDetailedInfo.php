@@ -17,7 +17,7 @@
 	else
 	{
 		$orderResult = $mysqli->query("SELECT * FROM orders_date WHERE id = '".$_REQUEST['id']."'");
-		if(MYSQLI_NUM_rows($orderResult) == 0)
+		if($orderResult->num_rows == 0)
 		{
 			if(isset($_SESSION['last_page']))
 			{
@@ -91,8 +91,10 @@
 
 			echo "
 				<br />
-				<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>ќбща€ стоимость заказа на момент офрмлени€:</b> ".$originalSum[0]." бел. руб.</span>
-				<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>ќбща€ стоимость заказа на данный момент (согласно сегодн€шнему курсу):</b> ".$total." бел. руб.</span>
+				<div style='position: relative; float: right; margin-top: 50px;'>
+					<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>ќбща€ стоимость заказа на момент офрмлени€:</b> ".$originalSum[0]." бел. руб.</span>
+					<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>ќбща€ стоимость заказа на данный момент (согласно сегодн€шнему курсу):</b> ".$total." бел. руб.</span>
+				</div>
 			";
 		}
 	}

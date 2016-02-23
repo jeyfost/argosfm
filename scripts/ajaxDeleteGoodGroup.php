@@ -7,7 +7,7 @@
 		if($mysqli->query("DELETE FROM orders WHERE order_id = '".$_POST['orderID']."' AND good_id = '".$_POST['goodID']."'"))
 		{
 			$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM orders WHERE order_id = '".$_POST['orderID']."'");
-			$goodsCount = $mysqli->$goodsCountResult(MYSQLI_NUM);
+			$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
 			if($goodsCount[0] == 0)
 			{
