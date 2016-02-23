@@ -44,7 +44,7 @@
 	else
 	{
 		$newsResult = $mysqli->query("SELECT * FROM news WHERE id = ".$_REQUEST['id']);
-		if(MYSQLI_NUM_rows($newsResult) == 0)
+		if($newsResult->num_rows == 0)
 		{
 			if(isset($_SESSION['last_page']))
 			{

@@ -86,7 +86,8 @@
     if(!empty($_REQUEST['user']))
     {
         $usersCountResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE id = '".$_REQUEST['user']."'");
-        if(MYSQLI_NUM_rows($usersCountResult) == 0)
+        if($usersCountResult->num_rows
+            == 0)
         {
             header("Location: admin.php");
         }
@@ -1177,7 +1178,7 @@
             if(empty($_REQUEST['section']))
             {
                 $goodsQuantityResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new");
-                $goodsQuantity =  $goodsQuantityResul->fetch_array(MYSQLI_NUM);
+                $goodsQuantity =  $goodsQuantityResult->fetch_array(MYSQLI_NUM);
 
                 $ordersQuantityResult = $mysqli->query("SELECT COUNT(id) FROM orders_date");
                 $ordersQuantity = $ordersQuantityResult->fetch_array(MYSQLI_NUM);
@@ -1382,7 +1383,7 @@
                                                         unset($_SESSION['goodDescription']);
 
                                                         $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
-                                                        if(MYSQLI_NUM_rows($goodsResult) > 0)
+                                                        if($goodsResult->num_rows > 0)
                                                         {
                                                             echo "
                                                                 <div id='admGoodBlock'>
@@ -1495,7 +1496,7 @@
                                                         $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
                                                     }
                                                     
-                                                    if(MYSQLI_NUM_rows($goodsResult) > 0)
+                                                    if($goodsResult->num_rows > 0)
                                                     {
                                                         echo "
                                                             <div id='admGoodBlock'>
@@ -1599,7 +1600,7 @@
                                             unset($_SESSION['goodDescription']);
 
                                             $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
-                                            if(MYSQLI_NUM_rows($goodsResult) > 0)
+                                            if($goodsResult->num_rows > 0)
                                             {
                                                 echo "
                                                     <div id='admGoodBlock'>
@@ -1828,7 +1829,7 @@
                                                             unset($_SESSION['goodDescription']);
 
                                                             $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
-                                                            if(MYSQLI_NUM_rows($goodsResult) > 0)
+                                                            if($goodsResult->num_rows > 0)
                                                             {
                                                                 echo "
                                                                     <div id='admGoodBlock'>
@@ -1997,7 +1998,7 @@
                                                             $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
                                                         }
 
-                                                        if(MYSQLI_NUM_rows($goodsResult) > 0)
+                                                        if($goodsResult->num_rows > 0)
                                                         {
                                                             echo "
                                                                 <div id='admGoodBlock'>
@@ -2171,7 +2172,7 @@
                                                         unset($_SESSION['goodDescription']);
 
                                                         $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
-                                                        if(MYSQLI_NUM_rows($goodsResult) > 0)
+                                                        if($goodsResult->num_rows > 0)
                                                         {
                                                             echo "
                                                                 <div id='admGoodBlock'>
@@ -2340,7 +2341,7 @@
                                                         $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
                                                     }
                                                     
-                                                    if(MYSQLI_NUM_rows($goodsResult) > 0)
+                                                    if($goodsResult->num_rows > 0)
                                                     {
                                                         echo "
                                                             <div id='admGoodBlock'>
@@ -3194,7 +3195,7 @@
                                                         <form name='deleteCategoryForm' id='deleteCategoryForm' method='post' action='../scripts/admin/deleteCategory.php'>
                                                     ";
                                                     
-                                                    if(MYSQLI_NUM_rows($goodsResult) != 0)
+                                                    if($goodsResult->num_rows != 0)
                                                     {
                                                         echo "
                                                             <label class='admLabel' onclick='checkboxClick(\"categoryDeleteCheckbox\")' style='cursor: pointer;'>Удалить категорию вместе с товарами</label>
@@ -3290,7 +3291,7 @@
                                                                 <form name='deleteSubcategoryForm' id='deleteSubcategoryForm' method='post' action='../scripts/admin/deleteSubcategory.php'>
                                                             ";
 
-                                                            if(MYSQLI_NUM_rows($goodsResult) != 0)
+                                                            if($goodsResult->num_rows != 0)
                                                             {
                                                                 echo "
                                                                     <label class='admLabel' onclick='checkboxClick(\"subcategoryDeleteCheckbox\")' style='cursor: pointer;'>Удалить раздел вместе с товарами</label>
@@ -3460,7 +3461,7 @@
                                                                     <form name='deleteSubcategory2Form' id='deleteSubcategory2Form' method='post' action='../scripts/admin/deleteSubcategory2.php'>
                                                                 ";
 
-                                                                if(MYSQLI_NUM_rows($goodsResult) != 0)
+                                                                if($goodsResult->num_rows != 0)
                                                                 {
                                                                     echo "
                                                                         <label class='admLabel' onclick='checkboxClick(\"subcategory2DeleteCheckbox\")' style='cursor: pointer;'>Удалить подраздел вместе с товарами</label>
@@ -3845,7 +3846,7 @@
                                             }
                                         }
 
-                                        if(MYSQLI_NUM_rows($mailResult) > 0)
+                                        if($mailResult->num_rows > 0)
                                         {
                                             $count = 0;
 

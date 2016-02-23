@@ -18,7 +18,7 @@
 		include('connect.php');
 		
 		$basketResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-		if(MYSQLI_NUM_rows($basketResult) > 0)
+		if($basketResult->num_rows > 0)
 		{
 			if($mysqli->query("DELETE FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'"))
 			{

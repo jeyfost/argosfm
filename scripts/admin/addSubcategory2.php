@@ -22,7 +22,7 @@
 			for($i = 1; $i < $sMaxID[0]; $i++)
 			{
 				$idCheckResult = $mysqli->query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
-				if(MYSQLI_NUM_rows($idCheckResult) == 0)
+				if($idCheckResult->num_rows == 0)
 				{
 					$id = $i;
 				}

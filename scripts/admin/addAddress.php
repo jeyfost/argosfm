@@ -12,7 +12,7 @@
 				if(!empty($_POST['newName']))
 				{
 					$addressResult = $mysqli->query("SELECT * FROM mail WHERE email = '".$_POST['newAddress']."'");
-					if(MYSQLI_NUM_rows($addressResult) == 0)
+					if($addressResult->num_rows == 0)
 					{
 						$hash = "";
 

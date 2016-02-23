@@ -16,7 +16,7 @@
 
 			$categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE name = '".$name."'");
 			
-			if(MYSQLI_NUM_rows($categoryResult) == 0)
+			if($categoryResult->num_rows == 0)
 			{
 				if(!empty($_FILES['categoryRedPicture']) and $_FILES['categoryRedPicture']['error'] == 0 and substr($_FILES['categoryRedPicture']['type'], 0, 5) == "image")
 				{

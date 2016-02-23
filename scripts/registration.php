@@ -40,7 +40,7 @@
 							{
 								$symbols = array('1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'n', 'm', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M');
 								$organisationResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE organisation = '".$organisation."'");
-								$O = $mysqli->$organisationResult(MYSQLI_NUM);
+								$O = $organisationResult->fetch_assoc(MYSQLI_NUM);
 								
 								if($O[0] == 0)
 								{

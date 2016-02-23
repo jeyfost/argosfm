@@ -34,7 +34,7 @@
 			$status = "";
 			$state = "noChanges";
 
-			if(MYSQLI_NUM_rows($categoryResult) == 0)
+			if($categoryResult->num_rows == 0)
 			{
 				$state = "name";
 

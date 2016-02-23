@@ -80,7 +80,7 @@
 		if(is_int((int)$_REQUEST['id']))
 		{
 			$newsCheckResult = $mysqli->query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
-			if(MYSQLI_NUM_rows($newsCheckResult) == 0)
+			if($newsCheckResult->num_rows == 0)
 			{
 				header("Location: news.php");
 			}
@@ -595,7 +595,7 @@
 						if($_SESSION['userID'] != 1)
 						{	
 							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$orders = MYSQLI_NUM_rows($ordersResult);
+							$ordersResult->num_rows;
 							if($orders < 1)
 							{
 								echo "
@@ -612,7 +612,7 @@
 						else
 						{
 							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
-							$orders = MYSQLI_NUM_rows($ordersResult);
+							$ordersResult->num_rows;
 							if($orders < 1)
 							{
 								echo "

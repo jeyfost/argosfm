@@ -9,7 +9,7 @@
 
 		$searchResult = $mysqli->query("SELECT * FROM catalogue_new WHERE name LIKE '%".$query."%' OR code LIKE '%".$query."%' LIMIT 5");
 		
-		if(MYSQLI_NUM_rows($searchResult) > 0)
+		if($searchResult->num_rows > 0)
 		{
 			$count = 0;
 

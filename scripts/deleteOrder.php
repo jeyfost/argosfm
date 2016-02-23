@@ -37,7 +37,7 @@
 			echo "<span class='basicGreen'>Заказ успешно удалён!</span><br /><br />";
 			
 			$orders1Result = $mysqli->query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0' ORDER BY id");
-			if(MYSQLI_NUM_rows($orders1Result) == 0)
+			if($orders1Result->num_rows == 0)
 			{
 				echo "<span class='basic'>История ваших заказов пуста, так как вы не соверишили ещё ни одного заказа. Для этого перейдите в <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
 			}

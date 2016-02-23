@@ -24,6 +24,8 @@
 		{
 			header("Location: order.php?s=1");
 		}
+
+		$_SESSION['s'] = $_REQUEST['s'];
 	}
 	
 	include('scripts/connect.php');
@@ -49,8 +51,8 @@
 			if($_SESSION['userID'] == 1)
 			{
 				$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1'");
-							
-				$quantity = MYSQLI_NUM_rows($ordersResult);
+
+				$ordersResult->num_rows;
 				if($quantity > 10)
 				{
 					if($quantity % 10 != 0)
@@ -73,8 +75,8 @@
 			else
 			{
 				$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1' AND user_id = '".$_SESSION['userID']."'");
-							
-				$quantity = MYSQLI_NUM_rows($ordersResult);
+
+				$ordersResult->num_rows;
 				if($quantity > 10)
 				{
 					if($quantity % 10 != 0)
@@ -583,7 +585,7 @@
 						if($_SESSION['userID'] != 1)
 						{	
 							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$orders = MYSQLI_NUM_rows($ordersResult);
+							$ordersResult->num_rows;
 							if($orders < 1)
 							{
 								echo "
@@ -600,7 +602,7 @@
 						else
 						{
 							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
-							$orders = MYSQLI_NUM_rows($ordersResult);
+							$ordersResult->num_rows;
 							if($orders < 1)
 							{
 								echo "
@@ -702,7 +704,7 @@
 
 						$number = 0;
 						
-						if(MYSQLI_NUM_rows($ordersResult) == 0)
+						if($ordersResult->num_rows == 0)
 						{
 							echo "<span class='basic'>На данный момент заявок нет.</span>";
 						}
@@ -1015,7 +1017,7 @@
 						$rateResult = $mysqli->query("SELECT rate FROM currency WHERE code = 'usd'");
 						$rate = $rateResult->fetch_array(MYSQLI_NUM);
 						$goodsResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-						if(MYSQLI_NUM_rows($goodsResult) == 0)
+						if($goodsResult->num_rows == 0)
 						{
 							echo "<span class='basic'>На данный момент ваша корзина пуста. Чтобы оформить заказ, посетите <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
 						}
@@ -1090,7 +1092,7 @@
 						echo "<span class='headerStyle'>Необработанные заказы</span><br /><br />";
 						echo "<div id='newOrders'>";
 						$orders1Result = $mysqli->query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0' ORDER BY id");
-						if(MYSQLI_NUM_rows($orders1Result) == 0)
+						if($orders1Result->num_rows == 0)
 						{
 							echo "<span class='basic'>История ваших заказов пуста, так как вы не соверишили ещё ни одного заказа. Для этого перейдите в <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
 						}
@@ -1154,7 +1156,7 @@
 						echo "<div id='oldOrders'>";
 						
 						$orders1Result = $mysqli->query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '1' ORDER BY date DESC LIMIT ".$start.", 10");
-						if(MYSQLI_NUM_rows($orders1Result) == 0)
+						if($orders1Result->num_rows == 0)
 						{
 							echo "<span class='basic'>К сожалению, у вас ещё нет обработанных заказов.</span>";
 						}

@@ -12,7 +12,7 @@
 	if(!empty($_SESSION['id']))
 	{
 		$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_SESSION['id']."'");
-		if(MYSQLI_NUM_rows($goodResult) > 0)
+		if($goodResult->num_rows > 0)
 		{
 			if(!empty($_POST['goodName']))
 			{

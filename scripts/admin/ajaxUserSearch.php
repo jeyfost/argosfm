@@ -11,7 +11,7 @@
 
 			$searchResult = $mysqli->query("SELECT * FROM users WHERE login LIKE '%".$query."%' OR organisation LIKE '%".$query."%' OR person LIKE '%".$query."%' ORDER BY login LIMIT 10");
 
-			if(MYSQLI_NUM_rows($searchResult) > 0)
+			if($searchResult->num_rows > 0)
 			{
 				while($search = $searchResult->fetch_assoc())
 				{

@@ -28,7 +28,7 @@
 			{
 				$subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_SESSION['s']."'");
 
-				if(MYSQLI_NUM_rows($subcategories2Result) != 0)
+				if($subcategories2Result->num_rows != 0)
 				{
 					if($mysqli->query("DELETE FROM subcategories2 WHERE subcategory = '".$_SESSION['s']."'"))
 					{
@@ -79,7 +79,7 @@
 		{
 			$subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_SESSION['s']."'");
 
-			if(MYSQLI_NUM_rows($subcategories2Result) != 0)
+			if($subcategories2Result->num_rows != 0)
 			{
 				if($mysqli->query("DELETE FROM subcategories2 WHERE subcategory = '".$_SESSION['s']."'"))
 				{

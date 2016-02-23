@@ -16,7 +16,7 @@
 
 			$subcategory2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE name = '".$name."' AND subcategory = '".$_SESSION['s']."'");
 
-			if(MYSQLI_NUM_rows($subcategory2Result) == 0)
+			if($subcategory2Result->num_rows == 0)
 			{
 				if($mysqli->query("UPDATE subcategories2 SET name = '".$name."' WHERE id = '".$_SESSION['s2']."'"))
 				{

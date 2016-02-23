@@ -23,12 +23,12 @@
 			$catalogueResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
 			$basketResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' and status = '0'");
 			
-			if(MYSQLI_NUM_rows($catalogueResult) > 0)
+			if($catalogueResult->num_rows > 0)
 			{
 				$count++;
 			}
 			
-			if(MYSQLI_NUM_rows($basketResult) > 0)
+			if($basketResult->num_rows > 0)
 			{
 				$count++;
 			}

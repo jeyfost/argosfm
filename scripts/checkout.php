@@ -18,7 +18,7 @@
 		include('connect.php');
 		
 		$ordersResult = $mysqli->query("SELECT * FROM orders_date");
-		if(MYSQLI_NUM_rows($ordersResult) > 0)
+		if($ordersResult->num_rows > 0)
 		{
 			$orderIDResult = $mysqli->query("SELECT MAX(id) FROM orders_date");
 			$orderID = $orderIDResult->fetch_array(MYSQLI_NUM);
@@ -35,7 +35,7 @@
 		$rate = $rateResult->fetch_array(MYSQLI_NUM);
 
 		$goodResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-		if(MYSQLI_NUM_rows($goodResult) != 0)
+		if($goodResult->num_rows != 0)
 		{
 			$count = 0;
 			while($good = $goodResult->fetch_assoc())
@@ -50,7 +50,7 @@
 					$count++;
 				}
 			}
-			if(MYSQLI_NUM_rows($goodResult) == $count)
+			if($goodResult->num_rows == $count)
 			{
 				if($mysqli->query("INSERT INTO orders_date (id, user_id, date, sum, status) VALUES ('".$oID."', '".$_SESSION['userID']."', '".date('Y-m-d H:i:s')."', '".$sum."', '0')"))
 				{
