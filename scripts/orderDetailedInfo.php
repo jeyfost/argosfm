@@ -91,8 +91,8 @@
 
 			echo "
 				<br />
-				<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Полная стоимость заказа на момент оформления:</b> ".$originalSum[0]." бел. руб.</span>
-				<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>Полная стоимость заказа на данный момент (согласно сегодняшнему курсу):</b> ".$total." бел. руб.</span>
+				<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Общая стоимость заказа на момент офрмления:</b> ".$originalSum[0]." бел. руб.</span>
+				<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>Общая стоимость заказа на данный момент (согласно сегодняшнему курсу):</b> ".$total." бел. руб.</span>
 			";
 		}
 	}

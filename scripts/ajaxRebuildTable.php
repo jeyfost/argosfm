@@ -46,7 +46,7 @@
 								<span class='basic'><b>Артикул: </b>".$good['code']."</span>
 							</div>
 							<div class='basketGoodPrice'>
-								<span class='basic'><b>Цена: </b>".($good['price']*$rate[0])." бел. руб.</span>
+								<span class='basic'><b>Цена за ед.: </b>".($good['price']*$rate[0])." бел. руб.</span>
 								<br />
 								<span class='basic'><b>Количество: </b>".$goods['quantity']." шт.</span>
 								<br />
@@ -63,8 +63,8 @@
 
 	echo "
 		<br />
-		<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Полная стоимость заказа на момент оформления:</b> ".$originalSum[0]." бел. руб.</span>
-		<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>Полная стоимость заказа на данный момент (согласно сегодняшнему курсу):</b> ".$total." бел. руб.</span>
+		<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Общая стоимость заказа на момент офрмления:</b> ".$originalSum[0]." бел. руб.</span>
+		<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>Общая стоимость заказа на данный момент (согласно сегодняшнему курсу):</b> ".$total." бел. руб.</span>
 	";
 
 ?>

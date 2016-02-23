@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ajax.js" afterPath="$PROJECT_DIR$/js/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order.php" afterPath="$PROJECT_DIR$/order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php" afterPath="$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ajaxRebuildTable.php" afterPath="$PROJECT_DIR$/scripts/ajaxRebuildTable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/orderDetailedInfo.php" afterPath="$PROJECT_DIR$/scripts/orderDetailedInfo.php" />
+    </list>
+    <ignored path="argosfm.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="argosfm" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="ajax.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/js/ajax.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.40189445">
+              <caret line="124" column="7" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="7" />
+              <folding>
+                <marker date="1456213850644" expanded="true" signature="4128:4140" placeholder="..." />
+                <marker date="1456213850644" expanded="true" signature="5347:5412" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxDeleteGoodGroup.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+              <folding>
+                <marker date="1456210387603" expanded="true" signature="114:210" placeholder="DELETE FROM " />
+                <marker date="1456210387603" expanded="true" signature="254:297" placeholder="SELECT COUNT... orders" />
+                <marker date="1456210387603" expanded="true" signature="254:301" placeholder="SELECT COUNT... orders" />
+                <marker date="1456210387603" expanded="true" signature="254:323" placeholder="SELECT COUNT... orders" />
+                <marker date="1456210387603" expanded="true" signature="443:479" placeholder="DELETE FROM " />
+                <marker date="1456210387603" expanded="true" signature="443:501" placeholder="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="order.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/order.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-18.307692">
+              <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
+              <folding>
+                <marker date="1456213202066" expanded="true" signature="755:799" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="1212:1296" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="3258:3290" placeholder="SELECT COUNT... background" />
+                <marker date="1456213202066" expanded="true" signature="3426:3478" placeholder="SELECT photo... background" />
+                <marker date="1456213202066" expanded="true" signature="3623:3974" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="3637:3960" placeholder="{...}" />
+                <marker date="1456213202066" expanded="false" signature="4614:4629" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="4630:5173" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="4665:5162" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="4708:5150" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="5112:5124" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="5280:5295" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="5296:5939" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="5331:5928" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="5374:5916" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="5663:5706" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="5878:5890" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="6127:6142" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="6143:6715" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="6178:6704" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="6221:6692" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="6654:6666" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="6862:6877" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="6878:7350" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="6913:7339" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="6956:7327" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="7289:7301" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="7492:7507" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="7508:7693" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="7543:7693" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="7586:7693" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="8592:8604" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="8813:8828" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="8829:9010" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="8864:9010" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="8907:9010" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="9713:9725" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="9985:10000" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="10001:10616" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="10048:10605" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="10095:10593" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="10555:10567" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="20102:20227" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="20408:20583" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="20497:20583" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="21653:21669" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="21798:21814" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="22173:22229" placeholder="SELECT * FRO... users" />
+                <marker date="1456213202066" expanded="true" signature="22329:22577" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="22668:22747" placeholder="SELECT * FRO... basket" />
+                <marker date="1456213202066" expanded="true" signature="23309:23353" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="25064:25116" placeholder="SELECT COUNT... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="26247:26339" placeholder="SELECT COUNT... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="27554:27567" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="27629:27648" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="27688:27746" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="28066:28121" placeholder="SELECT * FRO... users" />
+                <marker date="1456213202066" expanded="true" signature="28460:29674" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="28496:28568" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="28643:29365" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="28752:28764" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="29042:29076" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="29255:29288" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="29442:29658" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="29524:29574" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="29967:30051" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="30086:30099" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="30134:30153" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="30321:30845" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="30395:30845" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="30423:30837" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="30462:30522" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="30600:30675" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="30755:30821" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="31114:31748" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="31149:31219" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="31292:31588" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="31400:31412" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="31663:31733" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="32342:32388" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="34139:34185" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="35130:35176" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="36947:36993" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="37665:37711" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="38749:38811" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="39594:39640" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="42251:42313" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="43096:43142" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="44541:44587" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="45427:45440" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="45482:45501" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="47377:47421" placeholder="SELECT rate currency" />
+                <marker date="1456213202066" expanded="true" signature="47516:47595" placeholder="SELECT * FRO... basket" />
+                <marker date="1456213202066" expanded="true" signature="48055:48117" placeholder="SELECT * FRO... catalogue_new" />
+                <marker date="1456213202066" expanded="true" signature="48296:51033" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="48338:48531" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="48573:49517" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="48616:49500" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="48702:48783" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="48831:48915" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="48961:49482" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="49003:49098" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="49141:49463" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="50000:50077" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="50000:51017" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="50000:51033" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="50025:50055" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="50117:50135" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="50136:50906" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="50854:50884" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="50956:50974" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="51173:51292" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="51399:51660" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="51424:51440" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="51753:51766" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="51801:51820" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="51990:52086" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="52493:52945" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="52521:52936" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="52560:52621" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="52699:52774" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="52854:52920" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="53240:54106" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="53276:53350" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="53425:53941" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="53535:53547" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="53831:53863" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="54018:54090" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="54331:54375" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="54410:54429" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="54516:54534" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="54655:54779" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456213202066" expanded="true" signature="55001:55453" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="55029:55444" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="55068:55129" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="55207:55282" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="55362:55428" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="57553:58269" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="57589:57661" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="57736:58040" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="57846:57858" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="58117:58253" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="58162:58175" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="58887:58933" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="60684:60730" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="61675:61721" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="63492:63538" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="64210:64256" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="65294:65356" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="66139:66185" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="68796:68858" placeholder="..." />
+                <marker date="1456213202066" expanded="false" signature="69641:69687" placeholder="..." />
+                <marker date="1456213202066" expanded="true" signature="71086:71132" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxRebuildTable.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/ajaxRebuildTable.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-11.769231">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <marker date="1456213539178" expanded="true" signature="62:123" placeholder="SELECT * FRO... orders" />
+                <marker date="1456213539178" expanded="true" signature="163:225" placeholder="SELECT sum F... orders_date" />
+                <marker date="1456213539178" expanded="true" signature="324:368" placeholder="SELECT rate currency" />
+                <marker date="1456213539178" expanded="true" signature="506:568" placeholder="SELECT * FRO... catalogue_new" />
+                <marker date="1456213539178" expanded="true" signature="803:1121" placeholder="..." />
+                <marker date="1456213539178" expanded="true" signature="1181:1362" placeholder="..." />
+                <marker date="1456213539178" expanded="true" signature="1398:1925" placeholder="..." />
+                <marker date="1456213539178" expanded="true" signature="1435:1925" placeholder="..." />
+                <marker date="1456213539178" expanded="true" signature="1509:1578" placeholder="..." />
+                <marker date="1456213539178" expanded="true" signature="1620:1692" placeholder="..." />
+                <marker date="1456213539178" expanded="true" signature="1732:1925" placeholder="..." />
+                <marker date="1456213539178" expanded="true" signature="1768:1851" placeholder="..." />
+                <marker date="1456213539178" expanded="true" signature="1888:1925" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php" />
+        <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/scripts/orderDetailedInfo.php" />
+        <option value="$PROJECT_DIR$/scripts/ajaxRebuildTable.php" />
+        <option value="$PROJECT_DIR$/order.php" />
+        <option value="$PROJECT_DIR$/js/ajax.js" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="" />
+      <created>1456207155890</created>
+      <option name="number" value="Default" />
+      <updated>1456207155890</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="189" column="25" selection-start-line="189" selection-start-column="25" selection-end-line="189" selection-end-column="25" />
+          <folding>
+            <marker date="1456213850644" expanded="true" signature="4128:4140" placeholder="..." />
+            <marker date="1456213850644" expanded="true" signature="5347:5412" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <marker date="1456210387603" expanded="true" signature="114:210" placeholder="DELETE FROM " />
+            <marker date="1456210387603" expanded="true" signature="254:297" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="254:301" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="254:323" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="443:479" placeholder="DELETE FROM " />
+            <marker date="1456210387603" expanded="true" signature="443:501" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1456213202066" expanded="true" signature="755:799" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="1212:1296" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="3258:3290" placeholder="SELECT COUNT... background" />
+            <marker date="1456213202066" expanded="true" signature="3426:3478" placeholder="SELECT photo... background" />
+            <marker date="1456213202066" expanded="true" signature="3623:3974" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="3637:3960" placeholder="{...}" />
+            <marker date="1456213202066" expanded="false" signature="4614:4629" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4630:5173" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4665:5162" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4708:5150" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5112:5124" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5280:5295" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5296:5939" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5331:5928" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5374:5916" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5663:5706" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5878:5890" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6127:6142" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6143:6715" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6178:6704" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6221:6692" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6654:6666" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6862:6877" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6878:7350" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6913:7339" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6956:7327" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="7289:7301" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="7492:7507" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7508:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7543:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7586:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="8592:8604" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="8813:8828" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8829:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8864:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8907:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="9713:9725" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="9985:10000" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10001:10616" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10048:10605" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10095:10593" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="10555:10567" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20102:20227" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20408:20583" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20497:20583" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="21653:21669" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="21798:21814" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="22173:22229" placeholder="SELECT * FRO... users" />
+            <marker date="1456213202066" expanded="true" signature="22329:22577" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="22668:22747" placeholder="SELECT * FRO... basket" />
+            <marker date="1456213202066" expanded="true" signature="23309:23353" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="25064:25116" placeholder="SELECT COUNT... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="26247:26339" placeholder="SELECT COUNT... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="27554:27567" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="27629:27648" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="27688:27746" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="28066:28121" placeholder="SELECT * FRO... users" />
+            <marker date="1456213202066" expanded="true" signature="28460:29674" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="28496:28568" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="28643:29365" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="28752:28764" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29042:29076" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29255:29288" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="29442:29658" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29524:29574" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="29967:30051" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="30086:30099" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30134:30153" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30321:30845" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30395:30845" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30423:30837" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30462:30522" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30600:30675" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30755:30821" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31114:31748" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31149:31219" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31292:31588" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="31400:31412" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31663:31733" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="32342:32388" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="34139:34185" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="35130:35176" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="36947:36993" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="37665:37711" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="38749:38811" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="39594:39640" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="42251:42313" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="43096:43142" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="44541:44587" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="45427:45440" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="45482:45501" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="47377:47421" placeholder="SELECT rate currency" />
+            <marker date="1456213202066" expanded="true" signature="47516:47595" placeholder="SELECT * FRO... basket" />
+            <marker date="1456213202066" expanded="true" signature="48055:48117" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456213202066" expanded="true" signature="48296:51033" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48338:48531" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48573:49517" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48616:49500" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48702:48783" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48831:48915" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48961:49482" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="49003:49098" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="49141:49463" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:50077" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:51017" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:51033" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50025:50055" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50117:50135" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50136:50906" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50854:50884" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50956:50974" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51173:51292" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51399:51660" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="51424:51440" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51753:51766" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51801:51820" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51990:52086" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="52493:52945" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52521:52936" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52560:52621" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52699:52774" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52854:52920" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53240:54106" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53276:53350" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53425:53941" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="53535:53547" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="53831:53863" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54018:54090" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54331:54375" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54410:54429" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54516:54534" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54655:54779" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="55001:55453" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55029:55444" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55068:55129" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55207:55282" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55362:55428" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57553:58269" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57589:57661" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57736:58040" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="57846:57858" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="58117:58253" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="58162:58175" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="58887:58933" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="60684:60730" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="61675:61721" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="63492:63538" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="64210:64256" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="65294:65356" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="66139:66185" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="68796:68858" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="69641:69687" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="71086:71132" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxRebuildTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="62" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="62" />
+          <folding>
+            <marker date="1456213539178" expanded="true" signature="62:123" placeholder="SELECT * FRO... orders" />
+            <marker date="1456213539178" expanded="true" signature="163:225" placeholder="SELECT sum F... orders_date" />
+            <marker date="1456213539178" expanded="true" signature="324:368" placeholder="SELECT rate currency" />
+            <marker date="1456213539178" expanded="true" signature="506:568" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456213539178" expanded="true" signature="803:1121" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1181:1362" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1398:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1435:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1509:1578" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1620:1692" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1732:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1768:1851" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1888:1925" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="189" column="25" selection-start-line="189" selection-start-column="25" selection-end-line="189" selection-end-column="25" />
+          <folding>
+            <marker date="1456213850644" expanded="true" signature="4128:4140" placeholder="..." />
+            <marker date="1456213850644" expanded="true" signature="5347:5412" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <marker date="1456210387603" expanded="true" signature="114:210" placeholder="DELETE FROM " />
+            <marker date="1456210387603" expanded="true" signature="254:297" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="254:301" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="254:323" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="443:479" placeholder="DELETE FROM " />
+            <marker date="1456210387603" expanded="true" signature="443:501" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1456213202066" expanded="true" signature="755:799" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="1212:1296" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="3258:3290" placeholder="SELECT COUNT... background" />
+            <marker date="1456213202066" expanded="true" signature="3426:3478" placeholder="SELECT photo... background" />
+            <marker date="1456213202066" expanded="true" signature="3623:3974" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="3637:3960" placeholder="{...}" />
+            <marker date="1456213202066" expanded="false" signature="4614:4629" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4630:5173" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4665:5162" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4708:5150" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5112:5124" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5280:5295" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5296:5939" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5331:5928" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5374:5916" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5663:5706" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5878:5890" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6127:6142" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6143:6715" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6178:6704" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6221:6692" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6654:6666" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6862:6877" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6878:7350" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6913:7339" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6956:7327" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="7289:7301" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="7492:7507" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7508:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7543:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7586:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="8592:8604" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="8813:8828" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8829:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8864:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8907:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="9713:9725" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="9985:10000" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10001:10616" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10048:10605" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10095:10593" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="10555:10567" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20102:20227" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20408:20583" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20497:20583" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="21653:21669" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="21798:21814" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="22173:22229" placeholder="SELECT * FRO... users" />
+            <marker date="1456213202066" expanded="true" signature="22329:22577" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="22668:22747" placeholder="SELECT * FRO... basket" />
+            <marker date="1456213202066" expanded="true" signature="23309:23353" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="25064:25116" placeholder="SELECT COUNT... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="26247:26339" placeholder="SELECT COUNT... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="27554:27567" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="27629:27648" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="27688:27746" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="28066:28121" placeholder="SELECT * FRO... users" />
+            <marker date="1456213202066" expanded="true" signature="28460:29674" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="28496:28568" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="28643:29365" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="28752:28764" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29042:29076" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29255:29288" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="29442:29658" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29524:29574" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="29967:30051" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="30086:30099" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30134:30153" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30321:30845" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30395:30845" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30423:30837" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30462:30522" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30600:30675" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30755:30821" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31114:31748" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31149:31219" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31292:31588" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="31400:31412" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31663:31733" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="32342:32388" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="34139:34185" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="35130:35176" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="36947:36993" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="37665:37711" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="38749:38811" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="39594:39640" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="42251:42313" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="43096:43142" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="44541:44587" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="45427:45440" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="45482:45501" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="47377:47421" placeholder="SELECT rate currency" />
+            <marker date="1456213202066" expanded="true" signature="47516:47595" placeholder="SELECT * FRO... basket" />
+            <marker date="1456213202066" expanded="true" signature="48055:48117" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456213202066" expanded="true" signature="48296:51033" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48338:48531" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48573:49517" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48616:49500" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48702:48783" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48831:48915" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48961:49482" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="49003:49098" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="49141:49463" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:50077" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:51017" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:51033" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50025:50055" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50117:50135" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50136:50906" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50854:50884" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50956:50974" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51173:51292" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51399:51660" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="51424:51440" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51753:51766" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51801:51820" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51990:52086" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="52493:52945" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52521:52936" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52560:52621" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52699:52774" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52854:52920" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53240:54106" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53276:53350" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53425:53941" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="53535:53547" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="53831:53863" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54018:54090" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54331:54375" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54410:54429" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54516:54534" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54655:54779" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="55001:55453" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55029:55444" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55068:55129" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55207:55282" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55362:55428" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57553:58269" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57589:57661" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57736:58040" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="57846:57858" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="58117:58253" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="58162:58175" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="58887:58933" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="60684:60730" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="61675:61721" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="63492:63538" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="64210:64256" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="65294:65356" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="66139:66185" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="68796:68858" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="69641:69687" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="71086:71132" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxRebuildTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="45" column="62" selection-start-line="45" selection-start-column="55" selection-end-line="45" selection-end-column="62" />
+          <folding>
+            <marker date="1456213539178" expanded="true" signature="62:123" placeholder="SELECT * FRO... orders" />
+            <marker date="1456213539178" expanded="true" signature="163:225" placeholder="SELECT sum F... orders_date" />
+            <marker date="1456213539178" expanded="true" signature="324:368" placeholder="SELECT rate currency" />
+            <marker date="1456213539178" expanded="true" signature="506:568" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456213539178" expanded="true" signature="803:1121" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1181:1362" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1398:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1435:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1509:1578" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1620:1692" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1732:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1768:1851" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1888:1925" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="30" selection-start-line="0" selection-start-column="30" selection-end-line="0" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/orderDetailedInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7377279">
+          <caret line="73" column="70" selection-start-line="73" selection-start-column="63" selection-end-line="73" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
+          <folding>
+            <marker date="1456210387603" expanded="true" signature="114:210" placeholder="DELETE FROM " />
+            <marker date="1456210387603" expanded="true" signature="254:297" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="254:301" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="254:323" placeholder="SELECT COUNT... orders" />
+            <marker date="1456210387603" expanded="true" signature="443:479" placeholder="DELETE FROM " />
+            <marker date="1456210387603" expanded="true" signature="443:501" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.307692">
+          <caret line="107" column="25" selection-start-line="107" selection-start-column="25" selection-end-line="107" selection-end-column="25" />
+          <folding>
+            <marker date="1456213202066" expanded="true" signature="755:799" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="1212:1296" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="3258:3290" placeholder="SELECT COUNT... background" />
+            <marker date="1456213202066" expanded="true" signature="3426:3478" placeholder="SELECT photo... background" />
+            <marker date="1456213202066" expanded="true" signature="3623:3974" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="3637:3960" placeholder="{...}" />
+            <marker date="1456213202066" expanded="false" signature="4614:4629" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4630:5173" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4665:5162" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="4708:5150" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5112:5124" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5280:5295" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5296:5939" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5331:5928" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="5374:5916" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5663:5706" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="5878:5890" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6127:6142" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6143:6715" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6178:6704" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6221:6692" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6654:6666" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="6862:6877" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6878:7350" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6913:7339" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="6956:7327" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="7289:7301" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="7492:7507" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7508:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7543:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="7586:7693" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="8592:8604" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="8813:8828" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8829:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8864:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="8907:9010" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="9713:9725" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="9985:10000" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10001:10616" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10048:10605" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="10095:10593" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="10555:10567" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20102:20227" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20408:20583" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="20497:20583" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="21653:21669" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="21798:21814" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="22173:22229" placeholder="SELECT * FRO... users" />
+            <marker date="1456213202066" expanded="true" signature="22329:22577" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="22668:22747" placeholder="SELECT * FRO... basket" />
+            <marker date="1456213202066" expanded="true" signature="23309:23353" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="25064:25116" placeholder="SELECT COUNT... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="26247:26339" placeholder="SELECT COUNT... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="27554:27567" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="27629:27648" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="27688:27746" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="28066:28121" placeholder="SELECT * FRO... users" />
+            <marker date="1456213202066" expanded="true" signature="28460:29674" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="28496:28568" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="28643:29365" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="28752:28764" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29042:29076" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29255:29288" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="29442:29658" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="29524:29574" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="29967:30051" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="30086:30099" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30134:30153" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30321:30845" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30395:30845" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30423:30837" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30462:30522" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30600:30675" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="30755:30821" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31114:31748" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31149:31219" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31292:31588" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="31400:31412" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="31663:31733" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="32342:32388" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="34139:34185" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="35130:35176" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="36947:36993" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="37665:37711" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="38749:38811" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="39594:39640" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="42251:42313" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="43096:43142" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="44541:44587" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="45427:45440" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="45482:45501" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="47377:47421" placeholder="SELECT rate currency" />
+            <marker date="1456213202066" expanded="true" signature="47516:47595" placeholder="SELECT * FRO... basket" />
+            <marker date="1456213202066" expanded="true" signature="48055:48117" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456213202066" expanded="true" signature="48296:51033" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48338:48531" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48573:49517" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48616:49500" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48702:48783" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48831:48915" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="48961:49482" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="49003:49098" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="49141:49463" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:50077" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:51017" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50000:51033" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50025:50055" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50117:50135" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="50136:50906" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50854:50884" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="50956:50974" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51173:51292" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51399:51660" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="51424:51440" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51753:51766" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51801:51820" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="51990:52086" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="52493:52945" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52521:52936" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52560:52621" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52699:52774" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="52854:52920" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53240:54106" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53276:53350" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="53425:53941" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="53535:53547" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="53831:53863" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54018:54090" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54331:54375" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54410:54429" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54516:54534" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="54655:54779" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456213202066" expanded="true" signature="55001:55453" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55029:55444" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55068:55129" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55207:55282" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="55362:55428" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57553:58269" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57589:57661" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="57736:58040" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="57846:57858" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="58117:58253" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="58162:58175" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="58887:58933" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="60684:60730" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="61675:61721" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="63492:63538" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="64210:64256" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="65294:65356" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="66139:66185" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="68796:68858" placeholder="..." />
+            <marker date="1456213202066" expanded="false" signature="69641:69687" placeholder="..." />
+            <marker date="1456213202066" expanded="true" signature="71086:71132" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxRebuildTable.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.769231">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <marker date="1456213539178" expanded="true" signature="62:123" placeholder="SELECT * FRO... orders" />
+            <marker date="1456213539178" expanded="true" signature="163:225" placeholder="SELECT sum F... orders_date" />
+            <marker date="1456213539178" expanded="true" signature="324:368" placeholder="SELECT rate currency" />
+            <marker date="1456213539178" expanded="true" signature="506:568" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456213539178" expanded="true" signature="803:1121" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1181:1362" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1398:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1435:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1509:1578" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1620:1692" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1732:1925" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1768:1851" placeholder="..." />
+            <marker date="1456213539178" expanded="true" signature="1888:1925" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ajax.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40189445">
+          <caret line="124" column="7" selection-start-line="124" selection-start-column="7" selection-end-line="124" selection-end-column="7" />
+          <folding>
+            <marker date="1456213850644" expanded="true" signature="4128:4140" placeholder="..." />
+            <marker date="1456213850644" expanded="true" signature="5347:5412" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

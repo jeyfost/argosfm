@@ -457,7 +457,7 @@
                             break;
 
                         case "login":
-                            echo "<span class='basicRed'>Вы ввели несуществующий логин или e-mail.</span><br /><br />";
+                            echo "<span class='basicRed'>Вы ввели несуществующий логин или e-mail..</span><br /><br />";
                             break;
                         default:
                             break;
@@ -497,7 +497,7 @@
                         </div>
                     </div>
                 </a>
-                <a href='news.php' class='noBorder' title='Новости, акции и коммерческие предложения'>
+                <a href='news.php' class='noBorder' title='Новости, акции и коммерческие предложени'>
                     <div id='offersPoint' onmouseover='menuVisual("1", "opIMG", "opTop")' onmouseout='menuDefault3()'>
                         <div id='offersPointCenter'>
                             <div id='opTop'></div>
@@ -1046,7 +1046,7 @@
 														<span class='basic'><b>Артикул: </b>".$good['code']."</span>
 													</div>
 													<div class='basketGoodPrice'>
-														<span class='basic'><b>Цена: </b>".($good['price']*$rate[0])." бел. руб.</span>
+														<span class='basic'><b>Цена за ед.: </b>".($good['price']*$rate[0])." бел. руб.</span>
 														<br />
 														<span class='basic'><b>Общая цена данной группы товаров: </b><span id='price".$good['id']."'>".($goods['quantity']*$good['price']*$rate[0])."</span> бел. руб.</span>
 													</div>
@@ -1055,7 +1055,7 @@
 										</div>
 										<div class='basketEditBlock'>
 											<form id='deleteFromBasketForm".$good['id']."' method='post' action='scripts/deleteFromBasket.php?id=".$good['id']."'>
-												<img src='pictures/system/x.png' id='x".$good['id']."' class='noBorder' onmouseover='changeX(\"1\", \"x".$good['id']."\")' onmouseout='changeX(\"0\", \"x".$good['id']."\")' onclick='document.getElementById(\"deleteFromBasketForm".$good['id']."\").submit(); return false;' title='Убрать этот товар из корзины' style='float: right; cursor: pointer;' />
+												<img src='pictures/system/x.png' id='x".$good['id']."' class='noBorder' onmouseover='changeX(\"1\", \"x".$good['id']."\")' onmouseout='changeX(\"0\", \"x".$good['id']."\")' onclick='document.getElementById(\"deleteFromBasketForm".$good['id']."\").submit(); return false;' title='Убрать эту группу товаров из корзины' style='float: right; cursor: pointer;' />
 											</form>
 											<form method='post' style='padding-top: 25px;'>
 												<label>Количество</label>

@@ -3,7 +3,7 @@ function addToBasket(id) {
 	var nID = 'note' + id;
 
 	if(document.getElementById(qID).value < 1 || Math.ceil(document.getElementById(qID).value) - document.getElementById(qID).value != 0) {
-		document.getElementById(nID).innerHTML = "<span class='basicRed'>Неверно введено количетсво!</span>";
+		document.getElementById(nID).innerHTML = "<span class='basicRed'>РќРµРІРµСЂРЅРѕ РІРІРµРґРµРЅРѕ РєРѕР»РёС‡РµС‚СЃРІРѕ!</span>";
 	}
 	else {
 		$.ajax({
@@ -33,7 +33,7 @@ function editBasketGood(id, price, rate, total, quantity) {
 	quantity = parseInt(quantity);
 	
 	if(document.getElementById(qID).value < 1 || Math.ceil(document.getElementById(qID).value) - document.getElementById(qID).value != 0) {
-		document.getElementById(nID).innerHTML = "<span class='basicRed'>Неверно введено количетсво!</span>";
+		document.getElementById(nID).innerHTML = "<span class='basicRed'>РќРµРІРµСЂРЅРѕ РІРІРµРґРµРЅРѕ РєРѕР»РёС‡РµС‚СЃРІРѕ!</span>";
 	} else {
 		if(quantity > document.getElementById(qID).value) {
 			var newTotalPrice = parseInt(total-(price*rate*Math.abs(quantity-document.getElementById(qID).value)));
@@ -144,7 +144,7 @@ function changePrice(block, good, input, rate) {
 		data: {"goodID": good, "goodPrice": price},
 		success: function(response) {
 			if(response == "a") {
-				document.getElementById(block).innerHTML = "<span class='basic'><b>Цена: </b>" + parseInt(price * rate) + " бел. руб.</span>";
+				document.getElementById(block).innerHTML = "<span class='basic'><b>Р¦РµРЅР°: </b>" + parseInt(price * rate) + " Р±РµР». СЂСѓР±.</span>";
 				document.getElementById(block).setAttribute("onclick", "showForm('gp" + good + "', '" + price +"', '" + good + "', '" + rate + "')");
 			}
 
@@ -163,7 +163,7 @@ function showCustomer(id) {
 		url: 'scripts/ajaxCustomer.php',
 		data: {"id": id},
 		success: function(response) {
-			$('#mailTextBlock').html('<span class="admLabel">' + response + '</span><br /><br /><span class="basicRed" style="border-bottom: 1px dotted #df4e47; cursor: pointer; float: right;" onclick="hideCustomer()">Закрыть</span>');
+			$('#mailTextBlock').html('<span class="admLabel">' + response + '</span><br /><br /><span class="basicRed" style="border-bottom: 1px dotted #df4e47; cursor: pointer; float: right;" onclick="hideCustomer()">пїЅпїЅпїЅпїЅпїЅпїЅпїЅ</span>');
 			$('#mailTextBlock').css('z-index', '100');
 			$('#mailTextBlock').css('display', 'block');
 			$('#mailTextBlock').css('opacity', '1');
@@ -187,7 +187,7 @@ function deleteGoodGroup(order_id, good_id) {
 		success: function(response){
 			if(response == "a") {
 				var tableID = 'tableGood' + order_id;
-
+				alert(1);
 				$.ajax({
 					type: 'POST',
 					cache: false,
@@ -197,10 +197,6 @@ function deleteGoodGroup(order_id, good_id) {
 						document.getElementById(tableID).innerHTML = table;
 					}
 				});
-			}
-
-			if(response == "b") {
-				alert(2);
 			}
 		}
 	});
@@ -214,7 +210,7 @@ $(document).ready(function() {
 	$('#searchField').keyup(function() {
 		var query = $('#searchField').val();
 
-		if(query.length > 0 && query != "Поиск...") {
+		if(query.length > 0 && query != "РџРѕРёСЃРє...") {
 			var pos = parseInt($('#searchField').offset().left + 150 - 430);
 			pos = pos + 'px';
 
@@ -242,7 +238,7 @@ $(document).ready(function() {
 	$('#searchField').click(function() {
 		var query = $('#searchField').val();
 
-		if(query.length > 0 && query != "Поиск...") {
+		if(query.length > 0 && query != "РџРѕРёСЃРє...") {
 			var pos = parseInt($('#searchField').offset().left + 150 - 430);
 			pos = pos + 'px';
 
