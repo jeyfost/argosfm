@@ -85,7 +85,7 @@
 			$bigFinalName = $bigName.basename($_FILES['addFormBigPicture']['name']);
 			$smallFinalName = $smallName.basename($_FILES['addFormSmallPicture']['name']);
 			
-			$add_result = mysql_query("INSERT INTO catalogue_new (type, category, subcategory, name, description, picture, small, sketch) VALUES ('".$_SESSION['section']."', '".$_SESSION['category']."', '".$_SESSION['subcategory']."', '".$_POST['addFormNameArea']."', '".$description."', '".$bigFinalName."', '".$smallFinalName."', '".$sketchFinalName."')");
+			$add_result = $mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, name, description, picture, small, sketch) VALUES ('".$_SESSION['section']."', '".$_SESSION['category']."', '".$_SESSION['subcategory']."', '".$_POST['addFormNameArea']."', '".$description."', '".$bigFinalName."', '".$smallFinalName."', '".$sketchFinalName."')");
 			
 			move_uploaded_file($bigTmpName, $bigUpload);
 			move_uploaded_file($smallTmpName, $smallUpload);

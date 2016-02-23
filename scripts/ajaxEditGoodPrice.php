@@ -7,7 +7,7 @@
 	{
 		if(!empty($_POST['goodPrice']) and $_POST['goodPrice'] > 0)
 		{
-			if(mysql_query("UPDATE catalogue_new SET price = '".$_POST['goodPrice']."' WHERE id = '".$_POST['goodID']."'"))
+			if($mysqli->query("UPDATE catalogue_new SET price = '".$_POST['goodPrice']."' WHERE id = '".$_POST['goodID']."'"))
 			{
 				echo "a";
 			}

@@ -16,8 +16,8 @@
 	
 	include('connect.php');
 	
-	$orderInfoResult = mysql_query("SELECT * FROM orders_date WHERE id='".$_REQUEST['id']."'");
-	$orderInfo = mysql_fetch_array($orderInfoResult, MYSQL_ASSOC);
+	$orderInfoResult = $mysqli->query("SELECT * FROM orders_date WHERE id='".$_REQUEST['id']."'");
+	$orderInfo = $orderInfoResult->fetch_assoc();
 	
 	if(empty($orderInfo))
 	{
@@ -32,7 +32,7 @@
 	}
 	else
 	{
-		if(mysql_query("UPDATE orders_date SET status = '1', proceed_date='".date('Y-m-d H:i:s')."' WHERE id = '".$_REQUEST['id']."'"))
+		if($mysqli->query("UPDATE orders_date SET status = '1', proceed_date='".date('Y-m-d H:i:s')."' WHERE id = '".$_REQUEST['id']."'"))
 		{
 			echo "<span class='basicGreen'>Заказ успешно принят!</span><br /><br />";
 		}
@@ -41,12 +41,12 @@
 			echo "<span class='basicRed'>Во время принятия заказа произошла ошибка. Повторите попытку.</span><br /><br />";
 		}
 		
-		$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0' ORDER BY date");
-		while($orders = mysql_fetch_array($ordersResult, MYSQL_ASSOC))
+		$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0' ORDER BY date");
+		while($orders = $ordersResult->fetch_assoc())
 		{
 			$number++;	
-			$customerResult = mysql_query("SELECT * FROM users WHERE id = '".$orders['user_id']."'");
-			$customer = mysql_fetch_assoc($customerResult);
+			$customerResult = $mysqli->query("SELECT * FROM users WHERE id = '".$orders['user_id']."'");
+			$customer = $customerResult->fetch_assoc();
 			$info = $customer['person']."; ".$customer['phone'];
 			if(!empty($customer['organisation']))
 			{

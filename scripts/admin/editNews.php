@@ -11,8 +11,8 @@
 			{
 				if(!empty($_POST['emailText']))
 				{
-					$newsResult = mysql_query("SELECT * FROM news WHERE id = '".$_SESSION['news']."'");
-					$news = mysql_fetch_assoc($newsResult);
+					$newsResult = $mysqli->query("SELECT * FROM news WHERE id = '".$_SESSION['news']."'");
+					$news = $newsResult->fetch_assoc();
 					$count = 0;
 					$steps = 0;
 
@@ -20,7 +20,7 @@
 					{
 						$steps++;
 
-						if(mysql_query("UPDATE news SET header = '".htmlspecialchars($_POST['newsHeader'], ENT_QUOTES)."' WHERE id = '".$_SESSION['news']."'"))
+						if($mysqli->query("UPDATE news SET header = '".htmlspecialchars($_POST['newsHeader'], ENT_QUOTES)."' WHERE id = '".$_SESSION['news']."'"))
 						{
 							$count++;
 						}
@@ -30,7 +30,7 @@
 					{
 						$steps++;
 
-						if(mysql_query("UPDATE news SET short = '".htmlspecialchars($_POST['newsShort'], ENT_QUOTES)."' WHERE id = '".$_SESSION['news']."'"))
+						if($mysqli->query("UPDATE news SET short = '".htmlspecialchars($_POST['newsShort'], ENT_QUOTES)."' WHERE id = '".$_SESSION['news']."'"))
 						{
 							$count++;
 						}
@@ -41,7 +41,7 @@
 					{
 						$steps++;
 
-						if(mysql_query("UPDATE news SET text = '".$_POST['emailText']."' WHERE id = '".$_SESSION['news']."'"))
+						if($mysqli->query("UPDATE news SET text = '".$_POST['emailText']."' WHERE id = '".$_SESSION['news']."'"))
 						{
 							$count++;
 						}

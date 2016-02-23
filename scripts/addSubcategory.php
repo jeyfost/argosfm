@@ -13,8 +13,8 @@
 	{
 		$max = 0;
 		
-		$maxIdResult = mysql_query("SELECT id FROM subcategories_new WHERE id < 1000");
-		while($maxId = mysql_fetch_array($maxIdResult, MYSQL_NUM))
+		$maxIdResult = $mysqli->query("SELECT id FROM subcategories_new WHERE id < 1000");
+		while($maxId = $maxIdResult->fetch_array(MYSQLI_NUM))
 		{
 			if($maxId[0] > $max)
 			{
@@ -24,7 +24,7 @@
 		
 		$max++;
 		
-		if($addResult = mysql_query("INSERT INTO subcategories_new (id, type, category, name) VALUES ('".$max."', '".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".htmlspecialchars($_POST['subcategoryName'], ENT_QUOTES)."')"))
+		if($addResult = $mysqli->query("INSERT INTO subcategories_new (id, type, category, name) VALUES ('".$max."', '".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".htmlspecialchars($_POST['subcategoryName'], ENT_QUOTES)."')"))
 		{
 			$_SESSION['result'] = "add_subcategory_success";
 			

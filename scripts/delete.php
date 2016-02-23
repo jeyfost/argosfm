@@ -10,7 +10,7 @@
 	
 	include('connect.php');
 
-	$delete_result = mysql_query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['titleId']."'");
+	$delete_result = $mysqli->query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['titleId']."'");
 	
 	if($delete_result)
 	{

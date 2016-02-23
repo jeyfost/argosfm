@@ -14,8 +14,8 @@
 		}
 		else
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+			$user = $userResult->fetch_assoc();
 			setcookie("argosfm_login", $user['login'], time()+60*60*24*30*12, '/');
 			setcookie("argosfm_password", $user['password'], time()+60*60*24*30*12, '/');
 		}
@@ -24,8 +24,8 @@
 	{
 		if(isset($_COOKIE['argosfm_login']) and isset($_COOKIE['argosfm_password']) and !empty($_COOKIE['argosfm_login']) and !empty($_COOKIE['argosfm_password']))
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE login = '".$_COOKIE['argosfm_login']."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE login = '".$_COOKIE['argosfm_login']."'");
+			$user = $userResult->fetch_assoc();
 			
 			if(!empty($user) and $user['password'] == $_COOKIE['argosfm_password'])
 			{
@@ -73,13 +73,13 @@
     <?php
     	if(!isset($_SESSION['background']))
 		{
-			$BGCountResult = mysql_query("SELECT COUNT(id) FROM background");
-			$BGCount = mysql_fetch_array($BGCountResult, MYSQL_NUM);
+			$BGCountResult = $mysqli->query("SELECT COUNT(id) FROM background");
+			$BGCount = $BGCountResult->fetch_array(MYSQLI_NUM);
 
 			$index = rand(1, $BGCount[0]);
 
-			$backgroundResult = mysql_query("SELECT photo FROM background WHERE id = '".$index."'");
-			$background = mysql_fetch_array($backgroundResult, MYSQL_NUM);
+			$backgroundResult = $mysqli->query("SELECT photo FROM background WHERE id = '".$index."'");
+			$background = $backgroundResult->fetch_array(MYSQLI_NUM);
 
 			$_SESSION['background'] = $background[0];
 		}
@@ -511,8 +511,8 @@
 					}
 					else
 					{
-						$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-						$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+						$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+						$user = $userResult->fetch_assoc();
 
 						echo "
 							<div id='loginL'>
@@ -521,8 +521,8 @@
 						
 						if($_SESSION['userID'] != 1)
 						{	
-							$ordersResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -538,8 +538,8 @@
 						}
 						else
 						{
-							$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -680,8 +680,8 @@
         	<?php
 
 				$newsCount = 0;
-				$newsResult = mysql_query("SELECT * FROM news ORDER BY id DESC LIMIT 3");
-				while($news = mysql_fetch_assoc($newsResult))
+				$newsResult = $mysqli->query("SELECT * FROM news ORDER BY id DESC LIMIT 3");
+				while($news = $newsResult->fetch_assoc())
 				{
 					$newsCount++;
 					$date = substr($news['date'], 0, 10);

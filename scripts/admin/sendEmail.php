@@ -16,8 +16,8 @@
 					$reply = "mail@argos-fm.by";
 					$text = $_POST['emailText'];
 
-					$emailCountResult = mysql_query("SELECT COUNT(id) FROM mail");
-					$emailCount = mysql_fetch_array($emailCountResult, MYSQL_NUM);
+					$emailCountResult = $mysqli->query("SELECT COUNT(id) FROM mail");
+					$emailCount = $emailCountResult->fetch_array(MYSQLI_NUM);
 
 					$hash = md5(date('r', time()));
 
@@ -51,8 +51,8 @@
 
 					$count = 0;
 					
-					$emailResult = mysql_query("SELECT * FROM mail");
-					while($email = mysql_fetch_assoc($emailResult))
+					$emailResult = $mysqli->query("SELECT * FROM mail");
+					while($email = $emailResult->fetch_assoc())
 					{
 						$fullMessage = $baseMessage."--PHP-mixed-".$hash."\n\n"."--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: www.argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: www.argos-fm.by/test/scripts/stopSending.php?hash=".$email['hash']."\n";
 
@@ -66,7 +66,7 @@
 
 					if($count == $emailCount[0])
 					{
-						mysql_query("INSERT INTO mail_result (subject, text, date) VALUES ('".htmlspecialchars($subject)."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".date('Y-m-d H:i:s')."')");
+						$mysqli->query("INSERT INTO mail_result (subject, text, date) VALUES ('".htmlspecialchars($subject)."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".date('Y-m-d H:i:s')."')");
 
 						$_SESSION['sendEmail'] = "ok";
 
@@ -100,8 +100,8 @@
 							$text = $_POST['emailText'];
 							$to = $_POST['emailAddress'];
 
-							$emailCountResult = mysql_query("SELECT COUNT(id) FROM mail");
-							$emailCount = mysql_fetch_array($emailCountResult, MYSQL_NUM);
+							$emailCountResult = $mysqli->query("SELECT COUNT(id) FROM mail");
+							$emailCount = $emailCountResult->fetch_array(MYSQLI_NUM);
 
 							$hash = md5(date('r', time()));
 

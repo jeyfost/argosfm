@@ -35,8 +35,8 @@
 				if(!empty($_POST['code']))
 				{
 					$codeError = 0;
-					$codeResult = mysql_query("SELECT code FROM catalogue_new");
-					while($code = mysql_fetch_array($codeResult, MYSQL_NUM))
+					$codeResult = $mysqli->query("SELECT code FROM catalogue_new");
+					while($code = $codeResult->fetch_array(MYSQLI_NUM))
 					{
 						if($code[0] == $_POST['code'])
 						$codeError++;
@@ -71,17 +71,17 @@
 									
 									if(isset($_SESSION['categorySingle']) and $_SESSION['categorySingle'] == '1')
 									{
-										$subcategoryResult = mysql_query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['cId']."'");
-										$subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+										$subcategoryResult = $mysqli->query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['cId']."'");
+										$subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 										
-										if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, sketch, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$subcategory[0]."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['code']."')"))
+										if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, sketch, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$subcategory[0]."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['code']."')"))
 										{
-											$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$subcategory[0]."'");
-											$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+											$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$subcategory[0]."'");
+											$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 	
 											if($goodsCount[0] == $_POST['positionSelect'])
 											{
-												if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$subcategory[0]."' AND small = '".$smallFinalName."'"))
+												if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$subcategory[0]."' AND small = '".$smallFinalName."'"))
 												{
 													move_uploaded_file($bigTmpName, $bigUpload);
 													move_uploaded_file($smallTmpName, $smallUpload);
@@ -96,12 +96,12 @@
 												for($i = $goodsCount[0]; $i >= $_POST['positionSelect']; $i--)
 												{
 													$priorityNew = $i + 1;
-													$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$subcategory[0]."' AND priority = '".$i."'");
-													$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
-													mysql_query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
+													$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$subcategory[0]."' AND priority = '".$i."'");
+													$good = $goodResult->fetch_assoc();
+													$mysqli->query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
 												}
 												
-												if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$subcategory[0]."' AND small = '".$smallFinalName."'"))
+												if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$subcategory[0]."' AND small = '".$smallFinalName."'"))
 												{
 													move_uploaded_file($bigTmpName, $bigUpload);
 													move_uploaded_file($smallTmpName, $smallUpload);
@@ -122,14 +122,14 @@
 									if(isset($_SESSION['subcategorySingle']) and $_SESSION['subcategorySingle'] == '1')
 									{
 										/* добавление без subcategory2 */
-										if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, sketch, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$_SESSION['sId']."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['code']."')"))
+										if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, sketch, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$_SESSION['sId']."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['code']."')"))
 										{
-											$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['sId']."'");
-											$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+											$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['sId']."'");
+											$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 	
 											if($goodsCount[0] == $_POST['positionSelect'])
 											{
-												if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$_SESSION['sId']."' AND small = '".$smallFinalName."'"))
+												if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$_SESSION['sId']."' AND small = '".$smallFinalName."'"))
 												{
 													move_uploaded_file($bigTmpName, $bigUpload);
 													move_uploaded_file($smallTmpName, $smallUpload);
@@ -144,12 +144,12 @@
 												for($i = $goodsCount[0]; $i >= $_POST['positionSelect']; $i--)
 												{
 													$priorityNew = $i + 1;
-													$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['sId']."' AND priority = '".$i."'");
-													$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
-													mysql_query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
+													$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['sId']."' AND priority = '".$i."'");
+													$good = $goodResult->fetch_array(MYSQLI_ASSOC);
+													$mysqli->query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
 												}
 												
-												if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$_SESSION['sId']."' AND small = '".$smallFinalName."'"))
+												if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$_SESSION['sId']."' AND small = '".$smallFinalName."'"))
 												{
 													move_uploaded_file($bigTmpName, $bigUpload);
 													move_uploaded_file($smallTmpName, $smallUpload);
@@ -170,14 +170,14 @@
 									if(!isset($_SESSION['categorySingle']) and !isset($_SESSION['subcategorySingle']))
 									{
 										/* добавление с полным набором */
-										if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, sketch, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$_SESSION['sId']."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['code']."')"))
+										if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, sketch, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$_SESSION['sId']."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['code']."')"))
 										{
-											$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2Id']."'");
-											$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+											$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2Id']."'");
+											$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 											
 											if($goodsCount[0] == $_POST['positionSelect'])
 											{
-												if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory2 = '".$_SESSION['s2Id']."' AND small = '".$smallFinalName."'"))
+												if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory2 = '".$_SESSION['s2Id']."' AND small = '".$smallFinalName."'"))
 												{
 													move_uploaded_file($bigTmpName, $bigUpload);
 													move_uploaded_file($smallTmpName, $smallUpload);
@@ -192,12 +192,12 @@
 												for($i = $goodsCount[0]; $i >= $_POST['positionSelect']; $i--)
 												{
 													$priorityNew = $i + 1;
-													$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2Id']."' AND priority = '".$i."'");
-													$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
-													mysql_query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
+													$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2Id']."' AND priority = '".$i."'");
+													$good = $goodResult->fetch_array(MYSQLI_ASSOC);
+													$mysqli->query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
 												}
 												
-												if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory2 = '".$_SESSION['s2Id']."' AND small = '".$smallFinalName."'"))
+												if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory2 = '".$_SESSION['s2Id']."' AND small = '".$smallFinalName."'"))
 												{
 													move_uploaded_file($bigTmpName, $bigUpload);
 													move_uploaded_file($smallTmpName, $smallUpload);
@@ -240,17 +240,17 @@
 									
 								if(isset($_SESSION['categorySingle']) and $_SESSION['categorySingle'] == '1')
 								{
-									$subcategoryResult = mysql_query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['cId']."'");
-									$subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+									$subcategoryResult = $mysqli->query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['cId']."'");
+									$subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 										
-									if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$subcategory[0]."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$description."', '".$_POST['code']."')"))
+									if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$subcategory[0]."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$description."', '".$_POST['code']."')"))
 									{
-										$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$subcategory[0]."'");
-										$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+										$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$subcategory[0]."'");
+										$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 	
 										if($goodsCount[0] == $_POST['positionSelect'])
 										{
-											if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$subcategory[0]."' AND small = '".$smallFinalName."'"))
+											if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$subcategory[0]."' AND small = '".$smallFinalName."'"))
 											{
 												move_uploaded_file($bigTmpName, $bigUpload);
 												move_uploaded_file($smallTmpName, $smallUpload);
@@ -264,12 +264,12 @@
 											for($i = $goodsCount[0]; $i >= $_POST['positionSelect']; $i--)
 											{
 												$priorityNew = $i + 1;
-												$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$subcategory[0]."' AND priority = '".$i."'");
-												$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
-												mysql_query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
+												$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$subcategory[0]."' AND priority = '".$i."'");
+												$good = $goodResult->fetch_array(MYSQLI_ASSOC);
+												$mysqli->query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
 											}
 												
-											if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$subcategory[0]."' AND small = '".$smallFinalName."'"))
+											if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$subcategory[0]."' AND small = '".$smallFinalName."'"))
 											{
 												move_uploaded_file($bigTmpName, $bigUpload);
 												move_uploaded_file($smallTmpName, $smallUpload);
@@ -289,14 +289,14 @@
 								if(isset($_SESSION['subcategorySingle']) and $_SESSION['subcategorySingle'] == '1')
 								{
 									/* добавление без subcategory2 */
-									if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$_SESSION['sId']."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$description."', '".$_POST['code']."')"))
+									if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$_SESSION['sId']."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$description."', '".$_POST['code']."')"))
 									{
-										$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['sId']."'");
-										$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+										$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['sId']."'");
+										$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 										
 										if($goodsCount[0] == $_POST['positionSelect'])
 										{
-											if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$_SESSION['sId']."' AND small = '".$smallFinalName."'"))
+											if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$_SESSION['sId']."' AND small = '".$smallFinalName."'"))
 											{
 												move_uploaded_file($bigTmpName, $bigUpload);
 												move_uploaded_file($smallTmpName, $smallUpload);
@@ -310,12 +310,12 @@
 											for($i = $goodsCount[0]; $i >= $_POST['positionSelect']; $i--)
 											{
 												$priorityNew = $i + 1;
-												$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['sId']."' AND priority = '".$i."'");
-												$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
-													mysql_query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
+												$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['sId']."' AND priority = '".$i."'");
+												$good = $goodResult->fetch_assoc();
+													$mysqli->query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
 											}
 												
-											if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$_SESSION['sId']."' AND small = '".$smallFinalName."'"))
+											if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory = '".$_SESSION['sId']."' AND small = '".$smallFinalName."'"))
 											{
 												move_uploaded_file($bigTmpName, $bigUpload);
 												move_uploaded_file($smallTmpName, $smallUpload);
@@ -335,14 +335,14 @@
 								if(!isset($_SESSION['categorySingle']) and !isset($_SESSION['subcategorySingle']))
 								{
 									/* добавление с полным набором */
-									if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$_SESSION['sId']."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$description."', '".$_POST['code']."')"))
+									if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, description, code) VALUES ('".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".$_SESSION['sId']."', '".$_SESSION['s2Id']."', '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."', '".$bigFinalName."', '".$smallFinalName."', '".$description."', '".$_POST['code']."')"))
 									{
-										$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2Id']."'");
-										$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+										$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2Id']."'");
+										$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 											
 										if($goodsCount[0] == $_POST['positionSelect'])
 										{
-											if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory2 = '".$_SESSION['s2Id']."' AND small = '".$smallFinalName."'"))
+											if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory2 = '".$_SESSION['s2Id']."' AND small = '".$smallFinalName."'"))
 											{
 												move_uploaded_file($bigTmpName, $bigUpload);
 												move_uploaded_file($smallTmpName, $smallUpload);
@@ -356,12 +356,12 @@
 											for($i = $goodsCount[0]; $i >= $_POST['positionSelect']; $i--)
 											{
 												$priorityNew = $i + 1;
-												$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2Id']."' AND priority = '".$i."'");
-												$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
-												mysql_query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
+												$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2Id']."' AND priority = '".$i."'");
+												$good = $goodResult->fetch_assoc();
+												$mysqli->query("UPDATE catalogue_new SET priority = '".$priorityNew."' WHERE id = '".$good['id']."'");
 											}
 												
-											if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory2 = '".$_SESSION['s2Id']."' AND small = '".$smallFinalName."'"))
+											if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE subcategory2 = '".$_SESSION['s2Id']."' AND small = '".$smallFinalName."'"))
 											{
 												move_uploaded_file($bigTmpName, $bigUpload);
 												move_uploaded_file($smallTmpName, $smallUpload);

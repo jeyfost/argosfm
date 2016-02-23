@@ -29,8 +29,8 @@
 	
 	if(!empty($_SESSION['gId']))
 	{
-		$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_SESSION['gId']."'");
-		$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
+		$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_SESSION['gId']."'");
+		$good = $goodResult->fetch_array();
 		$changes = 0;
 		$errors = 0;
 						
@@ -38,7 +38,7 @@
 		{
 			if(htmlspecialchars($_POST['goodName'], ENT_QUOTES) != $good['name'])
 			{
-				if(mysql_query("UPDATE catalogue_new SET name = '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."' WHERE id = '".$good['id']."'"))
+				if($mysqli->query("UPDATE catalogue_new SET name = '".htmlspecialchars($_POST['goodName'], ENT_QUOTES)."' WHERE id = '".$good['id']."'"))
 				{
 					$changes++;
 				}
@@ -59,8 +59,8 @@
 			if($_POST['code'] != $good['code'])
 			{
 				$codeErrors = 0;
-				$codeResult = mysql_query("SELECT code FROM catalogue_new");
-				while($code = mysql_fetch_array($codeResult, MYSQL_NUM))
+				$codeResult = $mysqli->query("SELECT code FROM catalogue_new");
+				while($code = $codeResult->fetch_array(MYSQLI_NUM))
 				{
 					if($code[0] == $_POST['code'])
 					{
@@ -69,7 +69,7 @@
 				}
 				if($codeErrors == 0)
 				{
-					if(mysql_query("UPDATE catalogue_new SET code = '".$_POST['code']."' WHERE id = '".$good['id']."'"))
+					if($mysqli->query("UPDATE catalogue_new SET code = '".$_POST['code']."' WHERE id = '".$good['id']."'"))
 					{
 						$changes++;
 					}
@@ -96,7 +96,7 @@
 			if($_POST['description'] != $good['description'])
 			{
 				$description = str_replace("\n", "<br />", htmlspecialchars($_POST['description'], ENT_QUOTES));
-				if(mysql_query("UPDATE catalogue_new SET description = '".$description."' WHERE id = '".$good['id']."'"))
+				if($mysqli->query("UPDATE catalogue_new SET description = '".$description."' WHERE id = '".$good['id']."'"))
 				{
 					$changes++;
 				}
@@ -120,7 +120,7 @@
 			$bigUpload = $bigUploadDir.$bigName.basename($_FILES['bigImage']['name']);
 			$bigFinalName = $bigName.basename($_FILES['bigImage']['name']);
 				
-			if(mysql_query("UPDATE catalogue_new SET picture = '".$bigFinalName."' WHERE id = '".$good['id']."'"))
+			if($mysqli->query("UPDATE catalogue_new SET picture = '".$bigFinalName."' WHERE id = '".$good['id']."'"))
 			{
 				move_uploaded_file($bigTmpName, $bigUpload);
 				$changes++;
@@ -139,7 +139,7 @@
 			$smallUpload = $smallUploadDir.$smallName.basename($_FILES['smallImage']['name']);
 			$smallFinalName = $smallName.basename($_FILES['smallImage']['name']);
 				
-			if(mysql_query("UPDATE catalogue_new SET small = '".$smallFinalName."' WHERE id = '".$good['id']."'"))
+			if($mysqli->query("UPDATE catalogue_new SET small = '".$smallFinalName."' WHERE id = '".$good['id']."'"))
 			{
 				move_uploaded_file($smallTmpName, $smallUpload);
 				$changes++;
@@ -158,7 +158,7 @@
 			$sketchUpload = $sketchUploadDir.$sketchName.basename($_FILES['sketch']['name']);
 			$sketchFinalName = $sketchName.basename($_FILES['sketch']['name']);
 				
-			if(mysql_query("UPDATE catalogue_new SET sketch = '".$sketchFinalName."' WHERE id = '".$good['id']."'"))
+			if($mysqli->query("UPDATE catalogue_new SET sketch = '".$sketchFinalName."' WHERE id = '".$good['id']."'"))
 			{
 				move_uploaded_file($sketchTmpName, $sketchUpload);
 				$changes++;
@@ -173,20 +173,20 @@
 		{
 			if(!empty($good['subcategory2']))
 			{
-				$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$good['subcategory2']."'");
-				$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+				$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$good['subcategory2']."'");
+				$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 				
 				if($good['priority'] < $_POST['positionSelect'])
 				{
 					for($i = $good['priority'] + 1; $i <= $_POST['positionSelect']; $i++)
 					{
-						$gResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$good['subcategory2']."' AND priority = '".$i."'");
-						$g = mysql_fetch_array($gResult, MYSQL_ASSOC);
+						$gResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$good['subcategory2']."' AND priority = '".$i."'");
+						$g = $gResult->fetch_assoc();
 							
-						mysql_query("UPDATE catalogue_new SET priority = '".($i - 1)."' WHERE id = '".$g['id']."'");
+						$mysqli->query("UPDATE catalogue_new SET priority = '".($i - 1)."' WHERE id = '".$g['id']."'");
 					}
 
-					if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE id = '".$good['id']."'"))
+					if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE id = '".$good['id']."'"))
 					{
 						$changes++;
 					}
@@ -199,13 +199,13 @@
 				{
 					for($i = $good['priority'] - 1; $i >= $_POST['positionSelect']; $i--)
 					{
-						$gResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$good['subcategory2']."' AND priority = '".$i."'");
-						$g = mysql_fetch_array($gResult, MYSQL_ASSOC);
+						$gResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$good['subcategory2']."' AND priority = '".$i."'");
+						$g = $gResult->fetch_assoc();
 							
-						mysql_query("UPDATE catalogue_new SET priority = '".($i + 1)."' WHERE id = '".$g['id']."'");
+						$mysqli->query("UPDATE catalogue_new SET priority = '".($i + 1)."' WHERE id = '".$g['id']."'");
 					}
 
-					if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE id = '".$good['id']."'"))
+					if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE id = '".$good['id']."'"))
 					{
 						$changes++;
 					}
@@ -217,20 +217,20 @@
 			}
 			else
 			{
-				$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$good['subcategory']."'");
-				$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+				$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$good['subcategory']."'");
+				$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 				
 				if($good['priority'] < $_POST['positionSelect'])
 				{
 					for($i = $good['priority'] + 1; $i <= $_POST['positionSelect']; $i++)
 					{
-						$gResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$good['subcategory']."' AND priority = '".$i."'");
-						$g = mysql_fetch_array($gResult, MYSQL_ASSOC);
+						$gResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$good['subcategory']."' AND priority = '".$i."'");
+						$g = $gResult->fetch_assooc();
 							
-						mysql_query("UPDATE catalogue_new SET priority = '".($i - 1)."' WHERE id = '".$g['id']."'");
+						$mysqli->query("UPDATE catalogue_new SET priority = '".($i - 1)."' WHERE id = '".$g['id']."'");
 					}
 
-					if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE id = '".$good['id']."'"))
+					if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE id = '".$good['id']."'"))
 					{
 						$changes++;
 					}
@@ -243,13 +243,13 @@
 				{
 					for($i = $good['priority'] - 1; $i >= $_POST['positionSelect']; $i--)
 					{
-						$gResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$good['subcategory']."' AND priority = '".$i."'");
-						$g = mysql_fetch_array($gResult, MYSQL_ASSOC);
+						$gResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$good['subcategory']."' AND priority = '".$i."'");
+						$g = $gResult->fetch_assoc();
 							
-						mysql_query("UPDATE catalogue_new SET priority = '".($i + 1)."' WHERE id = '".$g['id']."'");
+						$mysqli->query("UPDATE catalogue_new SET priority = '".($i + 1)."' WHERE id = '".$g['id']."'");
 					}
 
-					if(mysql_query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE id = '".$good['id']."'"))
+					if($mysqli->query("UPDATE catalogue_new SET priority = '".$_POST['positionSelect']."' WHERE id = '".$good['id']."'"))
 					{
 						$changes++;
 					}

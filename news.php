@@ -25,8 +25,8 @@
 		}
 		else
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+			$user = $userResult->fetch_assoc();
 			setcookie("argosfm_login", $user['login'], time()+60*60*24*30*12, '/');
 			setcookie("argosfm_password", $user['password'], time()+60*60*24*30*12, '/');
 		}
@@ -35,8 +35,8 @@
 	{
 		if(isset($_COOKIE['argosfm_login']) and isset($_COOKIE['argosfm_password']) and !empty($_COOKIE['argosfm_login']) and !empty($_COOKIE['argosfm_password']))
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE login = '".$_COOKIE['argosfm_login']."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE login = '".$_COOKIE['argosfm_login']."'");
+			$user = $userResult->fetch_assoc();
 			
 			if(!empty($user) and $user['password'] == $_COOKIE['argosfm_password'])
 			{
@@ -52,8 +52,8 @@
 	
 	if(empty($_REQUEST['id']) and empty($_REQUEST['date']))
 	{
-		$quantityResult = mysql_query("SELECT COUNT(id) FROM news");
-		$quantity = mysql_fetch_array($quantityResult, MYSQL_NUM);
+		$quantityResult = $mysqli->query("SELECT COUNT(id) FROM news");
+		$quantity = $quantityResult->fetch_array(MYSQLI_NUM);
 		
 		if($quantity[0] > 10)
 		{
@@ -79,8 +79,8 @@
 	{
 		if(is_int((int)$_REQUEST['id']))
 		{
-			$newsCheckResult = mysql_query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
-			if(mysql_num_rows($newsCheckResult) == 0)
+			$newsCheckResult = $mysqli->query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
+			if(MYSQLI_NUM_rows($newsCheckResult) == 0)
 			{
 				header("Location: news.php");
 			}
@@ -145,13 +145,13 @@
     <?php
     	if(!isset($_SESSION['background']))
 		{
-			$BGCountResult = mysql_query("SELECT COUNT(id) FROM background");
-			$BGCount = mysql_fetch_array($BGCountResult, MYSQL_NUM);
+			$BGCountResult = $mysqli->query("SELECT COUNT(id) FROM background");
+			$BGCount = $BGCountResult->fetch_array(MYSQLI_NUM);
 
 			$index = rand(1, $BGCount[0]);
 
-			$backgroundResult = mysql_query("SELECT photo FROM background WHERE id = '".$index."'");
-			$background = mysql_fetch_array($backgroundResult, MYSQL_NUM);
+			$backgroundResult = $mysqli->query("SELECT photo FROM background WHERE id = '".$index."'");
+			$background = $backgroundResult->fetch_array(MYSQLI_NUM);
 
 			$_SESSION['background'] = $background[0];
 		}
@@ -584,8 +584,8 @@
 					}
 					else
 					{
-						$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-						$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+						$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+						$user = $userResult->fetch_assoc();
 
 						echo "
 							<div id='loginL'>
@@ -594,8 +594,8 @@
 						
 						if($_SESSION['userID'] != 1)
 						{	
-							$ordersResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -611,8 +611,8 @@
 						}
 						else
 						{
-							$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -698,19 +698,19 @@
 					{
 						if($numbers > 1)
 						{
-							$newsResult = mysql_query("SELECT * FROM news ORDER BY id DESC LIMIT ".$start.", 10");
+							$newsResult = $mysqli->query("SELECT * FROM news ORDER BY id DESC LIMIT ".$start.", 10");
 						}
 						else
 						{
-							$newsResult = mysql_query("SELECT * FROM news ORDER BY id DESC");
+							$newsResult = $mysqli->query("SELECT * FROM news ORDER BY id DESC");
 						}
 					}
 					else
 					{
-						$newsResult = mysql_query("SELECT * FROM news WHERE date_dmy = '".$_REQUEST['date']."' ORDER BY id DESC");
+						$newsResult = $mysqli->query("SELECT * FROM news WHERE date_dmy = '".$_REQUEST['date']."' ORDER BY id DESC");
 					}
 
-					while($news = mysql_fetch_assoc($newsResult))
+					while($news = $newsResult->fetch_assoc())
 					{
 						$newsCount++;
 						$date = substr($news['date'], 0, 10);
@@ -737,8 +737,8 @@
 				}
 				else
 				{
-					$newsFullResult = mysql_query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
-					$newsFull = mysql_fetch_assoc($newsFullResult);
+					$newsFullResult = $mysqli->query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
+					$newsFull = $newsFullResult->fetch_assoc();
 					
 					$date = substr($newsFull['date'], 0, 10);
 					$time = substr($newsFull['date'], 11, 5);
@@ -775,8 +775,8 @@
 						<br /><br />
 					";
 					
-					$newsQuantityResult = mysql_query("SELECT COUNT(id) FROM news");
-					$newsQuantity = mysql_fetch_array($newsQuantityResult, MYSQL_NUM);
+					$newsQuantityResult = $mysqli->query("SELECT COUNT(id) FROM news");
+					$newsQuantity = $newsQuantityResult->fetch_array(MYSQLI_NUM);
 					
 					if($newsQuantity[0] > 1)
 					{
@@ -790,19 +790,19 @@
 					
 					if($newsQuantity[0] >= 3)
 					{
-						$maxIDResult = mysql_query("SELECT MAX(id) FROM news");
-						$maxID = mysql_fetch_array($maxIDResult, MYSQL_NUM);
+						$maxIDResult = $mysqli->query("SELECT MAX(id) FROM news");
+						$maxID = $maxIDResult->fetch_array(MYSQLI_NUM);
 						
-						$minIDResult = mysql_query("SELECT MIN(id) FROM news");
-						$minID = mysql_fetch_array($minIDResult, MYSQL_NUM);
+						$minIDResult = $mysqli->query("SELECT MIN(id) FROM news");
+						$minID = $minIDResult->fetch_array(MYSQLI_NUM);
 						
 						if($_REQUEST['id'] == $maxID[0])
 						{
-							$news1Result = mysql_query("SELECT * FROM news WHERE (id = (SELECT MAX(id) FROM news WHERE id < ".$_REQUEST['id']."))");
-							$news1 = mysql_fetch_assoc($news1Result);
+							$news1Result = $mysqli->query("SELECT * FROM news WHERE (id = (SELECT MAX(id) FROM news WHERE id < ".$_REQUEST['id']."))");
+							$news1 = $news1Result->fetch_assoc();
 							
-							$news2Result = mysql_query("SELECT * FROM news WHERE (id = (SELECT MAX(id) FROM news WHERE id < ".$news1['id']."))");
-							$news2 = mysql_fetch_assoc($news2Result);
+							$news2Result = $mysqli->query("SELECT * FROM news WHERE (id = (SELECT MAX(id) FROM news WHERE id < ".$news1['id']."))");
+							$news2 = $news2Result->fetch_assoc();
 							
 							echo "
 								<ul>
@@ -815,11 +815,11 @@
 						{
 							if($_REQUEST['id'] == $minID[0])
 							{
-								$news1Result = mysql_query("SELECT * FROM news WHERE (id = (SELECT MIN(id) FROM news WHERE id > ".$_REQUEST['id']."))");
-								$news1 = mysql_fetch_assoc($news1Result);
+								$news1Result = $mysqli->query("SELECT * FROM news WHERE (id = (SELECT MIN(id) FROM news WHERE id > ".$_REQUEST['id']."))");
+								$news1 = $news1Result->fetch_assoc();
 								
-								$news2Result = mysql_query("SELECT * FROM news WHERE (id = (SELECT MIN(id) FROM news WHERE id > ".$news1['id']."))");
-								$news2 = mysql_fetch_assoc($news2Result);
+								$news2Result = $mysqli->query("SELECT * FROM news WHERE (id = (SELECT MIN(id) FROM news WHERE id > ".$news1['id']."))");
+								$news2 = $news2Result->fetch_assoc();
 								
 								echo "
 								<ul>
@@ -830,11 +830,11 @@
 							}
 							else
 							{
-								$news1Result = mysql_query("SELECT * FROM news WHERE (id = (SELECT MIN(id) FROM news WHERE id > ".$_REQUEST['id']."))");
-								$news1 = mysql_fetch_assoc($news1Result);
+								$news1Result = $mysqli->query("SELECT * FROM news WHERE (id = (SELECT MIN(id) FROM news WHERE id > ".$_REQUEST['id']."))");
+								$news1 = $news1Result->fetch_assoc();
 								
-								$news2Result = mysql_query("SELECT * FROM news WHERE (id = (SELECT MAX(id) FROM news WHERE id < ".$_REQUEST['id']."))");
-								$news2 = mysql_fetch_assoc($news2Result);
+								$news2Result = $mysqli->query("SELECT * FROM news WHERE (id = (SELECT MAX(id) FROM news WHERE id < ".$_REQUEST['id']."))");
+								$news2 = $news2Result->fetch_assoc();
 								
 								echo "
 									<ul>
@@ -849,16 +849,16 @@
 					{
 						if($newsQuantity[0] == 2)
 						{
-							$maxIDResult = mysql_query("SELECT MAX(id) FROM news");
-							$maxID = mysql_fetch_array($maxIDResult, MYSQL_NUM);
+							$maxIDResult = $mysqli->query("SELECT MAX(id) FROM news");
+							$maxID = $maxIDResult->fetch_array(MYSQLI_NUM);
 							
-							$minIDResult = mysql_query("SELECT MIN(id) FROM news");
-							$minID = mysql_fetch_array($minIDResult, MYSQL_NUM);
+							$minIDResult = $mysqli->query("SELECT MIN(id) FROM news");
+							$minID = $minIDResult->fetch_array(MYSQLI_NUM);
 							
 							if($_REQUEST['id'] == $maxID[0])
 							{
-								$news1Result = mysql_query("SELECT * FROM news WHERE id = ".$minID[0]);
-								$news1 = mysql_fetch_assoc($news1Result);
+								$news1Result = $mysqli->query("SELECT * FROM news WHERE id = ".$minID[0]);
+								$news1 = $news1Result->fetch_assoc();
 
 								echo "
 									<ul>
@@ -868,8 +868,8 @@
 							}
 							else
 							{
-								$news1Result = mysql_query("SELECT * FROM news WHERE id = ".$maxID[0]);
-								$news1 = mysql_fetch_assoc($news1Result);
+								$news1Result = $mysqli->query("SELECT * FROM news WHERE id = ".$maxID[0]);
+								$news1 = $news1Result->fetch_assoc();
 
 								echo "
 									<ul>

@@ -11,8 +11,8 @@
 
 	if(!empty($_SESSION['id']))
 	{
-		$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_SESSION['id']."'");
-		if(mysql_num_rows($goodResult) > 0)
+		$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_SESSION['id']."'");
+		if(MYSQLI_NUM_rows($goodResult) > 0)
 		{
 			if(!empty($_POST['goodName']))
 			{
@@ -24,8 +24,8 @@
 						{
 							if(!empty($_POST['goodDescription']))
 							{
-								$codeCheckResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['code']."'");
-								$codeCheck = mysql_fetch_array($codeCheckResult, MYSQL_NUM);
+								$codeCheckResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['code']."'");
+								$codeCheck = $codeCheckResult->fetch_array(MYSQLI_NUM);
 
 								if($codeCheck[0] == 0)
 								{
@@ -45,9 +45,9 @@
 										$gs = 1;
 									}
 
-									if(mysql_query("UPDATE catalogue_new SET name = '".$name."', description = '".$description."', priority = '".$_POST['goodPosition']."', price = '".$_POST['goodPrice']."', code = '".$_POST['goodCode']."' WHERE id = '".$_SESSION['id']."'"))
+									if($mysqli->query("UPDATE catalogue_new SET name = '".$name."', description = '".$description."', priority = '".$_POST['goodPosition']."', price = '".$_POST['goodPrice']."', code = '".$_POST['goodCode']."' WHERE id = '".$_SESSION['id']."'"))
 									{
-										$good = mysql_fetch_array($goodResult);
+										$good = $goodResult->fetch_array();
 
 										if($good['priority'] != $_POST['goodPosition'])
 										{
@@ -55,11 +55,11 @@
 											{
 												if($good['priority'] >= $_POST['goodPosition'])
 												{
-													$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."' AND priority <= '".$good['priority']."' AND priority >= '".$_POST['goodPosition']."' ORDER BY priority");
+													$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."' AND priority <= '".$good['priority']."' AND priority >= '".$_POST['goodPosition']."' ORDER BY priority");
 												}
 												else
 												{
-													$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."' AND priority <= '".$_POST['goodPosition']."' AND priority >= '".$good['priority']."' ORDER BY priority");
+													$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."' AND priority <= '".$_POST['goodPosition']."' AND priority >= '".$good['priority']."' ORDER BY priority");
 												}
 												
 											}
@@ -67,20 +67,20 @@
 											{
 												if($good['priority'] >= $_POST['goodPosition'])
 												{
-													$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."' AND priority <= '".$good['priority']."' AND priority >= '".$_POST['goodPosition']."' ORDER BY priority");
+													$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."' AND priority <= '".$good['priority']."' AND priority >= '".$_POST['goodPosition']."' ORDER BY priority");
 												}
 												else
 												{
-													$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."' AND priority <= '".$_POST['goodPosition']."' AND priority >= '".$good['priority']."' ORDER BY priority");
+													$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."' AND priority <= '".$_POST['goodPosition']."' AND priority >= '".$good['priority']."' ORDER BY priority");
 												}
 											}
 
-											while($goods = mysql_fetch_assoc($goodsResult))
+											while($goods = $goodsResult->fetch_assoc())
 											{
 												if($goods['id'] != $good['id'])
 												{
 													$newPriority = $goods['priority'] + 1;
-													mysql_query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
+													$mysqli->query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
 												}
 											}
 										}
@@ -124,7 +124,7 @@
 													$smallPhootoUpload = $smallPhootoUploadDir.$smallPhotoName.basename($_FILES['goodPhoto']['name']);
 													$smallPhotoFinalName = $smallPhotoName.basename($_FILES['goodPhoto']['name']);
 
-													if(mysql_query("UPDATE catalogue_new SET picture = '".$bigPhotoFinalName."', small = '".$smallPhotoFinalName."' WHERE id = '".$_SESSION['id']."'"))
+													if($mysqli->query("UPDATE catalogue_new SET picture = '".$bigPhotoFinalName."', small = '".$smallPhotoFinalName."' WHERE id = '".$_SESSION['id']."'"))
 													{
 														unlink("../../pictures/catalogue/big/".$good['picture']);
 														unlink("../../pictures/catalogue/small/".$good['small']);
@@ -210,7 +210,7 @@
 													$sketchUpload = $sketchUploadDir.$sketchName.basename($_FILES['goodSketch']['name']);
 													$sketchFinalName = $sketchName.basename($_FILES['sketchName']['name']);
 
-													if(mysql_query("UPDATE catalogue_new SET sketch = '".$sketchFinalName."' WHERE id = '".$_SESSION['id']."'"))
+													if($mysqli->query("UPDATE catalogue_new SET sketch = '".$sketchFinalName."' WHERE id = '".$_SESSION['id']."'"))
 													{
 														if(!empty($good['sketch']))
 														{

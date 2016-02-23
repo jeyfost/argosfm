@@ -10,8 +10,8 @@
 	{
 		if(!empty($_POST['userPassword']))
 		{
-			$loginResult = mysql_query("SELECT * FROM users WHERE login = '".$_POST['userLogin']."'");
-			$login = mysql_fetch_assoc($loginResult);
+			$loginResult = $mysqli->query("SELECT * FROM users WHERE login = '".$_POST['userLogin']."'");
+			$login = $loginResult->fetch_assoc();
 			
 			if(!empty($login))
 			{

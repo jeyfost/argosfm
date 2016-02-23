@@ -7,8 +7,8 @@
 	{
 		if(!empty($_POST['userPerson']))
 		{
-			$personResult = mysql_query("SELECT COUNT(id) FROM users WHERE person = '".$_POST['userPerson']."'");
-			$person = mysql_fetch_array($personResult, MYSQL_NUM);
+			$personResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE person = '".$_POST['userPerson']."'");
+			$person = $personResult->fetch_array(MYSQLI_NUM);
 
 			if($person[0] == 0)
 			{
@@ -16,8 +16,8 @@
 			}
 			else
 			{
-				$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['user']."'");
-				$user = mysql_fetch_assoc($userResult);
+				$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['user']."'");
+				$user = $userResult->fetch_assoc();
 
 				if($user['person'] == $_POST['userPerson'])
 				{

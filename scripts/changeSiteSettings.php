@@ -25,7 +25,7 @@
 		{
 			if(is_numeric($_POST['exchangeRate']))
 			{
-				if(mysql_query("UPDATE currency SET rate='".$_POST['exchangeRate']."' WHERE code = 'usd'"))
+				if($mysqli->query("UPDATE currency SET rate='".$_POST['exchangeRate']."' WHERE code = 'usd'"))
 				{
 					$_SESSION['exchange'] = 'ok';
 					header("Location: ../settings.php?s=3");

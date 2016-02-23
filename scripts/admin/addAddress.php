@@ -11,8 +11,8 @@
 			{
 				if(!empty($_POST['newName']))
 				{
-					$addressResult = mysql_query("SELECT * FROM mail WHERE email = '".$_POST['newAddress']."'");
-					if(mysql_num_rows($addressResult) == 0)
+					$addressResult = $mysqli->query("SELECT * FROM mail WHERE email = '".$_POST['newAddress']."'");
+					if(MYSQLI_NUM_rows($addressResult) == 0)
 					{
 						$hash = "";
 
@@ -26,7 +26,7 @@
 
 						$name = strtolower($_POST['newAddress']);
 
-						if(mysql_query("INSERT INTO mail (email, name, hash, in_send) VALUES ('".$name."', '".htmlspecialchars($_POST['newName'])."', '".$hash."', '1')"))
+						if($mysqli->query("INSERT INTO mail (email, name, hash, in_send) VALUES ('".$name."', '".htmlspecialchars($_POST['newName'])."', '".$hash."', '1')"))
 						{
 							$_SESSION['addAddress'] = "ok";
 							

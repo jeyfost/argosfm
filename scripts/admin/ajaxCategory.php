@@ -8,8 +8,8 @@
 		$name = iconv('UTF-8', 'windows-1251', htmlspecialchars($_POST['categoryName']));
 		if(strlen($name) > 0)
 		{
-			$categoryResult = mysql_query("SELECT COUNT(id) FROM categories_new WHERE name = '".$name."'");
-			$category = mysql_fetch_array($categoryResult, MYSQL_NUM);
+			$categoryResult = $mysqli->query("SELECT COUNT(id) FROM categories_new WHERE name = '".$name."'");
+			$category = $categoryResult->fetch_array(MYSQLI_NUM);
 
 			if($category[0] == 0)
 			{

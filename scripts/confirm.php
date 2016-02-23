@@ -16,12 +16,12 @@
 	}
 	else
 	{
-		$userResult = mysql_query("SELECT * FROM users WHERE hash = '".$_REQUEST['h']."'");
-		$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+		$userResult = $mysqli->query("SELECT * FROM users WHERE hash = '".$_REQUEST['h']."'");
+		$user = $userResult->fetch_assoc();
 		
 		if(!empty($user))
 		{
-			if(mysql_query("UPDATE users SET activated = 1 WHERE hash = '".$_REQUEST['h']."'"))
+			if($mysqli->query("UPDATE users SET activated = 1 WHERE hash = '".$_REQUEST['h']."'"))
 			{
 				$_SESSION['activation'] = 'ok';
 				if(isset($_SESSION['last_page']))

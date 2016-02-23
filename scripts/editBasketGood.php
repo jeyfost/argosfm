@@ -19,12 +19,12 @@
 		{
 			include('connect.php');
 			
-			$goodResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' AND status = '0'");
-			$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
+			$goodResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' AND status = '0'");
+			$good = $goodResult->fetch_assoc();
 			
 			if($good['quantity'] != $_REQUEST['q'])
 			{
-				if(mysql_query("UPDATE basket SET quantity = '".$_REQUEST['q']."' WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."'"))
+				if($mysqli->query("UPDATE basket SET quantity = '".$_REQUEST['q']."' WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."'"))
 				{
 					echo "Количество изменено.";
 				}

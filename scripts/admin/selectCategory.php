@@ -12,8 +12,8 @@
 	{
 		if($_POST['categorySelect'] != '')
 		{
-			$subcategoriesCountResult = mysql_query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_POST['categorySelect']."'");
-			$subcategoriesCount = mysql_fetch_array($subcategoriesCountResult, MYSQL_NUM);
+			$subcategoriesCountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_POST['categorySelect']."'");
+			$subcategoriesCount = $subcategoriesCountResult->fetch_array(MYSQLI_NUM);
 
 			if($subcategoriesCount[0] > 1)
 			{
@@ -21,8 +21,8 @@
 			}
 			else
 			{
-				$subcategoryResult = mysql_query("SELECT id FROM subcategories_new WHERE category = '".$_POST['categorySelect']."'");
-				$subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+				$subcategoryResult = $mysqli->query("SELECT id FROM subcategories_new WHERE category = '".$_POST['categorySelect']."'");
+				$subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 
 				header("Location: ../../admin/admin.php?section=".$_SESSION['section']."&action=".$_SESSION['action']."&type=".$_SESSION['type']."&c=".$_POST['categorySelect']."&s=".$subcategory[0]);
 			}

@@ -9,8 +9,8 @@
 	
 	include('connect.php');
 	
-	$categoryResult = mysql_query("SELECT * FROM categories_new WHERE id = '".$_SESSION['cId']."'");
-	$category = mysql_fetch_array($categoryResult, MYSQL_ASSOC);
+	$categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE id = '".$_SESSION['cId']."'");
+	$category = $categoryResult->fetch_assoc();
 	
 	$errors = 0;
 	$actions = 0;
@@ -19,7 +19,7 @@
 	{
 		if($category['name'] != htmlspecialchars($_POST['categoryName'], ENT_QUOTES))
 		{
-			if(!mysql_query("UPDATE categories_new SET name = '".htmlspecialchars($_POST['categoryName'], ENT_QUOTES)."' WHERE id = '".$_SESSION['cId']."'"))
+			if(!$mysqli->query("UPDATE categories_new SET name = '".htmlspecialchars($_POST['categoryName'], ENT_QUOTES)."' WHERE id = '".$_SESSION['cId']."'"))
 			{
 				$errors++;
 			}
@@ -35,7 +35,7 @@
 		$tmpName = $_FILES['categoryBlackImage']['tmp_name'];
 		$upload = $uploadDir.$name;
 		
-		if(!mysql_query("UPDATE categories_new SET picture = '".$name."' WHERE id = '".$_SESSION['cId']."'"))
+		if(!$mysqli->query("UPDATE categories_new SET picture = '".$name."' WHERE id = '".$_SESSION['cId']."'"))
 		{
 			$errors++;
 		}
@@ -53,7 +53,7 @@
 		$tmpName = $_FILES['categoryRedImage']['tmp_name'];
 		$upload = $uploadDir.$name;
 		
-		if(!mysql_query("UPDATE categories_new SET picture_red = '".$name."' WHERE id = '".$_SESSION['cId']."'"))
+		if(!$mysqli->query("UPDATE categories_new SET picture_red = '".$name."' WHERE id = '".$_SESSION['cId']."'"))
 		{
 			$errors++;
 		}

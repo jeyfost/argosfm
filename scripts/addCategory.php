@@ -25,8 +25,8 @@
 				
 				$max = 0;
 				
-				$maxIdResult = mysql_query("SELECT id FROM categories_new");
-				while($maxId = mysql_fetch_array($maxIdResult, MYSQL_NUM))
+				$maxIdResult = $mysqli->query("SELECT id FROM categories_new");
+				while($maxId = $maxIdResult->fetch_array(MYSQLI_NUM))
 				{
 					if($maxId[0] > $max)
 					{
@@ -36,7 +36,7 @@
 				
 				$max++;
 				
-				if($addResult = mysql_query("INSERT INTO categories_new (id, type, name, picture, picture_red) VALUES ('".$max."', '".$_SESSION['goodsType']."', '".htmlspecialchars($_POST['categoryName'], ENT_QUOTES)."', '".$blackName."', '".$redName."')"))
+				if($addResult = $mysqli->query("INSERT INTO categories_new (id, type, name, picture, picture_red) VALUES ('".$max."', '".$_SESSION['goodsType']."', '".htmlspecialchars($_POST['categoryName'], ENT_QUOTES)."', '".$blackName."', '".$redName."')"))
 				{
 					move_uploaded_file($blackTmpName, $blackUpload);
 					move_uploaded_file($redTmpName, $redUpload);
@@ -44,8 +44,8 @@
 					if(isset($_POST['categoryCheckbox']) and $_POST['categoryCheckbox'] == 'Yes')
 					{
 						$max1000 = 1000;
-						$maxId1000Result = mysql_query("SELECT id FROM subcategories_new WHERE id >= 1000");
-						while($maxId1000 = mysql_fetch_array($maxId1000Result, MYSQL_NUM))
+						$maxId1000Result = $mysqli->query("SELECT id FROM subcategories_new WHERE id >= 1000");
+						while($maxId1000 = $maxId1000Result->fetch_array(MYSQLI_NUM))
 						{
 							if($maxId1000[0] > $max1000)
 							{
@@ -55,7 +55,7 @@
 						
 						$max1000++;
 						
-						if($addSResult = mysql_query("INSERT INTO subcategories_new (id, type, category, name) VALUES ('".$max1000."', '".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".htmlspecialchars($_POST['categoryName'], ENT_QUOTES)."')"))
+						if($addSResult = $mysqli->query("INSERT INTO subcategories_new (id, type, category, name) VALUES ('".$max1000."', '".$_SESSION['goodsType']."', '".$_SESSION['cId']."', '".htmlspecialchars($_POST['categoryName'], ENT_QUOTES)."')"))
 						{
 							$_SESSION['result'] = "add_category_empty_success";
 							

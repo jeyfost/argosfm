@@ -16,8 +16,8 @@
 	
 	include('connect.php');
 	
-	$orderInfoResult = mysql_query("SELECT * FROM orders_date WHERE id='".$_REQUEST['id']."'");
-	$orderInfo = mysql_fetch_array($orderInfoResult, MYSQL_ASSOC);
+	$orderInfoResult = $mysqli->query("SELECT * FROM orders_date WHERE id='".$_REQUEST['id']."'");
+	$orderInfo = $orderInfoResult->fetch_assoc();
 	
 	if(empty($orderInfo))
 	{
@@ -32,7 +32,7 @@
 	}
 	else
 	{
-		if(mysql_query("DELETE FROM orders_date WHERE id = '".$_REQUEST['id']."'") and mysql_query("DELETE FROM orders WHERE order_id = '".$orderInfo['id']."'"))
+		if($mysqli->query("DELETE FROM orders_date WHERE id = '".$_REQUEST['id']."'") and $mysqli->query("DELETE FROM orders WHERE order_id = '".$orderInfo['id']."'"))
 		{
 			echo "<span class='basicGreen'>Заказ успешно удалён!</span><br /><br />";
 		}
@@ -41,12 +41,12 @@
 			echo "<span class='basicRed'>При удалении заказа произошла ошибка. Повторите попытку.</span><br /><br />";
 		}
 		
-		$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0' ORDER BY date");
-		while($orders = mysql_fetch_array($ordersResult, MYSQL_ASSOC))
+		$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0' ORDER BY date");
+		while($orders = $ordersResult->fetch_assoc())
 		{
 			$number++;	
-			$customerResult = mysql_query("SELECT * FROM users WHERE id = '".$orders['user_id']."'");
-			$customer = mysql_fetch_assoc($customerResult);
+			$customerResult = $mysqli->query("SELECT * FROM users WHERE id = '".$orders['user_id']."'");
+			$customer = $customerResult->fetch_assoc();
 			$info = $customer['person']."; ".$customer['phone'];
 			if(!empty($customer['organisation']))
 			{

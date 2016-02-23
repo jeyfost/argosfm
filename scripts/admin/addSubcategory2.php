@@ -14,15 +14,15 @@
 		{
 			$name = htmlspecialchars($_POST['subcategory2Name'], ENT_QUOTES);
 
-			$sMaxIDResult = mysql_query("SELECT MAX(id) FROM subcategories2");
-			$sMaxID = mysql_fetch_array($sMaxIDResult, MYSQL_NUM);
+			$sMaxIDResult = $mysqli->query("SELECT MAX(id) FROM subcategories2");
+			$sMaxID = $sMaxIDResult->fetch_array(MYSQLI_NUM);
 
 			$id = 0;
 
 			for($i = 1; $i < $sMaxID[0]; $i++)
 			{
-				$idCheckResult = mysql_query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
-				if(mysql_num_rows($idCheckResult) == 0)
+				$idCheckResult = $mysqli->query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
+				if(MYSQLI_NUM_rows($idCheckResult) == 0)
 				{
 					$id = $i;
 				}
@@ -33,7 +33,7 @@
 				$id = $sMaxID[0] + 1;
 			}
 
-			if(mysql_query("INSERT INTO subcategories2 (id, subcategory, name) VALUES ('".$id."', '".$_SESSION['s']."', '".$name."')"))
+			if($mysqli->query("INSERT INTO subcategories2 (id, subcategory, name) VALUES ('".$id."', '".$_SESSION['s']."', '".$name."')"))
 			{
 				$_SESSION['addSubcategory2'] = "ok";
 

@@ -18,12 +18,12 @@
 	{
 		include('connect.php');
 		
-		$goodResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' AND status = '0'");
-		$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
+		$goodResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' AND status = '0'");
+		$good = $goodResult->fetch_assoc();
 		
 		if(empty($good))
 		{
-			if(mysql_query("INSERT INTO basket (user_id, good_id, quantity, status) VALUES ('".$_SESSION['userID']."', '".$_REQUEST['id']."', '".$_REQUEST['q']."', '0')"))
+			if($mysqli->query("INSERT INTO basket (user_id, good_id, quantity, status) VALUES ('".$_SESSION['userID']."', '".$_REQUEST['id']."', '".$_REQUEST['q']."', '0')"))
 			{
 				echo "Товар добавлен в <a href='order.php' class='noBorder' target='_blank'><span class='catalogueItemTextDecorated'>корзину</span></a>.";
 			}
@@ -34,7 +34,7 @@
 		}
 		else
 		{
-			if(mysql_query("UPDATE basket SET quantity = '".($good['quantity'] + $_REQUEST['q'])."' WHERE id = '".$good['id']."'"))
+			if($mysqli->query("UPDATE basket SET quantity = '".($good['quantity'] + $_REQUEST['q'])."' WHERE id = '".$good['id']."'"))
 			{
 				echo "Количество данного товара в <a href='order.php' class='noBorder' target='_blank'><span class='catalogueItemTextDecorated'>корзине</span></a> пополнено.";
 			}

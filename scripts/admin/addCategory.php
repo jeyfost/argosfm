@@ -14,9 +14,9 @@
 		{
 			$name = htmlspecialchars($_POST['categoryName'], ENT_QUOTES);
 
-			$categoryResult = mysql_query("SELECT * FROM categories_new WHERE name = '".$name."'");
+			$categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE name = '".$name."'");
 			
-			if(mysql_num_rows($categoryResult) == 0)
+			if(MYSQLI_NUM_rows($categoryResult) == 0)
 			{
 				if(!empty($_FILES['categoryRedPicture']) and $_FILES['categoryRedPicture']['error'] == 0 and substr($_FILES['categoryRedPicture']['type'], 0, 5) == "image")
 				{
@@ -30,19 +30,19 @@
 						$blackUpload = $uploadDir.$blackName;
 						$redUpload = $uploadDir.$redName;
 
-						if(mysql_query("INSERT INTO categories_new (type, name, picture, picture_red) VALUES ('".$_SESSION['type']."', '".$name."', '".$blackName."', '".$redName."')"))
+						if($mysqli->query("INSERT INTO categories_new (type, name, picture, picture_red) VALUES ('".$_SESSION['type']."', '".$name."', '".$blackName."', '".$redName."')"))
 						{
 							if(isset($_POST['categoryCheckbox']) and $_POST['categoryCheckbox'] == '1')
 							{
-								$max1000IDResult = mysql_query("SELECT MAX(id) FROM subcategories_new WHERE id >= 1000");
-								$max1000ID = mysql_fetch_array($max1000IDResult, MYSQL_NUM);
+								$max1000IDResult = $mysqli->query("SELECT MAX(id) FROM subcategories_new WHERE id >= 1000");
+								$max1000ID = $max1000IDResult->fetch_array(MYSQLI_NUM);
 
 								$sID = $max1000ID[0] + 1;
 
-								$idResult = mysql_query("SELECT id FROM categories_new WHERE name = '".$name."'");
-								$id = mysql_fetch_array($idResult, MYSQL_NUM);
+								$idResult = $mysqli->query("SELECT id FROM categories_new WHERE name = '".$name."'");
+								$id = $idResult->fetch_array(MYSQLI_NUM);
 
-								if(mysql_query("INSERT INTO subcategories_new (id, type, category, name) VALUES('".$sID."', '".$_SESSION['type']."', '".$id[0]."', '".$name."')"))
+								if($mysqli->query("INSERT INTO subcategories_new (id, type, category, name) VALUES('".$sID."', '".$_SESSION['type']."', '".$id[0]."', '".$name."')"))
 								{
 									move_uploaded_file($blackTmpName, $blackUpload);
 									move_uploaded_file($redTmpName, $redUpload);

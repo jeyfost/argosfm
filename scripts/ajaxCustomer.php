@@ -2,8 +2,8 @@
 
 	include('connect.php');
 
-	$customerResult = mysql_query("SELECT * FROM users WHERE id = '".$_POST['id']."'");
-	$customer = mysql_fetch_assoc($customerResult);
+	$customerResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_POST['id']."'");
+	$customer = $customerResult->fetch_assoc();
 
 	echo "
 		<center>

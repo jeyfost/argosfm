@@ -9,14 +9,14 @@
 	
 	include('connect.php');
 	
-	$subcategory2Result = mysql_query("SELECT * FROM subcategories2 WHERE id = '".$_SESSION['s2Id']."'");
-	$subcategory2 = mysql_fetch_array($subcategory2Result, MYSQL_ASSOC);
+	$subcategory2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE id = '".$_SESSION['s2Id']."'");
+	$subcategory2 = $subcategory2Result->fetch_assoc();
 	
 	if(!empty($_POST['subcategory2Name']))
 	{
 		if(htmlspecialchars($_POST['subcategory2Name'], ENT_QUOTES) != $subcategory2['name'])
 		{
-			if(mysql_query("UPDATE subcategories2 SET name = '".htmlspecialchars($_POST['subcategory2Name'], ENT_QUOTES)."' WHERE id = '".$_SESSION['s2Id']."'"))
+			if($mysqli->query("UPDATE subcategories2 SET name = '".htmlspecialchars($_POST['subcategory2Name'], ENT_QUOTES)."' WHERE id = '".$_SESSION['s2Id']."'"))
 			{
 				$_SESSION['result'] = "edit_subcategory2_success";
 				

@@ -29,32 +29,32 @@
 			}
 
 			$name = htmlspecialchars($_POST['categoryName'], ENT_QUOTES);
-			$categoryResult = mysql_query("SELECT * FROM categories_new WHERE name = '".$name."'");
+			$categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE name = '".$name."'");
 
 			$status = "";
 			$state = "noChanges";
 
-			if(mysql_num_rows($categoryResult) == 0)
+			if(MYSQLI_NUM_rows($categoryResult) == 0)
 			{
 				$state = "name";
 
-				if(mysql_query("UPDATE categories_new SET name = '".$name."' WHERE id = '".$_SESSION['c']."'"))
+				if($mysqli->query("UPDATE categories_new SET name = '".$name."' WHERE id = '".$_SESSION['c']."'"))
 				{
 					$status .= "a";
 
-					$subcategoriesCountResult = mysql_query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
-					$subcategoriesCount = mysql_fetch_array($subcategoriesCountResult, MYSQL_NUM);
+					$subcategoriesCountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
+					$subcategoriesCount = $subcategoriesCountResult->fetch_array(MYSQLI_NUM);
 
 					if($subcategoriesCount[0] == 1)
 					{
-						$subcategoryResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
-						$subcategory = mysql_fetch_assoc($subcategoryResult);
+						$subcategoryResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
+						$subcategory = $subcategoryResult->fetch_assoc();
 
 						if($subcategory['id'] >= 1000)
 						{
 							$state = "subcategory";
 
-							if(mysql_query("UPDATE subcategories_new SET name = '".$name."' WHERE category = '".$_SESSION['c']."'"))
+							if($mysqli->query("UPDATE subcategories_new SET name = '".$name."' WHERE category = '".$_SESSION['c']."'"))
 							{
 								$status .= "b";
 							}
@@ -85,15 +85,15 @@
 					$state = "subcategory+red";
 				}
 
-				$pictureResult = mysql_query("SELECT picture_red FROM categories_new WHERE id = '".$_SESSION['c']."'");
-				$picture = mysql_fetch_array($pictureResult, MYSQL_NUM);
+				$pictureResult = $mysqli->query("SELECT picture_red FROM categories_new WHERE id = '".$_SESSION['c']."'");
+				$picture = $pictureResult->fetch_array(MYSQLI_NUM);
 
 				$redName = basename($_FILES['categoryRedPicture']['name']);
 				$uploadDir = "../../pictures/icons/";
 				$redTmpName = $_FILES['categoryRedPicture']['tmp_name'];
 				$redUpload = $uploadDir.$redName;
 
-				if(mysql_query("UPDATE categories_new SET picture_red = '".$redName."' WHERE id = '".$_SESSION['c']."'"))
+				if($mysqli->query("UPDATE categories_new SET picture_red = '".$redName."' WHERE id = '".$_SESSION['c']."'"))
 				{
 					if($picture[0] != $redName)
 					{
@@ -123,15 +123,15 @@
 					$state == "subcategory+images";
 				}
 
-				$pictureResult = mysql_query("SELECT picture FROM categories_new WHERE id = '".$_SESSION['c']."'");
-				$picture = mysql_fetch_array($pictureResult, MYSQL_NUM);
+				$pictureResult = $mysqli->query("SELECT picture FROM categories_new WHERE id = '".$_SESSION['c']."'");
+				$picture = $pictureResult->fetch_array(MYSQLI_NUM);
 
 				$blackName = basename($_FILES['categoryBlackPicture']['name']);
 				$uploadDir = "../../pictures/icons/";
 				$blackTmpName = $_FILES['categoryBlackPicture']['tmp_name'];
 				$blackUpload = $uploadDir.$blackName;
 
-				if(mysql_query("UPDATE categories_new SET picture = '".$blackName."' WHERE id = '".$_SESSION['c']."'"))
+				if($mysqli->query("UPDATE categories_new SET picture = '".$blackName."' WHERE id = '".$_SESSION['c']."'"))
 				{
 					if($picture[0] != $blackName)
 					{

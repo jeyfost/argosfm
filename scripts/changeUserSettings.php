@@ -3,8 +3,8 @@
 	session_start();
 	include('connect.php');
 	
-	$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-	$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+	$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+	$user = $userResult->fetch_assoc();
 	
 	if(!empty($user['organisation']))
 	{
@@ -14,7 +14,7 @@
 			$person = trim(htmlspecialchars($_POST['settingsName']));
 			$phone = trim(htmlspecialchars($_POST['settingsPhone']));
 			
-			if(mysql_query("UPDATE users SET organisation = '".$organisation."', person = '".$person."', phone = '".$person."' WHERE id = '".$_SESSION['userID']."'"))
+			if($mysqli->query("UPDATE users SET organisation = '".$organisation."', person = '".$person."', phone = '".$person."' WHERE id = '".$_SESSION['userID']."'"))
 			{
 				$_SESSION['settingsChange'] = 'ok';
 				header("Location: ../settings.php?s=1");
@@ -39,7 +39,7 @@
 			$person = trim(htmlspecialchars($_POST['settingsName']));
 			$phone = trim(htmlspecialchars($_POST['settingsPhone']));
 			
-			if(mysql_query("UPDATE users SET person = '".$person."', phone = '".$person."' WHERE id = '".$_SESSION['userID']."'"))
+			if($mysqli->query("UPDATE users SET person = '".$person."', phone = '".$person."' WHERE id = '".$_SESSION['userID']."'"))
 			{
 				$_SESSION['settingsChange'] = 'ok';
 				header("Location: ../settings.php?s=1");

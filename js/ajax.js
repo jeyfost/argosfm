@@ -163,7 +163,7 @@ function showCustomer(id) {
 		url: 'scripts/ajaxCustomer.php',
 		data: {"id": id},
 		success: function(response) {
-			$('#mailTextBlock').html('<span class="admLabel">' + response + '</span><br /><br /><span class="basicRed" style="border-bottom: 1px dotted #df4e47; cursor: pointer; float: right;" onclick="hideCustomer()">�������</span>');
+			$('#mailTextBlock').html('<span class="admLabel">' + response + '</span><br /><br /><span class="basicRed" style="border-bottom: 1px dotted #df4e47; cursor: pointer; float: right;" onclick="hideCustomer()">[x]</span>');
 			$('#mailTextBlock').css('z-index', '100');
 			$('#mailTextBlock').css('display', 'block');
 			$('#mailTextBlock').css('opacity', '1');

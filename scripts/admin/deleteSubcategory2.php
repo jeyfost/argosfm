@@ -12,8 +12,8 @@
 	{
 		if(isset($_POST['subcategory2DeleteCheckbox']) and $_POST['subcategory2DeleteCheckbox'] == 1)
 		{
-			$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
-			while($goods = mysql_fetch_assoc($goodsResult))
+			$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
+			while($goods = $goodsResult->fetch_assoc())
 			{
 				if(!empty($goods['sketch']))
 				{
@@ -24,9 +24,9 @@
 				unlink("../../pictures/catalogue/big/".$goods['picture']);
 			}
 
-			if(mysql_query("DELETE FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'"))
+			if($mysqli->query("DELETE FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'"))
 			{
-				if(mysql_query("DELETE FROM subcategories2 WHERE id = '".$_SESSION['s2']."'"))
+				if($mysqli->query("DELETE FROM subcategories2 WHERE id = '".$_SESSION['s2']."'"))
 				{
 					$_SESSION['subcategory2Delete'] = "ok";
 
@@ -48,7 +48,7 @@
 		}
 		else
 		{
-			if(mysql_query("DELETE FROM subcategories2 WHERE id = '".$_SESSION['s2']."'"))
+			if($mysqli->query("DELETE FROM subcategories2 WHERE id = '".$_SESSION['s2']."'"))
 			{
 				$_SESSION['subcategory2Delete'] = "ok";
 

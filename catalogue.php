@@ -25,8 +25,8 @@
 		}
 		else
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+			$user = $userResult->fetch_assoc();
 			setcookie("argosfm_login", $user['login'], time()+60*60*24*30*12, '/');
 			setcookie("argosfm_password", $user['password'], time()+60*60*24*30*12, '/');
 		}
@@ -35,8 +35,8 @@
 	{
 		if(isset($_COOKIE['argosfm_login']) and isset($_COOKIE['argosfm_password']) and !empty($_COOKIE['argosfm_login']) and !empty($_COOKIE['argosfm_password']))
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE login = '".$_COOKIE['argosfm_login']."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE login = '".$_COOKIE['argosfm_login']."'");
+			$user = $userResult->fetch_assoc();
 			
 			if(!empty($user) and $user['password'] == $_COOKIE['argosfm_password'])
 			{
@@ -60,8 +60,8 @@
 	
 	if(!empty($_REQUEST['category']))
 	{
-		$categoryResult = mysql_query("SELECT MAX(id) FROM categories_new");
-		$category = mysql_fetch_array($categoryResult, MYSQL_NUM);
+		$categoryResult = $mysqli->query("SELECT MAX(id) FROM categories_new");
+		$category = $categoryResult->fetch_array(MYSQLI_NUM);
 		
 		if($_REQUEST['category'] > $category[0] or $_REQUEST['category'] < 1 or !is_numeric($_REQUEST['category']))
 		{
@@ -114,26 +114,26 @@
 		}
 	}
 	
-	$c_result = mysql_query("SELECT MAX(id) FROM categories_new");
-	$c = mysql_fetch_array($c_result, MYSQL_NUM);
+	$c_result = $mysqli->query("SELECT MAX(id) FROM categories_new");
+	$c = $c_result->fetch_array(MYSQLI_NUM);
 	
 	if(!empty($_REQUEST['category']) and ($_REQUEST['c'] > $c[0] or $_REQUEST['category'] < 1))
 	{
 		header("Location: catalogue.php");	
 	}
 	
-	$s_result = mysql_query("SELECT MAX(id) FROM subcategories_new");
-	$s = mysql_fetch_array($s_result, MYSQL_NUM);
+	$s_result = $mysqli->query("SELECT MAX(id) FROM subcategories_new");
+	$s = $s_result->fetch_array(MYSQLI_NUM);
 		
 	if(!empty($_REQUEST['category']) and empty($_REQUEST['subcategory']))
 	{
-		$sCountResult = mysql_query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_REQUEST['category']."'");
-		$sCount = mysql_fetch_array($sCountResult, MYSQL_NUM);
+		$sCountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_REQUEST['category']."'");
+		$sCount = $sCountResult->fetch_array(MYSQLI_NUM);
 
 		if($sCount[0] == 1)
 		{
-			$subcategoryResult = mysql_query("SELECT id FROM subcategories_new WHERE category = '".$_REQUEST['category']."'");
-			$subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+			$subcategoryResult = $mysqli->query("SELECT id FROM subcategories_new WHERE category = '".$_REQUEST['category']."'");
+			$subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 
 			if($subcategory[0] >= 1000)
 			{
@@ -149,8 +149,8 @@
 			header("Location: catalogue.php?p=1");
 		}
 		
-		$quantity_result = mysql_query("SELECT COUNT(id) FROM catalogue_new");
-		$quantity = mysql_fetch_array($quantity_result, MYSQL_NUM);
+		$quantity_result = $mysqli->query("SELECT COUNT(id) FROM catalogue_new");
+		$quantity = $quantity_result->fetch_array(MYSQLI_NUM);
 									
 		if($quantity[0] > 10)
 		{
@@ -180,8 +180,8 @@
 				header("Location: catalogue.php?type=".$_REQUEST['type']."&p=1");
 			}
 			
-			$quantity_result = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE type = '".$_REQUEST['type']."'");
-			$quantity = mysql_fetch_array($quantity_result, MYSQL_NUM);
+			$quantity_result = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE type = '".$_REQUEST['type']."'");
+			$quantity = $quantity_result->fetch_array(MYSQLI_NUM);
 										
 			if($quantity[0] > 10)
 			{
@@ -211,8 +211,8 @@
 					header("Location: catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&p=1");
 				}
 				
-				$quantity_result = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE category = '".$_REQUEST['category']."'");
-				$quantity = mysql_fetch_array($quantity_result, MYSQL_NUM);
+				$quantity_result = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE category = '".$_REQUEST['category']."'");
+				$quantity = $quantity_result->fetch_array(MYSQLI_NUM);
 											
 				if($quantity[0] > 10)
 				{
@@ -242,8 +242,8 @@
 						header("Location: catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&p=1");
 					}
 					
-					$quantity_result = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['subcategory']."'");
-					$quantity = mysql_fetch_array($quantity_result, MYSQL_NUM);
+					$quantity_result = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['subcategory']."'");
+					$quantity = $quantity_result->fetch_array(MYSQLI_NUM);
 												
 					if($quantity[0] > 10)
 					{
@@ -271,8 +271,8 @@
 						header("Location: catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$_REQUEST['subcategory2']."&p=1");
 					}
 					
-					$quantity_result = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['subcategory2']."'");
-					$quantity = mysql_fetch_array($quantity_result, MYSQL_NUM);
+					$quantity_result = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['subcategory2']."'");
+					$quantity = $quantity_result->fetch_array(MYSQLI_NUM);
 												
 					if($quantity[0] > 10)
 					{
@@ -297,10 +297,10 @@
 		}
 	}
 	
-	mysql_set_charset("cp1251");
+	$mysqli->set_charset("cp1251");
 	
-	$rateResult = mysql_query("SELECT rate FROM currency WHERE code = 'usd'");
-	$rate = mysql_fetch_array($rateResult, MYSQL_NUM);
+	$rateResult = $mysqli->query("SELECT rate FROM currency WHERE code = 'usd'");
+	$rate = $rateResult->fetch_array(MYSQLI_NUM);
 
 ?>
 
@@ -358,13 +358,13 @@
     <?php
     	if(!isset($_SESSION['background']))
 		{
-			$BGCountResult = mysql_query("SELECT COUNT(id) FROM background");
-			$BGCount = mysql_fetch_array($BGCountResult, MYSQL_NUM);
+			$BGCountResult = $mysqli->query("SELECT COUNT(id) FROM background");
+			$BGCount = $BGCountResult->fetch_array(MYSQLI_NUM);
 
 			$index = rand(1, $BGCount[0]);
 
-			$backgroundResult = mysql_query("SELECT photo FROM background WHERE id = '".$index."'");
-			$background = mysql_fetch_array($backgroundResult, MYSQL_NUM);
+			$backgroundResult = $mysqli->query("SELECT photo FROM background WHERE id = '".$index."'");
+			$background = $backgroundResult->fetch_array(MYSQLI_NUM);
 
 			$_SESSION['background'] = $background[0];
 		}
@@ -798,8 +798,8 @@
 					}
 					else
 					{
-						$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-						$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+						$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+						$user = $userResult->fetch_assoc();
 
 						echo "
 							<div id='loginL'>
@@ -808,8 +808,8 @@
 						
 						if($_SESSION['userID'] != 1)
 						{	
-							$ordersResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -825,8 +825,8 @@
 						}
 						else
 						{
-							$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -882,8 +882,8 @@
 					
 					if(empty($_REQUEST['category']))
 					{
-						$fa_categoriesResult = mysql_query("SELECT * FROM categories_new WHERE type = 'fa' ORDER BY name");
-						while($fa_categories = mysql_fetch_array($fa_categoriesResult, MYSQL_ASSOC))
+						$fa_categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = 'fa' ORDER BY name");
+						while($fa_categories = $fa_categoriesResult->fetch_assoc())
 						{
 							echo "
 								<div class='categoryLine'>
@@ -899,8 +899,8 @@
 					}
 					else
 					{
-						$fa_categoriesResult = mysql_query("SELECT * FROM categories_new WHERE type = 'fa' ORDER BY name");
-						while($fa_categories = mysql_fetch_array($fa_categoriesResult, MYSQL_ASSOC))
+						$fa_categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = 'fa' ORDER BY name");
+						while($fa_categories = $fa_categoriesResult->fetch_assoc())
 						{
 							if($_REQUEST['category'] != $fa_categories['id'])
 							{
@@ -930,8 +930,8 @@
 								
 								if(empty($_REQUEST['subcategory']))
 								{
-									$subcategoriesResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
-									while($subcategories = mysql_fetch_array($subcategoriesResult))
+									$subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
+									while($subcategories = $subcategoriesResult->fetch_assoc())
 									{
 										echo "
 											<br />
@@ -945,8 +945,8 @@
 									{
 										if(checkingStatus($_REQUEST['subcategory'], $ids))
 										{
-											$subcategoriesResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
-											while($subcategories = mysql_fetch_array($subcategoriesResult))
+											$subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
+											while($subcategories = $subcategoriesResult->fetch_assoc())
 											{
 												if($_REQUEST['subcategory'] != $subcategories['id'])
 												{
@@ -962,15 +962,15 @@
 														<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicRed'>".$subcategories['name']."</span></a>
 													";
 													
-													$s2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
-													$s2Count = mysql_fetch_array($s2CountResult, MYSQL_NUM);
+													$s2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
+													$s2Count = $s2CountResult->fetch_array(MYSQLI_NUM);
 													
 													if($s2Count[0] != 0)
 													{
 														echo "<div class='subcategories2Block'>";
 														
-														$s2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
-														while($s2 = mysql_fetch_array($s2Result, MYSQL_ASSOC))
+														$s2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
+														while($s2 = $s2Result->fetch_assoc())
 														{
 															if(empty($_REQUEST['subcategory2']))
 															{
@@ -1033,8 +1033,8 @@
 					
 					if(empty($_REQUEST['category']))
 					{
-						$em_categoriesResult = mysql_query("SELECT * FROM categories_new WHERE type = 'em' ORDER BY name");
-						while($em_categories = mysql_fetch_array($em_categoriesResult, MYSQL_ASSOC))
+						$em_categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = 'em' ORDER BY name");
+						while($em_categories = $em_categoriesResult->fetch_assoc())
 						{
 							echo "
 								<div class='categoryLine'>
@@ -1050,8 +1050,8 @@
 					}
 					else
 					{
-						$em_categoriesResult = mysql_query("SELECT * FROM categories_new WHERE type = 'em' ORDER BY name");
-						while($em_categories = mysql_fetch_array($em_categoriesResult, MYSQL_ASSOC))
+						$em_categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = 'em' ORDER BY name");
+						while($em_categories = $em_categoriesResult->fetch_assoc())
 						{
 							if($_REQUEST['category'] != $em_categories['id'])
 							{
@@ -1081,8 +1081,8 @@
 								
 								if(empty($_REQUEST['subcategory']))
 								{
-									$subcategoriesResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
-									while($subcategories = mysql_fetch_array($subcategoriesResult))
+									$subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
+									while($subcategories = $subcategoriesResult->fetch_assoc())
 									{
 										echo "
 											<br />
@@ -1094,8 +1094,8 @@
 								{
 									if($_REQUEST['subcategory'] < 1000)
 									{
-										$subcategoriesResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
-										while($subcategories = mysql_fetch_array($subcategoriesResult))
+										$subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
+										while($subcategories = $subcategoriesResult->fetch_assoc())
 										{
 											if($_REQUEST['subcategory'] != $subcategories['id'])
 											{
@@ -1111,15 +1111,15 @@
 													<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicRed'>".$subcategories['name']."</span></a>
 												";
 												
-												$s2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
-													$s2Count = mysql_fetch_array($s2CountResult, MYSQL_NUM);
+												$s2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
+													$s2Count = $s2CountResult->fetch_array(MYSQLI_NUM);
 													
 													if($s2Count[0] != 0)
 													{
 														echo "<div class='subcategories2Block'>";
 														
-														$s2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
-														while($s2 = mysql_fetch_array($s2Result, MYSQL_ASSOC))
+														$s2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
+														while($s2 = $s2Result->fetch_assoc())
 														{
 															if(empty($_REQUEST['subcategory2']))
 															{
@@ -1181,8 +1181,8 @@
 					
 					if(empty($_REQUEST['category']))
 					{
-						$ca_categoriesResult = mysql_query("SELECT * FROM categories_new WHERE type = 'ca' ORDER BY name");
-						while($ca_categories = mysql_fetch_array($ca_categoriesResult, MYSQL_ASSOC))
+						$ca_categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = 'ca' ORDER BY name");
+						while($ca_categories = $ca_categoriesResult->fetch_assoc())
 						{
 							echo "
 								<div class='categoryLine'>
@@ -1198,8 +1198,8 @@
 					}
 					else
 					{
-						$ca_categoriesResult = mysql_query("SELECT * FROM categories_new WHERE type = 'ca' ORDER BY name");
-						while($ca_categories = mysql_fetch_array($ca_categoriesResult, MYSQL_ASSOC))
+						$ca_categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = 'ca' ORDER BY name");
+						while($ca_categories = $ca_categoriesResult->fetch_assoc())
 						{
 							if($_REQUEST['category'] != $ca_categories['id'])
 							{
@@ -1229,8 +1229,8 @@
 								
 								if(empty($_REQUEST['subcategory']))
 								{
-									$subcategoriesResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
-									while($subcategories = mysql_fetch_array($subcategoriesResult))
+									$subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
+									while($subcategories = $subcategoriesResult->fetch_assoc())
 									{
 										echo "
 											<br />
@@ -1244,8 +1244,8 @@
 									{
 										if(checkingStatus($_REQUEST['subcategory'], $ids))
 										{
-											$subcategoriesResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
-											while($subcategories = mysql_fetch_array($subcategoriesResult))
+											$subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['category']."' ORDER BY name");
+											while($subcategories = $subcategoriesResult->fetch_assoc())
 											{
 												if($_REQUEST['subcategory'] != $subcategories['id'])
 												{
@@ -1261,15 +1261,15 @@
 														<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicRed'>".$subcategories['name']."</span></a>
 													";
 													
-													$s2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
-													$s2Count = mysql_fetch_array($s2CountResult, MYSQL_NUM);
+													$s2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
+													$s2Count = $s2CountResult->fetch_array(MYSQLI_NUM);
 													
 													if($s2Count[0] != 0)
 													{
 														echo "<div class='subcategories2Block'>";
 														
-														$s2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
-														while($s2 = mysql_fetch_array($s2Result, MYSQL_ASSOC))
+														$s2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
+														while($s2 = $s2Result->fetch_array())
 														{
 															if(empty($_REQUEST['subcategory2']))
 															{
@@ -1323,8 +1323,8 @@
 				{
 					echo "<span class='headerStyle'>Полный список товаров</span><br /><br /><br />";
 					
-					$goodsResult = mysql_query("SELECT * FROM catalogue_new ORDER BY RAND() LIMIT ".$start.", 10");
-					while($goods = mysql_fetch_array($goodsResult))
+					$goodsResult = $mysqli->query("SELECT * FROM catalogue_new ORDER BY RAND() LIMIT ".$start.", 10");
+					while($goods = $goodsResult->fetch_assoc())
 					{
 						echo "
 							<div class='goodBlock'>
@@ -1401,8 +1401,8 @@
 								break;
 						}
 					
-						$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE type = '".$_REQUEST['type']."' ORDER BY RAND() LIMIT ".$start.", 10");
-						while($goods = mysql_fetch_array($goodsResult))
+						$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE type = '".$_REQUEST['type']."' ORDER BY RAND() LIMIT ".$start.", 10");
+						while($goods = $goodsResult->fetch_assoc())
 						{
 							echo "
 								<div class='goodBlock'>
@@ -1463,12 +1463,12 @@
 					{
 						if(empty($_REQUEST['subcategory']))
 						{
-							$cNameResult = mysql_query("SELECT name FROM categories_new WHERE id = '".$_REQUEST['category']."'");
-							$cName = mysql_fetch_array($cNameResult, MYSQL_NUM);
+							$cNameResult = $mysqli->query("SELECT name FROM categories_new WHERE id = '".$_REQUEST['category']."'");
+							$cName = $cNameResult->fetch_array(MYSQLI_NUM);
 							echo "<span class='headerStyle'>".$cName[0]."</span><br /><br /><br />";
 							
-							$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE category = '".$_REQUEST['category']."' ORDER BY RAND() LIMIT ".$start.", 10");
-							while($goods = mysql_fetch_array($goodsResult))
+							$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE category = '".$_REQUEST['category']."' ORDER BY RAND() LIMIT ".$start.", 10");
+							while($goods = $goodsResult->fetch_assoc())
 							{
 								echo "
 									<div class='goodBlock'>
@@ -1527,20 +1527,20 @@
 						}
 						else
 						{
-							$s2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
-							$s2Count = mysql_fetch_array($s2CountResult, MYSQL_NUM);
+							$s2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
+							$s2Count = $s2CountResult->fetch_array(MYSQLI_NUM);
 							
 							if($s2Count[0] != 0)
 							{
 								if(empty($_REQUEST['subcategory2']))
 								{
-									$sNameResult = mysql_query("SELECT name FROM subcategories_new WHERE id = '".$_REQUEST['subcategory']."'");
-									$sName = mysql_fetch_array($sNameResult, MYSQL_NUM);
+									$sNameResult = $mysqli->query("SELECT name FROM subcategories_new WHERE id = '".$_REQUEST['subcategory']."'");
+									$sName = $sNameResult->fetch_array(MYSQLI_NUM);
 									echo "<span class='headerStyle'>".$sName[0]."</span><br /><br /><br />";
 									
 									$count = 0;
-									$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['subcategory']."' ORDER BY RAND() LIMIT ".$start.", 10");
-									while($goods = mysql_fetch_array($goodsResult))
+									$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['subcategory']."' ORDER BY RAND() LIMIT ".$start.", 10");
+									while($goods = $goodsResult->fetch_assoc())
 									{
 										$count++;
 										
@@ -1606,13 +1606,13 @@
 								}
 								else
 								{
-									$s2NameResult = mysql_query("SELECT name FROM subcategories2 WHERE id = '".$_REQUEST['subcategory2']."'");
-									$s2Name = mysql_fetch_array($s2NameResult, MYSQL_NUM);
+									$s2NameResult = $mysqli->query("SELECT name FROM subcategories2 WHERE id = '".$_REQUEST['subcategory2']."'");
+									$s2Name = $s2NameResult->fetch_array(MYSQLI_NUM);
 									echo "<span class='headerStyle'>".$s2Name[0]."</span><br /><br /><br />";
 									
 									$count = 0;
-									$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['subcategory2']."' ORDER BY priority LIMIT ".$start.", 10");
-									while($goods = mysql_fetch_array($goodsResult))
+									$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['subcategory2']."' ORDER BY priority LIMIT ".$start.", 10");
+									while($goods = $goodsResult->fetch_assoc())
 									{
 										$count++;
 										
@@ -1679,13 +1679,13 @@
 							}
 							else
 							{
-								$sNameResult = mysql_query("SELECT name FROM subcategories_new WHERE id = '".$_REQUEST['subcategory']."'");
-								$sName = mysql_fetch_array($sNameResult, MYSQL_NUM);
+								$sNameResult = $mysqli->query("SELECT name FROM subcategories_new WHERE id = '".$_REQUEST['subcategory']."'");
+								$sName = $sNameResult->fetch_array(MYSQLI_NUM);
 								echo "<span class='headerStyle'>".$sName[0]."</span><br /><br /><br />";
 									
 								$count = 0;
-								$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['subcategory']."' ORDER BY priority LIMIT ".$start.", 10");
-								while($goods = mysql_fetch_array($goodsResult))
+								$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['subcategory']."' ORDER BY priority LIMIT ".$start.", 10");
+								while($goods = $goodsResult->fetch_assoc())
 								{
 									$count++;
 										

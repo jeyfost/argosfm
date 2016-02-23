@@ -12,8 +12,8 @@
 	{
 		if(isset($_POST['subcategoryDeleteCheckbox']) and $_POST['subcategoryDeleteCheckbox'] == 1)
 		{
-			$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE catalogue = '".$_SESSION['c']."'");
-			while($goods = mysql_fetch_assoc($goodsResult))
+			$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE catalogue = '".$_SESSION['c']."'");
+			while($goods = $goodsResult->fetch_assoc())
 			{
 				if(!empty($goods['sketch']))
 				{
@@ -24,12 +24,12 @@
 				unlink("../../pictures/catalogue/big/".$goods['picture']);
 			}
 
-			if(mysql_query("DELETE FROM catalogue_new WHERE category = '".$_SESSION['c']."'"))
+			if($mysqli->query("DELETE FROM catalogue_new WHERE category = '".$_SESSION['c']."'"))
 			{
 				$subArray = array();
 
-				$subcategoriesResult = mysql_query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
-				while($subcategories = mysql_fetch_array($subcategoriesResult, MYSQL_NUM))
+				$subcategoriesResult = $mysqli->query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
+				while($subcategories = $subcategoriesResult->fetch_array(MYSQLI_NUM))
 				{
 					array_push($subArray, $subcategories[0]);
 				}
@@ -39,14 +39,14 @@
 
 				for($i = 0; $i < count($subArray); $i++)
 				{
-					$subcategories2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$subArray[$i]."'");
-					$subcategories2Count = mysql_fetch_array($subcategories2CountResult, MYSQL_NUM);
+					$subcategories2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$subArray[$i]."'");
+					$subcategories2Count = $subcategories2CountResult->fetch_array(MYSQLI_NUM);
 					
 					if($subcategory2Count[0] != 0)
 					{
 						$enters++;
 
-						if(mysql_query("DELETE FROM subcategories2 WHERE subcategory = '".$subArray[$i]."'"))
+						if($mysqli->query("DELETE FROM subcategories2 WHERE subcategory = '".$subArray[$i]."'"))
 						{
 							$results++;
 						}
@@ -55,15 +55,15 @@
 
 				if($results == $enters)
 				{
-					if(mysql_query("DELETE FROM subcategories_new WHERE category = '".$_SESSION['c']."'"))
+					if($mysqli->query("DELETE FROM subcategories_new WHERE category = '".$_SESSION['c']."'"))
 					{
-						$categoryResult = mysql_query("SELECT * FROM categories_new WHERE id = '".$_SESSION['c']."'");
-						$category = mysql_fetch_assoc($categoryResult);
+						$categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE id = '".$_SESSION['c']."'");
+						$category = $categoryResult->fetch_assoc();
 
 						unlink("../../pictures/icons/".$category['picture']);
 						unlink("../../pictures/icons/".$category['picture_red']);
 
-						if(mysql_query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['c']."'"))
+						if($mysqli->query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['c']."'"))
 						{
 							$_SESSION['categoryDelete'] = "ok";
 
@@ -101,8 +101,8 @@
 		{
 			$subArray = array();
 
-			$subcategoriesResult = mysql_query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
-			while($subcategories = mysql_fetch_array($subcategoriesResult, MYSQL_NUM))
+			$subcategoriesResult = $mysqli->query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
+			while($subcategories = $subcategoriesResult->fetch_array(MYSQLI_NUM))
 			{
 				array_push($subArray, $subcategories[0]);
 			}
@@ -112,14 +112,14 @@
 
 			for($i = 0; $i < count($subArray); $i++)
 			{
-				$subcategories2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$subArray[$i]."'");
-				$subcategories2Count = mysql_fetch_array($subcategories2CountResult, MYSQL_NUM);
+				$subcategories2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$subArray[$i]."'");
+				$subcategories2Count = $subcategories2CountResult->fetch_array(MYSQLI_NUM);
 					
 				if($subcategory2Count[0] != 0)
 				{
 					$enters++;
 
-					if(mysql_query("DELETE FROM subcategories2 WHERE subcategory = '".$subArray[$i]."'"))
+					if($mysqli->query("DELETE FROM subcategories2 WHERE subcategory = '".$subArray[$i]."'"))
 					{
 						$results++;
 					}
@@ -128,15 +128,15 @@
 
 			if($results == $enters)
 			{
-				if(mysql_query("DELETE FROM subcategories_new WHERE category = '".$_SESSION['c']."'"))
+				if($mysqli->query("DELETE FROM subcategories_new WHERE category = '".$_SESSION['c']."'"))
 				{
-					$categoryResult = mysql_query("SELECT * FROM categories_new WHERE id = '".$_SESSION['c']."'");
-					$category = mysql_fetch_assoc($categoryResult);
+					$categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE id = '".$_SESSION['c']."'");
+					$category = $categoryResultz->fetch_assoc();
 
 					unlink("../../pictures/icons/".$category['picture']);
 					unlink("../../pictures/icons/".$category['picture_red']);
 
-					if(mysql_query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['c']."'"))
+					if($mysqli->query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['c']."'"))
 					{
 						$_SESSION['categoryDelete'] = "ok";
 
@@ -162,12 +162,6 @@
 
 				header("Location: ../../admin/admin.php?section=".$_SESSION['section']."&action=".$_SESSION['action']."&level=".$_SESSION['level']."&type=".$_SESSION['type']."&c=".$_SESSION['c']);
 			}
-		}
-		else
-		{
-			$_SESSION['categoryDelete'] = "goods";
-
-			header("Location: ../../admin/admin.php?section=".$_SESSION['section']."&action=".$_SESSION['action']."&level=".$_SESSION['level']."&type=".$_SESSION['type']."&c=".$_SESSION['c']);
 		}
 	}
 	else

@@ -12,8 +12,8 @@
 	{
 		$date = ($i + 1)."-".$_POST['month']."-".$_POST['year'];
 
-		$newsCountResult = mysql_query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
-		$newsCount = mysql_fetch_array($newsCountResult, MYSQL_NUM);
+		$newsCountResult = $mysqli->query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
+		$newsCount = $newsCountResult->fetch_array(MYSQLI_NUM);
 
 		if($_POST['year'] != getCurrentYear() or ($_POST['year'] == getCurrentYear() and $_POST['month'] != getCurrentMonth()))
 		{

@@ -22,7 +22,7 @@
 			{
 				if(strlen($_POST['newPassword']) >=5 and strlen($_POST['newPassword']) <= 25)
 				{
-					if(mysql_query("UPDATE users SET password = '".md5(md5($_POST['newPassword']))."' WHERE id = '".$_SESSION['userID']."'"))
+					if($mysqli->query("UPDATE users SET password = '".md5(md5($_POST['newPassword']))."' WHERE id = '".$_SESSION['userID']."'"))
 					{
 						$_SESSION['settingsChange'] = 'ok';
 						header("Location: ../settings.php?s=2");

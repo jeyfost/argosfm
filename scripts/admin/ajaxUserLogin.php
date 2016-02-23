@@ -7,8 +7,8 @@
 	{
 		if(!empty($_POST['userLogin']))
 		{
-			$loginResult = mysql_query("SELECT COUNT(id) FROM users WHERE login = '".$_POST['userLogin']."'");
-			$login = mysql_fetch_array($loginResult, MYSQL_NUM);
+			$loginResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE login = '".$_POST['userLogin']."'");
+			$login = $loginResult->fetch_array(MYSQLI_NUM);
 
 			if($login[0] == 0)
 			{
@@ -16,8 +16,8 @@
 			}
 			else
 			{
-				$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['user']."'");
-				$user = mysql_fetch_assoc($userResult);
+				$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['user']."'");
+				$user = $userResult->fetch_assoc();
 
 				if($user['login'] == $_POST['userLogin'])
 				{

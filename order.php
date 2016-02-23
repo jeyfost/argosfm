@@ -48,9 +48,9 @@
 		{
 			if($_SESSION['userID'] == 1)
 			{
-				$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '1'");
+				$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1'");
 							
-				$quantity = mysql_num_rows($ordersResult);
+				$quantity = MYSQLI_NUM_rows($ordersResult);
 				if($quantity > 10)
 				{
 					if($quantity % 10 != 0)
@@ -72,9 +72,9 @@
 			}
 			else
 			{
-				$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '1' AND user_id = '".$_SESSION['userID']."'");
+				$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1' AND user_id = '".$_SESSION['userID']."'");
 							
-				$quantity = mysql_num_rows($ordersResult);
+				$quantity = MYSQLI_NUM_rows($ordersResult);
 				if($quantity > 10)
 				{
 					if($quantity % 10 != 0)
@@ -132,13 +132,13 @@
     <?php
     	if(!isset($_SESSION['background']))
 		{
-			$BGCountResult = mysql_query("SELECT COUNT(id) FROM background");
-			$BGCount = mysql_fetch_array($BGCountResult, MYSQL_NUM);
+			$BGCountResult = $mysqli->query("SELECT COUNT(id) FROM background");
+			$BGCount = $BGCountResult->fetch_array(MYSQLI_NUM);
 
 			$index = rand(1, $BGCount[0]);
 
-			$backgroundResult = mysql_query("SELECT photo FROM background WHERE id = '".$index."'");
-			$background = mysql_fetch_array($backgroundResult, MYSQL_NUM);
+			$backgroundResult = $mysqli->query("SELECT photo FROM background WHERE id = '".$index."'");
+			$background = $backgroundResult->fetch_array(MYSQLI_NUM);
 
 			$_SESSION['background'] = $background[0];
 		}
@@ -572,8 +572,8 @@
 					}
 					else
 					{
-						$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-						$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+						$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+						$user = $userResult->fetch_array(MYSQLI_ASSOC);
 
 						echo "
 							<div id='loginL'>
@@ -582,8 +582,8 @@
 						
 						if($_SESSION['userID'] != 1)
 						{	
-							$ordersResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -599,8 +599,8 @@
 						}
 						else
 						{
-							$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -643,8 +643,8 @@
             	<?php
 					if($_SESSION['userID'] == 1)
 					{
-						$ordersQuantityResult = mysql_query("SELECT COUNT(id) FROM orders_date WHERE status = '0'");
-						$ordersQuantity = mysql_fetch_array($ordersQuantityResult, MYSQL_NUM);
+						$ordersQuantityResult = $mysqli->query("SELECT COUNT(id) FROM orders_date WHERE status = '0'");
+						$ordersQuantity = $ordersQuantityResult->fetch_array(MYSQLI_NUM);
 
 						switch($_REQUEST['s'])
 						{
@@ -666,8 +666,8 @@
 					}
 					else
 					{
-						$ordersQuantityResult = mysql_query("SELECT COUNT(id) FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-						$ordersQuantity = mysql_fetch_array($ordersQuantityResult, MYSQL_NUM);
+						$ordersQuantityResult = $mysqli->query("SELECT COUNT(id) FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+						$ordersQuantity = $ordersQuantityResult->fetch_array(MYSQLI_NUM);
 
 						switch($_REQUEST['s'])
 						{
@@ -698,21 +698,21 @@
 						echo "<div style='height: 30px;'></div>";
 						
 						echo "<div id='orderListBlock' style='padding: auto 20px;'>";
-						$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0' ORDER BY date");
+						$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0' ORDER BY date");
 
 						$number = 0;
 						
-						if(mysql_num_rows($ordersResult) == 0)
+						if(MYSQLI_NUM_rows($ordersResult) == 0)
 						{
 							echo "<span class='basic'>На данный момент заявок нет.</span>";
 						}
 						else
 						{
-							while($orders = mysql_fetch_array($ordersResult, MYSQL_ASSOC))
+							while($orders = $ordersResult->fetch_array(MYSQLI_ASSOC))
 							{
 								$number++;	
-								$customerResult = mysql_query("SELECT * FROM users WHERE id = '".$orders['user_id']."'");
-								$customer = mysql_fetch_assoc($customerResult);
+								$customerResult = $mysqli->query("SELECT * FROM users WHERE id = '".$orders['user_id']."'");
+								$customer = $customerResult->fetch_assoc();
 								$info = $customer['person']."; ".$customer['phone'];
 								if(!empty($customer['organisation']))
 								{
@@ -747,7 +747,7 @@
 					
 					if($_REQUEST['s'] == 2)
 					{
-						$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '1' ORDER BY date DESC LIMIT ".$start.", 10");
+						$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1' ORDER BY date DESC LIMIT ".$start.", 10");
 						
 						echo "<div style='height: 30px;'></div>";
 						echo "<div style='padding: auto 20px;'></div>";
@@ -774,7 +774,7 @@
 
 						$number = $_REQUEST['p'] * 10 - 10;
 							
-						while($orders = mysql_fetch_array($ordersResult, MYSQL_ASSOC))
+						while($orders = $ordersResult->fetch_assoc())
 						{
 							$number++;	
 							$status = "Обработан";
@@ -1012,20 +1012,20 @@
 						}
 						echo "</div>";
 						$totalPrice = 0;
-						$rateResult = mysql_query("SELECT rate FROM currency WHERE code = 'usd'");
-						$rate = mysql_fetch_array($rateResult, MYSQL_NUM);
-						$goodsResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-						if(mysql_num_rows($goodsResult) == 0)
+						$rateResult = $mysqli->query("SELECT rate FROM currency WHERE code = 'usd'");
+						$rate = $rateResult->fetch_array(MYSQLI_NUM);
+						$goodsResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+						if(MYSQLI_NUM_rows($goodsResult) == 0)
 						{
 							echo "<span class='basic'>На данный момент ваша корзина пуста. Чтобы оформить заказ, посетите <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
 						}
 						else
 						{
-							while ($goods = mysql_fetch_array($goodsResult, MYSQL_ASSOC))
+							while ($goods = $goodsResult->fetch_assoc())
 							{
 								$count++;
-								$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$goods['good_id']."'");
-								$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
+								$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$goods['good_id']."'");
+								$good = $goodResult->fetch_assoc();
 								$totalPrice += $good['price']*$goods['quantity']*$rate[0];
 								echo "
 									<div class='basketGood'>
@@ -1089,8 +1089,8 @@
 						
 						echo "<span class='headerStyle'>Необработанные заказы</span><br /><br />";
 						echo "<div id='newOrders'>";
-						$orders1Result = mysql_query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0' ORDER BY id");
-						if(mysql_num_rows($orders1Result) == 0)
+						$orders1Result = $mysqli->query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0' ORDER BY id");
+						if(MYSQLI_NUM_rows($orders1Result) == 0)
 						{
 							echo "<span class='basic'>История ваших заказов пуста, так как вы не соверишили ещё ни одного заказа. Для этого перейдите в <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
 						}
@@ -1115,7 +1115,7 @@
 								
 							$number_n = $_REQUEST['p'] * 10 - 10;
 								
-							while($orders1 = mysql_fetch_array($orders1Result, MYSQL_ASSOC))
+							while($orders1 = $orders1Result->fetch_assoc())
 							{
 								$number_n++;	
 								$status = "Не обработан";
@@ -1153,8 +1153,8 @@
 						echo "<span class='headerStyle' style='padding-top: 30px;'>Обработанные заказы</span><br /><br />";
 						echo "<div id='oldOrders'>";
 						
-						$orders1Result = mysql_query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '1' ORDER BY date DESC LIMIT ".$start.", 10");
-						if(mysql_num_rows($orders1Result) == 0)
+						$orders1Result = $mysqli->query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '1' ORDER BY date DESC LIMIT ".$start.", 10");
+						if(MYSQLI_NUM_rows($orders1Result) == 0)
 						{
 							echo "<span class='basic'>К сожалению, у вас ещё нет обработанных заказов.</span>";
 						}
@@ -1179,7 +1179,7 @@
 									
 							$number = $_REQUEST['p'] * 10 - 10;
 									
-							while($orders1 = mysql_fetch_array($orders1Result, MYSQL_ASSOC))
+							while($orders1 = $orders1Result->fetch_assoc())
 							{
 								$number++;	
 								$status = "Обработан";

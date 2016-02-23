@@ -20,22 +20,22 @@
 			include('connect.php');
 			
 			$count = 0;
-			$catalogueResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-			$basketResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' and status = '0'");
+			$catalogueResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+			$basketResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' and status = '0'");
 			
-			if(mysql_num_rows($catalogueResult) > 0)
+			if(MYSQLI_NUM_rows($catalogueResult) > 0)
 			{
 				$count++;
 			}
 			
-			if(mysql_num_rows($basketResult) > 0)
+			if(MYSQLI_NUM_rows($basketResult) > 0)
 			{
 				$count++;
 			}
 			
 			if($count == 2)
 			{
-				if(mysql_query("DELETE FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' and status = '0'"))
+				if($mysqli->query("DELETE FROM basket WHERE user_id = '".$_SESSION['userID']."' AND good_id = '".$_REQUEST['id']."' and status = '0'"))
 				{
 					$_SESSION['deleteFromBasket'] = 'ok';
 					header("Location: ../order.php?s=1");

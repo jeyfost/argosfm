@@ -43,8 +43,8 @@
 	}
 	else
 	{
-		$newsResult = mysql_query("SELECT * FROM news WHERE id = ".$_REQUEST['id']);
-		if(mysql_num_rows($newsResult) == 0)
+		$newsResult = $mysqli->query("SELECT * FROM news WHERE id = ".$_REQUEST['id']);
+		if(MYSQLI_NUM_rows($newsResult) == 0)
 		{
 			if(isset($_SESSION['last_page']))
 			{
@@ -57,9 +57,9 @@
 		}
 		else
 		{
-			$news = mysql_fetch_assoc($newsResult);
+			$news = $newsResult->fetch_assoc();
 			
-			if(mysql_query("DELETE FROM news WHERE id = ".$_REQUEST['id']))
+			if($mysqli->query("DELETE FROM news WHERE id = ".$_REQUEST['id']))
 			{
 				$_SESSION['deleteNews'] = 'ok';
 				header("Location: ../../admin/admin.php?section=users&action=news&p=".$_SESSION['p']);

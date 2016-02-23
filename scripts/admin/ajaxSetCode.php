@@ -16,8 +16,8 @@
 
 		while($success)
 		{
-			$codeResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$codes[$count]."'");
-			$code = mysql_fetch_array($codeResult, MYSQL_NUM);
+			$codeResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$codes[$count]."'");
+			$code = $codeResult->fetch_array(MYSQLI_NUM);
 
 			if($code[0] == 0)
 			{

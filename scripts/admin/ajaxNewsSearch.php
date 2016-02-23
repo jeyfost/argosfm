@@ -7,13 +7,13 @@
 	{
 		if(strlen($_POST['newsSearch']) > 0 and $_POST['newsSearch'] != "Поиск...")
 		{
-			$query = iconv('utf-8', 'cp1251', mysql_real_escape_string($_POST['newsSearch']));
+			$query = iconv('utf-8', 'cp1251', $mysqli->real_escape_string($_POST['newsSearch']));
 
-			$searchResult = mysql_query("SELECT * FROM news WHERE header LIKE '%".$query."%' ORDER BY header LIMIT 10");
+			$searchResult = $mysqli->query("SELECT * FROM news WHERE header LIKE '%".$query."%' ORDER BY header LIMIT 10");
 
-			if(mysql_num_rows($searchResult) > 0)
+			if(MYSQLI_NUM_rows($searchResult) > 0)
 			{
-				while($search = mysql_fetch_assoc($searchResult))
+				while($search = $searchResult->fetch_assoc())
 				{
 					echo "
 						<a href='admin.php?section=users&action=news&news=".$search['id']."' class='noBorder'>

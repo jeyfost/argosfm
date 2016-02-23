@@ -9,7 +9,7 @@
 	
 	include('connect.php');
 	
-	if(mysql_query("DELETE FROM subcategories_new WHERE id = '".$_SESSION['sId']."'"))
+	if($mysqli->query("DELETE FROM subcategories_new WHERE id = '".$_SESSION['sId']."'"))
 	{
 		$_SESSION['result'] = "delete_subcategory_success";
 		header("Location: ../admin/admin.php?category=".$_SESSION['category']."&mode=".$_SESSION['mode']."&type=".$_SESION['type']."&goodsType=".$_SESSION['goodsType']."&cId=".$_SESSION['cId']);

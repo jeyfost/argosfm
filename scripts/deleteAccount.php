@@ -16,7 +16,7 @@
 	}
 	else
 	{
-		if(mysql_query("DELETE FROM users WHERE id = '".$_SESSION['userID']."'"))
+		if($mysqli->query("DELETE FROM users WHERE id = '".$_SESSION['userID']."'"))
 		{
 			unset($_SESSION['userID']);
 			$_SESSION['delete'] = 'ok';

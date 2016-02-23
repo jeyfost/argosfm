@@ -7,12 +7,12 @@
 	{
 		if(filter_var($_POST['email'], FILTER_VALIDATE_EMAIL))
 		{
-			$addressResult = mysql_query("SELECT COUNT(id) FROM mail WHERE email = '".$_POST['email']."'");
-			$address = mysql_fetch_array($addressResult, MYSQL_NUM);
+			$addressResult = $mysqli->query("SELECT COUNT(id) FROM mail WHERE email = '".$_POST['email']."'");
+			$address = $addressResult->fetch_array(MYSQLI_NUM);
 
 			if($address[0] == 0)
 			{
-				if(mysql_query("UPDATE mail SET email = '".$_POST['email']."' WHERE id = '".$_POST['emailID']."'"))
+				if($mysqli->query("UPDATE mail SET email = '".$_POST['email']."' WHERE id = '".$_POST['emailID']."'"))
 				{
 					echo "a";
 				}
@@ -23,8 +23,8 @@
 			}
 			else
 			{
-				$emailResult = mysql_query("SELECT * FROM mail WHERE id = '".$_POST['emailID']."'");
-				$email = mysql_fetch_assoc($emailResult);
+				$emailResult = $mysqli->query("SELECT * FROM mail WHERE id = '".$_POST['emailID']."'");
+				$email = $emailResult->fetch_assoc();
 
 				if($_POST['email'] == $email['email'])
 				{

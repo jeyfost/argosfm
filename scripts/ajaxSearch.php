@@ -7,29 +7,29 @@
 	{
 		$query = iconv('UTF-8', 'CP1251', $_POST['searchQuery']);
 
-		$searchResult = mysql_query("SELECT * FROM catalogue_new WHERE name LIKE '%".$query."%' OR code LIKE '%".$query."%' LIMIT 5");
+		$searchResult = $mysqli->query("SELECT * FROM catalogue_new WHERE name LIKE '%".$query."%' OR code LIKE '%".$query."%' LIMIT 5");
 		
-		if(mysql_num_rows($searchResult) > 0)
+		if(MYSQLI_NUM_rows($searchResult) > 0)
 		{
 			$count = 0;
 
-			while($search = mysql_fetch_assoc($searchResult))
+			while($search = $searchResult->fetch_assoc())
 			{
 				$count++;
 
-				$categoryResult = mysql_query("SELECT name FROM categories_new WHERE id = '".$search['category']."'");
-				$category = mysql_fetch_array($categoryResult, MYSQL_NUM);
+				$categoryResult = $mysqli->query("SELECT name FROM categories_new WHERE id = '".$search['category']."'");
+				$category = $categoryResult->fetch_array(MYSQLI_NUM);
 
 				if(!empty($search['subcategory']) and $search['subcategory'] != 0)
 				{
-					$subcategoryResult = mysql_query("SELECT name FROM subcategories_new WHERE id = '".$search['subcategory']."'");
-					$subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+					$subcategoryResult = $mysqli->query("SELECT name FROM subcategories_new WHERE id = '".$search['subcategory']."'");
+					$subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 				}
 
 				if(!empty($search['subcategory2']) and $search['subcategory2'] != 0)
 				{
-					$subcategory2Result = mysql_query("SELECT name FROM subcategories2 WHERE id = '".$search['subcategory2']."'");
-					$subcategory2 = mysql_fetch_array($subcategory2Result, MYSQL_NUM);
+					$subcategory2Result = $mysqli->query("SELECT name FROM subcategories2 WHERE id = '".$search['subcategory2']."'");
+					$subcategory2 = $subcategory2Result->fetch_array(MYSQLI_NUM);
 				}
 
 				if($count % 2 == 0)

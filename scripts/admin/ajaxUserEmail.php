@@ -7,8 +7,8 @@
 	{
 		if(!empty($_POST['userEmail']) and filter_var($_POST['userEmail'], FILTER_VALIDATE_EMAIL))
 		{
-			$addressResult = mysql_query("SELECT COUNT(id) FROM users WHERE email = '".$_POST['userEmail']."'");
-			$address = mysql_fetch_array($addressResult, MYSQL_NUM);
+			$addressResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE email = '".$_POST['userEmail']."'");
+			$address = $addressResult->fetch_array(MYSQLI_NUM);
 
 			if($address[0] == 0)
 			{
@@ -16,12 +16,12 @@
 			}
 			else
 			{
-				$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['user']."'");
-				$user = mysql_fetch_assoc($userResult);
+				$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['user']."'");
+				$user = $userResult->fetch_assoc();
 
 				if($user['email'] == $_POST['userEmail'])
 				{
-					echo "a"
+					echo "a";
 				}
 				else
 				{

@@ -86,8 +86,8 @@
 			{
 				$date = ($i + 1)."-".getCurrentMonth()."-".getCurrentYear();
 
-				$newsCountResult = mysql_query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
-				$newsCount = mysql_fetch_array($newsCountResult, MYSQL_NUM);
+				$newsCountResult = $mysqli->query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
+				$newsCount = $newsCountResult->fetch_array(MYSQLI_NUM);
 
 				if($i >= getCurrentDay())
 				{
@@ -229,8 +229,8 @@
 			{
 				$date = ($i + 1)."-".$selectedMonth."-".$selectedYear;
 
-				$newsCountResult = mysql_query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
-				$newsCount = mysql_fetch_array($newsCountResult, MYSQL_NUM);
+				$newsCountResult = $mysqli->query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
+				$newsCount = $newsCountResult->fetch_array(MYSQLI_NUM);
 
 				$selectedDay = substr($selectedDate, 0, 2);
 

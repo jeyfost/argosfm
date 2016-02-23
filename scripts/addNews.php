@@ -15,7 +15,7 @@
 		$_SESSION['nText'] = $_POST['newsText'];
 		$_SESSION['nDescription'] = $_POST['newsDescription'];
 		
-		if(mysql_query("INSERT INTO news (header, short, text, date) VALUES ('".htmlspecialchars($_POST['newsHeader'])."', '".htmlspecialchars($_POST['newsDescription'])."', '".$_POST['newsText']."', '".date('d-m-Y H:i')."')"))
+		if($mysqli->query("INSERT INTO news (header, short, text, date) VALUES ('".htmlspecialchars($_POST['newsHeader'])."', '".htmlspecialchars($_POST['newsDescription'])."', '".$_POST['newsText']."', '".date('d-m-Y H:i')."')"))
 		{
 			$_SESSION['newsResult'] = 'success';
 			

@@ -16,8 +16,8 @@
 	
 	include('connect.php');
 	
-	$orderInfoResult = mysql_query("SELECT * FROM orders_date WHERE id='".$_REQUEST['id']."'");
-	$orderInfo = mysql_fetch_array($orderInfoResult, MYSQL_ASSOC);
+	$orderInfoResult = $mysqli->query("SELECT * FROM orders_date WHERE id='".$_REQUEST['id']."'");
+	$orderInfo = $orderInfoResult->fetch_array(MYSQLI_ASSOC);
 	
 	if(empty($orderInfo) or $orderInfo['user_id'] != $_SESSION['userID'])
 	{
@@ -32,12 +32,12 @@
 	}
 	else
 	{
-		if(mysql_query("DELETE FROM orders WHERE order_id = '".$_REQUEST['id']."'") and mysql_query("DELETE FROM orders_date WHERE id = '".$_REQUEST['id']."'"))
+		if($mysqli->query("DELETE FROM orders WHERE order_id = '".$_REQUEST['id']."'") and $mysqli->query("DELETE FROM orders_date WHERE id = '".$_REQUEST['id']."'"))
 		{
 			echo "<span class='basicGreen'>Заказ успешно удалён!</span><br /><br />";
 			
-			$orders1Result = mysql_query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0' ORDER BY id");
-			if(mysql_num_rows($orders1Result) == 0)
+			$orders1Result = $mysqli->query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0' ORDER BY id");
+			if(MYSQLI_NUM_rows($orders1Result) == 0)
 			{
 				echo "<span class='basic'>История ваших заказов пуста, так как вы не соверишили ещё ни одного заказа. Для этого перейдите в <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
 			}
@@ -62,7 +62,7 @@
 								
 				$number = 0;
 								
-				while($orders1 = mysql_fetch_array($orders1Result, MYSQL_ASSOC))
+				while($orders1 = $orders1Result->fetch_assoc())
 				{
 					$number++;			
 					$status = "Не обработан";

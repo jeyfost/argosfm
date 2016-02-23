@@ -2,8 +2,8 @@
 
 	include('../connect.php');
 
-	$mailTextResult = mysql_query("SELECT text FROM mail_result WHERE id = '".$_POST['id']."'");
-	$mailText = mysql_fetch_array($mailTextResult, MYSQL_NUM);
+	$mailTextResult = $mysqli->query("SELECT text FROM mail_result WHERE id = '".$_POST['id']."'");
+	$mailText = $mailTextResult->fetch_array(MYSQLI_NUM);
 
 	if(!empty($mailText[0]))
 	{

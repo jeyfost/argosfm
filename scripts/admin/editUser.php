@@ -120,8 +120,8 @@
 			header("Location: ../../admin/admin.php?section=users&action=users&user=".$_SESSION['user']);
 		}
 
-		$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['user']."'");
-		$user = mysql_fetch_assoc($userResult);
+		$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['user']."'");
+		$user = $userResult->fetch_assoc();
 
 		$count = 0;
 		$emailChanged = 0;
@@ -146,7 +146,7 @@
 		{
 			$login = htmlspecialchars($_POST['userLogin'], ENT_QUOTES);
 
-			if(mysql_query("UPDATE users SET login = '".$login."' WHERE id = '".$_SESSION['user']."'"))
+			if($mysqli->query("UPDATE users SET login = '".$login."' WHERE id = '".$_SESSION['user']."'"))
 			{
 				$message .= "<b>Ваш логин был изменён.<b/><br />Старый логин: <b>".$user['login']."</b><br />Новый логин: <b>".$login."</b><br /><br />Причина изменения: <b>".htmlspecialchars($_POST['userLoginReason'], ENT_QUOTES)."</b>\n\n";
 				$count++;
@@ -156,7 +156,7 @@
 
 		if(!empty($_POST['userPassword']) and !empty($_POST['userPasswordReason']))
 		{
-			if(mysql_query("UPDATE users SET password = '".md5(md5($_POST['userPassword']))."' WHERE id = '".$_SESSION['user']."'"))
+			if($mysqli->query("UPDATE users SET password = '".md5(md5($_POST['userPassword']))."' WHERE id = '".$_SESSION['user']."'"))
 			{
 				$message .= "<b>Ваш пароль был изменён.<b/><br />Новый пароль: <b>".$_POST['userPassword']."</b><br /><br />Причина изменения: <b>".htmlspecialchars($_POST['userPasswordReason'], ENT_QUOTES)."</b><br />Текущий пароль вы можете изменить в <a href='http://test1.ru/argosfm/settings.php?s=2'>личном кабинете</a>.\n\n";
 				$count++;
@@ -165,7 +165,7 @@
 
 		if(!empty($_POST['userEmail']) and !empty($_POST['userEmailReason']))
 		{
-			if(mysql_query("UPDATE users SET email = '".$_POST['userEmail']."' WHERE id = '".$_SESSION['user']."'"))
+			if($mysqli->query("UPDATE users SET email = '".$_POST['userEmail']."' WHERE id = '".$_SESSION['user']."'"))
 			{
 				$message .= "<b>Ваш e-mail был изменён.<b/><br />Новый e-mail: <b>".$_POST['userEmail']."</b><br /><br />Причина изменения: <b>".htmlspecialchars($_POST['userEmailReason'], ENT_QUOTES)."</b>\n\n";
 				$count++;
@@ -175,7 +175,7 @@
 
 		if(!empty($_POST['userPerson']) and !empty($_POST['userPersonReason']))
 		{
-			if(mysql_query("UPDATE users SET person = '".$_POST['userPerson']."' WHERE id = '".$_SESSION['user']."'"))
+			if($mysqli->query("UPDATE users SET person = '".$_POST['userPerson']."' WHERE id = '".$_SESSION['user']."'"))
 			{
 				$message .= "<b>Контактное лицо было изменено.<b/><br />Старое контактное лицо: <b>".$user['person']."</b><br />Новое контактное лицо: <b>".$_POST['userPerson']."</b><br /><br />Причина изменения: <b>".htmlspecialchars($_POST['userPersonReason'], ENT_QUOTES)."</b>\n\n";
 				$count++;
@@ -184,7 +184,7 @@
 
 		if(!empty($_POST['userPhone']) and !empty($_POST['userPhoneReason']))
 		{
-			if(mysql_query("UPDATE users SET phone = '".$_POST['userPhone']."' WHERE id = '".$_SESSION['user']."'"))
+			if($mysqli->query("UPDATE users SET phone = '".$_POST['userPhone']."' WHERE id = '".$_SESSION['user']."'"))
 			{
 				$message .= "<b>Контактный телефон был изменён.<b/><br />Старый номер: <b>".$user['phone']."</b><br />Новый номер: <b>".$_POST['userPhone']."</b><br /><br />Причина изменения: <b>".htmlspecialchars($_POST['userPhoneReason'], ENT_QUOTES)."</b>\n\n";
 				$count++;

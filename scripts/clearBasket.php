@@ -17,10 +17,10 @@
 	{
 		include('connect.php');
 		
-		$basketResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-		if(mysql_num_rows($basketResult) > 0)
+		$basketResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+		if(MYSQLI_NUM_rows($basketResult) > 0)
 		{
-			if(mysql_query("DELETE FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'"))
+			if($mysqli->query("DELETE FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'"))
 			{
 				$_SESSION['clearBasket'] = 'ok';
 				header("Location: ../order.php?s=1");

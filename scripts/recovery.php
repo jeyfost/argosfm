@@ -30,18 +30,18 @@
 			$password .= $symbols[$number];
 		}
 		
-		$userResult = mysql_query("SELECT * FROM users WHERE login = '".$login."'");
-		$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+		$userResult = $mysqli->query("SELECT * FROM users WHERE login = '".$login."'");
+		$user = $userResult->fetch_assoc();
 		
 		if(empty($user))
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE email = '".$login."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE email = '".$login."'");
+			$user = $userResult->fetch_assoc();
 			
 			if(!empty($user))
 			{
 				sendMail($user['email'], $password);
-				mysql_query("UPDATE users SET password = '".md5($password)."' WHERE id = '".$user['id']."'");
+				$mysqli->query("UPDATE users SET password = '".md5($password)."' WHERE id = '".$user['id']."'");
 				$_SESSION['recovery'] = 'sent';
 				$_SESSION['recovery_email'] = $user['email'];
 				if(isset($_SESSION['last_page']))
@@ -69,7 +69,7 @@
 		else
 		{
 			sendMail($user['email'], $password);
-			mysql_query("UPDATE users SET password = '".md5($password)."' WHERE id = '".$user['id']."'");
+			$mysqli->query("UPDATE users SET password = '".md5($password)."' WHERE id = '".$user['id']."'");
 			$_SESSION['recovery'] = 'sent';
 			$_SESSION['recovery_email'] = $user['email'];
 			if(isset($_SESSION['last_page']))

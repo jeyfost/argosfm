@@ -1,9 +1,13 @@
 <?php
 	include('config.php');
 	
-	$link = mysql_connect($host, $user, $password);
-	mysql_select_db($db, $link);
+	$mysqli = mysqli_connect($host, $user, $password, $db);
+
+	if(!$mysqli)
+	{
+		printf("Невозможно подключиться к базе данных. Код ошибки: %s\n", mysqli_connect_error());
+	}
 	
-	mysql_query("SET NAMES 'cp1251'");
-	mysql_query("SET CHARACTER SET 'cp1251'");
+	$mysqli->query("SET NAMES 'cp1251'");
+	$mysqli->query("SET CHARACTER SET 'cp1251'");
 ?>

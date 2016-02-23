@@ -38,7 +38,7 @@
 	$page = $_REQUEST['p'];
 	$start = $page * 10 - 10;
 	
-	mysql_set_charset("cp1251");
+	$mysqli->set_charset("cp1251");
 ?>
 
 <!doctype html>
@@ -73,13 +73,13 @@
     <?php
     	if(!isset($_SESSION['background']))
 		{
-			$BGCountResult = mysql_query("SELECT COUNT(id) FROM background");
-			$BGCount = mysql_fetch_array($BGCountResult, MYSQL_NUM);
+			$BGCountResult = $mysqli->query("SELECT COUNT(id) FROM background");
+			$BGCount = $BGCountResult->fetch_array(MYSQLI_NUM);
 
 			$index = rand(1, $BGCount[0]);
 
-			$backgroundResult = mysql_query("SELECT photo FROM background WHERE id = '".$index."'");
-			$background = mysql_fetch_array($backgroundResult, MYSQL_NUM);
+			$backgroundResult = $mysqli->query("SELECT photo FROM background WHERE id = '".$index."'");
+			$background = $backgroundResult->fetch_array(MYSQLI_NUM);
 
 			$_SESSION['background'] = $background[0];
 		}
@@ -513,8 +513,8 @@
 					}
 					else
 					{
-						$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-						$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+						$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+						$user = $userResult->fetch_assoc();
 
 						echo "
 							<div id='loginL'>
@@ -523,8 +523,8 @@
 						
 						if($_SESSION['userID'] != 1)
 						{	
-							$ordersResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -540,8 +540,8 @@
 						}
 						else
 						{
-							$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -584,10 +584,10 @@
 			
 				echo "<span class='headerStyle'>поиск по каталогу</span><br /><br />";
 				
-				$search_result = mysql_query("SELECT * FROM catalogue_new WHERE name LIKE '%".$_SESSION['query']."%' OR code LIKE '%".$_SESSION['query']."%' ORDER BY name LIMIT ".$start.", 10");
+				$search_result = $mysqli->query("SELECT * FROM catalogue_new WHERE name LIKE '%".$_SESSION['query']."%' OR code LIKE '%".$_SESSION['query']."%' ORDER BY name LIMIT ".$start.", 10");
 				$count = 0;
 						
-				while($search = mysql_fetch_array($search_result))
+				while($search = $search_result->fetch_assoc())
 				{
 					$count++;
 					
@@ -605,21 +605,21 @@
 							break;
 					}
 					
-					$categoryResult = mysql_query("SELECT name FROM categories_new WHERE id = ".$search['category']);
-					$categoryName = mysql_fetch_array($categoryResult, MYSQL_NUM);
+					$categoryResult = $mysqli->query("SELECT name FROM categories_new WHERE id = ".$search['category']);
+					$categoryName = $categoryResult->fetch_array(MYSQLI_NUM);
 					$category = $categoryName[0];
 					
 					if(!empty($search['subcategory']))
 					{
-						$subcategoryResult = mysql_query("SELECT name FROM subcategories_new WHERE id = ".$search['subcategory']);
-						$subcategoryName = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+						$subcategoryResult = $mysqli->query("SELECT name FROM subcategories_new WHERE id = ".$search['subcategory']);
+						$subcategoryName = $subcategoryResult->fetch_array(MYSQLI_NUM);
 						$subcategory = $subcategoryName[0];
 					}
 					
 					if(!empty($search['subcategory2']))
 					{
-						$subcategory2Result = mysql_query("SELECT name FROM subcategories2 WHERE id = ".$search['subcategory2']);
-						$subcategory2Name = mysql_fetch_array($subcategory2Result, MYSQL_NUM);
+						$subcategory2Result = $mysqli->query("SELECT name FROM subcategories2 WHERE id = ".$search['subcategory2']);
+						$subcategory2Name = $subcategory2Result->fetch_array(MYSQLI_NUM);
 						$subcategory2 = $subcategory2Name[0];
 					}
 					

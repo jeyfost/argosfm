@@ -49,8 +49,8 @@
 
     if(!empty($_REQUEST['id']))
     {
-        $cGoodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-        $cGood = mysql_fetch_assoc($cGoodResult);
+        $cGoodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+        $cGood = $cGoodResult->fetch_assoc();
 
         if((!empty($cGood['s']) and $cGood['s'] != 0 and empty($_REQUEST['s'])) or (!empty($cGood['s2']) and $cGood['s2'] != 0 and empty($_REQUEST['s2'])))
         {
@@ -85,8 +85,8 @@
 
     if(!empty($_REQUEST['user']))
     {
-        $usersCountResult = mysql_query("SELECT COUNT(id) FROM users WHERE id = '".$_REQUEST['user']."'");
-        if(mysql_num_rows($usersCountResult) == 0)
+        $usersCountResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE id = '".$_REQUEST['user']."'");
+        if(MYSQLI_NUM_rows($usersCountResult) == 0)
         {
             header("Location: admin.php");
         }
@@ -217,8 +217,8 @@
 
     if(!empty($_REQUEST['c']))
     {
-        $cResult = mysql_query("SELECT COUNT(id) from categories_new WHERE id = '".$_REQUEST['c']."'");
-        $c = mysql_fetch_array($cResult, MYSQL_NUM);
+        $cResult = $mysqli->query("SELECT COUNT(id) from categories_new WHERE id = '".$_REQUEST['c']."'");
+        $c = $cResult->fetch_array(MYSQLI_NUM);
 
         if($c[0] == 0)
         {
@@ -228,8 +228,8 @@
 
     if(!empty($_REQUEST['s']))
     {
-        $sResult = mysql_query("SELECT COUNT(id) from subcategories_new WHERE id = '".$_REQUEST['s']."'");
-        $s = mysql_fetch_array($sResult, MYSQL_NUM);
+        $sResult = $mysqli->query("SELECT COUNT(id) from subcategories_new WHERE id = '".$_REQUEST['s']."'");
+        $s = $sResult->fetch_array(MYSQLI_NUM);
 
         if($s[0] == 0)
         {
@@ -239,8 +239,8 @@
 
     if(!empty($_REQUEST['s2']))
     {
-        $s2Result = mysql_query("SELECT COUNT(id) from subcategories2 WHERE id = '".$_REQUEST['s2']."'");
-        $s2 = mysql_fetch_array($s2Result, MYSQL_NUM);
+        $s2Result = $mysqli->query("SELECT COUNT(id) from subcategories2 WHERE id = '".$_REQUEST['s2']."'");
+        $s2 = $s2Result->fetch_array(MYSQLI_NUM);
 
         if($s2[0] == 0)
         {
@@ -250,8 +250,8 @@
 
     if(!empty($_REQUEST['id']))
     {
-        $gResult = mysql_query("SELECT COUNT(id) from catalogue_new WHERE id = '".$_REQUEST['id']."'");
-        $g = mysql_fetch_array($gResult, MYSQL_NUM);
+        $gResult = $mysqli->query("SELECT COUNT(id) from catalogue_new WHERE id = '".$_REQUEST['id']."'");
+        $g = $gResult->fetch_array(MYSQLI_NUM);
 
         if($g[0] == 0)
         {
@@ -261,8 +261,8 @@
 
     if(!empty($_REQUEST['news']))
     {
-        $newsCountResult = mysql_query("SELECT COUNT(id) FROM news WHERE id = '".$_REQUEST['news']."'");
-        $newsCount = mysql_fetch_array($newsCountResult, MYSQL_NUM);
+        $newsCountResult = $mysqli->query("SELECT COUNT(id) FROM news WHERE id = '".$_REQUEST['news']."'");
+        $newsCount = $newsCountResult->fetch_array(MYSQLI_NUM);
 
         if($newsCount[0] == 0)
         {
@@ -286,8 +286,8 @@
         {
             if(empty($_REQUEST['news']))
             {
-                $newsCountResult = mysql_query("SELECT COUNT(id) FROM news");
-                $newsCount = mysql_fetch_array($newsCountResult, MYSQL_NUM);
+                $newsCountResult = $mysqli->query("SELECT COUNT(id) FROM news");
+                $newsCount = $newsCountResult->fetch_array(MYSQLI_NUM);
                                                     
                 if($newsCount[0] > 10)
                 {
@@ -320,15 +320,15 @@
                     case "maillist":
                         if($_REQUEST['active'] == 'true')
                         {
-                            $addressCountResult = mysql_query("SELECT COUNT(id) FROM mail WHERE in_send = '1'");
+                            $addressCountResult = $mysqli->query("SELECT COUNT(id) FROM mail WHERE in_send = '1'");
                         }
                         
                         if($_REQUEST['active'] == 'false')
                         {
-                            $addressCountResult = mysql_query("SELECT COUNT(id) FROM mail WHERE in_send = '0'");
+                            $addressCountResult = $mysqli->query("SELECT COUNT(id) FROM mail WHERE in_send = '0'");
                         }
 
-                        $addressCount = mysql_fetch_array($addressCountResult, MYSQL_NUM);
+                        $addressCount = $addressCountResult->fetch_array(MYSQLI_NUM);
                                                     
                         if($addressCount[0] > 10)
                         {
@@ -352,8 +352,8 @@
                         }
                         break;
                     case "mail-history":
-                        $mailCountResult = mysql_query("SELECT COUNT(id) FROM mail_result");
-                        $mailCount = mysql_fetch_array($mailCountResult, MYSQL_NUM);
+                        $mailCountResult = $mysqli->query("SELECT COUNT(id) FROM mail_result");
+                        $mailCount = $mailCountResult->fetch_array(MYSQLI_NUM);
                                                     
                         if($mailCount[0] > 10)
                         {
@@ -377,8 +377,8 @@
                         }
                         break;
                     case "users":
-                        $usersCountResult = mysql_query("SELECT COUNT(id) FROM users WHERE id <> '1'");
-                        $usersCount = mysql_fetch_array($usersCountResult, MYSQL_NUM);
+                        $usersCountResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE id <> '1'");
+                        $usersCount = $usersCountResult->fetch_array(MYSQLI_NUM);
                                                     
                         if($usersCount[0] > 10)
                         {
@@ -1176,14 +1176,14 @@
         <?php
             if(empty($_REQUEST['section']))
             {
-                $goodsQuantityResult = mysql_query("SELECT COUNT(id) FROM catalogue_new");
-                $goodsQuantity = mysql_fetch_array($goodsQuantityResult, MYSQL_NUM);
+                $goodsQuantityResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new");
+                $goodsQuantity =  $goodsQuantityResul->fetch_array(MYSQLI_NUM);
 
-                $ordersQuantityResult = mysql_query("SELECT COUNT(id) FROM orders_date");
-                $ordersQuantity = mysql_fetch_array($ordersQuantityResult, MYSQL_NUM);
+                $ordersQuantityResult = $mysqli->query("SELECT COUNT(id) FROM orders_date");
+                $ordersQuantity = $ordersQuantityResult->fetch_array(MYSQLI_NUM);
 
-                $usersQuantityResult = mysql_query("SELECT COUNT(id) FROM users");
-                $usersQuantity = mysql_fetch_array($usersQuantityResult, MYSQL_NUM);
+                $usersQuantityResult = $mysqli->query("SELECT COUNT(id) FROM users");
+                $usersQuantity = $usersQuantityResult->fetch_array(MYSQLI_NUM);
 
                 echo "<span class='admMenuFont'>Количество товаров в каталоге: </span><span class='admMenuRedFont'>".$goodsQuantity[0]."</span><br />";
                 echo "<span class='admMenuFont'>Количество совершённых заказов: </span><span class='admMenuRedFont'>".$ordersQuantity[0]."</span><br />";
@@ -1245,7 +1245,7 @@
 
                                     if(!empty($_REQUEST['type']))
                                     {
-                                        $categoryResult = mysql_query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
+                                        $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
 
                                         echo "
                                             <form name='selectCategoryForm' id='selectCategoryForm' method='post' action='../scripts/admin/selectCategory.php'>
@@ -1255,7 +1255,7 @@
                                                     <option value=''>- Выберите категорию -</option>
                                         ";
 
-                                        while($category = mysql_fetch_assoc($categoryResult))
+                                        while($category = $categoryResult->fetch_assoc())
                                         {
                                             echo "<option value='".$category['id']."' "; if($category['id'] == $_REQUEST['c']) {echo "selected";} echo ">".$category['name']."</option>";
                                         }
@@ -1269,12 +1269,12 @@
 
                                     if(!empty($_REQUEST['c']))
                                     {
-                                        $subcategoriesCountResult = mysql_query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_REQUEST['c']."'");
-                                        $subcategoriesCount = mysql_fetch_array($subcategoriesCountResult, MYSQL_NUM);
+                                        $subcategoriesCountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_REQUEST['c']."'");
+                                        $subcategoriesCount = $subcategoriesCountResult->fetch_array(MYSQLI_NUM);
 
                                         if($subcategoriesCount[0] > 1)
                                         {
-                                            $subcategoryResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
+                                            $subcategoryResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
 
                                             echo "
                                                 <form name='subcategorySelectForm' id='subcategorySelectForm' method='post' action='../scripts/admin/selectSubcategory.php'>
@@ -1284,7 +1284,7 @@
                                                         <option value=''>- Выберите раздел -</option>
                                             ";
 
-                                            while($subcategory = mysql_fetch_assoc($subcategoryResult))
+                                            while($subcategory = $subcategoryResult->fetch_assoc())
                                             {
                                                 echo "<option value='".$subcategory['id']."' "; if($subcategory['id'] == $_REQUEST['s']) {echo "selected";} echo ">".$subcategory['name']."</option>";
                                             }
@@ -1297,12 +1297,12 @@
 
                                             if(!empty($_REQUEST['s']))
                                             {
-                                                $subcategories2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
-                                                $subcategories2Count = mysql_fetch_array($subcategories2CountResult, MYSQL_NUM);
+                                                $subcategories2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
+                                                $subcategories2Count = $subcategories2CountResult->fetch_array(MYSQLI_NUM);
 
                                                 if($subcategories2Count[0] > 1)
                                                 {
-                                                    $subcategories2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
+                                                    $subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
 
                                                     echo "
                                                         <form name='subcategory2SelectForm' id='subcategorySelectForm' method='post' action='../scripts/admin/selectSubcategory2.php'>
@@ -1312,7 +1312,7 @@
                                                                 <option value=''>- Выберите подраздел -</option>
                                                     ";
 
-                                                    while($subcategories2 = mysql_fetch_assoc($subcategories2Result))
+                                                    while($subcategories2 = $subcategories2Result->fetch_assoc())
                                                     {
                                                         echo "<option value='".$subcategories2['id']."'"; if($subcategories2['id'] == $_REQUEST['s2']) {echo " selected";} echo ">".$subcategories2['name']."</option>";
                                                     }
@@ -1325,8 +1325,8 @@
 
                                                     if(!empty($_REQUEST['s2']))
                                                     {
-                                                        $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
-                                                        $goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+                                                        $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
+                                                        $goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
                                                         echo "
                                                             <form name='addGoodForm' id='addGoodForm' method='post' action='../scripts/admin/addGood.php' enctype='multipart/form-data'>
@@ -1381,8 +1381,8 @@
                                                         unset($_SESSION['goodPosition']);
                                                         unset($_SESSION['goodDescription']);
 
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
-                                                        if(mysql_num_rows($goodsResult) > 0)
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
+                                                        if(MYSQLI_NUM_rows($goodsResult) > 0)
                                                         {
                                                             echo "
                                                                 <div id='admGoodBlock'>
@@ -1392,7 +1392,7 @@
 
                                                             $counter = 0;
 
-                                                            while($goods = mysql_fetch_assoc($goodsResult))
+                                                            while($goods = $goodsResult->fetch_assoc())
                                                             {
                                                                 if($counter % 2 == 0)
                                                                 {
@@ -1429,8 +1429,8 @@
                                                 else
                                                 {
 
-                                                    $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
-                                                    $goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+                                                    $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
+                                                    $goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
                                                     echo "
                                                         <form name='addGoodForm' id='addGoodForm' method='post' action='../scripts/admin/addGood.php' enctype='multipart/form-data'>
@@ -1487,15 +1487,15 @@
 
                                                     if($subcategories2Count[0] == 1)
                                                     {
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
                                                     }
 
                                                     if($subcategories2Count[0] == 0)
                                                     {
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
                                                     }
                                                     
-                                                    if(mysql_num_rows($goodsResult) > 0)
+                                                    if(MYSQLI_NUM_rows($goodsResult) > 0)
                                                     {
                                                         echo "
                                                             <div id='admGoodBlock'>
@@ -1505,7 +1505,7 @@
 
                                                         $counter = 0;
 
-                                                        while($goods = mysql_fetch_assoc($goodsResult))
+                                                        while($goods = $goodsResult->fetch_assoc())
                                                         {
                                                             if($counter % 2 == 0)
                                                             {
@@ -1542,8 +1542,8 @@
                                         }
                                         else
                                         {
-                                            $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
-                                            $goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+                                            $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
+                                            $goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
                                             echo "
                                                 <form name='addGoodForm' id='addGoodForm' method='post' action='../scripts/admin/addGood.php' enctype='multipart/form-data'>
@@ -1598,8 +1598,8 @@
                                             unset($_SESSION['goodPosition']);
                                             unset($_SESSION['goodDescription']);
 
-                                            $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
-                                            if(mysql_num_rows($goodsResult) > 0)
+                                            $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
+                                            if(MYSQLI_NUM_rows($goodsResult) > 0)
                                             {
                                                 echo "
                                                     <div id='admGoodBlock'>
@@ -1609,7 +1609,7 @@
 
                                                 $counter = 0;
 
-                                                while($goods = mysql_fetch_assoc($goodsResult))
+                                                while($goods = $goodsResult->fetch_assoc())
                                                 {
                                                     if($counter % 2 == 0)
                                                     {
@@ -1663,7 +1663,7 @@
 
                                     if(!empty($_REQUEST['type']))
                                     {
-                                        $categoryResult = mysql_query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
+                                        $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
 
                                         echo "
                                             <form name='selectCategoryForm' id='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryE.php'>
@@ -1673,7 +1673,7 @@
                                                     <option value=''>- Выберите категорию -</option>
                                         ";
 
-                                        while($category = mysql_fetch_assoc($categoryResult))
+                                        while($category = $categoryResult->fetch_assoc())
                                         {
                                             echo "<option value='".$category['id']."' "; if($category['id'] == $_REQUEST['c']) {echo "selected";} echo ">".$category['name']."</option>";
                                         }
@@ -1687,12 +1687,12 @@
 
                                     if(!empty($_REQUEST['c']))
                                     {
-                                        $subcategoriesCountResult = mysql_query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_REQUEST['c']."'");
-                                        $subcategoriesCount = mysql_fetch_array($subcategoriesCountResult, MYSQL_NUM);
+                                        $subcategoriesCountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_REQUEST['c']."'");
+                                        $subcategoriesCount = $subcategoriesCountResult->fetch_array(MYSQLI_NUM);
 
                                         if($subcategoriesCount[0] > 1)
                                         {
-                                            $subcategoryResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
+                                            $subcategoryResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
 
                                             echo "
                                                 <form name='subcategorySelectForm' id='subcategorySelectForm' method='post' action='../scripts/admin/selectSubcategory.php'>
@@ -1702,7 +1702,7 @@
                                                         <option value=''>- Выберите раздел -</option>
                                             ";
 
-                                            while($subcategory = mysql_fetch_assoc($subcategoryResult))
+                                            while($subcategory = $subcategoryResult->fetch_assoc())
                                             {
                                                 echo "<option value='".$subcategory['id']."' "; if($subcategory['id'] == $_REQUEST['s']) {echo "selected";} echo ">".$subcategory['name']."</option>";
                                             }
@@ -1715,12 +1715,12 @@
 
                                             if(!empty($_REQUEST['s']))
                                             {
-                                                $subcategories2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
-                                                $subcategories2Count = mysql_fetch_array($subcategories2CountResult, MYSQL_NUM);
+                                                $subcategories2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
+                                                $subcategories2Count = $subcategories2CountResult->fetch_array(MYSQLI_NUM);
 
                                                 if($subcategories2Count[0] > 1)
                                                 {
-                                                    $subcategories2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
+                                                    $subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
 
                                                     echo "
                                                         <form name='subcategory2SelectForm' id='subcategorySelectForm' method='post' action='../scripts/admin/selectSubcategory2.php'>
@@ -1730,7 +1730,7 @@
                                                                 <option value=''>- Выберите подраздел -</option>
                                                     ";
 
-                                                    while($subcategories2 = mysql_fetch_assoc($subcategories2Result))
+                                                    while($subcategories2 = $subcategories2Result->fetch_assoc())
                                                     {
                                                         echo "<option value='".$subcategories2['id']."'"; if($subcategories2['id'] == $_REQUEST['s2']) {echo " selected";} echo ">".$subcategories2['name']."</option>";
                                                     }
@@ -1743,7 +1743,7 @@
 
                                                     if(!empty($_REQUEST['s2']))
                                                     {
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
 
                                                         echo "
                                                             <form name='goodSelectForm' id='goodSelectForm' method='post' action='../scripts/admin/selectGood.php'>
@@ -1753,7 +1753,7 @@
                                                                     <option value=''>- Выберите товар -</option>
                                                         ";
 
-                                                        while($goods = mysql_fetch_assoc($goodsResult))
+                                                        while($goods = $goodsResult->fetch_assoc())
                                                         {
                                                             echo "<option value='".$goods['id']."'"; if($goods['id'] == $_REQUEST['id']) {echo " selected";} echo ">".$goods['name']."</option>";
                                                         }
@@ -1766,11 +1766,11 @@
 
                                                         if(!empty($_REQUEST['id']))
                                                         {
-                                                            $goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-                                                            $good = mysql_fetch_assoc($goodResult);
+                                                            $goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+                                                            $good = $goodResult->fetch_assoc();
 
-                                                            $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
-                                                            $goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+                                                            $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
+                                                            $goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
                                                             echo "
                                                                 <form name='editGoodForm' id='editGoodForm' method='post' action='../scripts/admin/editGood.php' enctype='multipart/form-data'>
@@ -1827,8 +1827,8 @@
                                                             unset($_SESSION['goodPosition']);
                                                             unset($_SESSION['goodDescription']);
 
-                                                            $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
-                                                            if(mysql_num_rows($goodsResult) > 0)
+                                                            $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
+                                                            if(MYSQLI_NUM_rows($goodsResult) > 0)
                                                             {
                                                                 echo "
                                                                     <div id='admGoodBlock'>
@@ -1838,7 +1838,7 @@
 
                                                                 $counter = 0;
 
-                                                                while($goods = mysql_fetch_assoc($goodsResult))
+                                                                while($goods = $goodsResult->fetch_assoc())
                                                                 {
                                                                     if($_REQUEST['id'] == $goods['id'])
                                                                     {
@@ -1890,12 +1890,12 @@
                                                 {
                                                     if($subcategories2Count[0] == 1)
                                                     {
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
                                                     }
 
                                                     if($subcategories2Count[0] == 0)
                                                     {
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
                                                     }
                                                     
                                                     echo "
@@ -1906,7 +1906,7 @@
                                                                 <option value=''>- Выберите товар -</option>
                                                     ";
 
-                                                    while($goods = mysql_fetch_assoc($goodsResult))
+                                                    while($goods = $goodsResult->fetch_assoc($goodsResult))
                                                     {
                                                         echo "<option value='".$goods['id']."'"; if($_REQUEST['id'] == $goods['id']) {echo " selected";} echo ">".$goods['name']."</option>";
                                                     }
@@ -1919,18 +1919,18 @@
 
                                                     if(!empty($_REQUEST['id']))
                                                     {
-                                                        $goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-                                                        $good = mysql_fetch_assoc($goodResult);
+                                                        $goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+                                                        $good = $goodResult->fetch_assoc();
 
                                                         if(!empty($_REQUEST['s2']))
                                                         {
-                                                            $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
-                                                            $goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+                                                            $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
+                                                            $goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
                                                         }
                                                         else
                                                         {
-                                                            $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
-                                                            $goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+                                                            $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
+                                                            $goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
                                                         }
 
                                                         echo "
@@ -1990,14 +1990,14 @@
 
                                                         if(!empty($_REQUEST['s2']))
                                                         {
-                                                            $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
+                                                            $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
                                                         }
                                                         else
                                                         {
-                                                            $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
+                                                            $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
                                                         }
 
-                                                        if(mysql_num_rows($goodsResult) > 0)
+                                                        if(MYSQLI_NUM_rows($goodsResult) > 0)
                                                         {
                                                             echo "
                                                                 <div id='admGoodBlock'>
@@ -2007,7 +2007,7 @@
 
                                                             $counter = 0;
 
-                                                            while($goods = mysql_fetch_assoc($goodsResult))
+                                                            while($goods = $goodsResult->fetch_assoc())
                                                             {
                                                                 if($_REQUEST['id'] == $goods['id'])
                                                                     {
@@ -2058,12 +2058,12 @@
                                         }
                                         else
                                         {
-                                            $subcategories2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
-                                            $subcategories2Count = mysql_fetch_array($subcategories2CountResult, MYSQL_NUM);
+                                            $subcategories2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
+                                            $subcategories2Count = $subcategories2CountResult->fetch_array(MYSQLI_NUM);
 
                                             if($subcategories2Count[0] > 1)
                                             {
-                                                $subcategories2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
+                                                $subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
 
                                                 echo "
                                                     <form name='subcategory2SelectForm' id='subcategorySelectForm' method='post' action='../scripts/admin/selectSubcategory2.php'>
@@ -2073,7 +2073,7 @@
                                                             <option value=''>- Выберите подраздел -</option>
                                                 ";
 
-                                                while($subcategories2 = mysql_fetch_assoc($subcategories2Result))
+                                                while($subcategories2 = $subcategories2Result->fetch_assoc())
                                                 {
                                                     echo "<option value='".$subcategories2['id']."'"; if($subcategories2['id'] == $_REQUEST['s2']) {echo " selected";} echo ">".$subcategories2['name']."</option>";
                                                 }
@@ -2086,7 +2086,7 @@
 
                                                 if(!empty($_REQUEST['s2']))
                                                 {
-                                                    $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
+                                                    $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
 
                                                     echo "
                                                         <form name='goodSelectForm' id='goodSelectForm' method='post' action='../scripts/admin/selectGood.php'>
@@ -2096,7 +2096,7 @@
                                                                 <option value=''>- Выберите товар -</option>
                                                     ";
 
-                                                    while($goods = mysql_fetch_assoc($goodsResult))
+                                                    while($goods = $goodsResult->fetch_assoc($goodsResult))
                                                     {
                                                         echo "<option value='".$goods['id']."'"; if($goods['id'] == $_REQUEST['id']) {echo " selected";} echo ">".$goods['name']."</option>";
                                                     }
@@ -2109,11 +2109,11 @@
 
                                                     if(!empty($_REQUEST['id']))
                                                     {
-                                                        $goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-                                                        $good = mysql_fetch_assoc($goodResult);
+                                                        $goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+                                                        $good = $goodResult->fetch_assoc();
 
-                                                        $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
-                                                        $goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+                                                        $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
+                                                        $goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
                                                         echo "
                                                             <form name='editGoodForm' id='editGoodForm' method='post' action='../scripts/admin/editGood.php' enctype='multipart/form-data'>
@@ -2170,8 +2170,8 @@
                                                         unset($_SESSION['goodPosition']);
                                                         unset($_SESSION['goodDescription']);
 
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
-                                                        if(mysql_num_rows($goodsResult) > 0)
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
+                                                        if(MYSQLI_NUM_rows($goodsResult) > 0)
                                                         {
                                                             echo "
                                                                 <div id='admGoodBlock'>
@@ -2181,7 +2181,7 @@
 
                                                             $counter = 0;
 
-                                                            while($goods = mysql_fetch_assoc($goodsResult))
+                                                            while($goods = $goodsResult->fetch_assoc())
                                                             {
                                                                 if($_REQUEST['id'] == $goods['id'])
                                                                 {
@@ -2233,12 +2233,12 @@
                                             {
                                                 if($subcategories2Count[0] == 1)
                                                 {
-                                                    $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
+                                                    $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
                                                 }
                                                 
                                                 if($subcategories2Count[0] == 0)
                                                 {
-                                                    $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
+                                                    $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
                                                 }
 
                                                 echo "
@@ -2249,7 +2249,7 @@
                                                             <option value=''>- Выберите товар -</option>
                                                 ";
 
-                                                while($goods = mysql_fetch_assoc($goodsResult))
+                                                while($goods = $goodsResult->fetch_assoc())
                                                 {
                                                     echo "<option value='".$goods['id']."'"; if($_REQUEST['id'] == $goods['id']) {echo " selected";} echo ">".$goods['name']."</option>";
                                                 }
@@ -2262,19 +2262,19 @@
 
                                                 if(!empty($_REQUEST['id']))
                                                 {
-                                                    $goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-                                                    $good = mysql_fetch_assoc($goodResult);
+                                                    $goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+                                                    $good = $goodResult->fetch_assoc();
 
                                                     if(!empty($_REQUEST['s2']))
                                                     {
-                                                        $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
+                                                        $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
                                                     }
                                                     else
                                                     {
-                                                        $goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
+                                                        $goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
                                                     }
                                                     
-                                                    $goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+                                                    $goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
                                                     echo "
                                                         <form name='editGoodForm' id='editGoodForm' method='post' action='../scripts/admin/editGood.php' enctype='multipart/form-data'>
@@ -2333,14 +2333,14 @@
 
                                                     if(!empty($_REQUEST['s2']))
                                                     {
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY priority");
                                                     }
                                                     else
                                                     {
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY priority");
                                                     }
                                                     
-                                                    if(mysql_num_rows($goodsResult) > 0)
+                                                    if(MYSQLI_NUM_rows($goodsResult) > 0)
                                                     {
                                                         echo "
                                                             <div id='admGoodBlock'>
@@ -2350,7 +2350,7 @@
 
                                                         $counter = 0;
 
-                                                        while($goods = mysql_fetch_assoc($goodsResult))
+                                                        while($goods = $goodsResult->fetch_assoc())
                                                         {
                                                             if($_REQUEST['id'] == $goods['id'])
                                                             {
@@ -2419,7 +2419,7 @@
 
                                     if(!empty($_REQUEST['type']))
                                     {
-                                        $categoryResult = mysql_query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
+                                        $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
 
                                         echo "
                                             <form name='selectCategoryForm' id='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryE.php'>
@@ -2429,7 +2429,7 @@
                                                     <option value=''>- Выберите категорию -</option>
                                         ";
 
-                                        while($category = mysql_fetch_assoc($categoryResult))
+                                        while($category = $categoryResult->fetch_assoc())
                                         {
                                             echo "<option value='".$category['id']."' "; if($category['id'] == $_REQUEST['c']) {echo "selected";} echo ">".$category['name']."</option>";
                                         }
@@ -2442,12 +2442,12 @@
 
                                         if(!empty($_REQUEST['c']))
                                         {
-                                            $subcategoriesCountResult = mysql_query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_REQUEST['c']."'");
-                                            $subcategoriesCount = mysql_fetch_array($subcategoriesCountResult, MYSQL_NUM);
+                                            $subcategoriesCountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_REQUEST['c']."'");
+                                            $subcategoriesCount = $subcategoriesCountResult->fetch_array(MYSQLI_NUM);
 
                                             if($subcategoriesCount[0] > 1)
                                             {
-                                                $subcategoryResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
+                                                $subcategoryResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
 
                                                 echo "
                                                     <form name='subcategorySelectForm' id='subcategorySelectForm' method='post' action='../scripts/admin/selectSubcategory.php'>
@@ -2457,7 +2457,7 @@
                                                             <option value=''>- Выберите раздел -</option>
                                                 ";
 
-                                                while($subcategory = mysql_fetch_assoc($subcategoryResult))
+                                                while($subcategory = $subcategoryResult->fetch_assoc())
                                                 {
                                                     echo "<option value='".$subcategory['id']."' "; if($subcategory['id'] == $_REQUEST['s']) {echo "selected";} echo ">".$subcategory['name']."</option>";
                                                 }
@@ -2470,12 +2470,12 @@
 
                                                 if(!empty($_REQUEST['s']))
                                                 {
-                                                    $subcategories2CountResult = mysql_query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
-                                                    $subcategories2Count = mysql_fetch_array($subcategories2CountResult, MYSQL_NUM);
+                                                    $subcategories2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
+                                                    $subcategories2Count = $subcategories2CountResult->fetch_array(MYSQLI_NUM);
 
                                                     if($subcategories2Count[0] > 1)
                                                     {
-                                                        $subcategory2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
+                                                        $subcategory2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
 
                                                         echo "
                                                             <form name='subcategory2SelectForm' id='subcategory2SelectForm' method='post' action='../scripts/admin/selectSubcategory2.php'>
@@ -2485,7 +2485,7 @@
                                                                     <option value=''>- Выберите подраздел -</option>
                                                         ";
 
-                                                        while($subcategory2 = mysql_fetch_assoc($subcategory2Result))
+                                                        while($subcategory2 = $subcategory2Result->fetch_assoc())
                                                         {
                                                             echo "<option value='".$subcategory2['id']."' "; if($subcategory2['id'] == $_REQUEST['s2']) {echo "selected";} echo ">".$subcategory2['name']."</option>";
                                                         }
@@ -2498,7 +2498,7 @@
 
                                                         if(!empty($_REQUEST['s2']))
                                                         {
-                                                            $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
+                                                            $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."' ORDER BY name");
 
                                                             echo "
                                                                 <form name='goodSelectForm' id='goodSelectForm' method='post' action='../scripts/admin/selectGood.php'>
@@ -2508,7 +2508,7 @@
                                                                         <option value=''>- Выберите товар -</option>
                                                             ";
 
-                                                            while($goods = mysql_fetch_assoc($goodsResult))
+                                                            while($goods = $goodsResult->fetch_assoc())
                                                             {
                                                                 echo "<option value='".$goods['id']."'"; if($goods['id'] == $_REQUEST['id']) {echo " selected";} echo ">".$goods['name']."</option>";
                                                             }
@@ -2521,8 +2521,8 @@
 
                                                             if(!empty($_REQUEST['id']))
                                                             {
-                                                                $goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-                                                                $good = mysql_fetch_assoc($goodsResult);
+                                                                $goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+                                                                $good = $goodsResult->fetch_assoc();
 
                                                                 echo "
                                                                     <form name='deleteGoodForm' id='dleteGoodForm' method='post' action='../scripts/admin/deleteGood.php'>
@@ -2534,7 +2534,7 @@
                                                     }
                                                     else
                                                     {
-                                                        $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
+                                                        $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
 
                                                         echo "
                                                             <form name='goodSelectForm' id='goodSelectForm' method='post' action='../scripts/admin/selectGood.php'>
@@ -2544,7 +2544,7 @@
                                                                     <option value=''>- Выберите товар -</option>
                                                         ";
 
-                                                        while($goods = mysql_fetch_assoc($goodsResult))
+                                                        while($goods = $goodsResult->fetch_assoc())
                                                         {
                                                             echo "<option value='".$goods['id']."'"; if($goods['id'] == $_REQUEST['id']) {echo " selected";} echo ">".$goods['name']."</option>";
                                                         }
@@ -2557,8 +2557,8 @@
 
                                                         if(!empty($_REQUEST['id']))
                                                         {
-                                                            $goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-                                                            $good = mysql_fetch_assoc($goodsResult);
+                                                            $goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+                                                            $good = $goodsResult->fetch_assoc();
 
                                                             echo "
                                                                 <form name='deleteGoodForm' id='dleteGoodForm' method='post' action='../scripts/admin/deleteGood.php'>
@@ -2571,7 +2571,7 @@
                                             }
                                             else
                                             {
-                                                $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
+                                                $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."' ORDER BY name");
 
                                                 echo "
                                                     <form name='goodSelectForm' id='goodSelectForm' method='post' action='../scripts/admin/selectGood.php'>
@@ -2581,7 +2581,7 @@
                                                             <option value=''>- Выберите товар -</option>
                                                 ";
 
-                                                while($goods = mysql_fetch_assoc($goodsResult))
+                                                while($goods = $goodsResult->fetch_assoc())
                                                 {
                                                     echo "<option value='".$goods['id']."'"; if($goods['id'] == $_REQUEST['id']) {echo " selected";} echo ">".$goods['name']."</option>";
                                                 }
@@ -2594,8 +2594,8 @@
 
                                                 if(!empty($_REQUEST['id']))
                                                 {
-                                                    $goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
-                                                    $good = mysql_fetch_assoc($goodsResult);
+                                                    $goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_REQUEST['id']."'");
+                                                    $good = $goodsResult->fetch_assoc();
 
                                                     echo "
                                                         <form name='deleteGoodForm' id='dleteGoodForm' method='post' action='../scripts/admin/deleteGood.php'>
@@ -2691,7 +2691,7 @@
                                             }
                                             else
                                             {
-                                                $categoryResult = mysql_query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
+                                                $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
 
                                                 echo "
                                                     <form name='selectCategoryForm' id='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
@@ -2701,7 +2701,7 @@
                                                             <option value=''>- Выберите категорию -</option>
                                                 ";
 
-                                                while($category = mysql_fetch_assoc($categoryResult))
+                                                while($category = $categoryResult->fetch_assoc())
                                                 {
                                                     echo "<option value='".$category['id']."' "; if($category['id'] == $_REQUEST['c']) {echo "selected";} echo ">".$category['name']."</option>";
                                                 }
@@ -2733,7 +2733,7 @@
                                                 {
                                                     if(!empty($_REQUEST['c']))
                                                     {
-                                                        $subcategoryResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
+                                                        $subcategoryResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
 
                                                         echo "
                                                             <form name='selectSubcategoryForm' id='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
@@ -2743,7 +2743,7 @@
                                                                     <option value=''>- Выберите раздел -</option>
                                                         ";
 
-                                                        while($subcategory = mysql_fetch_assoc($subcategoryResult))
+                                                        while($subcategory = $subcategoryResult->fetch_assoc())
                                                         {
                                                             echo "<option value='".$subcategory['id']."' "; if($subcategory['id'] == $_REQUEST['s']) {echo "selected";} echo ">".$subcategory['name']."</option>";
                                                         }
@@ -2811,7 +2811,7 @@
                                         {
                                             if($_REQUEST['level'] == '1')
                                             {
-                                                $categoriesResult = mysql_query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
+                                                $categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
 
                                                 echo "
                                                     <form name='selectCategoryForm' name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
@@ -2821,7 +2821,7 @@
                                                             <option value=''>- Выберите категорию -</option>
                                                 ";
 
-                                                while($categories = mysql_fetch_assoc($categoriesResult))
+                                                while($categories = $categoriesResult->fetch_assoc())
                                                 {
                                                     echo "
                                                         <option value='".$categories['id']."'"; if(!empty($_REQUEST['c']) and $_REQUEST['c'] == $categories['id']){echo " selected";} echo ">".$categories['name']."</option>
@@ -2836,8 +2836,8 @@
 
                                                 if(!empty($_REQUEST['c']))
                                                 {
-                                                    $categoryResult = mysql_query("SELECT * FROM categories_new WHERE id = '".$_REQUEST['c']."'");
-                                                    $category = mysql_fetch_assoc($categoryResult);
+                                                    $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE id = '".$_REQUEST['c']."'");
+                                                    $category = $categoryResult->fetch_assoc();
 
                                                     echo "
                                                         <form name='editCategoryForm' id='editCategoryForm' method='post' action='../scripts/admin/editCategory.php' enctype='multipart/form-data'>
@@ -2871,17 +2871,17 @@
                                                     $catArray = array();
                                                     $namesArray = array();
 
-                                                    $categoriesResult = mysql_query("SELECT DISTINCT category FROM subcategories_new WHERE id < 1000 AND type = '".$_SESSION['type']."'");
+                                                    $categoriesResult = $mysqli->query("SELECT DISTINCT category FROM subcategories_new WHERE id < 1000 AND type = '".$_SESSION['type']."'");
 
-                                                    while($categories = mysql_fetch_array($categoriesResult, MYSQL_NUM))
+                                                    while($categories = $categoriesResult->fetch_array(MYSQLI_NUM))
                                                     {
                                                         array_push($catArray, $categories[0]);
                                                     }
 
                                                     for($i = 0; $i < count($catArray); $i++)
                                                     {
-                                                        $categoryResult = mysql_query("SELECT name FROM categories_new WHERE id = '".$catArray[$i]."'");
-                                                        $category = mysql_fetch_array($categoryResult, MYSQL_NUM);
+                                                        $categoryResult = $mysqli->query("SELECT name FROM categories_new WHERE id = '".$catArray[$i]."'");
+                                                        $category = $categoryResult->fetch_array(MYSQLI_NUM);
 
                                                         array_push($namesArray, $category[0]);
                                                     }
@@ -2898,8 +2898,8 @@
 
                                                     for($i = 0; $i < count($namesArray); $i++)
                                                     {
-                                                        $categoryResult = mysql_query("SELECT * FROM categories_new WHERE name = '".$namesArray[$i]."'");
-                                                        $category = mysql_fetch_assoc($categoryResult);
+                                                        $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE name = '".$namesArray[$i]."'");
+                                                        $category = $categoryResult->fetch_assoc();
 
                                                         echo "
                                                             <option value='".$category['id']."'"; if(!empty($_REQUEST['c']) and $_REQUEST['c'] == $category['id']){echo " selected";} echo ">".$category['name']."</option>
@@ -2914,7 +2914,7 @@
 
                                                     if(!empty($_REQUEST['c']))
                                                     {
-                                                        $subcategoriesResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
+                                                        $subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
 
                                                         echo "
                                                             <form name='selectSubcategoryForm' name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
@@ -2924,7 +2924,7 @@
                                                                     <option value=''>- Выберите раздел -</option>
                                                         ";
 
-                                                        while($subcategories = mysql_fetch_assoc($subcategoriesResult))
+                                                        while($subcategories = $subcategoriesResult->fetch_assoc())
                                                         {
                                                             echo "
                                                                 <option value='".$subcategories['id']."'"; if(!empty($_REQUEST['s']) and $_REQUEST['s'] == $subcategories['id']){echo " selected";} echo ">".$subcategories['name']."</option>
@@ -2939,8 +2939,8 @@
 
                                                         if(!empty($_REQUEST['s']))
                                                         {
-                                                            $subcategoryResult = mysql_query("SELECT * FROM subcategories_new WHERE id = '".$_REQUEST['s']."'");
-                                                            $subcategory = mysql_fetch_assoc($subcategoryResult);
+                                                            $subcategoryResult = $mysqli->query("SELECT * FROM subcategories_new WHERE id = '".$_REQUEST['s']."'");
+                                                            $subcategory = $subcategoryResult->fetch_assoc();
 
                                                             echo "
                                                                 <form name='editSubcategoryForm' id='editSubcategoryForm' method='post' action='../scripts/admin/editSubcategory.php'>
@@ -2964,16 +2964,16 @@
                                                     $catArray = array();
                                                     $namesArray = array();
 
-                                                    $subcategories2Result = mysql_query("SELECT DISTINCT subcategory FROM subcategories2");
-                                                    while($subcategories2 = mysql_fetch_array($subcategories2Result, MYSQL_NUM))
+                                                    $subcategories2Result = $mysqli->query("SELECT DISTINCT subcategory FROM subcategories2");
+                                                    while($subcategories2 = $subcategories2Result->fetch_array(MYSQLI_NUM))
                                                     {
                                                         array_push($subArray, $subcategories2[0]);
                                                     }
 
                                                     for($i = 0; $i < count($subArray); $i++)
                                                     {
-                                                        $subcategoryResult = mysql_query("SELECT type FROM subcategories_new WHERE id = '".$subArray[$i]."'");
-                                                        $subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+                                                        $subcategoryResult = $mysqli->query("SELECT type FROM subcategories_new WHERE id = '".$subArray[$i]."'");
+                                                        $subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 
                                                         if($subcategory[0] == $_SESSION['type'])
                                                         {
@@ -2983,8 +2983,8 @@
 
                                                     for($i = 0; $i < count($cleanSubArr); $i++)
                                                     {
-                                                        $categoryResult = mysql_query("SELECT category FROM subcategories_new WHERE id = '".$cleanSubArr[$i]."'");
-                                                        $category = mysql_fetch_array($categoryResult, MYSQL_NUM);
+                                                        $categoryResult = $mysqli->query("SELECT category FROM subcategories_new WHERE id = '".$cleanSubArr[$i]."'");
+                                                        $category = $categoryResult->fetch_array(MYSQLI_NUM);
 
                                                         $count = 0;
 
@@ -3004,8 +3004,8 @@
 
                                                     for($i = 0; $i < count($catArray); $i++)
                                                     {
-                                                        $categoryNameResult = mysql_query("SELECT name FROM categories_new WHERE id = '".$catArray[$i]."'");
-                                                        $categoryName = mysql_fetch_array($categoryNameResult, MYSQL_NUM);
+                                                        $categoryNameResult = $mysqli->query("SELECT name FROM categories_new WHERE id = '".$catArray[$i]."'");
+                                                        $categoryName = $categoryNameResult->fetch_array(MYSQLI_NUM);
 
                                                         array_push($namesArray, $categoryName[0]);
                                                     }
@@ -3022,8 +3022,8 @@
 
                                                     for($i = 0; $i < count($namesArray); $i++)
                                                     {
-                                                        $categoryResult = mysql_query("SELECT * FROM categories_new WHERE name = '".$namesArray[$i]."'");
-                                                        $category = mysql_fetch_assoc($categoryResult);
+                                                        $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE name = '".$namesArray[$i]."'");
+                                                        $category = $categoryResult->fetch_assoc();
 
                                                         echo "
                                                             <option value='".$category['id']."'"; if(!empty($_REQUEST['c']) and $_REQUEST['c'] == $category['id']){echo " selected";} echo ">".$category['name']."</option>
@@ -3042,8 +3042,8 @@
 
                                                         for($i = 0; $i < count($cleanSubArr); $i++)
                                                         {
-                                                            $subcategoryResult = mysql_query("SELECT name FROM subcategories_new WHERE id = '".$cleanSubArr[$i]."' AND category = '".$_SESSION['c']."'");
-                                                            $subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+                                                            $subcategoryResult = $mysqli->query("SELECT name FROM subcategories_new WHERE id = '".$cleanSubArr[$i]."' AND category = '".$_SESSION['c']."'");
+                                                            $subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 
                                                             if(!empty($subcategory))
                                                             {
@@ -3063,8 +3063,8 @@
 
                                                         for($i = 0; $i < count($namesArray); $i++)
                                                         {
-                                                            $subcategoryResult = mysql_query("SELECT * FROM subcategories_new WHERE name = '".$namesArray[$i]."'");
-                                                            $subcategory = mysql_fetch_assoc($subcategoryResult);
+                                                            $subcategoryResult = $mysqli->query("SELECT * FROM subcategories_new WHERE name = '".$namesArray[$i]."'");
+                                                            $subcategory = $subcategoryResult->fetch_assoc();
 
                                                             echo "
                                                                 <option value='".$subcategory['id']."'"; if(!empty($_REQUEST['s']) and $_REQUEST['s'] == $subcategory['id']){echo " selected";} echo ">".$subcategory['name']."</option>
@@ -3079,7 +3079,7 @@
 
                                                         if(!empty($_REQUEST['s']))
                                                         {
-                                                            $subcategories2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
+                                                            $subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
 
                                                             echo "
                                                                 <form name='selectSubcategory2Form' name='selectSubcategory2Form' method='post' action='../scripts/admin/selectSubcategory2.php'>
@@ -3089,7 +3089,7 @@
                                                                         <option value=''>- Выберите подраздел -</option>
                                                             ";
 
-                                                            while($subcategories2 = mysql_fetch_assoc($subcategories2Result))
+                                                            while($subcategories2 = $subcategories2Result->fetch_assoc())
                                                             {
                                                                 echo "
                                                                     <option value='".$subcategories2['id']."'"; if(!empty($_REQUEST['s2']) and $_REQUEST['s2'] == $subcategories2['id']){echo " selected";} echo ">".$subcategories2['name']."</option>
@@ -3104,8 +3104,8 @@
 
                                                             if(!empty($_REQUEST['s2']))
                                                             {
-                                                                $subcategory2Result = mysql_query("SELECT * FROM subcategories2 WHERE id = '".$_REQUEST['s2']."'");
-                                                                $subcategory2 = mysql_fetch_assoc($subcategory2Result);
+                                                                $subcategory2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE id = '".$_REQUEST['s2']."'");
+                                                                $subcategory2 = $subcategory2Result->fetch_assoc();
 
                                                                 echo "
                                                                     <form name='editSubcategory2Form' id='editSubcategory2Form' method='post' action='../scripts/admin/editSubcategory2.php'>
@@ -3163,7 +3163,7 @@
                                         {
                                             if($_REQUEST['level'] == '1')
                                             {
-                                                $categoriesResult = mysql_query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
+                                                $categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
 
                                                 echo "
                                                     <form name='selectCategoryForm' name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
@@ -3173,7 +3173,7 @@
                                                             <option value=''>- Выберите категорию -</option>
                                                 ";
 
-                                                while($categories = mysql_fetch_assoc($categoriesResult))
+                                                while($categories = $categoriesResult->fetch_assoc())
                                                 {
                                                     echo "
                                                         <option value='".$categories['id']."'"; if(!empty($_REQUEST['c']) and $_REQUEST['c'] == $categories['id']){echo " selected";} echo ">".$categories['name']."</option>
@@ -3188,13 +3188,13 @@
 
                                                 if(!empty($_REQUEST['c']))
                                                 {
-                                                    $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE category = '".$_REQUEST['c']."'");
+                                                    $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE category = '".$_REQUEST['c']."'");
 
                                                     echo "
                                                         <form name='deleteCategoryForm' id='deleteCategoryForm' method='post' action='../scripts/admin/deleteCategory.php'>
                                                     ";
                                                     
-                                                    if(mysql_num_rows($goodsResult) != 0)
+                                                    if(MYSQLI_NUM_rows($goodsResult) != 0)
                                                     {
                                                         echo "
                                                             <label class='admLabel' onclick='checkboxClick(\"categoryDeleteCheckbox\")' style='cursor: pointer;'>Удалить категорию вместе с товарами</label>
@@ -3216,17 +3216,17 @@
                                                     $catArray = array();
                                                     $namesArray = array();
 
-                                                    $categoriesResult = mysql_query("SELECT DISTINCT category FROM subcategories_new WHERE id < 1000 AND type = '".$_SESSION['type']."'");
+                                                    $categoriesResult = $mysqli->query("SELECT DISTINCT category FROM subcategories_new WHERE id < 1000 AND type = '".$_SESSION['type']."'");
 
-                                                    while($categories = mysql_fetch_array($categoriesResult, MYSQL_NUM))
+                                                    while($categories = $categoriesResult->fetch_array(MYSQLI_NUM))
                                                     {
                                                         array_push($catArray, $categories[0]);
                                                     }
 
                                                     for($i = 0; $i < count($catArray); $i++)
                                                     {
-                                                        $categoryResult = mysql_query("SELECT name FROM categories_new WHERE id = '".$catArray[$i]."'");
-                                                        $category = mysql_fetch_array($categoryResult, MYSQL_NUM);
+                                                        $categoryResult = $mysqli->query("SELECT name FROM categories_new WHERE id = '".$catArray[$i]."'");
+                                                        $category = $categoryResult->fetch_array(MYSQLI_NUM);
 
                                                         array_push($namesArray, $category[0]);
                                                     }
@@ -3243,8 +3243,8 @@
 
                                                     for($i = 0; $i < count($namesArray); $i++)
                                                     {
-                                                        $categoryResult = mysql_query("SELECT * FROM categories_new WHERE name = '".$namesArray[$i]."'");
-                                                        $category = mysql_fetch_assoc($categoryResult);
+                                                        $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE name = '".$namesArray[$i]."'");
+                                                        $category = $categoryResult->fetch_assoc();
 
                                                         echo "
                                                             <option value='".$category['id']."'"; if(!empty($_REQUEST['c']) and $_REQUEST['c'] == $category['id']){echo " selected";} echo ">".$category['name']."</option>
@@ -3259,7 +3259,7 @@
 
                                                     if(!empty($_REQUEST['c']))
                                                     {
-                                                        $subcategoriesResult = mysql_query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
+                                                        $subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
 
                                                         echo "
                                                             <form name='selectSubcategoryForm' name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
@@ -3269,7 +3269,7 @@
                                                                     <option value=''>- Выберите раздел -</option>
                                                         ";
 
-                                                        while($subcategories = mysql_fetch_assoc($subcategoriesResult))
+                                                        while($subcategories = $subcategoriesResult->fetch_assoc())
                                                         {
                                                             echo "
                                                                 <option value='".$subcategories['id']."'"; if(!empty($_REQUEST['s']) and $_REQUEST['s'] == $subcategories['id']){echo " selected";} echo ">".$subcategories['name']."</option>
@@ -3284,13 +3284,13 @@
 
                                                         if(!empty($_REQUEST['s']))
                                                         {
-                                                            $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
+                                                            $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['s']."'");
 
                                                             echo "
                                                                 <form name='deleteSubcategoryForm' id='deleteSubcategoryForm' method='post' action='../scripts/admin/deleteSubcategory.php'>
                                                             ";
 
-                                                            if(mysql_num_rows($goodsResult) != 0)
+                                                            if(MYSQLI_NUM_rows($goodsResult) != 0)
                                                             {
                                                                 echo "
                                                                     <label class='admLabel' onclick='checkboxClick(\"subcategoryDeleteCheckbox\")' style='cursor: pointer;'>Удалить раздел вместе с товарами</label>
@@ -3314,16 +3314,16 @@
                                                     $catArray = array();
                                                     $namesArray = array();
 
-                                                    $subcategories2Result = mysql_query("SELECT DISTINCT subcategory FROM subcategories2");
-                                                    while($subcategories2 = mysql_fetch_array($subcategories2Result, MYSQL_NUM))
+                                                    $subcategories2Result = $mysqli->query("SELECT DISTINCT subcategory FROM subcategories2");
+                                                    while($subcategories2 = $subcategories2Result->fetch_array(MYSQLI_NUM))
                                                     {
                                                         array_push($subArray, $subcategories2[0]);
                                                     }
 
                                                     for($i = 0; $i < count($subArray); $i++)
                                                     {
-                                                        $subcategoryResult = mysql_query("SELECT type FROM subcategories_new WHERE id = '".$subArray[$i]."'");
-                                                        $subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+                                                        $subcategoryResult = $mysqli->query("SELECT type FROM subcategories_new WHERE id = '".$subArray[$i]."'");
+                                                        $subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 
                                                         if($subcategory[0] == $_SESSION['type'])
                                                         {
@@ -3333,8 +3333,8 @@
 
                                                     for($i = 0; $i < count($cleanSubArr); $i++)
                                                     {
-                                                        $categoryResult = mysql_query("SELECT category FROM subcategories_new WHERE id = '".$cleanSubArr[$i]."'");
-                                                        $category = mysql_fetch_array($categoryResult, MYSQL_NUM);
+                                                        $categoryResult = $mysqli->query("SELECT category FROM subcategories_new WHERE id = '".$cleanSubArr[$i]."'");
+                                                        $category = $categoryResult->fetch_array(MYSQLI_NUM);
 
                                                         $count = 0;
 
@@ -3354,8 +3354,8 @@
 
                                                     for($i = 0; $i < count($catArray); $i++)
                                                     {
-                                                        $categoryNameResult = mysql_query("SELECT name FROM categories_new WHERE id = '".$catArray[$i]."'");
-                                                        $categoryName = mysql_fetch_array($categoryNameResult, MYSQL_NUM);
+                                                        $categoryNameResult = $mysqli->query("SELECT name FROM categories_new WHERE id = '".$catArray[$i]."'");
+                                                        $categoryName = $categoryNameResult->fetch_array(MYSQLI_NUM);
 
                                                         array_push($namesArray, $categoryName[0]);
                                                     }
@@ -3372,8 +3372,8 @@
 
                                                     for($i = 0; $i < count($namesArray); $i++)
                                                     {
-                                                        $categoryResult = mysql_query("SELECT * FROM categories_new WHERE name = '".$namesArray[$i]."'");
-                                                        $category = mysql_fetch_assoc($categoryResult);
+                                                        $categoryResult = $mysqli->query("SELECT * FROM categories_new WHERE name = '".$namesArray[$i]."'");
+                                                        $category = $categoryResult->fetch_assoc();
 
                                                         echo "
                                                             <option value='".$category['id']."'"; if(!empty($_REQUEST['c']) and $_REQUEST['c'] == $category['id']){echo " selected";} echo ">".$category['name']."</option>
@@ -3392,8 +3392,8 @@
 
                                                         for($i = 0; $i < count($cleanSubArr); $i++)
                                                         {
-                                                            $subcategoryResult = mysql_query("SELECT name FROM subcategories_new WHERE id = '".$cleanSubArr[$i]."' AND category = '".$_SESSION['c']."'");
-                                                            $subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+                                                            $subcategoryResult = $mysqli->query("SELECT name FROM subcategories_new WHERE id = '".$cleanSubArr[$i]."' AND category = '".$_SESSION['c']."'");
+                                                            $subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 
                                                             if(!empty($subcategory))
                                                             {
@@ -3413,8 +3413,8 @@
 
                                                         for($i = 0; $i < count($namesArray); $i++)
                                                         {
-                                                            $subcategoryResult = mysql_query("SELECT * FROM subcategories_new WHERE name = '".$namesArray[$i]."'");
-                                                            $subcategory = mysql_fetch_assoc($subcategoryResult);
+                                                            $subcategoryResult = $mysqli->query("SELECT * FROM subcategories_new WHERE name = '".$namesArray[$i]."'");
+                                                            $subcategory = $subcategoryResult->fetch_assoc();
 
                                                             echo "
                                                                 <option value='".$subcategory['id']."'"; if(!empty($_REQUEST['s']) and $_REQUEST['s'] == $subcategory['id']){echo " selected";} echo ">".$subcategory['name']."</option>
@@ -3429,7 +3429,7 @@
 
                                                         if(!empty($_REQUEST['s']))
                                                         {
-                                                            $subcategories2Result = mysql_query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
+                                                            $subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
 
                                                             echo "
                                                                 <form name='selectSubcategory2Form' name='selectSubcategory2Form' method='post' action='../scripts/admin/selectSubcategory2.php'>
@@ -3439,7 +3439,7 @@
                                                                         <option value=''>- Выберите подраздел -</option>
                                                             ";
 
-                                                            while($subcategories2 = mysql_fetch_assoc($subcategories2Result))
+                                                            while($subcategories2 = $subcategories2Result->fetch_assoc())
                                                             {
                                                                 echo "
                                                                     <option value='".$subcategories2['id']."'"; if(!empty($_REQUEST['s2']) and $_REQUEST['s2'] == $subcategories2['id']){echo " selected";} echo ">".$subcategories2['name']."</option>
@@ -3454,13 +3454,13 @@
 
                                                             if(!empty($_REQUEST['s2']))
                                                             {
-                                                                $goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
+                                                                $goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['s2']."'");
 
                                                                 echo "
                                                                     <form name='deleteSubcategory2Form' id='deleteSubcategory2Form' method='post' action='../scripts/admin/deleteSubcategory2.php'>
                                                                 ";
 
-                                                                if(mysql_num_rows($goodsResult) != 0)
+                                                                if(MYSQLI_NUM_rows($goodsResult) != 0)
                                                                 {
                                                                     echo "
                                                                         <label class='admLabel' onclick='checkboxClick(\"subcategory2DeleteCheckbox\")' style='cursor: pointer;'>Удалить подраздел вместе с товарами</label>
@@ -3553,9 +3553,9 @@
                                     unset($_SESSION['emailType']);
                                     break;
                                 case "mail-history":
-                                    $mailResult = mysql_query("SELECT * FROM mail_result ORDER BY date DESC LIMIT ".$start.", 10");
-                                    $mailCountResult = mysql_query("SELECT COUNT(id) FROM mail_result");
-                                    $mailCount = mysql_fetch_array($mailCountResult, MYSQL_NUM);
+                                    $mailResult = $mysqli->query("SELECT * FROM mail_result ORDER BY date DESC LIMIT ".$start.", 10");
+                                    $mailCountResult = $mysqli->query("SELECT COUNT(id) FROM mail_result");
+                                    $mailCount = $mailCountResult->fetch_array(MYSQLI_NUM);
 
                                     echo "
                                         <table>
@@ -3575,7 +3575,7 @@
                                             </tr>
                                     ";
 
-                                    while($mail = mysql_fetch_assoc($mailResult))
+                                    while($mail = $mailResult->fetch_assoc())
                                     {
                                         $count++;
                                         $number = $mailCount[0] - $_REQUEST['p'] * 10 + 11 - $count;
@@ -3825,11 +3825,11 @@
                                         {
                                             if($_REQUEST['start'] == "zero")
                                             {
-                                                $mailResult = mysql_query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '0%' ORDER BY email");
+                                                $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '0%' ORDER BY email");
                                             }
                                             else
                                             {
-                                                $mailResult = mysql_query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '".$_REQUEST['start']."%' ORDER BY email");
+                                                $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '".$_REQUEST['start']."%' ORDER BY email");
                                             }
                                         }
 
@@ -3837,15 +3837,15 @@
                                         {
                                             if($_REQUEST['start'] == "zero")
                                             {
-                                                $mailResult = mysql_query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '0%' ORDER BY disactivation_date DESC");
+                                                $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '0%' ORDER BY disactivation_date DESC");
                                             }
                                             else
                                             {
-                                                $mailResult = mysql_query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '".$_REQUEST['start']."%' ORDER BY disactivation_date DESC");
+                                                $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '".$_REQUEST['start']."%' ORDER BY disactivation_date DESC");
                                             }
                                         }
 
-                                        if(mysql_num_rows($mailResult) > 0)
+                                        if(MYSQLI_NUM_rows($mailResult) > 0)
                                         {
                                             $count = 0;
 
@@ -3870,7 +3870,7 @@
                                                     </tr>
                                                 ";
 
-                                                while($address = mysql_fetch_assoc($mailResult))
+                                                while($address = $mailResult->fetch_assoc())
                                                 {
                                                     $count++;
                                                     $addressNumber = $count;
@@ -3883,8 +3883,8 @@
                                                             <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <div id='emailBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editEmail(\"".$address['id']."\", \"".$address['email']."\", \"emailBlock".$address['id']."\")' title='Редактировать e-mail'>".$address['email']."</span></div>
                                                             </td>
-                                                            <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".mysql_real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
-                                                                <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".mysql_real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                            <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
+                                                                <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                             </td>
                                                             <td class='adminTDButtons'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <a href='../scripts/admin/deleteAddress.php?id=".$address['id']."' class='noBorder'><img id='mi".$address['id']."' src='../pictures/system/cross.png' class='noBorder' title='Удалить адрес из клиентской базы' style='margin-top: 12px;' onmouseover='mailIcon(\"1\", \"mi".$address['id']."\")' onmouseout='mailIcon(\"0\", \"mi".$address['id']."\")' /></a>
@@ -3916,7 +3916,7 @@
                                                     </tr>
                                                 ";
 
-                                                while($address = mysql_fetch_assoc($mailResult))
+                                                while($address = $mailResult->fetch_assoc())
                                                 {
                                                     $count++;
                                                     $addressNumber = $count;
@@ -3929,8 +3929,8 @@
                                                             <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <div id='emailBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editEmail(\"".$address['id']."\", \"".$address['email']."\", \"emailBlock".$address['id']."\")' title='Редактировать e-mail'>".$address['email']."</span></div>
                                                             </td>
-                                                            <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".mysql_real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
-                                                                <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".mysql_real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                            <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
+                                                                <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                             </td>
                                                             <td class='adminTDDate'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <span class='admLabel'>".$address['disactivation_date']."</span>
@@ -4010,9 +4010,9 @@
                                                 </tr>
                                             ";
 
-                                            $addressResult = mysql_query("SELECT * FROM mail WHERE in_send = '1' ORDER BY email LIMIT ".$start.", 10");
+                                            $addressResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' ORDER BY email LIMIT ".$start.", 10");
 
-                                            while($address = mysql_fetch_assoc($addressResult))
+                                            while($address = $addressResult->fetch_assoc())
                                             {
                                                 $count++;
                                                 $addressNumber = $_REQUEST['p'] * 10 - 10 + $count;
@@ -4025,8 +4025,8 @@
                                                         <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <div id='emailBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editEmail(\"".$address['id']."\", \"".$address['email']."\", \"emailBlock".$address['id']."\")' title='Редактировать e-mail'>".$address['email']."</span></div>
                                                         </td>
-                                                        <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".mysql_real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
-                                                            <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".mysql_real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                        <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
+                                                            <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                         </td>
                                                         <td class='adminTDButtons'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <a href='../scripts/admin/deleteAddress.php?id=".$address['id']."' class='noBorder'><img id='mi".$address['id']."' src='../pictures/system/cross.png' class='noBorder' title='Удалить адрес из клиентской базы' style='margin-top: 12px;' onmouseover='mailIcon(\"1\", \"mi".$address['id']."\")' onmouseout='mailIcon(\"0\", \"mi".$address['id']."\")' /></a>
@@ -4058,9 +4058,9 @@
                                                 </tr>
                                             ";
 
-                                            $addressResult = mysql_query("SELECT * FROM mail WHERE in_send = '0' ORDER BY disactivation_date DESC LIMIT ".$start.", 10");
+                                            $addressResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' ORDER BY disactivation_date DESC LIMIT ".$start.", 10");
 
-                                            while($address = mysql_fetch_assoc($addressResult))
+                                            while($address = $addressResult->fetch_assoc())
                                             {
                                                 $count++;
                                                 $addressNumber = $_REQUEST['p'] * 10 - 10 + $count;
@@ -4073,8 +4073,8 @@
                                                         <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <div id='emailBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editEmail(\"".$address['id']."\", \"".$address['email']."\", \"emailBlock".$address['id']."\")' title='Редактировать e-mail'>".$address['email']."</span></div>
                                                         </td>
-                                                        <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".mysql_real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
-                                                            <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".mysql_real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                        <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
+                                                            <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                         </td>
                                                         <td class='adminTDDate'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <span class='admLabel'>".$address['disactivation_date']."</span>
@@ -4279,8 +4279,8 @@
                                     }
                                     else
                                     {
-                                        $userLoginResult = mysql_query("SELECT login FROM users WHERE id = '".$_REQUEST['user']."'");
-                                        $userLogin = mysql_fetch_array($userLoginResult, MYSQL_NUM);
+                                        $userLoginResult = $mysqli->query("SELECT login FROM users WHERE id = '".$_REQUEST['user']."'");
+                                        $userLogin = $userLoginResult->fetch_array(MYSQLI_NUM);
 
                                         echo "
                                             <span class='admMenuFont'>Редактирование личных данных пользователя </span><span class='admMenuRedFont'>".$userLogin[0]."</span>
@@ -4294,8 +4294,8 @@
 
                                         echo "<table>";
 
-                                        $usersResult = mysql_query("SELECT * FROM users WHERE id <> '1' ORDER BY login LIMIT ".$start.", 10");
-                                        while($users = mysql_fetch_assoc($usersResult))
+                                        $usersResult = $mysqli->query("SELECT * FROM users WHERE id <> '1' ORDER BY login LIMIT ".$start.", 10");
+                                        while($users = $usersResult->fetch_assoc())
                                         {
                                             $count++;
                                             $usersNumber = $_REQUEST['p'] * 10 - 10 + $count;
@@ -4481,8 +4481,8 @@
 
                                     if(!empty($_REQUEST['user']))
                                     {
-                                        $userResult = mysql_query("SELECT * FROM users WHERE id = '".$_REQUEST['user']."'");
-                                        $user = mysql_fetch_assoc($userResult);
+                                        $userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_REQUEST['user']."'");
+                                        $user = $userResult->fetch_assoc();
 
                                         echo "
                                             <form name='editUserForm' id='editUserForm' method='post' action='../scripts/admin/editUser.php'>
@@ -4558,8 +4558,8 @@
                                     }
                                     else
                                     {
-                                        $newsResult = mysql_query("SELECT * FROM news WHERE id = '".$_REQUEST['news']."'");
-                                        $news = mysql_fetch_assoc($newsResult);
+                                        $newsResult = $mysqli->query("SELECT * FROM news WHERE id = '".$_REQUEST['news']."'");
+                                        $news = $newsResult->fetch_assoc();
 
                                         echo "
                                             <span class='admMenuFont'>Редактирование новости \"</span><span class='admMenuRedFont'>".$news['header']."</span><span class='admMenuFont'>\"</span>
@@ -4573,13 +4573,13 @@
 
                                         echo "<table>";
 
-                                        $newsCountResult = mysql_query("SELECT COUNT(id) FROM news");
-                                        $newsCount = mysql_fetch_array($newsCountResult, MYSQL_NUM);
+                                        $newsCountResult = $mysqli->query("SELECT COUNT(id) FROM news");
+                                        $newsCount = $newsCountResult->fetch_array(MYSQLI_NUM);
 
                                         $newsNum = $newsCount[0] - ($_REQUEST['p'] - 1) * 10 + 1;
 
-                                        $newsResult = mysql_query("SELECT * FROM news ORDER BY date_num DESC LIMIT ".$start.", 10");
-                                        while($news = mysql_fetch_assoc($newsResult))
+                                        $newsResult = $mysqli->query("SELECT * FROM news ORDER BY date_num DESC LIMIT ".$start.", 10");
+                                        while($news = $newsResult->fetch_assoc())
                                         {
                                             $count++;
                                             $newsNumber = $newsNum - $count;
@@ -4783,8 +4783,8 @@
                                     }
                                     else
                                     {
-                                        $newsResult = mysql_query("SELECT * FROM news WHERE id = '".$_REQUEST['news']."'");
-                                        $news = mysql_fetch_assoc($newsResult);
+                                        $newsResult = $mysqli->query("SELECT * FROM news WHERE id = '".$_REQUEST['news']."'");
+                                        $news = $newsResult->fetch_assoc();
 
                                         echo "
                                             <form name='editNewsForm' id='editNewsForm' method='post' action='../scripts/admin/editNews.php' enctype='multipart/form-data'>

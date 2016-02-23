@@ -7,8 +7,8 @@
 	{
 		if(filter_var($_POST['newAddress'], FILTER_VALIDATE_EMAIL))
 		{
-			$addressResult = mysql_query("SELECT COUNT(id) FROM mail WHERE email = '".$_POST['newAddress']."'");
-			$address = mysql_fetch_array($addressResult, MYSQL_NUM);
+			$addressResult = $mysqli->query("SELECT COUNT(id) FROM mail WHERE email = '".$_POST['newAddress']."'");
+			$address = $addressResult->fetch_array(MYSQLI_NUM);
 
 			if($address[0] == 0)
 			{

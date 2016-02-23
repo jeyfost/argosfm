@@ -13,8 +13,8 @@
 	
 	$count = 0;
 	
-	$user_result = mysql_query("SELECT * FROM users WHERE login = '".$_POST['login']."'");
-	$user = mysql_fetch_array($user_result, MYSQL_ASSOC);
+	$user_result = $mysqli->query("SELECT * FROM users WHERE login = '".$_POST['login']."'");
+	$user = $user_result->fetch_assoc();
 	
 	if(empty($user['login']))
 	{

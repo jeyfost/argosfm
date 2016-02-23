@@ -55,8 +55,8 @@
 
 									if(isset($_SESSION['s2']))
 									{
-										$goodCodeResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['goodCode']."'");
-										$goodCode = mysql_fetch_array($goodCodeResult, MYSQL_NUM);
+										$goodCodeResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['goodCode']."'");
+										$goodCode = $goodCodeResult->fetch_array(MYSQLI_NUM);
 
 										if($goodCode[0] != 0)
 										{
@@ -71,34 +71,34 @@
 										}
 										else
 										{
-											if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, sketch, description, priority, price, code) VALUES ('".$_SESSION['type']."', '".$_SESSION['c']."', '".$_SESSION['s']."', '".$_SESSION['s2']."', '".$name."', '".$bigPhotoFinalName."', '".$smallPhotoFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['goodPosition']."', '".$_POST['goodPrice']."', '".$_POST['goodCode']."')"))
+											if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, sketch, description, priority, price, code) VALUES ('".$_SESSION['type']."', '".$_SESSION['c']."', '".$_SESSION['s']."', '".$_SESSION['s2']."', '".$name."', '".$bigPhotoFinalName."', '".$smallPhotoFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['goodPosition']."', '".$_POST['goodPrice']."', '".$_POST['goodCode']."')"))
 											{
 												image_resize($smallPhotoTmpName, $smallPhootoUpload, 100, 100);
 												move_uploaded_file($bigPhotoTmpName, $bigPhotoUpload);
 												move_uploaded_file($smallPhotoTmpName, $smallPhotoUpload);
 												move_uploaded_file($sketchTmpName, $sketchUpload);
 
-												$maxPriorityResult = mysql_query("SELECT MAX(priority) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
-												$maxPriority = mysql_fetch_array($maxPriorityResult, MYSQL_NUM);
+												$maxPriorityResult = $mysqli->query("SELECT MAX(priority) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
+												$maxPriority = $maxPriorityResult->fetch_array(MYSQLI_NUM);
 
-												$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
-												$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+												$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
+												$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
-												$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."' ORDER BY priority");
-												while($goods = mysql_fetch_assoc($goodsResult))
+												$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."' ORDER BY priority");
+												while($goods = $goodsResult->fetch_assoc())
 												{
 													if($goodsCount[0] > $maxPriority[0])
 													{
-														$lastGoodIDResult = mysql_query("SELECT MAX(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
-														$lastGoodID = mysql_fetch_array($lastGoodIDResult, MYSQL_NUM);
+														$lastGoodIDResult = $mysqli->query("SELECT MAX(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
+														$lastGoodID = $lastGoodIDResult->fetch_array(MYSQLI_NUM);
 
-														$lastGoodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$lastGoodID[0]."'");
-														$lastGood = mysql_fetch_assoc($lastGoodResult);
+														$lastGoodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$lastGoodID[0]."'");
+														$lastGood = $lastGoodResult->fetch_assoc();
 
 														if($goods['priority'] >= $lastGood['priority'] and $goods['id'] != $lastGood['id'])
 														{
 															$newPriority = $goods['priority'] + 1;
-															mysql_query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
+															$mysqli->query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
 														}
 													}
 												}
@@ -123,8 +123,8 @@
 									}
 									else
 									{
-										$goodCodeResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['goodCode']."'");
-										$goodCode = mysql_fetch_array($goodCodeResult, MYSQL_NUM);
+										$goodCodeResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['goodCode']."'");
+										$goodCode = $goodCodeResult->fetch_array(MYSQLI_NUM);
 
 										if($goodCode[0] != 0)
 										{
@@ -139,34 +139,34 @@
 										}
 										else
 										{
-											if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, name, picture, small, sketch, description, priority, price, code) VALUES ('".$_SESSION['type']."', '".$_SESSION['c']."', '".$_SESSION['s']."', '".$name."', '".$bigPhotoFinalName."', '".$smallPhotoFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['goodPosition']."', '".$_POST['goodPrice']."', '".$_POST['goodCode']."')"))
+											if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, name, picture, small, sketch, description, priority, price, code) VALUES ('".$_SESSION['type']."', '".$_SESSION['c']."', '".$_SESSION['s']."', '".$name."', '".$bigPhotoFinalName."', '".$smallPhotoFinalName."', '".$sketchFinalName."', '".$description."', '".$_POST['goodPosition']."', '".$_POST['goodPrice']."', '".$_POST['goodCode']."')"))
 											{
 												image_resize($smallPhotoTmpName, $smallPhootoUpload, 100, 100);
 												move_uploaded_file($bigPhotoTmpName, $bigPhotoUpload);
 												move_uploaded_file($smallPhotoTmpName, $smallPhotoUpload);
 												move_uploaded_file($sketchTmpName, $sketchUpload);
 
-												$maxPriorityResult = mysql_query("SELECT MAX(priority) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
-												$maxPriority = mysql_fetch_array($maxPriorityResult, MYSQL_NUM);
+												$maxPriorityResult = $mysqli->query("SELECT MAX(priority) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
+												$maxPriority = $maxPriorityResult->fetch_array(MYSQLI_NUM);
 
-												$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
-												$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+												$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
+												$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
-												$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."' ORDER BY priority");
-												while($goods = mysql_fetch_assoc($goodsResult))
+												$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."' ORDER BY priority");
+												while($goods = $goodsResult->fetch_assoc())
 												{
 													if($goodsCount[0] > $maxPriority[0])
 													{
-														$lastGoodIDResult = mysql_query("SELECT MAX(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
-														$lastGoodID = mysql_fetch_array($lastGoodIDResult, MYSQL_NUM);
+														$lastGoodIDResult = $mysqli->query("SELECT MAX(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
+														$lastGoodID = $lastGoodIDResult->fetch_array(MYSQLI_NUM);
 
-														$lastGoodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$lastGoodID[0]."'");
-														$lastGood = mysql_fetch_assoc($lastGoodResult);
+														$lastGoodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$lastGoodID[0]."'");
+														$lastGood = $lastGoodResult->fetch_assoc();
 
 														if($goods['priority'] >= $lastGood['priority'] and $goods['id'] != $lastGood['id'])
 														{
 															$newPriority = $goods['priority'] + 1;
-															mysql_query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
+															$mysqli->query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
 														}
 													}
 												}
@@ -218,8 +218,8 @@
 
 								if(isset($_SESSION['s2']))
 								{
-									$goodCodeResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['goodCode']."'");
-									$goodCode = mysql_fetch_array($goodCodeResult, MYSQL_NUM);
+									$goodCodeResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['goodCode']."'");
+									$goodCode = $goodCodeResult->fetch_array(MYSQLI_NUM);
 
 									if($goodCode[0] != 0)
 									{
@@ -234,33 +234,33 @@
 									}
 									else
 									{
-										if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, description, priority, price, code) VALUES ('".$_SESSION['type']."', '".$_SESSION['c']."', '".$_SESSION['s']."', '".$_SESSION['s2']."', '".$name."', '".$bigPhotoFinalName."', '".$smallPhotoFinalName."', '".$description."', '".$_POST['goodPosition']."', '".$_POST['goodPrice']."', '".$_POST['goodCode']."')"))
+										if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, subcategory2, name, picture, small, description, priority, price, code) VALUES ('".$_SESSION['type']."', '".$_SESSION['c']."', '".$_SESSION['s']."', '".$_SESSION['s2']."', '".$name."', '".$bigPhotoFinalName."', '".$smallPhotoFinalName."', '".$description."', '".$_POST['goodPosition']."', '".$_POST['goodPrice']."', '".$_POST['goodCode']."')"))
 										{
 											image_resize($smallPhotoTmpName, $smallPhootoUpload, 100, 100);
 											move_uploaded_file($bigPhotoTmpName, $bigPhotoUpload);
 											move_uploaded_file($smallPhotoTmpName, $smallPhotoUpload);
 
-											$maxPriorityResult = mysql_query("SELECT MAX(priority) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
-											$maxPriority = mysql_fetch_array($maxPriorityResult, MYSQL_NUM);
+											$maxPriorityResult = $mysqli->query("SELECT MAX(priority) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
+											$maxPriority = $maxPriorityResult->fetch_array(MYSQLI_NUM);
 
-											$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
-											$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+											$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
+											$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
-											$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."' ORDER BY priority");
-											while($goods = mysql_fetch_assoc($goodsResult))
+											$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."' ORDER BY priority");
+											while($goods = $goodsResult->fetch_assoc())
 											{
 												if($goodsCount[0] > $maxPriority[0])
 												{
-													$lastGoodIDResult = mysql_query("SELECT MAX(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
-													$lastGoodID = mysql_fetch_array($lastGoodIDResult, MYSQL_NUM);
+													$lastGoodIDResult = $mysqli->query("SELECT MAX(id) FROM catalogue_new WHERE subcategory2 = '".$_SESSION['s2']."'");
+													$lastGoodID = $lastGoodIDResult->fetch_array(MYSQLI_NUM);
 
-													$lastGoodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$lastGoodID[0]."'");
-													$lastGood = mysql_fetch_assoc($lastGoodResult);
+													$lastGoodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$lastGoodID[0]."'");
+													$lastGood = $lastGoodResult->fetch_assoc();
 
 													if($goods['priority'] >= $lastGood['priority'] and $goods['id'] != $lastGood['id'])
 													{
 														$newPriority = $goods['priority'] + 1;
-														mysql_query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
+														$mysqli->query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
 													}
 												}
 											}
@@ -285,8 +285,8 @@
 								}
 								else
 								{
-									$goodCodeResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['goodCode']."'");
-									$goodCode = mysql_fetch_array($goodCodeResult, MYSQL_NUM);
+									$goodCodeResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE code = '".$_POST['goodCode']."'");
+									$goodCode = $goodCodeResult->fetch_array(MYSQLI_NUM);
 
 									if($goodCode[0] != 0)
 									{
@@ -301,33 +301,33 @@
 									}
 									else
 									{
-										if(mysql_query("INSERT INTO catalogue_new (type, category, subcategory, name, picture, small, description, priority, price, code) VALUES ('".$_SESSION['type']."', '".$_SESSION['c']."', '".$_SESSION['s']."', '".$name."', '".$bigPhotoFinalName."', '".$smallPhotoFinalName."', '".$description."', '".$_POST['goodPosition']."', '".$_POST['goodPrice']."', '".$_POST['goodCode']."')"))
+										if($mysqli->query("INSERT INTO catalogue_new (type, category, subcategory, name, picture, small, description, priority, price, code) VALUES ('".$_SESSION['type']."', '".$_SESSION['c']."', '".$_SESSION['s']."', '".$name."', '".$bigPhotoFinalName."', '".$smallPhotoFinalName."', '".$description."', '".$_POST['goodPosition']."', '".$_POST['goodPrice']."', '".$_POST['goodCode']."')"))
 										{
 											image_resize($smallPhotoTmpName, $smallPhootoUpload, 100, 100);
 											move_uploaded_file($bigPhotoTmpName, $bigPhotoUpload);
 											move_uploaded_file($smallPhotoTmpName, $smallPhotoUpload);
 
-											$maxPriorityResult = mysql_query("SELECT MAX(priority) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
-											$maxPriority = mysql_fetch_array($maxPriorityResult, MYSQL_NUM);
+											$maxPriorityResult = $mysqli->query("SELECT MAX(priority) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
+											$maxPriority = $maxPriorityResult->fetch_array(MYSQLI_NUM);
 
-											$goodsCountResult = mysql_query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
-											$goodsCount = mysql_fetch_array($goodsCountResult, MYSQL_NUM);
+											$goodsCountResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
+											$goodsCount = $goodsCountResult->fetch_array(MYSQLI_NUM);
 
-											$goodsResult = mysql_query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."' ORDER BY priority");
-											while($goods = mysql_fetch_assoc($goodsResult))
+											$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."' ORDER BY priority");
+											while($goods = $goodsResult->fetch_assoc())
 											{
 												if($goodsCount[0] > $maxPriority[0])
 												{
-													$lastGoodIDResult = mysql_query("SELECT MAX(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
-													$lastGoodID = mysql_fetch_array($lastGoodIDResult, MYSQL_NUM);
+													$lastGoodIDResult = $mysqli->query("SELECT MAX(id) FROM catalogue_new WHERE subcategory = '".$_SESSION['s']."'");
+													$lastGoodID = $lastGoodIDResult->fetch_array(MYSQLI_NUM);
 
-													$lastGoodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$lastGoodID[0]."'");
-													$lastGood = mysql_fetch_assoc($lastGoodResult);
+													$lastGoodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$lastGoodID[0]."'");
+													$lastGood = $lastGoodResult->fetch_assoc();
 
 													if($goods['priority'] >= $lastGood['priority'] and $goods['id'] != $lastGood['id'])
 													{
 														$newPriority = $goods['priority'] + 1;
-														mysql_query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
+														$mysqli->query("UPDATE catalogue_new SET priority = '".$newPriority."' WHERE id = '".$goods['id']."'");
 													}
 												}
 											}

@@ -9,7 +9,7 @@
 	
 	include('connect.php');
 	
-	if(mysql_query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['gId']."'"))
+	if($mysqli->query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['gId']."'"))
 	{
 		$_SESSION['result'] = "delete_good_success";
 		header("Location: ../admin/admin.php?category=".$_SESSION['category']."&mode=".$_SESSION['mode']."&goodsType=".$_SESSION['goodsType']."&cId=".$_SESSION['cId']."&sId=".$_SESSION['sId']."&s2Id=".$_SESSION['s2Id']);

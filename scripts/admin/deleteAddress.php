@@ -7,12 +7,12 @@
 	{
 		if(!empty($_REQUEST['id']))
 		{
-			$addressCountResult = mysql_query("SELECT COUNT(id) FROM mail WHERE id = '".$_REQUEST['id']."'");
-			$addressCount = mysql_fetch_array($addressCountResult, MYSQL_NUM);
+			$addressCountResult = $mysqli->query("SELECT COUNT(id) FROM mail WHERE id = '".$_REQUEST['id']."'");
+			$addressCount = $addressCountResult->fetch_array(MYSQLI_NUM);
 
 			if($addressCount[0] == 1)
 			{
-				if(mysql_query("DELETE FROM mail WHERE id = '".$_REQUEST['id']."'"))
+				if($mysqli->query("DELETE FROM mail WHERE id = '".$_REQUEST['id']."'"))
 				{
 					$_SESSION['addressDelete'] = "ok";
 

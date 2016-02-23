@@ -7,13 +7,13 @@
 	{
 		if(strlen($_POST['userSearch']) > 0 and $_POST['userSearch'] != "Поиск...")
 		{
-			$query = iconv('utf-8', 'cp1251', mysql_real_escape_string($_POST['userSearch']));
+			$query = iconv('utf-8', 'cp1251', $mysqli->real_escape_string($_POST['userSearch']));
 
-			$searchResult = mysql_query("SELECT * FROM users WHERE login LIKE '%".$query."%' OR organisation LIKE '%".$query."%' OR person LIKE '%".$query."%' ORDER BY login LIMIT 10");
+			$searchResult = $mysqli->query("SELECT * FROM users WHERE login LIKE '%".$query."%' OR organisation LIKE '%".$query."%' OR person LIKE '%".$query."%' ORDER BY login LIMIT 10");
 
-			if(mysql_num_rows($searchResult) > 0)
+			if(MYSQLI_NUM_rows($searchResult) > 0)
 			{
-				while($search = mysql_fetch_assoc($searchResult))
+				while($search = $searchResult->fetch_assoc())
 				{
 					echo "
 						<a href='admin.php?section=users&action=users&user=".$search['id']."' class='noBorder'>

@@ -19,8 +19,8 @@
 	<?php
 		$codes = array();
 		$free = array();
-		$codeResult = mysql_query("SELECT code FROM catalogue_new ORDER BY code");
-		while($code = mysql_fetch_array($codeResult, MYSQL_NUM))
+		$codeResult = $mysqli->query("SELECT code FROM catalogue_new ORDER BY code");
+		while($code = $codeResult->fetch_array(MYSQLI_NUM))
 		{
 			if($code[0] != 0)
 			{

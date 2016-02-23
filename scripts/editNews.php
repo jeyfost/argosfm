@@ -43,8 +43,8 @@
 	}
 	else
 	{
-		$newsResult = mysql_query("SELECT * FROM news WHERE id = ".$_REQUEST['id']);
-		if(mysql_num_rows($newsResult) == 0)
+		$newsResult = $mysqli->query("SELECT * FROM news WHERE id = ".$_REQUEST['id']);
+		if(MYSQLI_NUM_rows($newsResult) == 0)
 		{
 			if(isset($_SESSION['last_page']))
 			{
@@ -57,7 +57,7 @@
 		}
 		else
 		{
-			$news = mysql_fetch_assoc($newsResult);
+			$news = $newsResult->fetch_assoc();
 			
 			if(!empty($_POST['newsHeader']) and !empty($_POST['newsText']) and !empty($_POST['newsDescription']))
 			{
@@ -65,7 +65,7 @@
 				$_SESSION['nText'] = $_POST['newsText'];
 				$_SESSION['nDescription'] = $_POST['newsDescription'];
 				
-				if(mysql_query())
+				if($mysqli->query())
 				{
 					$_SESSION['newsResult'] = 'success';
 					

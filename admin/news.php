@@ -24,8 +24,8 @@
 		}
 		else
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+			$user = $userResult->fetch_assoc();
 			setcookie("argosfm_login", $user['login'], time()+60*60*24*30*12, '/');
 			setcookie("argosfm_password", $user['password'], time()+60*60*24*30*12, '/');
 		}
@@ -34,8 +34,8 @@
 	{
 		if(isset($_COOKIE['argosfm_login']) and isset($_COOKIE['argosfm_password']) and !empty($_COOKIE['argosfm_login']) and !empty($_COOKIE['argosfm_password']))
 		{
-			$userResult = mysql_query("SELECT * FROM users WHERE login = '".$_COOKIE['argosfm_login']."'");
-			$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+			$userResult = $mysqli->query("SELECT * FROM users WHERE login = '".$_COOKIE['argosfm_login']."'");
+			$user = $userResult->fetch_assoc();
 			
 			if(!empty($user) and $user['password'] == $_COOKIE['argosfm_password'])
 			{
@@ -51,9 +51,9 @@
 	
 	if(!empty($_REQUEST['id']))
 	{
-		$newsResult = mysql_query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
+		$newsResult = $mysqli->query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
 		
-		if(mysql_num_rows($newsResult) == 0)
+		if(MYSQLI_NUM_rows($newsResult) == 0)
 		{
 			if(isset($_SESSION['last_page']))
 			{
@@ -512,8 +512,8 @@
 					}
 					else
 					{
-						$userResult = mysql_query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
-						$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+						$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+						$user = $userResult->fetch_assoc();
 
 						echo "
 							<div id='loginL'>
@@ -522,8 +522,8 @@
 						
 						if($_SESSION['userID'] != 1)
 						{	
-							$ordersResult = mysql_query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -539,8 +539,8 @@
 						}
 						else
 						{
-							$ordersResult = mysql_query("SELECT * FROM orders_date WHERE status = '0'");
-							$orders = mysql_num_rows($ordersResult);
+							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
+							$orders = MYSQLI_NUM_rows($ordersResult);
 							if($orders < 1)
 							{
 								echo "
@@ -592,8 +592,8 @@
             <br /><br />
             <?php
 			
-				$newsResult = mysql_query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
-				$news = mysql_fetch_assoc($newsResult);
+				$newsResult = $mysqli->query("SELECT * FROM news WHERE id = '".$_REQUEST['id']."'");
+				$news = $newsResult->fetch_assoc();
             
 				if(!empty($_SESSION['newsResult']))
 				switch($_SESSION['newsResult'])

@@ -8,8 +8,8 @@
 		$name = iconv('UTF-8', 'windows-1251', htmlspecialchars($_POST['subcategoryName']));
 		if(strlen($name) > 0)
 		{
-			$subcategoryResult = mysql_query("SELECT COUNT(id) FROM subcategories_new WHERE name = '".$name."' AND category = '".$_SESSION['c']."'");
-			$subcategory = mysql_fetch_array($subcategoryResult, MYSQL_NUM);
+			$subcategoryResult = $mysqli->query("SELECT COUNT(id) FROM subcategories_new WHERE name = '".$name."' AND category = '".$_SESSION['c']."'");
+			$subcategory = $subcategoryResult->fetch_array(MYSQLI_NUM);
 
 			if($subcategory[0] == 0)
 			{

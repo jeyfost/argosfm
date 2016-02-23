@@ -27,8 +27,8 @@
 		return $name;
 	}
 	
-	$title_result = mysql_query("SELECT * FROM catalogue WHERE id = '".$_SESSION['titleId']."'");
-	$title = mysql_fetch_array($title_result);
+	$title_result = $mysqli->query("SELECT * FROM catalogue WHERE id = '".$_SESSION['titleId']."'");
+	$title = $title_result->fetch_assoc();
 	
 	$pictures['big'] = 0;
 	$pictures['small'] = 0;
@@ -80,7 +80,7 @@
 			$upload = $uploadDir.$name.basename($_FILES['addFormBigPicture']['name']);
 			$finalName = $name.basename($_FILES['addFormBigPicture']['name']);
 			
-			$bigPictureEditResult = mysql_query("UPDATE catalogue_new SET picture = '".$finalName."' WHERE id = '".$_SESSION['titleId']."'");
+			$bigPictureEditResult = $mysqli->query("UPDATE catalogue_new SET picture = '".$finalName."' WHERE id = '".$_SESSION['titleId']."'");
 			$edits++;
 			
 			move_uploaded_file($tmpName, $upload);
@@ -105,7 +105,7 @@
 			$upload = $uploadDir.$name.basename($_FILES['addFormSmallPicture']['name']);
 			$finalName = $name.basename($_FILES['addFormSmallPicture']['name']);
 			
-			$smallPictureEditResult = mysql_query("UPDATE catalogue_new SET small = '".$finalName."' WHERE id = '".$_SESSION['titleId']."'");
+			$smallPictureEditResult = $mysqli->query("UPDATE catalogue_new SET small = '".$finalName."' WHERE id = '".$_SESSION['titleId']."'");
 			$edits++;
 			
 			move_uploaded_file($tmpName, $upload);
@@ -133,7 +133,7 @@
 			$upload = $uploadDir.$name.basename($_FILES['addFormSketch']['name']);
 			$finalName = $name.basename($_FILES['addFormSketch']['name']);
 			
-			$sketchEditResult = mysql_query("UPDATE catalogue_new SET sketch = '".$finalName."' WHERE id = '".$_SESSION['titleId']."'");
+			$sketchEditResult = $mysqli->query("UPDATE catalogue_new SET sketch = '".$finalName."' WHERE id = '".$_SESSION['titleId']."'");
 			$edits++;
 			
 			move_uploaded_file($tmpName, $upload);
@@ -150,7 +150,7 @@
 		
 		if($text['name'] == 1)
 		{
-			$nameEditResult = mysql_query("UPDATE catalogue_new SET name = '".$_POST['addFormNameArea']."' WHERE id = '".$_SESSION['titleId']."'");
+			$nameEditResult = $mysqli->query("UPDATE catalogue_new SET name = '".$_POST['addFormNameArea']."' WHERE id = '".$_SESSION['titleId']."'");
 			$edits++;
 			
 			if($nameEditResult)
@@ -165,7 +165,7 @@
 		
 		if($text['description'] == 1)
 		{
-			$descriptionEditResult = mysql_query("UPDATE catalogue_new SET description = '".str_replace("\n", "<br />", $_POST['addFormDescriptionArea'])."' WHERE id = '".$_SESSION['titleId']."'");
+			$descriptionEditResult = $mysqli->query("UPDATE catalogue_new SET description = '".str_replace("\n", "<br />", $_POST['addFormDescriptionArea'])."' WHERE id = '".$_SESSION['titleId']."'");
 			$edits++;
 			
 			if($descriptionEditResult)

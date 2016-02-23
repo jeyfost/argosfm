@@ -14,11 +14,11 @@
 		{
 			$name = htmlspecialchars($_POST['subcategory2Name'], ENT_QUOTES);
 
-			$subcategory2Result = mysql_query("SELECT * FROM subcategories2 WHERE name = '".$name."' AND subcategory = '".$_SESSION['s']."'");
+			$subcategory2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE name = '".$name."' AND subcategory = '".$_SESSION['s']."'");
 
-			if(mysql_num_rows($subcategory2Result) == 0)
+			if(MYSQLI_NUM_rows($subcategory2Result) == 0)
 			{
-				if(mysql_query("UPDATE subcategories2 SET name = '".$name."' WHERE id = '".$_SESSION['s2']."'"))
+				if($mysqli->query("UPDATE subcategories2 SET name = '".$name."' WHERE id = '".$_SESSION['s2']."'"))
 				{
 					$_SESSION['editSubcategory2'] = "ok";
 

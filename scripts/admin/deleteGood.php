@@ -10,8 +10,8 @@
 
 	if(!empty($_SESSION['id']))
 	{
-		$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$_SESSION['id']."'");
-		$good = mysql_fetch_assoc($goodResult);
+		$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$_SESSION['id']."'");
+		$good = $goodResult->fetch_assoc();
 
 		if(!empty($good['sketch']))
 		{
@@ -21,7 +21,7 @@
 		unlink('../../pictures/big/'.$good['picture']);
 		unlink('../../pictures/small/'.$good['small']);
 
-		if(mysql_query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['id']."'"))
+		if($mysqli->query("DELETE FROM catalogue_new WHERE id = '".$_SESSION['id']."'"))
 		{
 			$_SESSION['deleteGood'] = 'ok';
 

@@ -16,12 +16,12 @@
 	}
 	else
 	{
-		$userResult = mysql_query("SELECT * FROM users WHERE hash = '".$_REQUEST['h']."'");
-		$user = mysql_fetch_array($userResult, MYSQL_ASSOC);
+		$userResult = $mysqli->query("SELECT * FROM users WHERE hash = '".$_REQUEST['h']."'");
+		$user = $userResult->fetch_assoc();
 		
 		if(!empty($user))
 		{
-			if(mysql_query("DELETE FROM users WHERE hash = '".$_REQUEST['h']."'"))
+			if($mysqli->query("DELETE FROM users WHERE hash = '".$_REQUEST['h']."'"))
 			{
 				$_SESSION['registration_cancel'] = 'ok';
 				if(isset($_SESSION['last_page']))

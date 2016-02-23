@@ -10,13 +10,13 @@
 
 	if(!empty($_SESSION['section']) and !empty($_SESSION['action']) and !empty($_SESSION['type']) and !empty($_SESSION['c']))
 	{
-		$subcategoryCheckResult = mysql_query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
-		$subcategoryCheck = mysql_fetch_array($subcategoryCheckResult, MYSQL_NUM);
+		$subcategoryCheckResult = $mysqli->query("SELECT COUNT(id) FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
+		$subcategoryCheck = $subcategoryCheckResult->fetch_array(MYSQLI_NUM);
 
 		if($subcategoryCheck[0] == 1)
 		{
-			$subcategoryIDResult = mysql_query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
-			$subcategoryID = mysql_fetch_array($subcategoryIDResult, MYSQL_NUM);
+			$subcategoryIDResult = $mysqli->query("SELECT id FROM subcategories_new WHERE category = '".$_SESSION['c']."'");
+			$subcategoryID = $subcategoryIDResult->fetch_array(MYSQLI_NUM);
 		}
 		else
 		{
@@ -29,15 +29,15 @@
 			{
 				$name = htmlspecialchars($_POST['subcategoryName'], ENT_QUOTES);
 
-				$sMaxIDResult = mysql_query("SELECT MAX(id) FROM subcategories_new WHERE id < 1000");
-				$sMaxID = mysql_fetch_array($sMaxIDResult, MYSQL_NUM);
+				$sMaxIDResult = $mysqli->query("SELECT MAX(id) FROM subcategories_new WHERE id < 1000");
+				$sMaxID = $sMaxIDResult->fetch_array(MYSQLI_NUM);
 
 				$id = 0;
 
 				for($i = 1; $i < $sMaxID[0]; $i++)
 				{
-					$idCheckResult = mysql_query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
-					if(mysql_num_rows($idCheckResult) == 0)
+					$idCheckResult = $mysqli->query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
+					if(MYSQLI_NUM_rows($idCheckResult) == 0)
 					{
 						$id = $i;
 					}
@@ -48,7 +48,7 @@
 					$id = $sMaxID[0] + 1;
 				}
 
-				if(mysql_query("INSERT INTO subcategories_new (id, type, category, name) VALUES ('".$id."', '".$_SESSION['type']."', '".$_SESSION['c']."', '".$name."')"))
+				if($mysqli->query("INSERT INTO subcategories_new (id, type, category, name) VALUES ('".$id."', '".$_SESSION['type']."', '".$_SESSION['c']."', '".$name."')"))
 				{
 					$_SESSION['addSubcategory'] = "ok";
 
@@ -74,15 +74,15 @@
 			{
 				$name = htmlspecialchars($_POST['subcategoryName'], ENT_QUOTES);
 
-				$sMaxIDResult = mysql_query("SELECT MAX(id) FROM subcategories_new WHERE id < 1000");
-				$sMaxID = mysql_fetch_array($sMaxIDResult, MYSQL_NUM);
+				$sMaxIDResult = $mysqli->query("SELECT MAX(id) FROM subcategories_new WHERE id < 1000");
+				$sMaxID = $sMaxIDResult->fetch_array(MYSQLI_NUM);
 
 				$id = 0;
 
 				for($i = 1; $i < $sMaxID[0]; $i++)
 				{
-					$idCheckResult = mysql_query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
-					if(mysql_num_rows($idCheckResult) == 0)
+					$idCheckResult = $mysqli->query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
+					if(MYSQLI_NUM_rows($idCheckResult) == 0)
 					{
 						$id = $i;
 					}
@@ -93,19 +93,19 @@
 					$id = $sMaxID[0] + 1;
 				}
 
-				if(mysql_query("UPDATE subcategories_new SET id = '".$id."' WHERE id = '".$subcategoryID[0]."'"))
+				if($mysqli->query("UPDATE subcategories_new SET id = '".$id."' WHERE id = '".$subcategoryID[0]."'"))
 				{
-					if(mysql_query("UPDATE catalogue_new SET subcategory = '".$id."' WHERE subcategory = '".$subcategoryID[0]."'"))
+					if($mysqli->query("UPDATE catalogue_new SET subcategory = '".$id."' WHERE subcategory = '".$subcategoryID[0]."'"))
 					{
-						$sMaxIDResult = mysql_query("SELECT MAX(id) FROM subcategories_new WHERE id < 1000");
-						$sMaxID = mysql_fetch_array($sMaxIDResult, MYSQL_NUM);
+						$sMaxIDResult = $mysqli->query("SELECT MAX(id) FROM subcategories_new WHERE id < 1000");
+						$sMaxID = $sMaxIDResult->fetch_array(MYSQLI_NUM);
 
 						$id = 0;
 
 						for($i = 1; $i < $sMaxID[0]; $i++)
 						{
-							$idCheckResult = mysql_query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
-							if(mysql_num_rows($idCheckResult) == 0)
+							$idCheckResult = $mysqli->query("SELECT * FROM subcategories_new WHERE id = '".$i."'");
+							if(MYSQLI_NUM_rows($idCheckResult) == 0)
 							{
 								$id = $i;
 							}
@@ -116,7 +116,7 @@
 							$id = $sMaxID[0] + 1;
 						}
 
-						if(mysql_query("INSERT INTO subcategories_new (id, type, category, name) VALUES ('".$id."', '".$_SESSION['type']."', '".$_SESSION['c']."', '".$name."')"))
+						if($mysqli->query("INSERT INTO subcategories_new (id, type, category, name) VALUES ('".$id."', '".$_SESSION['type']."', '".$_SESSION['c']."', '".$name."')"))
 						{
 							$_SESSION['addSubcategory'] = "ok";
 

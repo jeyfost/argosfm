@@ -16,8 +16,8 @@
 	}
 	else
 	{
-		$orderResult = mysql_query("SELECT * FROM orders_date WHERE id = '".$_REQUEST['id']."'");
-		if(mysql_num_rows($orderResult) == 0)
+		$orderResult = $mysqli->query("SELECT * FROM orders_date WHERE id = '".$_REQUEST['id']."'");
+		if(MYSQLI_NUM_rows($orderResult) == 0)
 		{
 			if(isset($_SESSION['last_page']))
 			{
@@ -30,17 +30,17 @@
 		}
 		else
 		{
-			$originalSumResult = mysql_query("SELECT sum from orders_date WHERE id = '".$_REQUEST['id']."'");
-			$originalSum = mysql_fetch_array($originalSumResult, MYSQL_NUM);
-			$order = mysql_fetch_assoc($orderResult);
+			$originalSumResult = $mysqli->query("SELECT sum from orders_date WHERE id = '".$_REQUEST['id']."'");
+			$originalSum = $originalSumResult->fetch_array(MYSQLI_NUM);
+			$order = $orderResult->fetch_assoc();
 			$total = 0;
-			$rateResult = mysql_query("SELECT rate FROM currency WHERE code = 'usd'");
-			$rate = mysql_fetch_array($rateResult, MYSQL_NUM);
-			$goodsResult = mysql_query("SELECT * FROM orders WHERE order_id = '".$_REQUEST['id']."'");
-			while($goods = mysql_fetch_array($goodsResult))
+			$rateResult = $mysqli->query("SELECT rate FROM currency WHERE code = 'usd'");
+			$rate = $rateResult->fetch_array(MYSQLI_NUM);
+			$goodsResult = $mysqli->query("SELECT * FROM orders WHERE order_id = '".$_REQUEST['id']."'");
+			while($goods = $goodsResult->fetch_assoc())
 			{
-				$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$goods['good_id']."'");
-				$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
+				$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$goods['good_id']."'");
+				$good = $goodResult->fetch_assoc();
 				$total += $good['price']*$rate[0]*$goods['quantity'];
 				
 				echo "

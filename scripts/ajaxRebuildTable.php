@@ -2,18 +2,18 @@
 
 	include('connect.php');
 
-	$goodsResult = mysql_query("SELECT * FROM orders WHERE order_id = '".$_POST['orderID']."'");
+	$goodsResult = $mysqli->query("SELECT * FROM orders WHERE order_id = '".$_POST['orderID']."'");
 
-	$originalSumResult = mysql_query("SELECT sum FROM orders_date WHERE id = '".$_POST['orderID']."'");
-	$originalSum = mysql_fetch_array($originalSumResult, MYSQL_NUM);
+	$originalSumResult = $mysqli->query("SELECT sum FROM orders_date WHERE id = '".$_POST['orderID']."'");
+	$originalSum = $originalSumResult->fetch_array(MYSQLI_NUM);
 
-	$rateResult = mysql_query("SELECT rate FROM currency WHERE code = 'usd'");
-	$rate = mysql_fetch_array($rateResult, MYSQL_NUM);
+	$rateResult = $mysqli->query("SELECT rate FROM currency WHERE code = 'usd'");
+	$rate = $rateResult->fetch_array(MYSQLI_NUM);
 
-	while($goods = mysql_fetch_array($goodsResult))
+	while($goods = $goodsResult->fetch_array())
 	{
-		$goodResult = mysql_query("SELECT * FROM catalogue_new WHERE id = '".$goods['good_id']."'");
-		$good = mysql_fetch_array($goodResult, MYSQL_ASSOC);
+		$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$goods['good_id']."'");
+		$good = $goodResult->fetch_assoc();
 		$total += $good['price']*$rate[0]*$goods['quantity'];
 		
 		echo "

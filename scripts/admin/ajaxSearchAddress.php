@@ -13,11 +13,11 @@
 		$query = iconv('UTF-8', 'CP1251', $_POST['searchQuery']);
 		$count = 0;
 
-		$searchResult = mysql_query("SELECT * FROM mail WHERE email LIKE '%".$query."%' ORDER BY email LIMIT 10");
+		$searchResult = $mysqli->query("SELECT * FROM mail WHERE email LIKE '%".$query."%' ORDER BY email LIMIT 10");
 
-		if(mysql_num_rows($searchResult) > 0)
+		if(MYSQLI_NUM_rows($searchResult) > 0)
 		{
-			while($search = mysql_fetch_assoc($searchResult))
+			while($search = $searchResult->fetch_assoc())
 			{
 				$count++;
 

@@ -26,26 +26,26 @@
 			{
 				if(strlen($password) >= 5 and strlen($password) <= 25)
 				{
-					$loginResult = mysql_query("SELECT COUNT(id) FROM users WHERE login = '".$login."'");
-					$L = mysql_fetch_array($loginResult, MYSQL_NUM);
+					$loginResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE login = '".$login."'");
+					$L = $loginResult->fetch_array(MYSQLI_NUM);
 					
 					if($L[0] == 0)
 					{
 						if(filter_var($email, FILTER_VALIDATE_EMAIL))
 						{
-							$emailResult = mysql_query("SELECT COUNT(id) FROM users WHERE email = '".$email."'");
-							$E = mysql_fetch_array($emailResult, MYSQL_NUM);
+							$emailResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE email = '".$email."'");
+							$E = $emailResult->fetch_array(MYSQLI_NUM);
 							
 							if($E[0] == 0)
 							{
 								$symbols = array('1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'n', 'm', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M');
-								$organisationResult = mysql_query("SELECT COUNT(id) FROM users WHERE organisation = '".$organisation."'");
-								$O = mysql_fetch_array($organisationResult, MYSQL_NUM);
+								$organisationResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE organisation = '".$organisation."'");
+								$O = $mysqli->$organisationResult(MYSQLI_NUM);
 								
 								if($O[0] == 0)
 								{
-									$phoneResult = mysql_query("SELECT COUNT(id) FROM users WHERE phone = '".$phone."'");
-									$P = mysql_fetch_array($phoneResult, MYSQL_NUM);
+									$phoneResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE phone = '".$phone."'");
+									$P = $phoneResult->fetch_array(MYSQLI_NUM);
 									
 									if($P[0] == 0)
 									{
@@ -59,7 +59,7 @@
 										
 										$password = md5(md5($password));
 										
-										if(mysql_query("INSERT INTO users (login, password, email, hash, organisation, person, phone, activated) VALUES ('".$login."', '".$password."', '".$email."', '".$hash."', '".$organisation."', '".$name."', '".$phone."', '1')"))
+										if($mysqli->query("INSERT INTO users (login, password, email, hash, organisation, person, phone, activated) VALUES ('".$login."', '".$password."', '".$email."', '".$hash."', '".$organisation."', '".$name."', '".$phone."', '1')"))
 										{
 											//sendMail($email, $hash);
 											$_SESSION['registration'] = 'ok';
@@ -224,22 +224,22 @@
 			{
 				if(strlen($password) >= 5 and strlen($password) <= 25)
 				{
-					$loginResult = mysql_query("SELECT COUNT(id) FROM users WHERE login = '".$login."'");
-					$L = mysql_fetch_array($loginResult, MYSQL_NUM);
+					$loginResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE login = '".$login."'");
+					$L = $loginResult->fetch_array(MYSQLI_NUM);
 					
 					if($L[0] == 0)
 					{
 						if(filter_var($email, FILTER_VALIDATE_EMAIL))
 						{
-							$emailResult = mysql_query("SELECT COUNT(id) FROM users WHERE email = '".$email."'");
-							$E = mysql_fetch_array($emailResult, MYSQL_NUM);
+							$emailResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE email = '".$email."'");
+							$E = $emailResult->fetch_array(MYSQLI_NUM);
 							
 							if($E[0] == 0)
 							{
 								$symbols = array('1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'n', 'm', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M');
 
-								$phoneResult = mysql_query("SELECT COUNT(id) FROM users WHERE phone = '".$phone."'");
-								$P = mysql_fetch_array($phoneResult, MYSQL_NUM);
+								$phoneResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE phone = '".$phone."'");
+								$P = $phoneResult->fetch_array(MYSQLI_NUM);
 								
 								if($P[0] == 0)
 								{
@@ -253,7 +253,7 @@
 									
 									$password = md5(md5($password));
 										
-									if(mysql_query("INSERT INTO users (login, password, email, hash, organisation, person, phone, activated) VALUES ('".$login."', '".$password."', '".$email."', '".$hash."', '', '".$name."', '".$phone."', '1')"))
+									if($mysqli->query("INSERT INTO users (login, password, email, hash, organisation, person, phone, activated) VALUES ('".$login."', '".$password."', '".$email."', '".$hash."', '', '".$name."', '".$phone."', '1')"))
 									{
 										//sendMail($email, $hash);
 										$_SESSION['registration'] = 'ok';
