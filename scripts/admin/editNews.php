@@ -20,7 +20,7 @@
 					{
 						$steps++;
 
-						if($mysqli->query("UPDATE news SET header = '".htmlspecialchars($_POST['newsHeader'], ENT_QUOTES)."' WHERE id = '".$_SESSION['news']."'"))
+						if($mysqli->query("UPDATE news SET header = '".addslashes($_POST['newsHeader'])."' WHERE id = '".$_SESSION['news']."'"))
 						{
 							$count++;
 						}
@@ -30,7 +30,7 @@
 					{
 						$steps++;
 
-						if($mysqli->query("UPDATE news SET short = '".htmlspecialchars($_POST['newsShort'], ENT_QUOTES)."' WHERE id = '".$_SESSION['news']."'"))
+						if($mysqli->query("UPDATE news SET short = '".addslashes($_POST['newsShort'])."' WHERE id = '".$_SESSION['news']."'"))
 						{
 							$count++;
 						}

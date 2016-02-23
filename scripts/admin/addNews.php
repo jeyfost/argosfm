@@ -11,7 +11,7 @@
 			{
 				if(!empty($_POST['emailText']))
 				{
-					if($mysqli->query("INSERT INTO news (header, short, text, date, date_num, date_dmy) VALUES ('".$_POST['newsHeader']."', '".$_POST['newsShort']."', '".$_POST['emailText']."', '".date('d-m-Y H:i')."', '".date('Y-m-d H:i:s')."', '".date('d-m-Y')."')"))
+					if($mysqli->query("INSERT INTO news (header, short, text, date, date_num, date_dmy) VALUES ('".addslashes($_POST['newsHeader'])."', '".addslashes($_POST['newsShort'])."', '".$_POST['emailText']."', '".date('d-m-Y H:i')."', '".date('Y-m-d H:i:s')."', '".date('d-m-Y')."')"))
 					{
 						$_SESSION['addNews'] = "ok";
 						header("Location: ../../admin/admin.php?section=users&action=news&p=1");
