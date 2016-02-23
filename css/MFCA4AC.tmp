@@ -1,0 +1,279 @@
+@charset "windows-1251";
+@font-face {
+	font-family: 'Cambria';
+	src: url('../fonts/cambria.ttf');
+	font-weight: normal;
+	font-style: normal;	
+}
+@font-face {
+	font-family: 'Play';
+	src: url('../fonts/Play.ttf');
+	font-weight: normal;
+	font-style: normal;	
+}
+
+html {
+        background: url(../pictures/system/bg1.jpg) no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+		padding: 0px;
+		margin: 0px;
+		height: 100%;
+}
+
+.toCatalogueButton:hover {background-color: #b3413c;}
+.button:hover {background-color: #b3413c; color: #ffffff;}
+.headerStyleRedHover:hover, catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover {color: #b3413c;}
+.headerStyleHover:hover, .basicHover:hover {color: #df4e47;}
+.catalogueItemTextItalic:hover, .redItalicHover:hover {text-decoration: underline;}
+.newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
+
+#loginSubmit:hover, #toAdminButton:hover, #backToAdminButton:hover, #registrationSubmit:hover, #recoverySubmit:hover, #cancelButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover {background-color: #b3413c;}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	min-height: 525px;
+	height: 100%;
+	height: auto !important;
+	/* [disabled]font-family: Cambria, Arial, Helvetica, sans-serif; */
+	font-size: 12px;
+	font-weight: normal;
+	font-style: normal;
+	/* [disabled]color: #3f3f3f; */
+}
+header {width: 100%; min-width: 1000px; height: 70px; background-color: #ffffff; top: 0px; left: 0px;}
+menu {position: relative; width: 516px; height: 70px; margin: 0 auto; margin-top: 0px;}
+footer {width: 100%; min-width: 1000px; height: 70px; background-color: #ffffff; position: absolute; bottom: 0px;}
+label {font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+select {width: 290px; height: 20px; padding: 0px 5px; font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f; margin-top: 3px;}
+input {width: 220px; height: 20px; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px; padding-right: 3px; padding-left: 3px; border: 1px solid #df4e47; position: relative;}
+
+/*index.php + common styles*/
+#layout {position: absolute; width: 100%; height: 100%; opacity: 0.85; background-color: #000000; margin: 0px; padding: 0px; z-index: 100;}
+#headerBlock {position: relative; margin: 0 auto; width: 1000px; height: 70px;}
+#logo {width: 197px; position: relative; margin-top: 12px; float: left;}
+#mainPoint {position: relative; float: left; width: 120px; height: 70px; margin-top: 0px;}
+#cataloguePoint {position: relative; float: left; width: 120px; height: 70px; margin-top: 0px; margin-left: -10px;}
+#contactsPoint {position: relative; float: left; width: 120px; height: 70px; margin-top: 0px;}
+#offersPoint {position: relative; float: left; width: 120px; height: 70px; margin-top: 0px; margin-left: -12px;}
+#mainPointCenter {position: relative; margin: 0 auto; width: 96px; height: 70px;}
+#mpTopActive {width: 96px; height: 3px; background-color: #df4e47;}
+#mpTop {width: 96px; height: 3px; background-color: #ffffff;}
+#cataloguePointCenter {position: relative; margin: 0 auto; width: 94px; height: 70px;}
+#cpTopActive {width: 94px; height: 3px; background-color: #df4e47;}
+#cpTop {width: 94px; height: 3px; background-color: #ffffff;}
+#contactsPointCenter {position: relative; margin: 0 auto; width: 113px; height: 70px;}
+#csTopActive {width: 113px; height: 3px; background-color: #df4e47;}
+#csTop {width: 113px; height: 3px; background-color: #ffffff;}
+#offersPointCenter {position: relative; margin: 0 auto; width: 97px; height: 70px;}
+#opTopActive {width: 97px; height: 3px; background-color: #df4e47;}
+#opTop {width: 97px; height: 3px; background-color: #ffffff;}
+#login {width: 15px; height: 16px; margin-top: 27px; position: relative; float: left; cursor: pointer;}
+#loginL {width: 60px; height: 16px; margin-top: 27px; position: relative; float: left; margin-left: -23px;}
+#searchBlock {width: 202px; height: 70px; float: right; margin-top: -70px;}
+#searchBG {width: 152px; height: 24px; margin-top: 23px; background-color: #df4e47; float: right; position: relative;}
+#searchField {margin-right: 1px; margin-top: 1px; width: 126px; height: 20px; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px; padding-right: 21px; padding-left: 3px; border: none; float: right; position: relative;}
+#searchSubmit {background: url(../pictures/system/search.png) no-repeat top left; border: none; width: 14px; height: 14px; cursor: pointer; position: absolute; top: 5px; right: 5px;}
+#content {position: relative; margin: 0 auto; width: 1000px; min-height: 415px; height: auto !important; padding: 20px auto;}
+#content_main {position: relative; margin: 20px auto auto auto; width: 1000px; height: 100px;}
+#fa_main_block {position: relative; float: left; width: 280px; height: 375px; background-color: #ffffff; padding: 20px; text-align: center;}
+#em_main_block {position: relative; float: left; width: 280px; height: 375px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center;}
+#ca_main_block {position: relative; float: left; width: 280px; height: 375px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center;}
+#footerContent {width: 1000px; height: auto; position: relative; margin: 0 auto;}
+#location {height: 40px; width: 200px; padding-top: 15px;}
+#copyright {position: relative; margin: 0 auto; width: 300px; height: 55px; text-align: center; line-height: 67px; margin-top: -56px;}
+#web {position: relative; float: right; height: 40px; text-align: right; margin-top: -55px; padding-top: 15px;}
+#loginBlockOuter {position: absolute; width: 258px; height: 270px; top: 80px; right: 50px; background-color: #df4e47; z-index: 101;}
+#loginBlock {position: relative; margin: 0 auto; margin-top: 1px; width: 256px; height: 268px; background-color: #ffffff;}
+#loginForm {position: relative; margin: 0 auto; width: 228px; padding-top: 10px;}
+#loginSubmit {width: 100px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#cancelButton {width: 100px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px; float: right;}
+#registrationWindowOuter {position: absolute; width: 340px; height: 530px; background-color: #df4e47; z-index: 102; left: 50%; margin-left: -170px; top: 80px;}
+#registrationWindow {position: relative; margin: 0 auto; margin-top: 1px; width: 338px; height: 528px; background-color: #ffffff;}
+#registrationForm {width: 298px; position: relative; margin: 0 auto; padding-top: 10px;}
+#registrationSubmit {width: 150px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#notificationWindowOuter {position: absolute; width: 400px; height: 160px; background-color: #df4e47; z-index: 103; left: 50%; margin-left: -200px; top: 80px;}
+#notificationWindow {position: relative; margin: 0 auto; margin-top: 1px; width: 398px; height: 158px; background-color: #ffffff;}
+#recoveryNotificationForm {width: 368px; position: relative; margin: 0 auto; padding-top: 10px;}
+#registrationNotificationForm {width: 368px; position: relative; margin: 0 auto; padding-top: 10px;}
+#passwordRecoveryOuter {position: absolute; width: 400px; height: 160px; background-color: #df4e47; z-index: 103; left: 50%; margin-left: -200px; top: 80px;}
+#passwordRecoveryBlock {position: relative; margin: 0 auto; margin-top: 1px; width: 398px; height: 158px; background-color: #ffffff;}
+#passwordRecoveryForm {width: 368px; position: relative; margin: 0 auto; padding-top: 10px;}
+#recoverySubmit {width: 100px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#notificationWindowOuter {position: absolute; width: 400px; height: 160px; background-color: #df4e47; z-index: 104; left: 50%; margin-left: -200px; top: 80px;}
+#notificationWindow {position: relative; margin: 0 auto; margin-top: 1px; width: 398px; height: 158px; background-color: #ffffff;}
+#notificationRegistrationWindowOuter {position: absolute; width: 400px; height: 170px; background-color: #df4e47; z-index: 104; left: 50%; margin-left: -200px; top: 80px;}
+#notificationRegistrationWindow {position: relative; margin: 0 auto; margin-top: 1px; width: 398px; height: 168px; background-color: #ffffff;}
+#userIcon {position: relative; float: left;}
+#basketIcon {position: relative; float: left; margin-left: 5px;}
+#exitIcon {position: relative; float: right;}
+#newsMain, #partners {position: relative; float: left; width: 100%; background-color: #ffffff; margin-top: 15px; padding: 10px 0;}
+
+/*catalogue.php*/
+#cataloguePoints {position: relative; float: left; width: 270px; height: auto; background-color: #ffffff; padding: 15px;}
+#catalogueGoods {position: relative; float: right; width: 620px; height: auto; background-color: #ffffff; padding: 15px;}
+
+/*contacts.php*/
+#map {position: relative; float: left; width: 570px; background-color: #ffffff; padding: 15px;}
+#contacts {position: relative; float: right; width: 350px; height: 415px; background-color: #ffffff; padding: 15px;}
+
+/*search.php*/
+#search {position: relative; width: 970px; padding: 15px; background-color: #ffffff;}
+#searchPages {position: relative; width: 970px; margin-top: 20px; text-align: center;}
+
+/*colors.php*/
+#color {position: relative; width: 600px; padding: 15px; background-color: #ffffff; position: relative; margin: 0 auto;}
+
+/*settings.php*/
+#settingsBlock {position: relative; margin: 0 auto; width: 600px; height: 300px; margin-top: 50px; padding: 10px; background-color: #ffffff;}
+#settingsMenu {position: relative; width: 600px; height: 40px; float: left;}
+#settingBlockInner {position: relative; float: left; width: 600px;}
+#settingsCaptcha {position: relative; float: left;}
+#settings1Submit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#inputReadOnly {background-color: #e7e7e7;}
+#newPasswordSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#deleteAccountSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#siteSettingsSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#settings1Form {margin-left: 20px; margin-top: 10px;}
+#settings2Form {margin-left: 20px; margin-top: 10px;}
+#settings3Form {margin-left: 20px; margin-top: 40px;}
+#siteSettingsForm {margin-left: 20px; margin-top: 40px;}
+#toAdminButton {width: 100%; margin-top: 125px;  position: relative; height: 40px; line-height: 40px; text-align: center; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer;}
+
+/*order.php*/
+#basketBlock {position: relative; margin: 0 auto; width: 850px; margin-top: 50px; padding: 10px 10px 20px 10px; background-color: #ffffff; overflow: hidden;}
+#basketMenu {width: 100%; height: 40px;}
+#completeOrderForm {position: relative; float: left; margin-left: 20px;}
+#completeOrderSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#clearBasketSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#clearBasketForm {float: right; position: relative;}
+#footerOrder {width: 100%; min-width: 1000px; height: 70px; background-color: #ffffff; bottom: 0px;}
+#ordersSortSelect {position: relative; float: left; width: 125px;}
+#ordersQuantitySelect {position: relative; float: left; width: 120px;}
+#ordersSort {position: relative; float: left;}
+#ordersQuantity {position: relative; float: left; margin-left: 30px;}
+#ordersContent {position: relative; float: left;}
+#orderPages {position: absolute; bottom: 0; text-align: center; width: 95%; margin-bottom: 5px;}
+
+/*admin/news.php*/
+#addNewsSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#backToAdminButton {position: relative; float: right; margin-top: -22px; width: 400px; height: 20px; line-height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; text-align: center;}
+
+/*news.php*/
+#content_news {position: relative; margin: 20px auto auto auto; width: 1000px; background-color: #ffffff;}
+#content_news_inner {position: relative; width: 960px; padding: 10px 20px; background-color: #ffffff; overflow: hidden;}
+#content_news img {margin: 10px;}
+
+/*admin index.php*/
+#adminAuth {position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 300px; height: 180px; margin: auto; background-color: #ffffff; padding: 20px;}
+#adminAuthBig {position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 300px; height: 200px; margin: auto; background-color: #ffffff; padding: 20px;}
+
+/* admin admin.php */
+#adminBody {background: none; background-color: #ffffff; height: 3000px !important;}
+#adminBlock {position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 80%; margin: auto; background-color: #ffffff; padding: 20px;}
+#adminCategoryBlock {width: 100%;}
+#priorityBlock {position: absolute; top: 100px; right: 0px; width: 700px;}
+
+.noBorder {border: none; text-decoration: none;}
+.pBottom {margin-top: 26px;}
+.headerStyle {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.bigHeaderStyle {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.bigHeaderStyleRed {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #df4e47;}
+.headerStyleWhite {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #ffffff;}
+.headerStyleHover {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.headerStyleRed {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #df4e47;}
+.headerStyleRedHover {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #df4e47;}
+.mainIMGContainer {position: relative; width: 230px; height: 173px; margin-top: 20px; margin-left: 25px;}
+.mainIMGText {position: relative; text-align: left; margin-top: 20px;}
+.toCatalogueButton {position: relative; margin: 0 auto; background-color: #df4e47; width: 100px; height: 20px; bottom: 0px; text-align: center;}
+.toCatBText {font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #ffffff;}
+.categoriesBlock {width: 270px; height: auto; margin: 10px auto;}
+.categoryLine {width: 270px; height: auto;}
+.subcategoriesBlock {width: 225px; float: right; padding-bottom: 10px; padding-left: 25px; margin-top: -10px;}
+.subcategories2Block {width: 200px; float: right; padding-bottom: 10px; padding-left: 25px; margin-top: -10px;}
+.icon {position: relative; float: left; width: 21px; height: 21px; padding-left: 10px;}
+.categoryName {position: relative; float: right; width: 219px; height: 21px; line-height: 21px; text-align: left;}
+.basic {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.basicBig {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.basicBigLink {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #df4e47;}
+.basicHover {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.basicRed {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47;}
+.basicGreen {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #093;}
+.basicRed {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47;}
+.smallBasicRed {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; font-style: normal; color: #df4e47;}
+.goodBlock {width: 620px; min-height: 100px; position: relative; float: left; margin-bottom: 50px;}
+.picture {position: relative; float: left; width: 100px; height: 100px;}
+.goodContent {float: right; width: 500px;}
+.goodTopLine {position: relative; float: right; width: 500px; height: 30px;}
+.redStripe {position: relative; float: left; width: 5px; height: 30px; background-color: #df4e47;}
+.goodName {position: relative; float: right; width: 480px; height: 30px; line-height: 30px;}
+.goodStyle {font-family: Play, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.tableStyle {font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.tableStyleDecorated {font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #df4e47; cursor: pointer;}
+.goodDescription {position: relative; float: right; width: 480px; margin-top: 10px;}
+.goodDescriptionLeft {position: relative; float: left; width: 376px; text-align: left;}
+.goodDescriptionRight {position: relative; float: right; width: 100px; text-align: left;}
+.catalogueItemTextDecorated {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47; text-decoration: underline;}
+.catalogueItemText {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47;}
+.catalogueItemTextItalic {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; color: #3f3f3f;}
+.redItalic {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; color: #3f3f3f;}
+.redItalicHover {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; color: #df4e47;}
+.sketch {position: relative; float: right; width: 480px; margin-top: 10px;}
+.sketchStyle {font-family: Play, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; font-style: normal; color: #df4e47; text-decoration: underline;}
+.searchItem {width: 970px; min-height: 120px; margin-bottom: 100px;}
+.searchContent {float: right; width: 850px;}
+.searchTopLine {position: relative; float: right; width: 850px; height: 30px;}
+.searchName {position: relative; float: right; width: 830px; height: 30px; line-height: 30px;}
+.searchDescription {position: relative; float: right; width: 830px; margin-top: 10px;}
+.searchSketch {position: relative; float: right; width: 830px; margin-top: 10px;}
+.colorItem {width: 600px; height: auto; margin-bottom: 20px;}
+.colorItemHeader {width: 600px; height: 30px; float: left;}
+.colorName {width: 580px; float: right; height: 30px; line-height: 30px;}
+.colorItemContent {width: 600px;}
+.authInput {width: 290px; height: 20px; padding: 0px 5px; font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f; border: 1px solid #cccccc;}
+.formInput {width: 280px; height: 20px; padding: 0px 5px; font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.basicBigBlue {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #2bb3cc;}
+.basicBigRed {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #ff2323;}
+.basicBigDecorated {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f; text-decoration: underline;}
+.formTextarea {width: 280px; height: 120px; padding: 0px 5px; font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.priorityGood {position: relative; float: left; width: 690px; height: 20px; padding: 5px; border: 1px solid #999999; margin-top: 2px;}
+.location {width: 100%; height: 20px; position: relative;}
+.radio {padding: 0px; margin: 0px; width: 30px; height: auto; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px;}
+.settingsMenuButton {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; text-align: center; background-color: #ffffff;}
+.settingsMenuButtonActive {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; text-align: center; background-color: #df4e47;}
+.catalogueInput {width: 22px; height: 25px; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px; padding-right: 3px; padding-left: 5px; border: 1px solid #df4e47; position: relative; float: left; background-color: #f8f8f8; border: 1px solid #919191;}
+.toBasketSubmit {width: 25px; height: 25px; margin-top: 3px; position: relative; float: right; cursor: pointer; border: none;}
+.goodCode {position: relative; float: left;}
+.goodPrice {position: relative; float: right; padding-right: 20px;}
+.basketPoint {positiion: relative; float: left; width: 200px; height: 40px; line-height: 40px; background-color: #ffffff; text-align: center;}
+.basketPointActive {positiion: relative; float: left; width: 200px; height: 40px; line-height: 40px; background-color: #df4e47; text-align: center;}
+.basketGood {position: relative; float: left; width: 100%; padding-bottom: 20px; min-height: 180px;}
+.basketGoodH {position: relative; float: left; margin-left: 65px; width: 100%; padding-bottom: 20px; min-height: 180px;}
+.basketGoodPicture {position: relative; float: left;}
+.basketGoodContent {position: relative; float: left; width: 600px; padding-left: 20px;}
+.basketGoodTopLine {position: relative; float: left; width: 600px; height: 30px;}
+.basketGTLRed {position: relative; float: left; width: 5px; height: 30px; background-color: #df4e47;}
+.basketGoodName {position: relative; float: left; width: 580px; height: 30px; line-height: 30px; text-align: left; padding-left: 15px;}
+.basketGoodDescription {position: relative; float: Left; width: 580px; padding-top: 15px; padding-left: 20px;}
+.basketGoodCodePrice {position: relative; float: left; width: 580px; padding-top: 15px; padding-left: 20px;}
+.basketGoodCode {position: relative; float: left; text-align: left;}
+.basketGoodPrice {position: relative; float: right; margin-right: 15px; text-align: right;}
+.basketEditBlock {position: relative; float: right; padding-left: 10px;}
+.basketNote {width: 100px;}
+.ordersTable {width: 845px;}
+.line {position: relative; float: left; height: 25px; width: 845px; background-color: #f4f4f4;}
+.tableSpace {position: relative; float: left; width: 5px; height: 25px;}
+.tableVSpace {position: relative; float: left; width: 845px; height: 5px;}
+.orderNumberTop {position: relative; float: left; width: 40px; height: 25px; line-height: 25px; text-align: center; background-color: #b6d7e0;}
+.orderNameTop {position: relative; float: left; width: 630px; height: 25px; line-height: 25px; text-align: left; padding-left: 20px; background-color: #b6d7e0;}
+.orderStatusTop {position: relative; float: left; width: 145px; height: 25px; line-height: 25px; text-align: center; background-color: #b6d7e0;}
+.orderNumber {position: relative; float: left; width: 40px; height: 25px; line-height: 25px; text-align: center;}
+.orderName {position: relative; float: left; width: 610px; height: 25px; line-height: 25px; text-align: left; padding-left: 20px;}
+.orderStatus {position: relative; float: left; width: 145px; height: 25px; line-height: 25px; text-align: center; margin-left: 20px;}
+.tableGood {position: relative; float: left; width: 845px;}
+.newsEntry {position: relative; float: left; left: 20px; width: 940px; padding: 5px 10px; background-color: #eeeeee; cursor: pointer;}
+.newsEntryFull {position: relative; float: left; left: 20px; width: 240px; padding: 5px 10px; border: 1px solid black; background-color: #ffffff; cursor: pointer;}
+.newsHeadingFont {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; font-style: normal; color: #df4e47;}
