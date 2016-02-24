@@ -209,7 +209,31 @@ function deleteGoodGroup(order_id, good_id) {
 }
 
 function changeQuantity(block, text, quantity, good_id, order_id) {
-	document.getElementById(block).innerHTML = "";
+	document.getElementById(block).innerHTML = "<form id='editOrderQuantityForm' method='POST'><input type='text' class='catalogueInput' value='" + quantity + "'' id='quantity" + good_id + "' onkeyup='adminEditOrder(\"" + order_id + "\", \"" + good_id + "\", \"" + block + "\", \"" + text + "\")' onblur='adminEditOrder(\"" + order_id + "\", \"" + good_id + "\", \"" + block + "\", \"" + text + "\")' style='float: right; z-index: 300;' autofocus /></form><br /><br /><div style='height: 3px;'></div>";
+}
+
+function adminEditOrder(order_id, good_id, block, text) {
+	var qID = 'quantity' + good_id;
+	var val = document.getElementById(qID).value;
+
+	if(document.getElementById(id).value < 1 || Math.ceil(document.getElementById(id).value) - document.getElementById(id).value != 0) {
+		document.getElementById(id).style.border = '2px solid #df4e47';
+	}
+	else {
+		document.getElementById(id).style.border = '1px solid #3f3f3f';
+	}
+
+	if(parseInt(val) > 0) {
+		$.ajax({
+			type: 'POST',
+			cache: false,
+			data: {"goodID": good_id, "orderID": order_id, "quantity": val},
+			url: 'scripts/ajaxEditOrderGoodQuantity.php',
+			success: function(response) {
+				return false;
+			}
+		});
+	}
 }
 
 $(document).ready(function() {

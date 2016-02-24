@@ -1,7 +1,7 @@
 <?php
 	include('config.php');
 	
-	$mysqli = mysqli_connect($host, $user, $password, $db);
+	$mysqli = new mysqli($host, $user, $password, $db);
 
 	if(!$mysqli)
 	{

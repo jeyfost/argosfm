@@ -209,7 +209,7 @@ ul, li {color: #df4e47;}
 #addNewsButton {position: relative; float: right; width: 200px; height: 40px; line-height: 40px; background-color: #df4e47; text-align: center; z-index: 3;}
 #addressSearchResult {position: absolute; padding: 10px; border: 1px solid #787878; background-color: #ffffff; top: 335px; left: 692px; display: none; z-index: 999;}
 #mailHistoryButton {position: absolute; top: 30px; right: 30px;}
-#mailTextBlock {background-color: #dddddd; border: 2px dotted #df4e47; padding: 10px; position: absolute; opacity: 0; max-width: 400px; z-index: 0; display: none; top: 30px; left: 30px;}
+#mailTextBlock {background-color: #dddddd; border: 2px dotted #df4e47; padding: 10px; position: absolute; opacity: 0; max-width: 400px; z-index: 0; display: none; top: 30px; left: 300px;}
 
 /* calendar.php */
 #calendar {position: absolute; right: 10px; width: 262px; background-color: #ffffff;}

@@ -199,6 +199,15 @@ function settingsMenuButton(action, id, text) {
 	}
 }
 
+function validateQuantity(id) {
+	if(document.getElementById(id).value < 1 || Math.ceil(document.getElementById(id).value) - document.getElementById(id).value != 0) {
+		document.getElementById(id).style.border = '2px solid #df4e47';
+	}
+	else {
+		document.getElementById(id).style.border = '1px solid #3f3f3f';
+	}
+}
+
 function changeX(action, id) {
 	if(action == 1) {
 		document.getElementById(id).src = 'pictures/system/xHover.png';

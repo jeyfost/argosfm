@@ -73,7 +73,7 @@
 									<div class='basketGoodPrice'>
 										<span class='basic'><b>Цена за ед.: </b>".($good['price']*$rate[0])." бел. руб.</span>
 										<br />
-										<div id='gq".$goods['id']."' onclick='changeQuantity(\"gq".$goods['id']."\", \"gqt".$good['id']."\", \"".$goods['quantity']."\", \"".$goods['id']."\", \"".$order['id']."\")' style='cursor: pointer;' title='Изменить количество данного товара в заказе'><span class='basic'><b>Количество: </b><span id='gqt".$good['id']."'>".$goods['quantity']."</span> шт.</span></div>
+										<div id='gq".$goods['id']."' "; if($order['status'] == 0 and $_SESSION['userID'] == 1) {echo "onclick='changeQuantity(\"gq".$goods['id']."\", \"gqt".$good['id']."\", \"".$goods['quantity']."\", \"".$goods['id']."\", \"".$order['id']."\")' style='cursor: pointer;' title='Изменить количество данного товара в заказе'";} echo "<span class='basic'><b>Количество: </b><span id='gqt".$good['id']."'>".$goods['quantity']."</span> шт.</span></div>
 										<span class='basic'><b>Общая стоимость данной группы товаров: </b><span id='price".$good['id']."'>".($goods['quantity']*$good['price']*$rate[0])."</span> бел. руб.</span>
 									</div>
 								</div>

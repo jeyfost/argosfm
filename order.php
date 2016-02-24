@@ -1182,9 +1182,9 @@
 							{
 								$number++;	
 								$status = "Обработан";
-								$proceedeDate = "";
+								$proceedDate = "";
 								
-								switch (date('w', strtotime(substr($orders1['proceede_date'], 0, 10))))
+								switch (date('w', strtotime(substr($orders1['proceed_date'], 0, 10))))
 								{
 									case "1":
 										$day = "в понедельник ";
@@ -1210,9 +1210,18 @@
 									default:
 										break;
 								}
-								$proceedeDate .= $day;							
-								$proceedeDate .= substr($orders1['proceede_date'], 8, 2);
-								switch(substr($orders1['proceede_date'], 5, 2))
+
+								$proceedDate .= $day;
+								if(substr($orders1['proceed_date'], 8, 1) == 0)
+								{
+									$proceedDate .= substr($orders1['proceed_date'], 9, 1);
+								}
+								else
+								{
+									$proceedDate .= substr($orders1['proceed_date'], 8, 2);
+								}
+
+								switch(substr($orders1['proceed_date'], 5, 2))
 								{
 									case "01":
 										$month = " января ";
@@ -1253,9 +1262,9 @@
 									default:
 										break;
 								}
-								$proceedeDate .= $month;
-								$proceedeDate .= "в ";
-								$proceedeDate .= substr($orders1['proceede_date'], 11, 8);
+								$proceedDate .= $month;
+								$proceedDate .= substr($orders1['proceed_date'], 0, 4)." года в ";
+								$proceedDate .= substr($orders1['proceed_date'], 11, 8);
 										
 								echo "
 									<div class='tableVSpace'></div>
@@ -1269,7 +1278,7 @@
 										</div>
 										<div class='tableSpace'></div>
 										<div class='orderStatus'>
-											<span class='tableStyle' style='cursor: help;' title='Заказ обработан ".$proceedeDate."'>".$status."</span>
+											<span class='tableStyle' style='cursor: help;' title='Заказ обработан ".$proceedDate."'>".$status."</span>
 										</div>
 									</div>
 									<div class='tableVSpace'></div>
