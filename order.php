@@ -51,8 +51,7 @@
 			if($_SESSION['userID'] == 1)
 			{
 				$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1'");
-
-				$ordersResult->num_rows;
+				$quantity = $ordersResult->num_rows;
 				if($quantity > 10)
 				{
 					if($quantity % 10 != 0)
@@ -75,8 +74,7 @@
 			else
 			{
 				$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1' AND user_id = '".$_SESSION['userID']."'");
-
-				$ordersResult->num_rows;
+				$quantity = $ordersResult->num_rows;
 				if($quantity > 10)
 				{
 					if($quantity % 10 != 0)
@@ -263,6 +261,7 @@
 					break;
 				case "no_activation":
 					echo "<span class='basicRed'>Ваша учётная запись ещё не активирована. Вы не сможете заходить в настройки до тех пор, пока не активация не будет завершена. Для этого проверьте свою электронную почту.</span>";
+					break;
 				default:
 					break;
 			}
@@ -594,7 +593,7 @@
 							else
 							{
 								echo "
-									<a href='order.php' class='noBorder'><img src='pictures/system/basketFullRed.png' class='noBorder' id='basketIcon' title='Корзина | Количество товаров: ".$orders."' /></a>
+									<a href='order.php' class='noBorder'><img src='pictures/system/basketFullRed.png' class='noBorder' id='basketIcon' title='Корзина | Количество товаров: ".$ordersResult->num_rows."' /></a>
 								";
 							}
 						}
@@ -610,7 +609,7 @@
 							else
 							{
 								echo "
-									<a href='order.php' class='noBorder'><img src='pictures/system/basketFullRed.png' class='noBorder' id='basketIcon' title='Заявки | Количество заявок: ".$orders."' /></a>
+									<a href='order.php' class='noBorder'><img src='pictures/system/basketFullRed.png' class='noBorder' id='basketIcon' title='Заявки | Количество заявок: ".$ordersResult->num_rows."' /></a>
 								";
 							}
 						}
@@ -1112,7 +1111,7 @@
 									</div>
 								";
 								
-							$number_n = $_REQUEST['p'] * 10 - 10;
+							$number_n = 0;
 								
 							while($orders1 = $orders1Result->fetch_assoc())
 							{
