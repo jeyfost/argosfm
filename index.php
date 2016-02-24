@@ -664,7 +664,7 @@
             	<h2 class='basic'>Предлагаем бахрому для штор, скатертей, подушек, обделочную тесьму для салфеток, мебели, окантовки краёв, декоративные шнуры, люверсы, кисти и подхваты для штор.</h2>
             </div>
             <a href='catalogue.php?type=ca' class='noBorder'>
-                <div class='toCatalogueButton' style='margin-top: 66px;'>
+                <div class='toCatalogueButton' style='margin-top: 60px;'>
                     <span class='toCatBText'>в каталог</span>
                 </div>
             </a>
