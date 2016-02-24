@@ -35,42 +35,41 @@
 				";
 				}
 
-				echo "
-					<div class='basketGoodPicture'>
-						<a href='pictures/catalogue/big/" . $good['picture'] . "' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/" . $good['small'] . "' class='noBorder' /></a>
-					</div>
-					<div class='basketGoodContent'>
-						<div class='basketGoodTopLine'>
-							<div class='basketGTLRed'></div>
-							<div class='basketGoodName'>
-								<span class='goodStyle'>" . $good['name'] . "</span>
-							</div>
-							<div class='basketGoodDescription'>
-								<span class='basic'>" . $good['description'] . "</span>
-							</div>
-							<div class='basketGoodCodePrice'>
-								<div class='basketGoodCode'>
-									<span class='basic'><b>Артикул: </b>" . $good['code'] . "</span>
+					echo "
+						<div class='basketGoodPicture'>
+							<a href='pictures/catalogue/big/".$good['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$good['small']."' class='noBorder' /></a>
+						</div>
+						<div class='basketGoodContent'>
+							<div class='basketGoodTopLine'>
+								<div class='basketGTLRed'></div>
+								<div class='basketGoodName'>
+									<span class='goodStyle'>".$good['name']."</span>
 								</div>
-								<div class='basketGoodPrice'>
-									<span class='basic'><b>Цена за ед.: </b>" . ($good['price'] * $rate[0]) . " бел. руб.</span>
-									<br />
-									<span class='basic'><b>Количество: </b>" . $goods['quantity'] . " шт.</span>
-									<br />
-									<span class='basic'><b>Общая стоимость данной группы товаров: </b><span id='price" . $good['id'] . "'>" . ($goods['quantity'] * $good['price'] * $rate[0]) . "</span> бел. руб.</span>
+								<div class='basketGoodDescription'>
+									<span class='basic'>".$good['description']."</span>
+								</div>
+								<div class='basketGoodCodePrice'>
+									<div class='basketGoodCode'>
+										<span class='basic'><b>Артикул: </b>".$good['code']."</span>
+									</div>
+									<div class='basketGoodPrice'>
+										<span class='basic'><b>Цена за ед.: </b>".($good['price']*$rate[0])." бел. руб.</span>
+										<br />
+										<div id='gq".$goods['id']."' "; if($order['status'] == 0 and $_SESSION['userID'] == 1) {echo "onclick='changeQuantity(\"gq".$goods['id']."\", \"gqt".$good['id']."\", \"".$goods['quantity']."\", \"".$goods['good_id']."\", \"".$_POST['orderID']."\")' style='cursor: pointer;' title='Изменить количество данного товара в заказе'";} echo "><span class='basic'><b>Количество: </b><span id='gqt".$good['id']."'>".$goods['quantity']."</span> шт.</span></div>
+										<span class='basic'><b>Общая стоимость данной группы товаров: </b><span id='price".$good['id']."'>".($goods['quantity']*$good['price']*$rate[0])."</span> бел. руб.</span>
+									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-			";
+					";
 		}
 
 		echo "
 			<br />
-			<div style='position: relative; float: right; margin-top: 10px;'>
-				<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Общая стоимость заказа на момент офрмления:</b> " . $originalSum[0] . " бел. руб.</span>
-				<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>Общая стоимость заказа на данный момент (согласно сегодняшнему курсу):</b> " . $total . " бел. руб.</span>
+			<div style='position: relative; float: right; margin-top: 50px;'>
+				<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Общая стоимость заказа на момент офрмления:</b> ".$originalSum[0]." бел. руб.</span>
+				<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>Общая стоимость заказа на данный момент (согласно сегодняшнему курсу): </b><span id='totalPrice".$_POST['orderID']."'>".$total."</span> бел. руб.</span>
 			</div>
 		";
 	}

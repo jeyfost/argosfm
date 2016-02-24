@@ -209,19 +209,14 @@ function deleteGoodGroup(order_id, good_id) {
 }
 
 function changeQuantity(block, text, quantity, good_id, order_id) {
-	document.getElementById(block).innerHTML = "<form id='editOrderQuantityForm' method='POST'><input type='text' class='catalogueInput' value='" + quantity + "'' id='quantity" + good_id + "' onkeyup='adminEditOrder(\"" + order_id + "\", \"" + good_id + "\", \"" + block + "\", \"" + text + "\")' onblur='adminEditOrder(\"" + order_id + "\", \"" + good_id + "\", \"" + block + "\", \"" + text + "\")' style='float: right; z-index: 300;' autofocus /></form><br /><br /><div style='height: 3px;'></div>";
+	document.getElementById(block).innerHTML = "<form id='editOrderQuantityForm' method='POST'><input type='text' class='catalogueInput' value='" + quantity + "'' id='quantityInput' onkeyup='validateQuantity(\"quantityInput\")' onblur='adminEditOrder(\"" + order_id + "\", \"" + good_id + "\", \"" + block + "\", \"" + text + "\")' style='float: right; z-index: 3;' /></form><br /><br /><div style='height: 3px;'></div>";
+	document.getElementById('quantityInput').focus();
+	document.getElementById(block).removeAttribute('onclick');
 }
 
 function adminEditOrder(order_id, good_id, block, text) {
-	var qID = 'quantity' + good_id;
+	var qID = "quantityInput";
 	var val = document.getElementById(qID).value;
-
-	if(document.getElementById(id).value < 1 || Math.ceil(document.getElementById(id).value) - document.getElementById(id).value != 0) {
-		document.getElementById(id).style.border = '2px solid #df4e47';
-	}
-	else {
-		document.getElementById(id).style.border = '1px solid #3f3f3f';
-	}
 
 	if(parseInt(val) > 0) {
 		$.ajax({
@@ -230,7 +225,32 @@ function adminEditOrder(order_id, good_id, block, text) {
 			data: {"goodID": good_id, "orderID": order_id, "quantity": val},
 			url: 'scripts/ajaxEditOrderGoodQuantity.php',
 			success: function(response) {
-				return false;
+				if(response == "a") {
+					document.getElementById(block).innerHTML = "<span class='basic'><b>Количество: </b><span id='gqt" + good_id + "'>" + val + "</span> шт.</span>";
+					document.getElementById(block).setAttribute('onclick', 'changeQuantity(\"gq' + good_id + '\", \"' + text + '\", \"' + val + '\", \"' + good_id + '\", \"' + order_id + '\")');
+
+					$.ajax({
+						type: 'POST',
+						cache: false,
+						data: {"goodID": good_id, "orderID": order_id},
+						url: 'scripts/ajaxChangeGroupPrice.php',
+						success: function(result) {
+							var pID = 'price' + good_id;
+							document.getElementById(pID).innerHTML = result;
+
+							$.ajax({
+								type: 'POST',
+								cache: false,
+								data: {"orderID": order_id},
+								url: 'scripts/ajaxChangeTotalPrice.php',
+								success: function(newSum) {
+									var tID = 'totalPrice' + order_id;
+									document.getElementById(tID).innerHTML = newSum;
+								}
+							});
+						}
+					});
+				}
 			}
 		});
 	}

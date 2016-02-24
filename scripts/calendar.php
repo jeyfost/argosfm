@@ -5,9 +5,6 @@
 	$link = mysql_connect($host, $user, $password);
 	mysql_select_db($db, $link);
 
-	mysql_query("SET NAMES 'utf8'");
-	mysql_query("SET CHARACTER SET 'utf8'");
-
 	function initCalendar($selectedDate)
 	{
 		if($selectedDate == "" or (substr($selectedDate, 3, 2) == getCurrentMonth() and substr($selectedDate, 6, 4) == getCurrentYear()))
