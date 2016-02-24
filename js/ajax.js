@@ -31,6 +31,13 @@ function editBasketGood(id, price, rate, total, quantity) {
 	rate = parseInt(rate);
 	total = parseInt(total);
 	quantity = parseInt(quantity);
+
+	if(document.getElementById(qID).value < 1 || Math.ceil(document.getElementById(qID).value) - document.getElementById(qID).value != 0) {
+		document.getElementById(qID).style.border = '2px solid #df4e47';
+	}
+	else {
+		document.getElementById(qID).style.border = '1px solid #3f3f3f';
+	}
 	
 	if(document.getElementById(qID).value < 1 || Math.ceil(document.getElementById(qID).value) - document.getElementById(qID).value != 0) {
 		document.getElementById(nID).innerHTML = "<span class='basicRed'>Неверно введено количетсво!</span>";

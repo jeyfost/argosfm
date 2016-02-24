@@ -1060,8 +1060,7 @@
 											<form method='post' style='padding-top: 25px;'>
 												<label>Количество</label>
 												<br /><br />
-												<input type='text' class='catalogueInput' id='quantity".$good['id']."' name='quantity".$good['id']."' value='".$goods['quantity']."' onKeyUp='validateQuantity(\"quantity".$good['id']."\")' onChange='validateQuantity(\"quantity".$good['id']."\")' />
-												<img src='pictures/system/edit.png' id='edit".$good['id']."' class='noBorder'  onmouseover='changeEdit(\"1\", \"edit".$good['id']."\")' onmouseout='changeEdit(\"0\", \"edit".$good['id']."\")' onclick='editBasketGood(\"".$good['id']."\", \"".$good['price']."\", \"".$rate[0]."\", \"".$totalPrice."\", \"".$goods['quantity']."\")' title='Изменить количество товара в заказе' style='float: right; cursor: pointer;' />
+												<input type='text' class='catalogueInput' id='quantity".$good['id']."' name='quantity".$good['id']."' value='".$goods['quantity']."' onKeyUp='editBasketGood(\"".$good['id']."\", \"".$good['price']."\", \"".$rate[0]."\", \"".$totalPrice."\", \"".$goods['quantity']."\")' />
 											</form>
 											<div id='note".$good['id']."' style='padding-top: 40px;' class='basketNote'></div>
 										</div>
