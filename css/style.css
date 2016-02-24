@@ -251,7 +251,8 @@ ul, li {color: #df4e47;}
 .admRedText {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal; color: #df4e47;}
 .admWhiteText {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal; color: #ffffff;}
 .adminTDNumber {width: 30px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
-.adminTDMail, .adminTDName {height: 30px; line-height: 30px; text-align: left; padding-left: 10px; padding-right: 10px; padding-left: 5px; padding-right: 5px;}
+.adminTDMail {height: 30px; line-height: 30px; text-align: left; padding-left: 10px; padding-right: 10px; padding-left: 5px; padding-right: 5px; max-width: 230px;}
+.adminTDName {height: 30px; line-height: 30px; text-align: left; padding-left: 10px; padding-right: 10px; padding-left: 5px; padding-right: 5px; max-width: 260px;}
 .adminTDButtons {width: 60px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
 .adminTDDate {height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
 .admPageNumberBlock {position: relative; float: left; background-color: #ffffff; width: 40px; height: 30px; line-height: 30px; text-align: center;}
