@@ -23,12 +23,13 @@
 		}
 		else
 		{
+			$order = $orderResult->fetch_assoc();
+
 			$gResult = $mysqli->query("SELECT COUNT(id) FROM orders WHERE order_id = '".$_REQUEST['id']."'");
 			if($gResult->num_rows != 0)
 			{
 				$originalSumResult = $mysqli->query("SELECT sum from orders_date WHERE id = '".$_REQUEST['id']."'");
 				$originalSum = $originalSumResult->fetch_array(MYSQLI_NUM);
-				$order = $orderResult->fetch_assoc();
 				$total = 0;
 				$rateResult = $mysqli->query("SELECT rate FROM currency WHERE code = 'usd'");
 				$rate = $rateResult->fetch_array(MYSQLI_NUM);
@@ -82,13 +83,26 @@
 					";
 				}
 
-				echo "
-					<br />
-					<div style='position: relative; float: right; margin-top: 50px;'>
-						<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>ќбща€ стоимость заказа на момент офрмлени€:</b> ".$originalSum[0]." бел. руб.</span>
-						<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>ќбща€ стоимость заказа на данный момент (согласно сегодн€шнему курсу):</b> ".$total." бел. руб.</span>
-					</div>
-				";
+				if($order['status'] == 0)
+				{
+					echo "
+						<br />
+						<div style='position: relative; float: right; margin-top: 50px;'>
+							<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>ќбща€ стоимость заказа на момент офрмлени€:</b> ".$originalSum[0]." бел. руб.</span>
+							<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>ќбща€ стоимость заказа на данный момент (согласно сегодн€шнему курсу):</b> ".$total." бел. руб.</span>
+						</div>
+					";
+				}
+				else
+				{
+					echo "
+						<br />
+						<div style='position: relative; float: right; margin-top: 50px;'>
+							<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -40px;'><b>ќбща€ стоимость заказа на момент прин€ти€:</b> ".$order['sum_final']." бел. руб.</span>
+
+						</div>
+					";
+				}
 			}
 			else
 			{

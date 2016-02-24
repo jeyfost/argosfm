@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/acceptOrder.php" afterPath="$PROJECT_DIR$/scripts/acceptOrder.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/orderDetailedInfo.php" afterPath="$PROJECT_DIR$/scripts/orderDetailedInfo.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,13 +27,96 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="orderDetailedInfo.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/orderDetailedInfo.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.886792">
+              <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+              <folding>
+                <element signature="e#1088#3361#0#PHP" expanded="false" />
+                <marker date="1456297827062" expanded="true" signature="272:330" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456297827062" expanded="true" signature="412:430" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="562:605" placeholder="SELECT COUNT... orders" />
+                <marker date="1456297827062" expanded="true" signature="562:609" placeholder="SELECT COUNT... orders" />
+                <marker date="1456297827062" expanded="true" signature="562:629" placeholder="SELECT COUNT... orders" />
+                <marker date="1456297827062" expanded="true" signature="710:770" placeholder="SELECT sum f... orders_date" />
+                <marker date="1456297827062" expanded="true" signature="888:932" placeholder="SELECT rate currency" />
+                <marker date="1456297827062" expanded="true" signature="1021:1080" placeholder="SELECT * FRO... orders" />
+                <marker date="1456297827062" expanded="true" signature="1173:1235" placeholder="SELECT * FRO... catalogue_new" />
+                <marker date="1456297827062" expanded="true" signature="1382:1388" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="1479:1798" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="1865:2050" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="2088:3334" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="2127:3321" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="2205:2278" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="2322:2398" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="2440:3307" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="2478:2565" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="2604:3292" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="2911:2927" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="3442:3493" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="3494:3882" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="3530:3582" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="3711:3763" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="3956:4007" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="4008:4152" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="4008:4206" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="4049:4101" placeholder="..." />
+                <marker date="1456297827062" expanded="true" signature="4281:4299" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-17.076923">
+              <caret line="352" column="60" selection-start-line="352" selection-start-column="60" selection-end-line="352" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="acceptOrder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/acceptOrder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="1.5497897">
+              <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+              <folding>
+                <marker date="1456298804403" expanded="true" signature="304:371" placeholder="SELECT COUNT... orders" />
+                <marker date="1456298804403" expanded="true" signature="660:704" placeholder="SELECT rate currency" />
+                <marker date="1456298804403" expanded="true" signature="792:829" placeholder="SELECT * FRO... orders" />
+                <marker date="1456298804403" expanded="true" signature="792:831" placeholder="SELECT * FRO... orders" />
+                <marker date="1456298804403" expanded="true" signature="792:851" placeholder="SELECT * FRO... orders" />
+                <marker date="1456298804403" expanded="true" signature="941:964" placeholder="SELECT price... catalogue" />
+                <marker date="1456298804403" expanded="true" signature="941:979" placeholder="SELECT price... catalogue_new" />
+                <marker date="1456298804403" expanded="true" signature="941:981" placeholder="SELECT price... catalogue_new" />
+                <marker date="1456298804403" expanded="true" signature="941:1003" placeholder="SELECT price... catalogue_new" />
+                <marker date="1456298804403" expanded="true" signature="1141:1280" placeholder="UPDATE order... " />
+                <marker date="1456298804403" expanded="true" signature="1545:1603" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456298804403" expanded="true" signature="1710:1765" placeholder="SELECT * FRO... users" />
+                <marker date="1456298804403" expanded="true" signature="2041:3136" placeholder="..." />
+                <marker date="1456298804403" expanded="true" signature="2072:2134" placeholder="..." />
+                <marker date="1456298804403" expanded="true" signature="2200:2906" placeholder="..." />
+                <marker date="1456298804403" expanded="true" signature="2304:2316" placeholder="..." />
+                <marker date="1456298804403" expanded="true" signature="2589:2623" placeholder="..." />
+                <marker date="1456298804403" expanded="true" signature="2801:2834" placeholder="..." />
+                <marker date="1456298804403" expanded="true" signature="2973:3125" placeholder="..." />
+                <marker date="1456298804403" expanded="true" signature="3050:3097" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3604488">
-              <caret line="666" column="68" selection-start-line="666" selection-start-column="68" selection-end-line="666" selection-end-column="68" />
+            <state vertical-scroll-proportion="-15.115385">
+              <caret line="674" column="16" selection-start-line="674" selection-start-column="16" selection-end-line="674" selection-end-column="16" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <marker date="1456296269147" expanded="true" signature="492:548" placeholder="SELECT * FRO... users" />
                 <marker date="1456296269147" expanded="true" signature="958:1023" placeholder="SELECT * FRO... users" />
                 <marker date="1456296269147" expanded="true" signature="2864:2896" placeholder="SELECT COUNT... background" />
@@ -111,7 +196,6 @@
         <option value="$PROJECT_DIR$/js/ajax.js" />
         <option value="$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php" />
         <option value="$PROJECT_DIR$/scripts/registration.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/admin/news.php" />
         <option value="$PROJECT_DIR$/scripts/ajaxSearch.php" />
@@ -136,9 +220,7 @@
         <option value="$PROJECT_DIR$/scripts/admin/editSubcategory2.php" />
         <option value="$PROJECT_DIR$/scripts/admin/editNews.php" />
         <option value="$PROJECT_DIR$/scripts/admin/addNews.php" />
-        <option value="$PROJECT_DIR$/scripts/orderDetailedInfo.php" />
         <option value="$PROJECT_DIR$/scripts/ajaxRebuildTable.php" />
-        <option value="$PROJECT_DIR$/scripts/acceptOrder.php" />
         <option value="$PROJECT_DIR$/scripts/cancelOrder.php" />
         <option value="$PROJECT_DIR$/scripts/calendar.php" />
         <option value="$PROJECT_DIR$/settings.php" />
@@ -149,6 +231,9 @@
         <option value="$PROJECT_DIR$/catalogue.php" />
         <option value="$PROJECT_DIR$/order.php" />
         <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/scripts/orderDetailedInfo.php" />
+        <option value="$PROJECT_DIR$/scripts/acceptOrder.php" />
       </list>
     </option>
   </component>
@@ -222,6 +307,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,7 +405,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456295984024</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Правка дизайна главной страницы">
+      <created>1456296300002</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1456296300002</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -348,7 +453,8 @@
     <MESSAGE value="Правки в заявках" />
     <MESSAGE value="Фикс календаря" />
     <MESSAGE value="Исправление иконки корзины" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправление иконки корзины" />
+    <MESSAGE value="Правка дизайна главной страницы" />
+    <option name="LAST_COMMIT_MESSAGE" value="Правка дизайна главной страницы" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -431,13 +537,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.55820477">
           <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.653846">
-          <caret line="369" column="58" selection-start-line="369" selection-start-column="58" selection-end-line="369" selection-end-column="58" />
         </state>
       </provider>
     </entry>
@@ -627,40 +726,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/orderDetailedInfo.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.23077">
-          <caret line="94" column="72" selection-start-line="94" selection-start-column="72" selection-end-line="94" selection-end-column="72" />
-          <folding>
-            <marker date="1456238091360" expanded="true" signature="272:330" placeholder="SELECT * FRO... orders_date" />
-            <marker date="1456238091360" expanded="true" signature="412:430" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="520:563" placeholder="SELECT COUNT... orders" />
-            <marker date="1456238091360" expanded="true" signature="520:567" placeholder="SELECT COUNT... orders" />
-            <marker date="1456238091360" expanded="true" signature="520:587" placeholder="SELECT COUNT... orders" />
-            <marker date="1456238091360" expanded="true" signature="668:728" placeholder="SELECT sum f... orders_date" />
-            <marker date="1456238091360" expanded="true" signature="888:932" placeholder="SELECT rate currency" />
-            <marker date="1456238091360" expanded="true" signature="1021:1080" placeholder="SELECT * FRO... orders" />
-            <marker date="1456238091360" expanded="true" signature="1173:1235" placeholder="SELECT * FRO... catalogue_new" />
-            <marker date="1456238091360" expanded="true" signature="1382:1388" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="1479:1798" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="1865:2050" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="2088:3334" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="2127:3321" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="2205:2278" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="2322:2398" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="2440:3307" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="2478:2565" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="2604:3292" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="2911:2927" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="3403:3454" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="3455:3840" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="3490:3542" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="3670:3722" placeholder="..." />
-            <marker date="1456238091360" expanded="true" signature="3908:3926" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/ajaxRebuildTable.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2622721">
@@ -686,27 +751,6 @@
             <marker date="1456238130970" expanded="true" signature="2731:3118" placeholder="..." />
             <marker date="1456238130970" expanded="false" signature="2764:2816" placeholder="..." />
             <marker date="1456238130970" expanded="false" signature="2946:2998" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/acceptOrder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39650145">
-          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-          <folding>
-            <marker date="1456294029551" expanded="true" signature="304:371" placeholder="SELECT COUNT... orders" />
-            <marker date="1456294029551" expanded="true" signature="630:738" placeholder="UPDATE order... " />
-            <marker date="1456294029551" expanded="true" signature="1003:1061" placeholder="SELECT * FRO... orders_date" />
-            <marker date="1456294029551" expanded="true" signature="1168:1223" placeholder="SELECT * FRO... users" />
-            <marker date="1456294029551" expanded="true" signature="1499:2594" placeholder="..." />
-            <marker date="1456294029551" expanded="true" signature="1530:1592" placeholder="..." />
-            <marker date="1456294029551" expanded="true" signature="1658:2364" placeholder="..." />
-            <marker date="1456294029551" expanded="true" signature="1762:1774" placeholder="..." />
-            <marker date="1456294029551" expanded="true" signature="2047:2081" placeholder="..." />
-            <marker date="1456294029551" expanded="true" signature="2259:2292" placeholder="..." />
-            <marker date="1456294029551" expanded="true" signature="2431:2583" placeholder="..." />
-            <marker date="1456294029551" expanded="true" signature="2508:2555" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -1547,10 +1591,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3604488">
-          <caret line="666" column="68" selection-start-line="666" selection-start-column="68" selection-end-line="666" selection-end-column="68" />
+        <state vertical-scroll-proportion="-15.115385">
+          <caret line="674" column="16" selection-start-line="674" selection-start-column="16" selection-end-line="674" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#div#0;n#a#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#a#0;n#div#2;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
             <marker date="1456296269147" expanded="true" signature="492:548" placeholder="SELECT * FRO... users" />
             <marker date="1456296269147" expanded="true" signature="958:1023" placeholder="SELECT * FRO... users" />
             <marker date="1456296269147" expanded="true" signature="2864:2896" placeholder="SELECT COUNT... background" />
@@ -1604,6 +1649,82 @@
             <marker date="1456296269147" expanded="true" signature="23064:23108" placeholder="SELECT * FRO... orders_date" />
             <marker date="1456296269147" expanded="true" signature="28405:28448" placeholder="SELECT * FRO... news" />
             <marker date="1456296269147" expanded="true" signature="29592:29689" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-17.076923">
+          <caret line="352" column="60" selection-start-line="352" selection-start-column="60" selection-end-line="352" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/orderDetailedInfo.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.886792">
+          <caret line="95" column="20" selection-start-line="95" selection-start-column="20" selection-end-line="95" selection-end-column="20" />
+          <folding>
+            <element signature="e#1088#3361#0#PHP" expanded="false" />
+            <marker date="1456297827062" expanded="true" signature="272:330" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456297827062" expanded="true" signature="412:430" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="562:605" placeholder="SELECT COUNT... orders" />
+            <marker date="1456297827062" expanded="true" signature="562:609" placeholder="SELECT COUNT... orders" />
+            <marker date="1456297827062" expanded="true" signature="562:629" placeholder="SELECT COUNT... orders" />
+            <marker date="1456297827062" expanded="true" signature="710:770" placeholder="SELECT sum f... orders_date" />
+            <marker date="1456297827062" expanded="true" signature="888:932" placeholder="SELECT rate currency" />
+            <marker date="1456297827062" expanded="true" signature="1021:1080" placeholder="SELECT * FRO... orders" />
+            <marker date="1456297827062" expanded="true" signature="1173:1235" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456297827062" expanded="true" signature="1382:1388" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="1479:1798" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="1865:2050" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="2088:3334" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="2127:3321" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="2205:2278" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="2322:2398" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="2440:3307" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="2478:2565" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="2604:3292" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="2911:2927" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="3442:3493" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="3494:3882" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="3530:3582" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="3711:3763" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="3956:4007" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="4008:4152" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="4008:4206" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="4049:4101" placeholder="..." />
+            <marker date="1456297827062" expanded="true" signature="4281:4299" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/acceptOrder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.5497897">
+          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="32" />
+          <folding>
+            <marker date="1456298804403" expanded="true" signature="304:371" placeholder="SELECT COUNT... orders" />
+            <marker date="1456298804403" expanded="true" signature="660:704" placeholder="SELECT rate currency" />
+            <marker date="1456298804403" expanded="true" signature="792:829" placeholder="SELECT * FRO... orders" />
+            <marker date="1456298804403" expanded="true" signature="792:831" placeholder="SELECT * FRO... orders" />
+            <marker date="1456298804403" expanded="true" signature="792:851" placeholder="SELECT * FRO... orders" />
+            <marker date="1456298804403" expanded="true" signature="941:964" placeholder="SELECT price... catalogue" />
+            <marker date="1456298804403" expanded="true" signature="941:979" placeholder="SELECT price... catalogue_new" />
+            <marker date="1456298804403" expanded="true" signature="941:981" placeholder="SELECT price... catalogue_new" />
+            <marker date="1456298804403" expanded="true" signature="941:1003" placeholder="SELECT price... catalogue_new" />
+            <marker date="1456298804403" expanded="true" signature="1141:1280" placeholder="UPDATE order... " />
+            <marker date="1456298804403" expanded="true" signature="1545:1603" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456298804403" expanded="true" signature="1710:1765" placeholder="SELECT * FRO... users" />
+            <marker date="1456298804403" expanded="true" signature="2041:3136" placeholder="..." />
+            <marker date="1456298804403" expanded="true" signature="2072:2134" placeholder="..." />
+            <marker date="1456298804403" expanded="true" signature="2200:2906" placeholder="..." />
+            <marker date="1456298804403" expanded="true" signature="2304:2316" placeholder="..." />
+            <marker date="1456298804403" expanded="true" signature="2589:2623" placeholder="..." />
+            <marker date="1456298804403" expanded="true" signature="2801:2834" placeholder="..." />
+            <marker date="1456298804403" expanded="true" signature="2973:3125" placeholder="..." />
+            <marker date="1456298804403" expanded="true" signature="3050:3097" placeholder="..." />
           </folding>
         </state>
       </provider>

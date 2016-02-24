@@ -23,7 +23,21 @@
 			echo "<span class='basicRed'>ƒанный заказ нельз€ прин€ть, так как он не содержит ни одной позиции.</span><br /><br />";
 		}
 		else {
-			if($mysqli->query("UPDATE orders_date SET status = '1', proceed_date='".date('Y-m-d H:i:s')."' WHERE id = '".$_REQUEST['id']."'"))
+			$finalSum = 0;
+
+			$rateResult = $mysqli->query("SELECT rate FROM currency WHERE code = 'usd'");
+			$rate = $rateResult->fetch_array(MYSQLI_NUM);
+
+			$goodsResult = $mysqli->query("SELECT * FROM orders WHERE order_id = '".$_REQUEST['id']."'");
+			while($goods = $goodsResult->fetch_assoc())
+			{
+				$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$goods['good_id']."'");
+				$good = $goodResult->fetch_assoc();
+
+				$finalSum += $goods['quantity'] * $good['price'] * $rate[0];
+			}
+
+			if($mysqli->query("UPDATE orders_date SET status = '1', proceed_date = '".date('Y-m-d H:i:s')."', sum_final = '".$finalSum."' WHERE id = '".$_REQUEST['id']."'"))
 			{
 				echo "<span class='basicGreen'>«аказ успешно прин€т!</span><br /><br />";
 			}
