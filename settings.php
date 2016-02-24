@@ -512,8 +512,7 @@
 						if($_SESSION['userID'] != 1)
 						{	
 							$ordersResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
-							$ordersResult->num_rows;
-							if($orders < 1)
+							if($ordersResult->num_rows < 1)
 							{
 								echo "
 									<a href='order.php' class='noBorder'><img src='pictures/system/basket.png' class='noBorder' id='basketIcon' title='Корзина' onmouseover='changeBasketIcon(1)' onmouseout='changeBasketIcon(0)' /></a>
@@ -529,8 +528,7 @@
 						else
 						{
 							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0'");
-							$ordersResult->num_rows;
-							if($orders < 1)
+							if($ordersResult->num_rows < 1)
 							{
 								echo "
 									<a href='order.php' class='noBorder'><img src='pictures/system/basket.png' class='noBorder' id='basketIcon' title='Заявки' onmouseover='changeBasketIcon(1)' onmouseout='changeBasketIcon(0)' /></a>
