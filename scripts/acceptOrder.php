@@ -15,36 +15,28 @@
 	}
 	
 	include('connect.php');
-	
-	$orderInfoResult = $mysqli->query("SELECT * FROM orders_date WHERE id='".$_REQUEST['id']."'");
-	$orderInfo = $orderInfoResult->fetch_assoc();
-	
-	if(empty($orderInfo))
-	{
-		if(isset($_SESSION['last_page']))
-		{
-			header("Location: ".$_SESSION['last_page']);
+
+	$goodsQuantityResult = $mysqli->query("SELECT COUNT(id) FROM orders WHERE order_id = '".$_REQUEST['id']."'");
+	$goodsQuantity = $goodsQuantityResult->fetch_array(MYSQLI_NUM);
+
+		if($goodsQuantity[0] == 0) {
+			echo "<span class='basicRed'>Данный заказ нельзя принять, так как он не содержит ни одной позиции.</span><br /><br />";
 		}
-		else
-		{
-			header("Location: ../index.php");
+		else {
+			if($mysqli->query("UPDATE orders_date SET status = '1', proceed_date='".date('Y-m-d H:i:s')."' WHERE id = '".$_REQUEST['id']."'"))
+			{
+				echo "<span class='basicGreen'>Заказ успешно принят!</span><br /><br />";
+			}
+			else
+			{
+				echo "<span class='basicRed'>Во время принятия заказа произошла ошибка. Повторите попытку.</span><br /><br />";
+			}
 		}
-	}
-	else
-	{
-		if($mysqli->query("UPDATE orders_date SET status = '1', proceed_date='".date('Y-m-d H:i:s')."' WHERE id = '".$_REQUEST['id']."'"))
-		{
-			echo "<span class='basicGreen'>Заказ успешно принят!</span><br /><br />";
-		}
-		else
-		{
-			echo "<span class='basicRed'>Во время принятия заказа произошла ошибка. Повторите попытку.</span><br /><br />";
-		}
-		
+
 		$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '0' ORDER BY date");
 		while($orders = $ordersResult->fetch_assoc())
 		{
-			$number++;	
+			$number++;
 			$customerResult = $mysqli->query("SELECT * FROM users WHERE id = '".$orders['user_id']."'");
 			$customer = $customerResult->fetch_assoc();
 			$info = $customer['person']."; ".$customer['phone'];
@@ -52,7 +44,7 @@
 			{
 				$info = $customer['organisation']."; ".$info;
 			}
-													
+
 			echo "
 				<div class='tableVSpace'></div>
 				<div class='line'>
@@ -72,8 +64,7 @@
 				</div>
 				<div class='tableVSpace'></div>
 				<div class='tableGood' id='tableGood".$orders['id']."'></div>
-			";	
+			";
 		}
-	}
 
 ?>

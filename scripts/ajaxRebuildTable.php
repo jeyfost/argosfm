@@ -7,7 +7,7 @@
 	if($goodsResult->num_rows == 0)
 	{
 		echo "
-			<span class='goodStyle'>Все товары из заказа были удалены. Заказ был аннулирован.</span>
+			<span class='goodStyle' style='margin-left: 20px;'>Все товары из заказа были удалены. Заказ был аннулирован.</span>
 		";
 	}
 	else
