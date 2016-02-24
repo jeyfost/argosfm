@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/ajaxChangeGroupPrice.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/ajaxChangeTotalPrice.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ajax.js" afterPath="$PROJECT_DIR$/js/ajax.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ajaxEditOrderGoodQuantity.php" afterPath="$PROJECT_DIR$/scripts/ajaxEditOrderGoodQuantity.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ajaxRebuildTable.php" afterPath="$PROJECT_DIR$/scripts/ajaxRebuildTable.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/calendar.php" afterPath="$PROJECT_DIR$/scripts/calendar.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/orderDetailedInfo.php" afterPath="$PROJECT_DIR$/scripts/orderDetailedInfo.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1066,7 +1059,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456315399151</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Исправлен редактор количества товара в заказе">
+      <created>1456320534134</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1456320534134</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1112,7 +1111,8 @@
     <MESSAGE value="Сохранение общей суммы заказа" />
     <MESSAGE value="Редактирования количества в корзине переведено на Ajax" />
     <MESSAGE value="Полурабочий редактор количество товаров в заказе + мелкие правки" />
-    <option name="LAST_COMMIT_MESSAGE" value="Полурабочий редактор количество товаров в заказе + мелкие правки" />
+    <MESSAGE value="Исправлен редактор количества товара в заказе" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлен редактор количества товара в заказе" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
