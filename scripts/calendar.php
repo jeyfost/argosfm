@@ -1,5 +1,13 @@
 <?php
 
+	include('config.php');
+
+	$link = mysql_connect($host, $user, $password);
+	mysql_select_db($db, $link);
+
+	mysql_query("SET NAMES 'utf8'");
+	mysql_query("SET CHARACTER SET 'utf8'");
+
 	function initCalendar($selectedDate)
 	{
 		if($selectedDate == "" or (substr($selectedDate, 3, 2) == getCurrentMonth() and substr($selectedDate, 6, 4) == getCurrentYear()))
@@ -86,8 +94,8 @@
 			{
 				$date = ($i + 1)."-".getCurrentMonth()."-".getCurrentYear();
 
-				$newsCountResult = $mysqli->query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
-				$newsCount = $newsCountResult->fetch_array(MYSQLI_NUM);
+				$newsCountResult = mysql_query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
+				$newsCount = mysql_fetch_array($newsCountResult, MYSQL_NUM);
 
 				if($i >= getCurrentDay())
 				{

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
+    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="Фикс календаря">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/calendar.php" afterPath="$PROJECT_DIR$/scripts/calendar.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,130 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="orderDetailedInfo.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/orderDetailedInfo.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.23077">
-              <caret line="94" column="72" selection-start-line="94" selection-start-column="72" selection-end-line="94" selection-end-column="72" />
-              <folding>
-                <marker date="1456238091360" expanded="true" signature="272:330" placeholder="SELECT * FRO... orders_date" />
-                <marker date="1456238091360" expanded="true" signature="412:430" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="520:563" placeholder="SELECT COUNT... orders" />
-                <marker date="1456238091360" expanded="true" signature="520:567" placeholder="SELECT COUNT... orders" />
-                <marker date="1456238091360" expanded="true" signature="520:587" placeholder="SELECT COUNT... orders" />
-                <marker date="1456238091360" expanded="true" signature="668:728" placeholder="SELECT sum f... orders_date" />
-                <marker date="1456238091360" expanded="true" signature="888:932" placeholder="SELECT rate currency" />
-                <marker date="1456238091360" expanded="true" signature="1021:1080" placeholder="SELECT * FRO... orders" />
-                <marker date="1456238091360" expanded="true" signature="1173:1235" placeholder="SELECT * FRO... catalogue_new" />
-                <marker date="1456238091360" expanded="true" signature="1382:1388" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="1479:1798" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="1865:2050" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="2088:3334" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="2127:3321" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="2205:2278" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="2322:2398" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="2440:3307" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="2478:2565" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="2604:3292" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="2911:2927" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="3403:3454" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="3455:3840" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="3490:3542" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="3670:3722" placeholder="..." />
-                <marker date="1456238091360" expanded="true" signature="3908:3926" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editNews.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/admin/editNews.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="100" selection-start-line="32" selection-start-column="100" selection-end-line="32" selection-end-column="100" />
-              <folding>
-                <marker date="1456237369855" expanded="true" signature="274:327" placeholder="SELECT * FRO... news" />
-                <marker date="1456237369855" expanded="true" signature="505:603" placeholder="UPDATE news " />
-                <marker date="1456237369855" expanded="true" signature="744:840" placeholder="UPDATE news " />
-                <marker date="1456237369855" expanded="true" signature="983:1066" placeholder="UPDATE news " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addNews.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/admin/addNews.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding>
-                <marker date="1456237470338" expanded="true" signature="263:337" placeholder="INSERT INTO news... " />
-                <marker date="1456237470338" expanded="true" signature="263:377" placeholder="INSERT INTO news... " />
-                <marker date="1456237470338" expanded="true" signature="263:514" placeholder="INSERT INTO news... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ajaxRebuildTable.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/ajaxRebuildTable.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-              <folding>
-                <marker date="1456238130970" expanded="true" signature="83:144" placeholder="SELECT * FRO... orders" />
-                <marker date="1456238130970" expanded="true" signature="227:245" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="368:434" placeholder="SELECT sum F... orders_date" />
-                <marker date="1456238130970" expanded="true" signature="533:577" placeholder="SELECT rate currency" />
-                <marker date="1456238130970" expanded="true" signature="714:780" placeholder="SELECT * FRO... catalogue_new" />
-                <marker date="1456238130970" expanded="true" signature="923:928" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="1010:1350" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="1412:1603" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="1640:2193" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="1640:2621" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="1678:2193" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="1754:1829" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="1872:1950" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="1991:2193" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="2028:2117" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="2155:2193" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="2679:2730" placeholder="..." />
-                <marker date="1456238130970" expanded="true" signature="2731:3118" placeholder="..." />
-                <marker date="1456238130970" expanded="false" signature="2764:2816" placeholder="..." />
-                <marker date="1456238130970" expanded="false" signature="2946:2998" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="acceptOrder.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/acceptOrder.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.1320753">
-              <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
-              <folding>
-                <marker date="1456294029551" expanded="true" signature="304:371" placeholder="SELECT COUNT... orders" />
-                <marker date="1456294029551" expanded="true" signature="630:738" placeholder="UPDATE order... " />
-                <marker date="1456294029551" expanded="true" signature="1003:1061" placeholder="SELECT * FRO... orders_date" />
-                <marker date="1456294029551" expanded="true" signature="1168:1223" placeholder="SELECT * FRO... users" />
-                <marker date="1456294029551" expanded="true" signature="1499:2594" placeholder="..." />
-                <marker date="1456294029551" expanded="true" signature="1530:1592" placeholder="..." />
-                <marker date="1456294029551" expanded="true" signature="1658:2364" placeholder="..." />
-                <marker date="1456294029551" expanded="true" signature="1762:1774" placeholder="..." />
-                <marker date="1456294029551" expanded="true" signature="2047:2081" placeholder="..." />
-                <marker date="1456294029551" expanded="true" signature="2259:2292" placeholder="..." />
-                <marker date="1456294029551" expanded="true" signature="2431:2583" placeholder="..." />
-                <marker date="1456294029551" expanded="true" signature="2508:2555" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="cancelOrder.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="cancelOrder.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/cancelOrder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.24781342">
-              <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+            <state vertical-scroll-proportion="-10.905661">
+              <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
               <folding>
                 <marker date="1456294444813" expanded="true" signature="285:341" placeholder="DELETE FROM " />
                 <marker date="1456294444813" expanded="true" signature="364:422" placeholder="DELETE FROM " />
@@ -166,27 +48,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="calendar.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="calendar.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/calendar.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3207547">
-              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.20196353">
+              <caret line="164" column="51" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
               <folding>
-                <marker date="1456294366304" expanded="false" signature="310:322" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="323:566" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="1042:1074" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="1070:1074" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="2250:2305" placeholder="SELECT COUNT... news" />
-                <marker date="1456294366304" expanded="false" signature="2473:2488" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="3376:3402" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="3435:3449" placeholder="..." />
-                <marker date="1456294366304" expanded="false" signature="4242:4254" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="4255:4492" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="5231:5263" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="5259:5263" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="6421:6476" placeholder="SELECT COUNT... news" />
-                <marker date="1456294366304" expanded="true" signature="7355:7381" placeholder="..." />
-                <marker date="1456294366304" expanded="true" signature="7414:7428" placeholder="..." />
+                <marker date="1456295318898" expanded="false" signature="492:504" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="505:748" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="1224:1256" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="1252:1256" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="2429:2484" placeholder="SELECT COUNT... news" />
+                <marker date="1456295318898" expanded="false" signature="2657:2672" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="3560:3586" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="3619:3633" placeholder="..." />
+                <marker date="1456295318898" expanded="false" signature="4426:4438" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="4439:4676" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="5415:5447" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="5443:5447" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="6605:6660" placeholder="SELECT COUNT... news" />
+                <marker date="1456295318898" expanded="true" signature="7539:7565" placeholder="..." />
+                <marker date="1456295318898" expanded="true" signature="7598:7612" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -195,8 +77,8 @@
       <file leaf-file-name="connect.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/connect.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.1923075">
-              <caret line="11" column="49" selection-start-line="3" selection-start-column="4" selection-end-line="11" selection-end-column="49" />
+            <state vertical-scroll-proportion="-1.9615384">
+              <caret line="3" column="11" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -259,8 +141,8 @@
         <option value="$PROJECT_DIR$/scripts/orderDetailedInfo.php" />
         <option value="$PROJECT_DIR$/scripts/ajaxRebuildTable.php" />
         <option value="$PROJECT_DIR$/scripts/acceptOrder.php" />
-        <option value="$PROJECT_DIR$/scripts/calendar.php" />
         <option value="$PROJECT_DIR$/scripts/cancelOrder.php" />
+        <option value="$PROJECT_DIR$/scripts/calendar.php" />
       </list>
     </option>
   </component>
@@ -428,7 +310,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456294542308</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Правки в заявках">
+      <created>1456294587355</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1456294587355</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -436,43 +324,24 @@
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33637547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33637547" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33637547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -487,7 +356,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Правки в заявках" />
-    <option name="LAST_COMMIT_MESSAGE" value="Правки в заявках" />
+    <MESSAGE value="Фикс календаря" />
+    <option name="LAST_COMMIT_MESSAGE" value="Фикс календаря" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -822,35 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ajaxRebuildTable.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding>
-            <marker date="1456238130970" expanded="true" signature="83:144" placeholder="SELECT * FRO... orders" />
-            <marker date="1456238130970" expanded="true" signature="227:245" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="368:434" placeholder="SELECT sum F... orders_date" />
-            <marker date="1456238130970" expanded="true" signature="533:577" placeholder="SELECT rate currency" />
-            <marker date="1456238130970" expanded="true" signature="714:780" placeholder="SELECT * FRO... catalogue_new" />
-            <marker date="1456238130970" expanded="true" signature="923:928" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="1010:1350" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="1412:1603" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="1640:2193" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="1640:2621" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="1678:2193" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="1754:1829" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="1872:1950" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="1991:2193" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="2028:2117" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="2155:2193" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="2679:2730" placeholder="..." />
-            <marker date="1456238130970" expanded="true" signature="2731:3118" placeholder="..." />
-            <marker date="1456238130970" expanded="false" signature="2764:2816" placeholder="..." />
-            <marker date="1456238130970" expanded="false" signature="2946:2998" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/orderDetailedInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-20.23077">
@@ -885,41 +726,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/connect.php">
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxRebuildTable.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.1923075">
-          <caret line="11" column="49" selection-start-line="3" selection-start-column="4" selection-end-line="11" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/calendar.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3207547">
-          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.2622721">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
           <folding>
-            <marker date="1456294366304" expanded="false" signature="310:322" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="323:566" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="1042:1074" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="1070:1074" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="2250:2305" placeholder="SELECT COUNT... news" />
-            <marker date="1456294366304" expanded="false" signature="2473:2488" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="3376:3402" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="3435:3449" placeholder="..." />
-            <marker date="1456294366304" expanded="false" signature="4242:4254" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="4255:4492" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="5231:5263" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="5259:5263" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="6421:6476" placeholder="SELECT COUNT... news" />
-            <marker date="1456294366304" expanded="true" signature="7355:7381" placeholder="..." />
-            <marker date="1456294366304" expanded="true" signature="7414:7428" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="83:144" placeholder="SELECT * FRO... orders" />
+            <marker date="1456238130970" expanded="true" signature="227:245" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="368:434" placeholder="SELECT sum F... orders_date" />
+            <marker date="1456238130970" expanded="true" signature="533:577" placeholder="SELECT rate currency" />
+            <marker date="1456238130970" expanded="true" signature="714:780" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456238130970" expanded="true" signature="923:928" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="1010:1350" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="1412:1603" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="1640:2193" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="1640:2621" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="1678:2193" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="1754:1829" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="1872:1950" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="1991:2193" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="2028:2117" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="2155:2193" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="2679:2730" placeholder="..." />
+            <marker date="1456238130970" expanded="true" signature="2731:3118" placeholder="..." />
+            <marker date="1456238130970" expanded="false" signature="2764:2816" placeholder="..." />
+            <marker date="1456238130970" expanded="false" signature="2946:2998" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/acceptOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1320753">
+        <state vertical-scroll-proportion="0.39650145">
           <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding>
             <marker date="1456294029551" expanded="true" signature="304:371" placeholder="SELECT COUNT... orders" />
@@ -940,8 +778,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/cancelOrder.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24781342">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="12" />
+        <state vertical-scroll-proportion="-10.905661">
+          <caret line="34" column="65" selection-start-line="34" selection-start-column="65" selection-end-line="34" selection-end-column="65" />
           <folding>
             <marker date="1456294444813" expanded="true" signature="285:341" placeholder="DELETE FROM " />
             <marker date="1456294444813" expanded="true" signature="364:422" placeholder="DELETE FROM " />
@@ -955,6 +793,38 @@
             <marker date="1456294444813" expanded="false" signature="1977:2010" placeholder="..." />
             <marker date="1456294444813" expanded="true" signature="2153:2309" placeholder="..." />
             <marker date="1456294444813" expanded="false" signature="2234:2281" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/connect.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.9615384">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/calendar.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20196353">
+          <caret line="164" column="51" selection-start-line="164" selection-start-column="51" selection-end-line="164" selection-end-column="51" />
+          <folding>
+            <marker date="1456295318898" expanded="false" signature="492:504" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="505:748" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="1224:1256" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="1252:1256" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="2429:2484" placeholder="SELECT COUNT... news" />
+            <marker date="1456295318898" expanded="false" signature="2657:2672" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="3560:3586" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="3619:3633" placeholder="..." />
+            <marker date="1456295318898" expanded="false" signature="4426:4438" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="4439:4676" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="5415:5447" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="5443:5447" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="6605:6660" placeholder="SELECT COUNT... news" />
+            <marker date="1456295318898" expanded="true" signature="7539:7565" placeholder="..." />
+            <marker date="1456295318898" expanded="true" signature="7598:7612" placeholder="..." />
           </folding>
         </state>
       </provider>
