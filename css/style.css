@@ -131,20 +131,20 @@ ul, li {color: #df4e47;}
 #color {position: relative; width: 600px; padding: 15px; background-color: #ffffff; margin: 0 auto;}
 
 /*settings.php*/
-#settingsBlock {position: relative; margin: 0 auto; width: 600px; height: 300px; margin-top: 50px; padding: 10px; background-color: #ffffff;}
+#settingsBlock {position: relative; margin: 0 auto; width: 600px; height: 350px; margin-top: 50px; padding: 10px; background-color: #ffffff;}
 #settingsMenu {position: relative; width: 600px; height: 40px; float: left;}
 #settingBlockInner {position: relative; float: left; width: 600px;}
 #settingsCaptcha {position: relative; float: left;}
-#settings1Submit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#settings1Submit {width: 150px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
 #inputReadOnly {background-color: #e7e7e7;}
-#newPasswordSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
-#deleteAccountSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
-#siteSettingsSubmit {width: 200px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#newPasswordSubmit {width: 150px;font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#deleteAccountSubmit {width: 150px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#siteSettingsSubmit {width: 150px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
 #settings1Form {margin-left: 20px; margin-top: 10px;}
 #settings2Form {margin-left: 20px; margin-top: 10px;}
 #settings3Form {margin-left: 20px; margin-top: 40px;}
 #siteSettingsForm {margin-left: 20px; margin-top: 40px;}
-#toAdminButton {width: 100%; margin-top: 125px;  position: relative; height: 40px; line-height: 40px; text-align: center; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer;}
+#toAdminButton {width: 100%; margin-top: 140px;  position: relative; height: 40px; line-height: 40px; text-align: center; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer;}
 
 /*order.php*/
 #basketBlock {position: relative; margin: 0 auto; width: 850px; margin-top: 50px; padding: 10px 10px 20px 10px; background-color: #ffffff; overflow: hidden;}

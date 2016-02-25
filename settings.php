@@ -521,7 +521,7 @@
 							else
 							{
 								echo "
-									<a href='order.php' class='noBorder'><img src='pictures/system/basketFull.png' class='noBorder' id='basketIcon' title='Корзина | Количество товаров: ".$orders."' onmouseover='changeBasketFullIcon(1)' onmouseout='changeBasketFullIcon(0)' /></a>
+									<a href='order.php' class='noBorder'><img src='pictures/system/basketFull.png' class='noBorder' id='basketIcon' title='Корзина | Количество товаров: ".$ordersResult->num_rows."' onmouseover='changeBasketFullIcon(1)' onmouseout='changeBasketFullIcon(0)' /></a>
 								";
 							}
 						}
@@ -537,7 +537,7 @@
 							else
 							{
 								echo "
-									<a href='order.php' class='noBorder'><img src='pictures/system/basketFull.png' class='noBorder' id='basketIcon' title='Корзина | Количество заявок: ".$orders."' onmouseover='changeBasketFullIcon(1)' onmouseout='changeBasketFullIcon(0)' /></a>
+									<a href='order.php' class='noBorder'><img src='pictures/system/basketFull.png' class='noBorder' id='basketIcon' title='Корзина | Количество заявок: ".$ordersResult->num_rows."' onmouseover='changeBasketFullIcon(1)' onmouseout='changeBasketFullIcon(0)' /></a>
 								";
 							}
 						}
@@ -694,7 +694,7 @@
 								<form name='settings1Form' id='settings1Form' method='post' action='scripts/changeUserSettings.php'>
 									<label>Контактное лицо:</label>
 									<br />
-									<input type='text' name='settingsName' value='".$user['person']."' />
+									<input type='text' class='admInput' name=settingsName'' value='".$user['person']."' />
 									<br /><br />
 							";
 							if(!empty($user['organisation']))
@@ -702,7 +702,7 @@
 								echo "
 									<label>Название организации:</label>
 									<br />
-									<input type='text' name='settingsOrganisation' value='".$user['organisation']."' />
+									<input type='text' class='admInput' name='settingsOrganisation' value='".$user['organisation']."' />
 									<br /><br />
 								";	
 							}
@@ -711,16 +711,16 @@
 								echo "
 									<label>Название организации:</label>
 									<br />
-									<input type='text' id='inputReadOnly' readonly />
+									<input type='text' class='admInput' id='inputReadOnly' readonly />
 									<br /><br />
 								";
 							}
 							echo "
 									<label>Контактный телефон:</label>
 									<br />
-									<input type='text' name='settingsPhone' value='".$user['phone']."' />
+									<input type='text' class='admInput' name='settingsPhone' value='".$user['phone']."' />
 									<br /><br />
-									<input type='submit' id='settings1Submit' value='внести изменения' />
+									<input type='submit' class='admSubmit' id='settings1Submit' value='Внести изменения' />
 								</form>
 							";
 							break;
@@ -755,13 +755,13 @@
 								<form name='settings2Form' id='settings2Form' method='post' action='scripts/changeUserPassword.php'>
 									<label>Введите новый пароль:</label>
 									<br />
-									<input type='password' name='newPassword' />
+									<input type='password' class='admInput' name='newPassword' />
 									<br /><br />
 									<label>Введите новый пароль ещё раз:</label>
 									<br />
-									<input type='password' name='newPasswordRepeat'>
+									<input type='password' class='admInput' name='newPasswordRepeat'>
 									<br /><br />
-									<input type='submit' id='newPasswordSubmit' value='Изменить пароль' />
+									<input type='submit' class='admSubmit' id='newPasswordSubmit' value='Изменить пароль' />
 								</form>
 							";
 							break;
@@ -778,7 +778,7 @@
 									<form name='settings3Form' id='settings3Form' method='post' action='scripts/deleteAccount.php'>
 										<label>Если вы уверены, что хотите удалить аккаунт, нажмите на кнопку ниже. Обратите внимание, что аккаунт будет удалён безвозвратно без возможности восстановления. Все личные данные также будут удалены.</label>
 										<br /><br />
-										<center><input type='submit' id='deleteAccountSubmit' value='Удалить аккаунт' /></center>
+										<center><input type='submit' class='admSubmit' id='deleteAccountSubmit' value='Удалить аккаунт' /></center>
 									</form>
 								";
 							}
@@ -814,9 +814,9 @@
 									<form id='siteSettingsForm' action='scripts/changeSiteSettings.php' method='post'>
 										<label>Курс доллара:</label>
 										<br />
-										<input type='text' id='exchangeRate' value='".$rate['rate']."' name='exchangeRate' />
+										<input type='text' class='admInput' id='exchangeRate' value='".$rate['rate']."' name='exchangeRate' />
 										<br /><br />
-										<input type='submit' value='Внести изменения' id='siteSettingsSubmit' />
+										<input type='submit' class='admSubmit' value='Внести изменения' id='siteSettingsSubmit' />
 									</form>
 									
 									<a href='admin/index.php' class='noBorder'>
