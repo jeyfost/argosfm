@@ -568,7 +568,7 @@
 								</div>
 							</div>
 							<div class='colorItemContent'>
-								<a href='pictures/catalogue/colors/".$colors[$i]."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/colors/".$colors[$i]."' class='noBorder' /></a>
+								<a href='pictures/catalogue/colors/".$colors[$i]."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/colors/".$colors[$i]."' class='noBorder' style='margin-top: 5px;' /></a>
 							</div>
 						</div>
 					";	
@@ -609,13 +609,14 @@
 		$_SESSION['last_page'] = getUrl();
 	
 	?>
-    
+
     <script type='text/javascript'>footerPosition();</script>
     <script type='text/javascript'>
 		var fullHeight = $('#color').height() + $('#color').offset().top + 50;
-		
+		var newOffset = parseInt(fullHeight + 20);
+
 		if($('footer').offset().top < fullHeight) {
-			$('footer').offset({top: fullHeight});
+			$('footer').offset({top: newOffset});
 		}
 	</script>
 

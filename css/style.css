@@ -127,7 +127,7 @@ ul, li {color: #df4e47;}
 #searchPages {position: relative; width: 970px; margin-top: 20px; text-align: center;}
 
 /*colors.php*/
-#color {position: relative; width: 600px; padding: 15px; background-color: #ffffff; position: relative; margin: 0 auto;}
+#color {position: relative; width: 600px; padding: 15px; background-color: #ffffff; margin: 0 auto;}
 
 /*settings.php*/
 #settingsBlock {position: relative; margin: 0 auto; width: 600px; height: 300px; margin-top: 50px; padding: 10px; background-color: #ffffff;}
@@ -251,8 +251,8 @@ ul, li {color: #df4e47;}
 .admRedText {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal; color: #df4e47;}
 .admWhiteText {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal; color: #ffffff;}
 .adminTDNumber {width: 30px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
-.adminTDMail {height: 30px; line-height: 30px; text-align: left; padding-left: 10px; padding-right: 10px; padding-left: 5px; padding-right: 5px; max-width: 230px;}
-.adminTDName {height: 30px; line-height: 30px; text-align: left; padding-left: 10px; padding-right: 10px; padding-left: 5px; padding-right: 5px; max-width: 260px;}
+.adminTDMail {height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px; max-width: 230px;}
+.adminTDName {height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px; max-width: 260px;}
 .adminTDButtons {width: 60px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
 .adminTDDate {height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
 .admPageNumberBlock {position: relative; float: left; background-color: #ffffff; width: 40px; height: 30px; line-height: 30px; text-align: center;}
@@ -326,7 +326,7 @@ ul, li {color: #df4e47;}
 .searchSketch {position: relative; float: right; width: 830px; margin-top: 10px;}
 .colorItem {width: 600px; height: auto; margin-bottom: 20px;}
 .colorItemHeader {width: 600px; height: 30px; float: left;}
-.colorName {width: 580px; float: right; height: 30px; line-height: 30px;}
+.colorName {width: 575px; float: right; height: 30px; line-height: 30px; padding-left: 10px; background-color: #dddddd;}
 .colorItemContent {width: 600px;}
 .authInput {width: 290px; height: 20px; padding: 0px 5px; font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f; border: 1px solid #cccccc;}
 .formInput {width: 280px; height: 20px; padding: 0px 5px; font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
@@ -339,12 +339,12 @@ ul, li {color: #df4e47;}
 .radio {padding: 0px; margin: 0px; width: 30px; height: auto; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px;}
 .settingsMenuButton {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; text-align: center; background-color: #ffffff;}
 .settingsMenuButtonActive {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; text-align: center; background-color: #df4e47;}
-.catalogueInput {width: 22px; height: 25px; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px; padding-right: 3px; padding-left: 5px; border: 1px solid #df4e47; position: relative; float: left; background-color: #f8f8f8; border: 1px solid #919191;}
+.catalogueInput {width: 22px; height: 25px; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px; padding-right: 3px; padding-left: 5px; position: relative; float: left; background-color: #f8f8f8; border: 1px solid #919191;}
 .toBasketSubmit {width: 25px; height: 25px; margin-top: 3px; position: relative; float: right; cursor: pointer; border: none;}
 .goodCode {position: relative; float: left;}
 .goodPrice {position: relative; float: right; padding-right: 20px;}
-.basketPoint {positiion: relative; float: left; width: 200px; height: 40px; line-height: 40px; background-color: #ffffff; text-align: center;}
-.basketPointActive {positiion: relative; float: left; width: 200px; height: 40px; line-height: 40px; background-color: #df4e47; text-align: center;}
+.basketPoint {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; background-color: #ffffff; text-align: center;}
+.basketPointActive {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; background-color: #df4e47; text-align: center;}
 .basketGood {position: relative; float: left; width: 100%; padding-bottom: 20px; min-height: 180px;}
 .basketGoodH {position: relative; float: left; margin-left: 65px; width: 100%; padding-bottom: 20px; min-height: 180px;}
 .basketGoodPicture {position: relative; float: left;}
