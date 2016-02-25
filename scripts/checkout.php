@@ -43,7 +43,7 @@
 				$goodPriceResult = $mysqli->query("SELECT price FROM catalogue_new WHERE id = '".$good['good_id']."'");
 				$goodPrice = $goodPriceResult->fetch_array(MYSQLI_NUM);
 
-				$sum += $goodPrice[0] * $rate[0];
+				$sum += $goodPrice[0] * $rate[0] * $good['quantity'];
 
 				if($mysqli->query("INSERT INTO orders (order_id, user_id, good_id, quantity) VALUES ('".$oID."', '".$_SESSION['userID']."', '".$good['good_id']."', '".$good['quantity']."')"))
 				{

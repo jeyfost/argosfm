@@ -61,7 +61,14 @@ function editBasketGood(id, price, rate, total, quantity) {
 			success: function(response) {
 				document.getElementById(nID).innerHTML = response;
 				document.getElementById(pID).innerHTML = rate * price * document.getElementById(qID).value;
-				document.getElementById('totalPrice').innerHTML = newTotalPrice;
+				
+				$.ajax({
+					type: 'POST',
+					url: 'scripts/ajaxCalculatePrice.php',
+					success: function(newPrice) {
+						document.getElementById('totalPrice').innerHTML = newPrice;
+					}
+				});
 			}
 		});
 	}

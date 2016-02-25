@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
+    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="Исправление пересчёта начальной стоимости заказа">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/ajaxCalculatePrice.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/colors.php" afterPath="$PROJECT_DIR$/colors.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ajax.js" afterPath="$PROJECT_DIR$/js/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/checkout.php" afterPath="$PROJECT_DIR$/scripts/checkout.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -199,10 +200,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="colors.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="colors.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/colors.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.713885">
+            <state vertical-scroll-proportion="1.3461539">
               <caret line="615" column="47" selection-start-line="615" selection-start-column="47" selection-end-line="615" selection-end-column="47" />
               <folding>
                 <marker date="1456380298283" expanded="true" signature="1609:1641" placeholder="SELECT COUNT... background" />
@@ -264,6 +265,56 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="checkout.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/checkout.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-15.038462">
+              <caret line="47" column="191" selection-start-line="47" selection-start-column="191" selection-end-line="47" selection-end-column="191" />
+              <folding>
+                <marker date="1456380856264" expanded="true" signature="311:336" placeholder="SELECT * FRO... orders_date" />
+                <marker date="1456380856264" expanded="true" signature="414:445" placeholder="SELECT MAX(i... orders_date" />
+                <marker date="1456380856264" expanded="true" signature="611:655" placeholder="SELECT rate currency" />
+                <marker date="1456380856264" expanded="true" signature="740:819" placeholder="SELECT * FRO... basket" />
+                <marker date="1456380856264" expanded="true" signature="964:1029" placeholder="SELECT price... catalogue_new" />
+                <marker date="1456380856264" expanded="true" signature="1176:1329" placeholder="INSERT INTO orders... " />
+                <marker date="1456380856264" expanded="true" signature="1432:1579" placeholder="INSERT INTO orders_date... " />
+                <marker date="1456380856264" expanded="true" signature="1613:1690" placeholder="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxCalculatePrice.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/ajaxCalculatePrice.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36956522">
+              <caret line="10" column="95" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
+              <folding>
+                <marker date="1456381417485" expanded="true" signature="79:123" placeholder="SELECT rate currency" />
+                <marker date="1456381417485" expanded="true" signature="220:254" placeholder="SELECT * FRO... basket" />
+                <marker date="1456381417485" expanded="true" signature="220:258" placeholder="SELECT * FRO... basket" />
+                <marker date="1456381417485" expanded="true" signature="220:282" placeholder="SELECT * FRO... basket" />
+                <marker date="1456381417485" expanded="true" signature="369:411" placeholder="SELECT price... catalogue_new" />
+                <marker date="1456381417485" expanded="true" signature="369:413" placeholder="SELECT price... catalogue_new" />
+                <marker date="1456381417485" expanded="true" signature="369:434" placeholder="SELECT price... catalogue_new" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editBasketGood.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/editBasketGood.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.384615">
+              <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+              <folding>
+                <marker date="1456217449428" expanded="true" signature="408:523" placeholder="SELECT * FRO... basket" />
+                <marker date="1456217449428" expanded="true" signature="641:768" placeholder="UPDATE baske... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -272,7 +323,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/admin/selectCategory.php" />
         <option value="$PROJECT_DIR$/scripts/admin/selectCategoryE.php" />
         <option value="$PROJECT_DIR$/scripts/admin/selectSubcategory.php" />
         <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
@@ -283,7 +333,6 @@
         <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/admin/news.php" />
         <option value="$PROJECT_DIR$/scripts/ajaxSearch.php" />
-        <option value="$PROJECT_DIR$/scripts/checkout.php" />
         <option value="$PROJECT_DIR$/scripts/clearBasket.php" />
         <option value="$PROJECT_DIR$/scripts/deleteFromBasket.php" />
         <option value="$PROJECT_DIR$/scripts/deleteNews.php" />
@@ -323,6 +372,8 @@
         <option value="$PROJECT_DIR$/order.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/colors.php" />
+        <option value="$PROJECT_DIR$/scripts/checkout.php" />
+        <option value="$PROJECT_DIR$/scripts/ajaxCalculatePrice.php" />
       </list>
     </option>
   </component>
@@ -383,6 +434,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -534,15 +599,22 @@
       <option name="project" value="LOCAL" />
       <updated>1456325099715</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Исправлены стили в странице цветовой раскладки">
+      <created>1456380337369</created>
+      <option name="number" value="00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1456380337369</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -550,7 +622,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -583,7 +654,9 @@
     <MESSAGE value="Исправлен редактор количества товара в заказе" />
     <MESSAGE value="Исправлено постраничное разбиение на странице заказов" />
     <MESSAGE value="Изменён стиль таблицы в клиентской базе" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменён стиль таблицы в клиентской базе" />
+    <MESSAGE value="Исправлены стили в странице цветовой раскладки" />
+    <MESSAGE value="Исправление пересчёта начальной стоимости заказа" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправление пересчёта начальной стоимости заказа" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -592,13 +665,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/admin/selectSubcategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.7818182">
-          <caret line="26" column="55" selection-start-line="26" selection-start-column="55" selection-end-line="26" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1454544">
@@ -638,13 +704,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.1538463">
           <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/checkout.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.8076925">
-          <caret line="52" column="36" selection-start-line="52" selection-start-column="36" selection-end-line="52" selection-end-column="36" />
         </state>
       </provider>
     </entry>
@@ -855,13 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/editBasketGood.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.769231">
-          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1100,7 +1152,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/colors.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.713885">
+        <state vertical-scroll-proportion="1.3461539">
           <caret line="615" column="47" selection-start-line="615" selection-start-column="47" selection-end-line="615" selection-end-column="47" />
           <folding>
             <marker date="1456380298283" expanded="true" signature="1609:1641" placeholder="SELECT COUNT... background" />
@@ -1157,6 +1209,50 @@
             <marker date="1456380298283" expanded="true" signature="24545:24615" placeholder="..." />
             <marker date="1456380298283" expanded="true" signature="24667:24875" placeholder="..." />
             <marker date="1456380298283" expanded="true" signature="24838:24854" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/editBasketGood.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
+          <folding>
+            <marker date="1456217449428" expanded="true" signature="408:523" placeholder="SELECT * FRO... basket" />
+            <marker date="1456217449428" expanded="true" signature="641:768" placeholder="UPDATE baske... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/checkout.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.038462">
+          <caret line="47" column="191" selection-start-line="47" selection-start-column="191" selection-end-line="47" selection-end-column="191" />
+          <folding>
+            <marker date="1456380856264" expanded="true" signature="311:336" placeholder="SELECT * FRO... orders_date" />
+            <marker date="1456380856264" expanded="true" signature="414:445" placeholder="SELECT MAX(i... orders_date" />
+            <marker date="1456380856264" expanded="true" signature="611:655" placeholder="SELECT rate currency" />
+            <marker date="1456380856264" expanded="true" signature="740:819" placeholder="SELECT * FRO... basket" />
+            <marker date="1456380856264" expanded="true" signature="964:1029" placeholder="SELECT price... catalogue_new" />
+            <marker date="1456380856264" expanded="true" signature="1176:1329" placeholder="INSERT INTO orders... " />
+            <marker date="1456380856264" expanded="true" signature="1432:1579" placeholder="INSERT INTO orders_date... " />
+            <marker date="1456380856264" expanded="true" signature="1613:1690" placeholder="DELETE FROM " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxCalculatePrice.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36956522">
+          <caret line="10" column="95" selection-start-line="10" selection-start-column="95" selection-end-line="10" selection-end-column="95" />
+          <folding>
+            <marker date="1456381417485" expanded="true" signature="79:123" placeholder="SELECT rate currency" />
+            <marker date="1456381417485" expanded="true" signature="220:254" placeholder="SELECT * FRO... basket" />
+            <marker date="1456381417485" expanded="true" signature="220:258" placeholder="SELECT * FRO... basket" />
+            <marker date="1456381417485" expanded="true" signature="220:282" placeholder="SELECT * FRO... basket" />
+            <marker date="1456381417485" expanded="true" signature="369:411" placeholder="SELECT price... catalogue_new" />
+            <marker date="1456381417485" expanded="true" signature="369:413" placeholder="SELECT price... catalogue_new" />
+            <marker date="1456381417485" expanded="true" signature="369:434" placeholder="SELECT price... catalogue_new" />
           </folding>
         </state>
       </provider>
