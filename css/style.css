@@ -196,7 +196,7 @@ ul, li {color: #df4e47;}
 #newsAdminButtons {position: relative; float: right; margin-top: -80px;}
 
 /*admin index.php*/
-#adminAuth {position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 300px; height: 180px; margin: auto; background-color: #ffffff; padding: 20px;}
+#adminAuth {position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 300px; height: 240px; margin: auto; background-color: #ffffff; padding: 20px;}
 #adminAuthBig {position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 300px; height: 200px; margin: auto; background-color: #ffffff; padding: 20px;}
 #authSubmit {width: 220px; height: 20px; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #ffffff; font-size: 14px; padding-right: 3px; padding-left: 3px; background-color: #df4e47; cursor: pointer;}
 

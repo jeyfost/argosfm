@@ -54,13 +54,13 @@
         <form method='post' action='../scripts/checking.php'>
         	<label>Логин:</label>
             <br />
-            <input type='text' name='login' class='authInput' <?php if(!empty($_SESSION['login'])) {echo "value='".$_SESSION['login']."'";} ?> />
+            <input type='text' class='admInput' name='login' class='authInput' <?php if(!empty($_SESSION['login'])) {echo "value='".$_SESSION['login']."'";} ?> />
             <br /><br />
             <label>Пароль:</label>
             <br />
-            <input type='password' name='password' class='authInput' />
+            <input type='password' class='admInput' name='password' class='authInput' />
             <br /><br />
-            <center><input type='submit' value='Войти' id='authSubmit' /></center>
+            <center><input type='submit' class='admSubmit' value='Войти' /></center>
         </form>
         
         <?php
