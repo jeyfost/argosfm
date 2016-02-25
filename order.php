@@ -45,7 +45,11 @@
 		$c = $cResult->fetch_array(MYSQLI_NUM);
 
 		if($c[0] == 0) {
-			header("Location: order.php?s=2&customer=all&p=1");
+			$cResult = $mysqli->query("SELECT COUNT(id) FROM users_deleted WHERE id = '".$_REQUEST['customer']."'");
+			$c = $cResult->fetch_array(MYSQLI_NUM);
+			if($c[0] == 0) {
+				header("Location: order.php?s=2&customer=all&p=1");
+			}
 		}
 	}
 
@@ -777,12 +781,24 @@
 							$customerResult = $mysqli->query("SELECT * FROM users WHERE id = '".$customers[0]."'");
 							$customer = $customerResult->fetch_assoc();
 
-							if(!empty($customer['organisation'])) {
-								array_push($customersList, $customer['organisation']);
+							if(empty($customer)) {
+								$customerResult = $mysqli->query("SELECT * FROM users_deleted WHERE id = '".$customers[0]."'");
+								$customer = $customerResult->fetch_assoc();
+
+								if(!empty($customer['organisation'])) {
+									$name = "[удалён] ".$customer['organisation'];
+								} else {
+									$name = "[удалён] ".$customer['person'];
+								}
 							} else {
-								array_push($customersList, $customer['person']);
+								if(!empty($customer['organisation'])) {
+									$name = $customer['organisation'];
+								} else {
+									$name = $customer['person'];
+								}
 							}
 
+							array_push($customersList, $name);
 							array_push($idList, $customer['id']);
 						}
 
