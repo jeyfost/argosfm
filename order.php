@@ -39,7 +39,21 @@
 	{
 		unset($_SESSION['quantity']);
 	}
-	
+
+	if(!empty($_REQUEST['customer']) and $_REQUEST['customer'] != 'all') {
+		$cResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE id = '".$_REQUEST['customer']."'");
+		$c = $cResult->fetch_array(MYSQLI_NUM);
+
+		if($c[0] == 0) {
+			header("Location: order.php?s=2&customer=all&p=1");
+		}
+	}
+
+	if($_SESSION['userID'] == 1 and $_REQUEST['s'] == '2' and empty($_REQUEST['customer']))
+	{
+		header("Location: order.php?s=2&customer=all&p=1");
+	}
+
 	if($_REQUEST['s'] == 2)
 	{
 		if(empty($_REQUEST['p']))
@@ -50,7 +64,12 @@
 		{
 			if($_SESSION['userID'] == 1)
 			{
-				$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1'");
+				if($_REQUEST['customer'] == 'all') {
+					$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1'");
+				} else {
+					$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1' AND user_id = '".$_REQUEST['customer']."'");
+				}
+
 				$quantity = $ordersResult->num_rows;
 				if($quantity > 10)
 				{
@@ -67,7 +86,7 @@
 				{
 					$numbers = 1;
 				}
-														
+
 				$page = $_REQUEST['p'];
 				$start = $page * 10 - 10;
 			}
@@ -746,7 +765,49 @@
 					
 					if($_REQUEST['s'] == 2)
 					{
-						$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1' ORDER BY date DESC LIMIT ".$start.", 10");
+						echo "<div style='height: 30px;'></div>";
+						echo "<div style='padding: auto 20px;'></div>";
+						echo "<span class='headerStyle'>Показать заказы:</span><br /><br />";
+
+						$customersList = array();
+						$idList = array();
+
+						$customersResult = $mysqli->query("SELECT DISTINCT user_id FROM orders_date WHERE status = '1'");
+						while($customers = $customersResult->fetch_array(MYSQLI_NUM)) {
+							$customerResult = $mysqli->query("SELECT * FROM users WHERE id = '".$customers[0]."'");
+							$customer = $customerResult->fetch_assoc();
+
+							if(!empty($customer['organisation'])) {
+								array_push($customersList, $customer['organisation']);
+							} else {
+								array_push($customersList, $customer['person']);
+							}
+
+							array_push($idList, $customer['id']);
+						}
+
+						array_multisort($customersList, $idList);
+
+						echo "
+							<form name='chooseCustomerForm' id='chooseCustomerForm' method='post' action='scripts/chooseCustomer.php'>
+								<select name='customerSelect' class='admSelect' onchange='this.form.submit()'>
+								<option value='all'>- Всех покупателей -</option>
+						";
+
+						for($i = 0; $i < count($customersList); $i++) {
+							echo "<option value='".$idList[$i]."'"; if($idList[$i] == $_REQUEST['customer']) {echo " selected ";} echo ">".$customersList[$i]."</option>";
+						}
+
+						echo "
+								</select>
+							</form>
+						";
+
+						if($_REQUEST['customer'] == 'all') {
+							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1' ORDER BY date DESC LIMIT ".$start.", 10");
+						}else {
+							$ordersResult = $mysqli->query("SELECT * FROM orders_date WHERE status = '1' AND user_id = '".$_REQUEST['customer']."' ORDER BY date DESC LIMIT ".$start.", 10");
+						}
 						
 						echo "<div style='height: 30px;'></div>";
 						echo "<div style='padding: auto 20px;'></div>";
@@ -816,14 +877,14 @@
 		                        }
 		                        else
 		                        {
-		                        	echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='goodStyleRed' id='pbtPrev'>Предыдущая</span></div></a>";
+		                        	echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='goodStyleRed' id='pbtPrev'>Предыдущая</span></div></a>";
 		                        }
 
 		                        for($i = 1; $i <= $numbers; $i++)
 		                        {
 		                            if($_REQUEST['p'] != $i)
 		                            {
-		                                echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".$i."' class='noBorder'>";
+		                                echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".$i."' class='noBorder'>";
 		                            }
 
 		                            echo "<div id='pb".$i."' "; if($i == $_REQUEST['p']) {echo "class='admPageNumberBlockActive'";} else {echo "class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".$i."\", \"pbt".$i."\")' onmouseout='admPageBlock(\"0\", \"pb".$i."\", \"pbt".$i."\")'";} echo "><span "; if($i == $_REQUEST['p']) {echo "class='goodStyleWhite'";} else {echo "class='goodStyleRed' id='pbt".$i."'";} echo ">".$i."</span></div>";
@@ -840,7 +901,7 @@
 		                        }
 		                        else
 		                        {
-		                            echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] + 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbNext' onmouseover='admPageBlock(\"1\", \"pbNext\", \"pbtNext\")' onmouseout='admPageBlock(\"0\", \"pbNext\", \"pbtNext\")'><span class='goodStyleRed' id='pbtNext'>Следующая</span></div></a>";
+		                            echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] + 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbNext' onmouseover='admPageBlock(\"1\", \"pbNext\", \"pbtNext\")' onmouseout='admPageBlock(\"0\", \"pbNext\", \"pbtNext\")'><span class='goodStyleRed' id='pbtNext'>Следующая</span></div></a>";
 		                        }
 
 		                        echo "</div>";
@@ -856,14 +917,14 @@
 		                            }
 		                            else
 		                            {
-		                                echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='goodStyleRed' id='pbtPrev'>Предыдущая</span></div></a>";
+		                                echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='goodStyleRed' id='pbtPrev'>Предыдущая</span></div></a>";
 		                            }
 		                                                    
 		                            for($i = 1; $i <= 5; $i++)
 		                            {
 		                                if($_REQUEST['p'] != $i)
 		                                {
-		                                    echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".$i."' class='noBorder'>";
+		                                    echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".$i."' class='noBorder'>";
 		                                }
 
 		                                echo "<div id='pb".$i."' "; if($i == $_REQUEST['p']) {echo "class='admPageNumberBlockActive'";} else {echo "class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".$i."\", \"pbt".$i."\")' onmouseout='admPageBlock(\"0\", \"pb".$i."\", \"pbt".$i."\")'";} echo "><span "; if($i == $_REQUEST['p']) {echo "class='goodStyleWhite'";} else {echo "class='goodStyleRed' id='pbt".$i."'";} echo ">".$i."</span></div>";
@@ -875,7 +936,7 @@
 		                            }
 
 		                            echo "<div class='admPageNumberBlock' style='cursor: url(\"pictures/cursor/no.cur\"), auto;'><span class='goodStyle'>...</span></div>";
-		                            echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".$numbers."' class='noBorder'><div id='pb".$numbers."' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".$numbers."\", \"pbt".$numbers."\")' onmouseout='admPageBlock(\"0\", \"pb".$numbers."\", \"pbt".$numbers."\")'><span class='goodStyleRed' id='pbt".$numbers."'>".$numbers."</span></div></a>";
+		                            echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".$numbers."' class='noBorder'><div id='pb".$numbers."' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".$numbers."\", \"pbt".$numbers."\")' onmouseout='admPageBlock(\"0\", \"pb".$numbers."\", \"pbt".$numbers."\")'><span class='goodStyleRed' id='pbt".$numbers."'>".$numbers."</span></div></a>";
 
 		                            if($_REQUEST['p'] == $numbers)
 		                            {
@@ -883,7 +944,7 @@
 		                            }
 		                            else
 		                            {
-		                            	echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] + 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbNext' onmouseover='admPageBlock(\"1\", \"pbNext\", \"pbtNext\")' onmouseout='admPageBlock(\"0\", \"pbNext\", \"pbtNext\")'><span class='goodStyleRed' id='pbtNext'>Следующая</span></div></a>";
+		                            	echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] + 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbNext' onmouseover='admPageBlock(\"1\", \"pbNext\", \"pbtNext\")' onmouseout='admPageBlock(\"0\", \"pbNext\", \"pbtNext\")'><span class='goodStyleRed' id='pbtNext'>Следующая</span></div></a>";
 		                            }
 
 		                            echo "</div>";
@@ -897,15 +958,15 @@
 		                                echo "
 		                                    <br /><br />
 		                                    <div id='pageNumbers'>
-		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='goodStyleRed' id='pbtPrev'>Предыдущая</span></div></a>
+		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='goodStyleRed' id='pbtPrev'>Предыдущая</span></div></a>
 		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=1' class='noBorder'><div id='pb1' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb1\", \"pbt1\")' onmouseout='admPageBlock(\"0\", \"pb1\", \"pbt1\")'><span class='goodStyleRed' id='pbt1'>1</span></div></a>
 		                                        <div class='admPageNumberBlock' style='cursor: url(\"pictures/cursor/no.cur\"), auto;'><span class='goodStyle'>...</span></div>
-		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] - 1)."' class='noBorder'><div id='pb".($_REQUEST['p'] - 1)."' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".($_REQUEST['p'] - 1)."\", \"pbt".($_REQUEST['p'] - 1)."\")' onmouseout='admPageBlock(\"0\", \"pb".($_REQUEST['p'] - 1)."\", \"pbt".($_REQUEST['p'] - 1)."\")'><span class='goodStyleRed' id='pbt".($_REQUEST['p'] - 1)."'>".($_REQUEST['p'] - 1)."</span></div></a>
+		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] - 1)."' class='noBorder'><div id='pb".($_REQUEST['p'] - 1)."' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".($_REQUEST['p'] - 1)."\", \"pbt".($_REQUEST['p'] - 1)."\")' onmouseout='admPageBlock(\"0\", \"pb".($_REQUEST['p'] - 1)."\", \"pbt".($_REQUEST['p'] - 1)."\")'><span class='goodStyleRed' id='pbt".($_REQUEST['p'] - 1)."'>".($_REQUEST['p'] - 1)."</span></div></a>
 		                                        <div class='admPageNumberBlockActive'><span class='goodStyleWhite'>".$_REQUEST['p']."</span></div>
-		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] + 1)."' class='noBorder'><div id='pb".($_REQUEST['p'] + 1)."' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".($_REQUEST['p'] + 1)."\", \"pbt".($_REQUEST['p'] + 1)."\")' onmouseout='admPageBlock(\"0\", \"pb".($_REQUEST['p'] + 1)."\", \"pbt".($_REQUEST['p'] + 1)."\")'><span class='goodStyleRed' id='pbt".($_REQUEST['p'] + 1)."'>".($_REQUEST['p'] + 1)."</span></div></a>
+		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] + 1)."' class='noBorder'><div id='pb".($_REQUEST['p'] + 1)."' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".($_REQUEST['p'] + 1)."\", \"pbt".($_REQUEST['p'] + 1)."\")' onmouseout='admPageBlock(\"0\", \"pb".($_REQUEST['p'] + 1)."\", \"pbt".($_REQUEST['p'] + 1)."\")'><span class='goodStyleRed' id='pbt".($_REQUEST['p'] + 1)."'>".($_REQUEST['p'] + 1)."</span></div></a>
 		                                        <div class='admPageNumberBlock' style='cursor: url(\"pictures/cursor/no.cur\"), auto;'><span class='goodStyle'>...</span></div>
-		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".$numbers."' class='noBorder'><div id='pb".$numbers."' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".$numbers."\", \"pbt".$numbers."\")' onmouseout='admPageBlock(\"0\", \"pb".$numbers."\", \"pbt".$numbers."\")'><span class='goodStyleRed' id='pbt".$numbers."'>".$numbers."</span></div></a>
-		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] + 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbNext' onmouseover='admPageBlock(\"1\", \"pbNext\", \"pbtNext\")' onmouseout='admPageBlock(\"0\", \"pbNext\", \"pbtNext\")'><span class='goodStyleRed' id='pbtNext'>Следующая</span></div></a>
+		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".$numbers."' class='noBorder'><div id='pb".$numbers."' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".$numbers."\", \"pbt".$numbers."\")' onmouseout='admPageBlock(\"0\", \"pb".$numbers."\", \"pbt".$numbers."\")'><span class='goodStyleRed' id='pbt".$numbers."'>".$numbers."</span></div></a>
+		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] + 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbNext' onmouseover='admPageBlock(\"1\", \"pbNext\", \"pbtNext\")' onmouseout='admPageBlock(\"0\", \"pbNext\", \"pbtNext\")'><span class='goodStyleRed' id='pbtNext'>Следующая</span></div></a>
 		                                    </div>
 		                                ";
 		                            }
@@ -914,8 +975,8 @@
 		                                echo "
 		                                    <br /><br />
 		                                    <div id='pageNumbers'>
-		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='goodStyleRed' id='pbtPrev'>Предыдущая</span></div></a>
-		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=1' class='noBorder'><div id='pb1' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb1\", \"pbt1\")' onmouseout='admPageBlock(\"0\", \"pb1\", \"pbt1\")'><span class='goodStyleRed' id='pbt1'>1</span></div></a>
+		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='goodStyleRed' id='pbtPrev'>Предыдущая</span></div></a>
+		                                        <a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=1' class='noBorder'><div id='pb1' class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb1\", \"pbt1\")' onmouseout='admPageBlock(\"0\", \"pb1\", \"pbt1\")'><span class='goodStyleRed' id='pbt1'>1</span></div></a>
 		                                        <div class='admPageNumberBlock' style='cursor: url(\"pictures/cursor/no.cur\"), auto;'><span class='goodStyle'>...</span></div>
 		                                ";
 
@@ -923,7 +984,7 @@
 		                                {
 		                                    if($_REQUEST['p'] != $i)
 		                                    {
-		                                        echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".$i."' class='noBorder'>";
+		                                        echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".$i."' class='noBorder'>";
 		                                    }
 
 		                                    echo "<div id='pb".$i."' "; if($i == $_REQUEST['p']) {echo "class='admPageNumberBlockActive'";} else {echo "class='admPageNumberBlock' onmouseover='admPageBlock(\"1\", \"pb".$i."\", \"pbt".$i."\")' onmouseout='admPageBlock(\"0\", \"pb".$i."\", \"pbt".$i."\")'";} echo "><span "; if($i == $_REQUEST['p']) {echo "class='goodStyleWhite'";} else {echo "class='goodStyleRed' id='pbt".$i."'";} echo ">".$i."</span></div>";
@@ -940,7 +1001,7 @@
 		                                }
 		                                else
 		                                {
-		                                    echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "p=".($_REQUEST['p'] + 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbNext' onmouseover='admPageBlock(\"1\", \"pbNext\", \"pbtNext\")' onmouseout='admPageBlock(\"0\", \"pbNext\", \"pbtNext\")'><span class='goodStyleRed' id='pbtNext'>Следующая</span></div></a>";
+		                                    echo "<a href='order.php?"; if(!empty($_REQUEST['s'])) {echo "&s=".$_REQUEST['s']."&";} echo "customer=".$_REQUEST['customer']."&p=".($_REQUEST['p'] + 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbNext' onmouseover='admPageBlock(\"1\", \"pbNext\", \"pbtNext\")' onmouseout='admPageBlock(\"0\", \"pbNext\", \"pbtNext\")'><span class='goodStyleRed' id='pbtNext'>Следующая</span></div></a>";
 		                                }   
 		                            }
 		                        }

@@ -29,6 +29,7 @@ html {background-color: #dddddd;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
 .admULFont:hover, .admUL li:hover {text-decoration: underline;}
 .admSubmit:hover {color: #df4e47; background-color: #dddddd;}
+.admSelect:hover, .admInput:hover {background-color: #c0c0c0;}
 
 #loginSubmit:hover, #toAdminButton:hover, #backToAdminButton:hover, #registrationSubmit:hover, #recoverySubmit:hover, #cancelButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover {background-color: #b3413c;}
 
