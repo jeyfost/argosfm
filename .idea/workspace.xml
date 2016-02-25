@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order.php" afterPath="$PROJECT_DIR$/order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/registration.php" afterPath="$PROJECT_DIR$/scripts/registration.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="order.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="order.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40813464">
-              <caret line="790" column="46" selection-start-line="790" selection-start-column="46" selection-end-line="790" selection-end-column="46" />
+            <state vertical-scroll-proportion="44.5">
+              <caret line="1206" column="244" selection-start-line="1206" selection-start-column="244" selection-end-line="1206" selection-end-column="244" />
               <folding>
                 <marker date="1456394641438" expanded="true" signature="704:742" placeholder="SELECT COUNT... users" />
                 <marker date="1456394641438" expanded="true" signature="704:770" placeholder="SELECT COUNT... users" />
@@ -207,16 +207,42 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="registration.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/registration.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.77696794">
+              <caret line="287" column="41" selection-start-line="287" selection-start-column="41" selection-end-line="287" selection-end-column="41" />
+              <folding>
+                <marker date="1456397027404" expanded="true" signature="1134:1188" placeholder="SELECT COUNT... users" />
+                <marker date="1456397027404" expanded="true" signature="1372:1426" placeholder="SELECT COUNT... users" />
+                <marker date="1456397027404" expanded="true" signature="1902:1970" placeholder="SELECT COUNT... users" />
+                <marker date="1456397027404" expanded="true" signature="2115:2169" placeholder="SELECT COUNT... users" />
+                <marker date="1456397027404" expanded="true" signature="2535:2742" placeholder="INSERT INTO users... " />
+                <marker date="1456397027404" expanded="true" signature="2966:3020" placeholder="INSERT INTO mail... " />
+                <marker date="1456397027404" expanded="true" signature="2966:3071" placeholder="INSERT INTO mail... " />
+                <marker date="1456397027404" expanded="true" signature="6824:6878" placeholder="SELECT COUNT... users" />
+                <marker date="1456397027404" expanded="true" signature="7062:7116" placeholder="SELECT COUNT... users" />
+                <marker date="1456397027404" expanded="true" signature="7586:7640" placeholder="SELECT COUNT... users" />
+                <marker date="1456397027404" expanded="true" signature="7993:8183" placeholder="INSERT INTO users... " />
+                <marker date="1456397027404" expanded="true" signature="8399:8496" placeholder="INSERT INTO mail... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="deleteAccount.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/deleteAccount.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-17.0">
               <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
               <folding>
+                <marker date="1456394064189" expanded="true" signature="113:263" placeholder="{...}" />
+                <marker date="1456394064189" expanded="true" signature="271:1030" placeholder="..." />
                 <marker date="1456394064189" expanded="true" signature="304:334" placeholder="SELECT * FRO... users" />
                 <marker date="1456394064189" expanded="true" signature="304:336" placeholder="SELECT * FRO... users" />
                 <marker date="1456394064189" expanded="true" signature="304:364" placeholder="SELECT * FRO... users" />
                 <marker date="1456394064189" expanded="true" signature="429:638" placeholder="INSERT INTO users_deleted... " />
+                <marker date="1456394064189" expanded="true" signature="643:937" placeholder="..." />
                 <marker date="1456394064189" expanded="true" signature="666:720" placeholder="DELETE FROM " />
               </folding>
             </state>
@@ -325,7 +351,6 @@
         <option value="$PROJECT_DIR$/scripts/admin/deleteCategory.php" />
         <option value="$PROJECT_DIR$/js/ajax.js" />
         <option value="$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php" />
-        <option value="$PROJECT_DIR$/scripts/registration.php" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/admin/news.php" />
         <option value="$PROJECT_DIR$/scripts/ajaxSearch.php" />
@@ -372,6 +397,7 @@
         <option value="$PROJECT_DIR$/settings.php" />
         <option value="$PROJECT_DIR$/scripts/deleteAccount.php" />
         <option value="$PROJECT_DIR$/order.php" />
+        <option value="$PROJECT_DIR$/scripts/registration.php" />
       </list>
     </option>
   </component>
@@ -446,6 +472,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="admin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -639,7 +683,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456394190984</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="В истории заказов можно смотреть историю удалённых пользователей">
+      <created>1456394704531</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1456394704531</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -695,7 +745,8 @@
     <MESSAGE value="Исправлено отображение количества обработанных заказов у пользователя" />
     <MESSAGE value="При удалении информация о пользователе сохраняется в отдельную таблицу" />
     <MESSAGE value="Исправлено копирование информации при удалении пользователя" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлено копирование информации при удалении пользователя" />
+    <MESSAGE value="В истории заказов можно смотреть историю удалённых пользователей" />
+    <option name="LAST_COMMIT_MESSAGE" value="В истории заказов можно смотреть историю удалённых пользователей" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -704,13 +755,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/registration.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.55820477">
-          <caret line="50" column="37" selection-start-line="50" selection-start-column="37" selection-end-line="50" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/news.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8076925">
@@ -757,13 +801,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.1538463">
           <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/admin/addAddress.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1538463">
-          <caret line="14" column="47" selection-start-line="14" selection-start-column="47" selection-end-line="14" selection-end-column="47" />
         </state>
       </provider>
     </entry>
@@ -1208,10 +1245,13 @@
         <state vertical-scroll-proportion="-17.0">
           <caret line="26" column="13" selection-start-line="26" selection-start-column="13" selection-end-line="26" selection-end-column="13" />
           <folding>
+            <marker date="1456394064189" expanded="true" signature="113:263" placeholder="{...}" />
+            <marker date="1456394064189" expanded="true" signature="271:1030" placeholder="..." />
             <marker date="1456394064189" expanded="true" signature="304:334" placeholder="SELECT * FRO... users" />
             <marker date="1456394064189" expanded="true" signature="304:336" placeholder="SELECT * FRO... users" />
             <marker date="1456394064189" expanded="true" signature="304:364" placeholder="SELECT * FRO... users" />
             <marker date="1456394064189" expanded="true" signature="429:638" placeholder="INSERT INTO users_deleted... " />
+            <marker date="1456394064189" expanded="true" signature="643:937" placeholder="..." />
             <marker date="1456394064189" expanded="true" signature="666:720" placeholder="DELETE FROM " />
           </folding>
         </state>
@@ -1219,8 +1259,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40813464">
-          <caret line="790" column="46" selection-start-line="790" selection-start-column="46" selection-end-line="790" selection-end-column="46" />
+        <state vertical-scroll-proportion="44.5">
+          <caret line="1206" column="244" selection-start-line="1206" selection-start-column="244" selection-end-line="1206" selection-end-column="244" />
           <folding>
             <marker date="1456394641438" expanded="true" signature="704:742" placeholder="SELECT COUNT... users" />
             <marker date="1456394641438" expanded="true" signature="704:770" placeholder="SELECT COUNT... users" />
@@ -1393,6 +1433,38 @@
             <marker date="1456394641438" expanded="true" signature="71866:71928" placeholder="..." />
             <marker date="1456394641438" expanded="false" signature="72711:72757" placeholder="..." />
             <marker date="1456394641438" expanded="true" signature="74156:74202" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/admin/addAddress.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35764375">
+          <caret line="24" column="25" selection-start-line="16" selection-start-column="24" selection-end-line="24" selection-end-column="25" />
+          <folding>
+            <marker date="1456236473893" expanded="true" signature="306:365" placeholder="SELECT * FRO... mail" />
+            <marker date="1456236473893" expanded="true" signature="975:1102" placeholder="INSERT INTO mail... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/registration.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.77696794">
+          <caret line="287" column="41" selection-start-line="287" selection-start-column="41" selection-end-line="287" selection-end-column="41" />
+          <folding>
+            <marker date="1456397027404" expanded="true" signature="1134:1188" placeholder="SELECT COUNT... users" />
+            <marker date="1456397027404" expanded="true" signature="1372:1426" placeholder="SELECT COUNT... users" />
+            <marker date="1456397027404" expanded="true" signature="1902:1970" placeholder="SELECT COUNT... users" />
+            <marker date="1456397027404" expanded="true" signature="2115:2169" placeholder="SELECT COUNT... users" />
+            <marker date="1456397027404" expanded="true" signature="2535:2742" placeholder="INSERT INTO users... " />
+            <marker date="1456397027404" expanded="true" signature="2966:3020" placeholder="INSERT INTO mail... " />
+            <marker date="1456397027404" expanded="true" signature="2966:3071" placeholder="INSERT INTO mail... " />
+            <marker date="1456397027404" expanded="true" signature="6824:6878" placeholder="SELECT COUNT... users" />
+            <marker date="1456397027404" expanded="true" signature="7062:7116" placeholder="SELECT COUNT... users" />
+            <marker date="1456397027404" expanded="true" signature="7586:7640" placeholder="SELECT COUNT... users" />
+            <marker date="1456397027404" expanded="true" signature="7993:8183" placeholder="INSERT INTO users... " />
+            <marker date="1456397027404" expanded="true" signature="8399:8496" placeholder="INSERT INTO mail... " />
           </folding>
         </state>
       </provider>

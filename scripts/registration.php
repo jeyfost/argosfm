@@ -9,10 +9,10 @@
 		{
 			$login = trim(htmlspecialchars($_POST['userLogin']));
 			$password = $_POST['userPassword'];
-			$email = $_POST['userEmail'];
+			$email = strtolower($_POST['userEmail']);
 			$organisation = addslashes(htmlspecialchars($_POST['organisation']));
-			$name = $_POST['userName'];
-			$phone = $_POST['userPhone'];
+			$name = addslashes(htmlspecialchars($_POST['userName']));
+			$phone = addslashes(htmlspecialchars($_POST['userPhone']));
 			
 			$_SESSION['registration_type'] = 1;
 			$_SESSION['registration_login'] = $login;
@@ -61,6 +61,16 @@
 										
 										if($mysqli->query("INSERT INTO users (login, password, email, hash, organisation, person, phone, activated) VALUES ('".$login."', '".$password."', '".$email."', '".$hash."', '".$organisation."', '".$name."', '".$phone."', '1')"))
 										{
+											$code = "";
+
+											for($i = 0; $i < 32; $i++)
+											{
+												$number = rand(0, count($symbols) - 1);
+												$code .= $symbols[$number];
+											}
+
+											$mysqli->query("INSERT INTO mail (email, name, hash, in_send) VALUES('".$email."', '".$organisation."', '".$code."', '1')");
+
 											//sendMail($email, $hash);
 											$_SESSION['registration'] = 'ok';
 											if(isset($_SESSION['last_page']))
@@ -255,7 +265,18 @@
 										
 									if($mysqli->query("INSERT INTO users (login, password, email, hash, organisation, person, phone, activated) VALUES ('".$login."', '".$password."', '".$email."', '".$hash."', '', '".$name."', '".$phone."', '1')"))
 									{
+										$code = "";
+
+										for($i = 0; $i < 32; $i++)
+										{
+											$number = rand(0, count($symbols) - 1);
+											$code .= $symbols[$number];
+										}
+
+										$mysqli->query("INSERT INTO mail (email, name, hash, in_send) VALUES('".$email."', '".$name."', '".$code."', '1')");
+
 										//sendMail($email, $hash);
+
 										$_SESSION['registration'] = 'ok';
 										if(isset($_SESSION['last_page']))
 										{
