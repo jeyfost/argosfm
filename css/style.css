@@ -124,7 +124,7 @@ ul, li {color: #df4e47;}
 #contacts {position: relative; float: right; width: 350px; height: 415px; background-color: #ffffff; padding: 15px;}
 
 /*search.php*/
-#search {position: relative; width: 970px; padding: 15px; background-color: #ffffff;}
+#search {position: relative; width: 970px; padding: 15px; background-color: #ffffff; min-height: 350px;}
 #searchPages {position: relative; width: 970px; margin-top: 20px; text-align: center;}
 
 /*colors.php*/
