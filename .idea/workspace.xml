@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/ajaxSearch.php" afterPath="$PROJECT_DIR$/scripts/ajaxSearch.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -207,12 +207,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.54137444">
+            <state vertical-scroll-proportion="-13.538462">
               <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxSearch.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/ajaxSearch.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.54698455">
+              <caret line="41" column="967" selection-start-line="41" selection-start-column="965" selection-end-line="41" selection-end-column="967" />
+              <folding>
+                <marker date="1456403794847" expanded="true" signature="184:278" placeholder="SELECT * FRO... catalogue_new" />
+                <marker date="1456403794847" expanded="true" signature="446:514" placeholder="SELECT name categories_new" />
+                <marker date="1456403794847" expanded="true" signature="696:770" placeholder="SELECT name subcategories_new" />
+                <marker date="1456403794847" expanded="true" signature="968:1040" placeholder="SELECT name subcategories2" />
+                <marker date="1456403794847" expanded="false" signature="2846:2872" placeholder="..." />
+                <marker date="1456403794847" expanded="true" signature="2926:3192" placeholder="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -463,7 +480,6 @@
         <option value="$PROJECT_DIR$/scripts/ajaxDeleteGoodGroup.php" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/admin/news.php" />
-        <option value="$PROJECT_DIR$/scripts/ajaxSearch.php" />
         <option value="$PROJECT_DIR$/scripts/clearBasket.php" />
         <option value="$PROJECT_DIR$/scripts/deleteFromBasket.php" />
         <option value="$PROJECT_DIR$/scripts/deleteNews.php" />
@@ -508,6 +524,7 @@
         <option value="$PROJECT_DIR$/catalogue.php" />
         <option value="$PROJECT_DIR$/order.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/scripts/ajaxSearch.php" />
       </list>
     </option>
   </component>
@@ -568,6 +585,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -779,7 +810,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456401687715</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Переработан стиль аттрибута title в обработаных заказах">
+      <created>1456402895016</created>
+      <option name="number" value="00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1456402895016</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -838,7 +875,8 @@
     <MESSAGE value="В истории заказов можно смотреть историю удалённых пользователей" />
     <MESSAGE value="При регистрации пользовател email попадает в клиентскую базу" />
     <MESSAGE value="Исправление высоты основого блока на странице поиске" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправление высоты основого блока на странице поиске" />
+    <MESSAGE value="Переработан стиль аттрибута title в обработаных заказах" />
+    <option name="LAST_COMMIT_MESSAGE" value="Переработан стиль аттрибута title в обработаных заказах" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -851,13 +889,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.8076925">
           <caret line="542" column="51" selection-start-line="542" selection-start-column="51" selection-end-line="542" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/ajaxSearch.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1538463">
-          <caret line="11" column="34" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1778,9 +1809,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54137444">
+        <state vertical-scroll-proportion="-13.538462">
           <caret line="43" column="24" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/ajaxSearch.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.54698455">
+          <caret line="41" column="967" selection-start-line="41" selection-start-column="965" selection-end-line="41" selection-end-column="967" />
+          <folding>
+            <marker date="1456403794847" expanded="true" signature="184:278" placeholder="SELECT * FRO... catalogue_new" />
+            <marker date="1456403794847" expanded="true" signature="446:514" placeholder="SELECT name categories_new" />
+            <marker date="1456403794847" expanded="true" signature="696:770" placeholder="SELECT name subcategories_new" />
+            <marker date="1456403794847" expanded="true" signature="968:1040" placeholder="SELECT name subcategories2" />
+            <marker date="1456403794847" expanded="false" signature="2846:2872" placeholder="..." />
+            <marker date="1456403794847" expanded="true" signature="2926:3192" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
