@@ -161,6 +161,14 @@ function showLoginForm() {
 	if(!document.getElementById('loginIcon').hasAttribute('name')) {
 		document.getElementById('loginIcon').setAttribute('name', 'activeIcon');
 		document.getElementById('layout').setAttribute('style', 'display: block;');
+
+		var scrollHeight = Math.max(
+		  document.body.scrollHeight, document.documentElement.scrollHeight,
+		  document.body.offsetHeight, document.documentElement.offsetHeight,
+		  document.body.clientHeight, document.documentElement.clientHeight
+		);
+
+		$('#layout').height(scrollHeight); 
 		document.getElementById('loginBlockOuter').setAttribute('style', 'display: block;');
 	}
 	else {
