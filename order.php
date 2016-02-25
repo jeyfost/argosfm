@@ -684,7 +684,7 @@
 					}
 					else
 					{
-						$ordersQuantityResult = $mysqli->query("SELECT COUNT(id) FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
+						$ordersQuantityResult = $mysqli->query("SELECT COUNT(id) FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '1'");
 						$ordersQuantity = $ordersQuantityResult->fetch_array(MYSQLI_NUM);
 
 						switch($_REQUEST['s'])
@@ -1151,7 +1151,7 @@
 						$orders1Result = $mysqli->query("SELECT * FROM orders_date WHERE user_id = '".$_SESSION['userID']."' AND status = '0' ORDER BY id");
 						if($orders1Result->num_rows == 0)
 						{
-							echo "<span class='basic'>История ваших заказов пуста, так как вы не соверишили ещё ни одного заказа. Для этого перейдите в <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
+							echo "<span class='basic'>На данный момент у вас нет необработанных заказов. Для оформления нового заказа перейдите в <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
 						}
 						else
 						{
