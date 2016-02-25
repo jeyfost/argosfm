@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="Изменены стили личного кабинета">
+    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/order.php" afterPath="$PROJECT_DIR$/order.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/deleteAccount.php" afterPath="$PROJECT_DIR$/scripts/deleteAccount.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -25,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="order.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="order.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3604488">
-              <caret line="671" column="268" selection-start-line="671" selection-start-column="268" selection-end-line="671" selection-end-column="268" />
+            <state vertical-scroll-proportion="-11.846154">
+              <caret line="705" column="25" selection-start-line="705" selection-start-column="25" selection-end-line="705" selection-end-column="25" />
               <folding>
                 <marker date="1456387700950" expanded="true" signature="704:742" placeholder="SELECT COUNT... users" />
                 <marker date="1456387700950" expanded="true" signature="704:770" placeholder="SELECT COUNT... users" />
@@ -205,6 +205,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="deleteAccount.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/deleteAccount.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.66909623">
+              <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+              <folding>
+                <marker date="1456388780753" expanded="true" signature="305:335" placeholder="SELECT * FRO... users" />
+                <marker date="1456388780753" expanded="true" signature="305:337" placeholder="SELECT * FRO... users" />
+                <marker date="1456388780753" expanded="true" signature="305:361" placeholder="SELECT * FRO... users" />
+                <marker date="1456388780753" expanded="true" signature="422:498" placeholder="INSERT INTO users_deleted... " />
+                <marker date="1456388780753" expanded="true" signature="422:568" placeholder="INSERT INTO users_deleted... " />
+                <marker date="1456388780753" expanded="true" signature="422:588" placeholder="INSERT INTO users_deleted... " />
+                <marker date="1456388780753" expanded="true" signature="614:668" placeholder="DELETE FROM " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="settings.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/settings.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -303,7 +321,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/admin/selectSubcategory.php" />
         <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
         <option value="$PROJECT_DIR$/scripts/admin/deleteCategory.php" />
         <option value="$PROJECT_DIR$/js/ajax.js" />
@@ -354,6 +371,7 @@
         <option value="$PROJECT_DIR$/settings.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/order.php" />
+        <option value="$PROJECT_DIR$/scripts/deleteAccount.php" />
       </list>
     </option>
   </component>
@@ -414,6 +432,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="argosfm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="scripts" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,7 +621,13 @@
       <option name="project" value="LOCAL" />
       <updated>1456387465106</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Исправлено отображение количества обработанных заказов у пользователя">
+      <created>1456387774467</created>
+      <option name="number" value="00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1456387774467</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -642,7 +680,8 @@
     <MESSAGE value="Исправление пересчёта начальной стоимости заказа" />
     <MESSAGE value="Сортировка заказов по покупателям" />
     <MESSAGE value="Изменены стили личного кабинета" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменены стили личного кабинета" />
+    <MESSAGE value="Исправлено отображение количества обработанных заказов у пользователя" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлено отображение количества обработанных заказов у пользователя" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -651,13 +690,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/admin/deleteCategory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5">
-          <caret line="145" column="21" selection-start-line="145" selection-start-column="21" selection-end-line="145" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ajax.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.6793556">
@@ -1156,8 +1188,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/order.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3604488">
-          <caret line="671" column="268" selection-start-line="671" selection-start-column="268" selection-end-line="671" selection-end-column="268" />
+        <state vertical-scroll-proportion="-11.846154">
+          <caret line="705" column="25" selection-start-line="705" selection-start-column="25" selection-end-line="705" selection-end-column="25" />
           <folding>
             <marker date="1456387700950" expanded="true" signature="704:742" placeholder="SELECT COUNT... users" />
             <marker date="1456387700950" expanded="true" signature="704:770" placeholder="SELECT COUNT... users" />
@@ -1328,6 +1360,22 @@
             <marker date="1456387700950" expanded="true" signature="71289:71351" placeholder="..." />
             <marker date="1456387700950" expanded="false" signature="72134:72180" placeholder="..." />
             <marker date="1456387700950" expanded="true" signature="73579:73625" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/deleteAccount.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.66909623">
+          <caret line="26" column="39" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
+          <folding>
+            <marker date="1456388780753" expanded="true" signature="305:335" placeholder="SELECT * FRO... users" />
+            <marker date="1456388780753" expanded="true" signature="305:337" placeholder="SELECT * FRO... users" />
+            <marker date="1456388780753" expanded="true" signature="305:361" placeholder="SELECT * FRO... users" />
+            <marker date="1456388780753" expanded="true" signature="422:498" placeholder="INSERT INTO users_deleted... " />
+            <marker date="1456388780753" expanded="true" signature="422:568" placeholder="INSERT INTO users_deleted... " />
+            <marker date="1456388780753" expanded="true" signature="422:588" placeholder="INSERT INTO users_deleted... " />
+            <marker date="1456388780753" expanded="true" signature="614:668" placeholder="DELETE FROM " />
           </folding>
         </state>
       </provider>
