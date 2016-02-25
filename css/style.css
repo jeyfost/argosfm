@@ -33,6 +33,26 @@ html {background-color: #dddddd;}
 
 #loginSubmit:hover, #toAdminButton:hover, #backToAdminButton:hover, #registrationSubmit:hover, #recoverySubmit:hover, #cancelButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover {background-color: #b3413c;}
 
+.tableStyle[title]:hover:after {
+	content: attr(title);
+	padding: 4px 8px;
+	color: #333;
+	position: absolute;
+	right: 0;
+	top: 100%;
+	z-index: 20;
+	white-space: nowrap;
+	-moz-box-shadow: 0px 0px 4px #222;
+	-webkit-box-shadow: 0px 0px 4px #222;
+	box-shadow: 0px 0px 4px #222;
+	background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+	background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc));
+	background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc);
+	background-image: -moz-linear-gradient(top, #eeeeee, #cccccc);
+	background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
+	background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
+}
+
 body {
 	padding: 0px;
 	margin: 0px;
