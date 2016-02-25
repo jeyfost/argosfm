@@ -224,8 +224,6 @@ function correction() {
 	if(content.height() < block.height()) {
 		content.height(block.height());
 	}
-	
-	alert(content.height() + ' /// ' + block.height());
 }
 
 function changePictures(id, fileRed, file, action) {
