@@ -3,19 +3,19 @@
 	font-family: 'Cambria';
 	src: url('../fonts/cambria.ttf');
 	font-weight: normal;
-	font-style: normal;	
+	font-style: normal;
 }
 @font-face {
 	font-family: 'Play';
 	src: url('../fonts/Play.ttf');
 	font-weight: normal;
-	font-style: normal;	
+	font-style: normal;
 }
 @font-face {
 	font-family: 'Roboto';
 	src: url('../fonts/Roboto.ttf');
 	font-weight: normal;
-	font-style: normal;	
+	font-style: normal;
 }
 
 html {background-color: #dddddd;}
@@ -28,10 +28,10 @@ html {background-color: #dddddd;}
 .catalogueItemTextItalic:hover, .redItalicHover:hover, #content_news_inner a:hover, ul .basicBigRed:hover {text-decoration: underline;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
 .admULFont:hover, .admUL li:hover {text-decoration: underline;}
-.admSubmit:hover {color: #df4e47; background-color: #dddddd;}
-.admSelect:hover, .admInput:hover {background-color: #c0c0c0;}
+.admSubmit:hover, .windowSubmit:hover {color: #df4e47; background-color: #dddddd;}
+.admSelect:hover, .admInput:hover, .windowInput:hover {background-color: #c0c0c0;}
 
-#loginSubmit:hover, #toAdminButton:hover, #backToAdminButton:hover, #registrationSubmit:hover, #recoverySubmit:hover, #cancelButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover {background-color: #b3413c;}
+#toAdminButton:hover, #backToAdminButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover {background-color: #b3413c;}
 
 .tableStyle[title]:hover:after {
 	content: attr(title);
@@ -108,23 +108,19 @@ ul, li {color: #df4e47;}
 #location {height: 40px; width: 200px; padding-top: 15px;}
 #copyright {position: relative; margin: 0 auto; width: 300px; height: 55px; text-align: center; line-height: 67px; margin-top: -56px;}
 #web {position: relative; float: right; height: 40px; text-align: right; margin-top: -55px; padding-top: 15px;}
-#loginBlockOuter {position: absolute; width: 258px; height: 270px; top: 80px; right: 50px; background-color: #df4e47; z-index: 101;}
-#loginBlock {position: relative; margin: 0 auto; margin-top: 1px; width: 256px; height: 268px; background-color: #ffffff;}
+#loginBlock {position: absolute; top: 80px; right: 50px; background-color: #ffffff; z-index: 101; border: 1px dotted #df4e47; padding: 10px;}
 #loginForm {position: relative; margin: 0 auto; width: 228px; padding-top: 10px;}
-#loginSubmit {width: 100px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
 #cancelButton {width: 100px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px; float: right;}
-#registrationWindowOuter {position: absolute; width: 340px; height: 530px; background-color: #df4e47; z-index: 102; left: 50%; margin-left: -170px; top: 80px;}
-#registrationWindow {position: relative; margin: 0 auto; margin-top: 1px; width: 338px; height: 528px; background-color: #ffffff;}
-#registrationForm {width: 298px; position: relative; margin: 0 auto; padding-top: 10px;}
-#registrationSubmit {width: 150px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
+#registrationWindow {position: absolute; background-color: #ffffff; z-index: 102; left: 50%; margin-left: -130px; top: 80px; padding: 10px 15px; border: 1px dotted #df4e47;}
+#registrationForm {width: 298px; position: relative; margin: 0 auto;}
+#registrationSubmit {float: left; width: 150px;}
 #notificationWindowOuter {position: absolute; width: 400px; height: 160px; background-color: #df4e47; z-index: 103; left: 50%; margin-left: -200px; top: 80px;}
 #notificationWindow {position: relative; margin: 0 auto; margin-top: 1px; width: 398px; height: 158px; background-color: #ffffff;}
+#recoveryInput {width: 357px;}
 #recoveryNotificationForm {width: 368px; position: relative; margin: 0 auto; padding-top: 10px;}
 #registrationNotificationForm {width: 368px; position: relative; margin: 0 auto; padding-top: 10px;}
-#passwordRecoveryOuter {position: absolute; width: 400px; height: 160px; background-color: #df4e47; z-index: 103; left: 50%; margin-left: -200px; top: 80px;}
-#passwordRecoveryBlock {position: relative; margin: 0 auto; margin-top: 1px; width: 398px; height: 158px; background-color: #ffffff;}
+#passwordRecoveryBlock {position: absolute; background-color: #ffffff; z-index: 103; left: 50%; margin-left: -200px; top: 80px; padding: 10px 15px; border: 1px dotted #df4e47;}
 #passwordRecoveryForm {width: 368px; position: relative; margin: 0 auto; padding-top: 10px;}
-#recoverySubmit {width: 100px; height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
 #notificationWindowOuter {position: absolute; width: 400px; height: 160px; background-color: #df4e47; z-index: 104; left: 50%; margin-left: -200px; top: 80px;}
 #notificationWindow {position: relative; margin: 0 auto; margin-top: 1px; width: 398px; height: 158px; background-color: #ffffff;}
 #notificationRegistrationWindowOuter {position: absolute; width: 400px; height: 170px; background-color: #df4e47; z-index: 104; left: 50%; margin-left: -200px; top: 80px;}
@@ -134,6 +130,8 @@ ul, li {color: #df4e47;}
 #exitIcon {position: relative; float: right;}
 #newsMain, #partners {position: relative; float: left; width: 100%; background-color: #ffffff; margin-top: 15px; padding: 10px 0 10px 0;}
 #fastSearch {position: absolute; background-color: #f8f8f8; width: 410px; z-index: 20; padding: 10px; display: none; border: 1px solid #dddddd;}
+#loginSubmit {float: left;}
+#loginCancel {float: right;}
 
 /*catalogue.php*/
 #cataloguePoints {position: relative; float: left; width: 270px; height: auto; background-color: #ffffff; padding: 15px;}
@@ -402,3 +400,6 @@ ul, li {color: #df4e47;}
 .cBorder {position: relative; float: left; width: 210px; height: 1px; border-bottom: 1px dotted #3f3f3f;}
 .cDay {position: relative; float: left; width: 30px; height: 30px; line-height: 30px; text-align: center;}
 .orderGoodDelete {position: absolute; width: 16px; height: 16px; cursor: pointer; top: 5px; right: 140px; z-index: 3;}
+.windowInput {width: 220px; height: 40px; padding: 0px 5px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #df4e47; margin-top: 3px; background-color: #dddddd; border: none;}
+.windowSubmit {width: 100px; height: 40px; line-height: 40px; text-align: center; padding: 0px 5px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #ffffff; margin-top: 3px; background-color: #df4e47; border: none; cursor: pointer;}
+.notification {padding: 5px; background-color: #dddddd; border: 2px solid #df4e47; text-align: left; margin-top: 20px; width: auto; text-align: center;}

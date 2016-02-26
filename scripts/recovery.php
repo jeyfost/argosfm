@@ -2,20 +2,6 @@
 
 	session_start();
 	include('connect.php');
-
-	function sendMail($address, $new_password)
-	{
-		$from = "no-reply@argos-fm.by";
-		$to = $address;
-				
-		$subject = "Восстановление пароля на сайте Аргос-ФМ";
-		$message = "Ваш пароль на сайте <a href='http://argos-fm.by/'>argos-fm.by</a> был изменён.<br />Новый пароль: <b>".$new_password."</b><br /><br />Изменить пароль можно в <a href='http://argos-fm.by/settings.php'>личном кабинете</a>, предварительно авторизовавшись на сайте.";
-
-		$headers = "Content-type: text/html; charset=windows-1251 \r\n";
-		$headers .= "From: Администрация сайта Аргос-ФМ <no-reply@argos-fm.by>\r\n";
-		
-		mail($to, $subject, $message, $headers);
-	}
 	
 	if(!empty($_POST['recovery']))
 	{
@@ -94,5 +80,18 @@
 			header("Location: ../index.php");
 		}
 	}
+
+function sendMail($address, $new_password)
+{
+	$to = $address;
+
+	$subject = "Восстановление пароля на сайте Аргос-ФМ";
+	$message = "Ваш пароль на сайте <a href='http://argos-fm.by/'>argos-fm.by</a> был изменён.<br />Новый пароль: <b>".$new_password."</b><br /><br />Изменить пароль можно в <a href='http://argos-fm.by/settings.php'>личном кабинете</a>, предварительно авторизовавшись на сайте.";
+
+	$headers = "Content-type: text/html; charset=windows-1251 \r\n";
+	$headers .= "From: Администрация сайта Аргос-ФМ <no-reply@argos-fm.by>\r\n";
+
+	mail($to, $subject, $message, $headers);
+}
 
 ?>

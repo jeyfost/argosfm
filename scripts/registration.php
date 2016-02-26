@@ -40,7 +40,7 @@
 							{
 								$symbols = array('1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'j', 'n', 'm', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M');
 								$organisationResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE organisation = '".$organisation."'");
-								$O = $organisationResult->fetch_assoc(MYSQLI_NUM);
+								$O = $organisationResult->fetch_array(MYSQLI_NUM);
 								
 								if($O[0] == 0)
 								{
@@ -186,23 +186,10 @@
 					header("Location: ../index.php");
 				}
 			}
-			
-			if(strlen($password) < 5)
-			{
-				$_SESSION['registration'] = 'password';
-				if(isset($_SESSION['last_page']))
-				{
-					header("Location: ".$_SESSION['last_page']);
-				}
-				else
-				{
-					header("Location: ../index.php");
-				}
-			}
 		}
 		else
 		{
-			$_SESSION['regisration'] = 'empty';
+			$_SESSION['registration'] = 'empty';
 			if(isset($_SESSION['last_page']))
 			{
 				header("Location: ".$_SESSION['last_page']);
@@ -219,9 +206,9 @@
 		{
 			$login = trim(htmlspecialchars($_POST['userLogin']));
 			$password = $_POST['userPassword'];
-			$email = $_POST['userEmail'];
-			$name = $_POST['userName'];
-			$phone = $_POST['userPhone'];
+			$email = strtolower($_POST['userEmail']);
+			$name = addslashes(htmlspecialchars($_POST['userName']));
+			$phone = addslashes(htmlspecialchars($_POST['userPhone']));
 			
 			$_SESSION['registration_type'] = 2;
 			$_SESSION['registration_login'] = $login;
@@ -393,7 +380,7 @@
 		}
 		else
 		{
-			$_SESSION['regisration'] = 'empty';
+			$_SESSION['registration'] = 'empty';
 			if(isset($_SESSION['last_page']))
 			{
 				header("Location: ".$_SESSION['last_page']);
@@ -408,7 +395,6 @@
 	function sendMail($address, $code)
 	{
 		$to = $address;
-		$from = "no-reply@argos-fm.by";
 		
 		$headers = "Content-type=text/html; charset: windows-1251 \r\n";
 		$headers .= "From: Администрация сайта Аргос-ФМ <no-reply@argos-fm.by>\r\n";

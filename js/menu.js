@@ -136,16 +136,16 @@ function resetBlocks() {
 		document.getElementById('layout').setAttribute('style', 'display: none;');
 	}
 	
-	if(document.getElementById('loginBlockOuter')) {
-		document.getElementById('loginBlockOuter').setAttribute('style', 'display: none;');
+	if(document.getElementById('loginBlock')) {
+		document.getElementById('loginBlock').setAttribute('style', 'display: none;');
 	}
 	
-	if(document.getElementById('registrationWindowOuter')) {
-		document.getElementById('registrationWindowOuter').setAttribute('style', 'display: none;');
+	if(document.getElementById('registrationWindow')) {
+		document.getElementById('registrationWindow').setAttribute('style', 'display: none;');
 	}
 	
-	if(document.getElementById('passwordRecoveryOuter')) {
-		document.getElementById('passwordRecoveryOuter').setAttribute('style', 'display: none;');
+	if(document.getElementById('passwordRecoveryBlock')) {
+		document.getElementById('passwordRecoveryBlock').setAttribute('style', 'display: none;');
 	}
 	
 	if(document.getElementById('notificationWindowOuter')) {
@@ -169,7 +169,7 @@ function showLoginForm() {
 		);
 
 		$('#layout').height(scrollHeight); 
-		document.getElementById('loginBlockOuter').setAttribute('style', 'display: block;');
+		document.getElementById('loginBlock').setAttribute('style', 'display: block;');
 	}
 	else {
 		document.getElementById('loginIcon').removeAttribute('name');
@@ -177,22 +177,22 @@ function showLoginForm() {
 }
 
 function registrationWindow() {
-	document.getElementById('loginBlockOuter').setAttribute('style', 'display: none;');
-	document.getElementById('registrationWindowOuter').setAttribute('style', 'display: block');
+	document.getElementById('loginBlock').setAttribute('style', 'display: none;');
+	document.getElementById('registrationWindow').setAttribute('style', 'display: block');
 }
 
 function recoveryWindow() {
-	document.getElementById('loginBlockOuter').setAttribute('style', 'display: none;');
-	document.getElementById('passwordRecoveryOuter').setAttribute('style', 'display: block');
+	document.getElementById('loginBlock').setAttribute('style', 'display: none;');
+	document.getElementById('passwordRecoveryBlock').setAttribute('style', 'display: block');
 }
 
 function registrationType(n) {
 	if(n == 1) {
-		document.getElementById('registrationWindow').innerHTML = "<form name='registrationForm' id='registrationForm' method='post' action='scripts/registration.php'><center><span class='headerStyleRed'>Регистрация нового пользователя</span></center><br /><br /><label>Тип пользователя:</label><br /><input type='radio' name='userType' value='1' class='radio' onclick='registrationType(1)' checked><span class='mainIMGText'>Организация или ИП</span><br /><input type='radio' name='userType' value='2' class='radio' onclick='registrationType(2)'><span class='mainIMGText'>Физическое лицо</span><br /><br /><label>Логин:</label><br /><input type='text' name='userLogin' id='userLoginInput' /><br /><br /><label>Пароль:</label><br /><input type='password' name='userPassword' id='userPasswordInput' /><br /><br /><label>E-mail:</label><br /><input type='text' name='userEmail' id='userEmailInput' /><br /><br /><label>Название организации:</label><br /><input type='text' name='organisation' id='organisationInput' /><br /><br /><label>Контактное лицо:</label><br /><input type='text' name='userName' id='userNameInput' /><br /><br /><label>Контактный телефон:</label><br /><input type='text' name='userPhone' id='userPhoneInput' /><br /><br /><br /><input type='submit' value='зарегистрироваться' id='registrationSubmit' /><input type='button' value='отмена' id='cancelButton' onclick='resetBlocks();' /></form>";
+		document.getElementById('registrationWindow').innerHTML = "<form name='registrationForm' id='registrationForm' method='post' action='scripts/registration.php'><center><span class='headerStyleRed'>Регистрация нового пользователя</span></center><br /><br /><label>Тип пользователя:</label><br /><input type='radio' name='userType' value='1' class='radio' onclick='registrationType(1)' checked><span class='mainIMGText'>Организация или ИП</span><br /><input type='radio' name='userType' value='2' class='radio' onclick='registrationType(2)'><span class='mainIMGText'>Физическое лицо</span><br /><br /><label>Логин:</label><br /><input type='text' class='admInput' name='userLogin' id='userLoginInput' /><br /><br /><label>Пароль:</label><br /><input type='password' class='admInput' name='userPassword' id='userPasswordInput' /><br /><br /><label>E-mail:</label><br /><input type='text' class='admInput' name='userEmail' id='userEmailInput' /><br /><br /><label>Название организации:</label><br /><input type='text' class='admInput' name='organisation' id='organisationInput' /><br /><br /><label>Контактное лицо:</label><br /><input type='text' class='admInput' name='userName' id='userNameInput' /><br /><br /><label>Контактный телефон:</label><br /><input type='text' class='admInput' name='userPhone' id='userPhoneInput' /><br /><br /><br /><input type='submit' class='windowSubmit' value='Зарегистрироваться' id='registrationSubmit' /><input type='button' class='windowSubmit' value='Отмена' id='loginCancel' onclick='resetBlocks();' /></form>";
 	}
 	
 	if(n == 2) {
-		document.getElementById('registrationWindow').innerHTML = "<form name='registrationForm' id='registrationForm' method='post' action='scripts/registration.php'><center><span class='headerStyleRed'>Регистрация нового пользователя</span></center><br /><br /><label>Тип пользователя:</label><br /><input type='radio' name='userType' value='1' class='radio' onclick='registrationType(1)'><span class='mainIMGText'>Организация или ИП</span><br /><input type='radio' name='userType' value='2' class='radio' onclick='registrationType(2)' checked><span class='mainIMGText'>Физическое лицо</span><br /><br /><label>Логин:</label><br /><input type='text' name='userLogin' id='userLoginInput' /><br /><br /><label>Пароль:</label><br /><input type='password' name='userPassword' id='userPasswordInput' /><br /><br /><label>E-mail:</label><br /><input type='text' name='userEmail' id='userEmailInput' /><br /><br /><label>Имя:</label><br /><input type='text' name='userName' id='userNameInput' /><br /><br /><label>Контактный телефон:</label><br /><input type='text' name='userPhone' id='userPhoneInput' /><br /><br /><br /><br /><br /><br /><input type='submit' value='зарегистрироваться' id='registrationSubmit' /><input type='button' value='отмена' id='cancelButton' onclick='resetBlocks();' /></form>";
+		document.getElementById('registrationWindow').innerHTML = "<form name='registrationForm' id='registrationForm' method='post' action='scripts/registration.php'><center><span class='headerStyleRed'>Регистрация нового пользователя</span></center><br /><br /><label>Тип пользователя:</label><br /><input type='radio' name='userType' value='1' class='radio' onclick='registrationType(1)'><span class='mainIMGText'>Организация или ИП</span><br /><input type='radio' name='userType' value='2' class='radio' onclick='registrationType(2)' checked><span class='mainIMGText'>Физическое лицо</span><br /><br /><label>Логин:</label><br /><input type='text' class='admInput' name='userLogin' id='userLoginInput' /><br /><br /><label>Пароль:</label><br /><input type='password' class='admInput' name='userPassword' id='userPasswordInput' /><br /><br /><label>E-mail:</label><br /><input type='text' class='admInput' name='userEmail' id='userEmailInput' /><br /><br /><label>Имя:</label><br /><input type='text' class='admInput' name='userName' id='userNameInput' /><br /><br /><label>Контактный телефон:</label><br /><input type='text' class='admInput' name='userPhone' id='userPhoneInput' /><br /><br /><br /><br /><br /><br /><br /><br /><input type='submit' class='windowSubmit' value='Зарегистрироваться' id='registrationSubmit' /><input type='button' class='windowSubmit' value='Отмена' id='loginCancel' onclick='resetBlocks();' /></form>";
 	}
 }
 
@@ -241,4 +241,14 @@ function changePictures(id, fileRed, file, action) {
 	else {
 		document.getElementById(id).src = 'pictures/system/' + file;
 	}
+}
+
+function resizeLayout() {
+	var scrollHeight = Math.max(
+		document.body.scrollHeight, document.documentElement.scrollHeight,
+		document.body.offsetHeight, document.documentElement.offsetHeight,
+		document.body.clientHeight, document.documentElement.clientHeight
+	);
+
+	$('#layout').height(scrollHeight); 
 }
