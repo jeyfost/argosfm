@@ -159,8 +159,8 @@ ul, li {color: #df4e47;}
 #siteSettingsSubmit {width: 150px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
 #settings1Form {margin-left: 20px; margin-top: 10px;}
 #settings2Form {margin-left: 20px; margin-top: 10px;}
-#settings3Form {margin-left: 20px; margin-top: 40px;}
-#siteSettingsForm {margin-left: 20px; margin-top: 40px;}
+#settings3Form {margin-left: 20px; margin-top: 10px;}
+#siteSettingsForm {margin-left: 20px; margin-top: 10px;}
 #toAdminButton {width: 100%; margin-top: 140px;  position: relative; height: 40px; line-height: 40px; text-align: center; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer;}
 
 /*order.php*/
@@ -402,3 +402,4 @@ ul, li {color: #df4e47;}
 .windowInput {width: 220px; height: 40px; padding: 0px 5px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #df4e47; margin-top: 3px; background-color: #dddddd; border: none;}
 .windowSubmit {width: 100px; height: 40px; line-height: 40px; text-align: center; padding: 0px 5px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #ffffff; margin-top: 3px; background-color: #df4e47; border: none; cursor: pointer;}
 .notification {padding: 5px; background-color: #dddddd; border: 2px solid #df4e47; text-align: left; margin-top: 20px; width: auto; text-align: center;}
+.notificationOK {padding: 5px; background-color: #dddddd; border: 2px solid #093; text-align: left; margin-top: 20px; width: auto; text-align: center;}

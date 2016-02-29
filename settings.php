@@ -689,13 +689,13 @@
 								switch($_SESSION['settingsChange'])
 								{
 									case "ok":
-										echo "<span class='basicGreen'>Ваши данные были успешно изменены.</span>";
+										echo "<div class='notificationOK'><span class='basicGreen'>Ваши данные были успешно изменены.</span></div>";
 										break;
 									case "failed":
-										echo "<span class='basicRed'>При внесении изменений произошла ошибка. Попробуйте снова.</span>";
+										echo "<div class='notification'><span class='basicRed'>При внесении изменений произошла ошибка. Попробуйте снова.</span></div>";
 										break;
 									case "empty":
-										echo "<span class='basicRed'>Все поля должны быть заполнены.</span>";
+										echo "<div class='notification'><span class='basicRed'>Все поля должны быть заполнены.</span></div>";
 										break;
 									default:
 										break;
@@ -746,19 +746,19 @@
 								switch($_SESSION['settingsChange'])
 								{
 									case "ok":
-										echo "<span class='basicGreen'>Ваш пароль успешно изменён.</span>";
+										echo "<div class='notificationOK'><span class='basicGreen'>Ваш пароль успешно изменён.</span></div>";
 										break;
 									case "failed":
-										echo "<span class='basicRed'>При изменении пароля произошла ошибка. Попробуйте снова.</span>";
+										echo "<div class='notification'><span class='basicRed'>При изменении пароля произошла ошибка. Попробуйте снова.</span></div>";
 										break;
 									case "empty":
-										echo "<span class='basicRed'>Введите новый пароль в оба текстовых поля.</span>";
+										echo "<div class='notification'><span class='basicRed'>Введите новый пароль в оба текстовых поля.</span></div>";
 										break;
 									case "length":
-										echo "<span class='basicRed'>Длина пароля должна составлять от 5 до 25 символов.</span>";
+										echo "<div class='notification'><span class='basicRed'>Длина пароля должна составлять от 5 до 25 символов.</span></div>";
 										break;
 									case "different":
-										echo "<span class='basicRed'>Новый пароль и контрольный пароль не совпадают. Повторите ввод более внимательно.</span>";
+										echo "<div class='notification'><span class='basicRed'>Новый пароль и контрольный пароль не совпадают. Повторите ввод более внимательно.</span></div>";
 										break;
 									default:
 										break;
@@ -804,16 +804,16 @@
 									switch($_SESSION['exchange'])
 									{
 										case 'ok':
-											echo "<div style='position: absolute; top: 50px; left: 30px;'><span class='basicGreen'>Курс доллара успешно изменён.</span></div>";
+											echo "<div class='notificationOK' style='margin-top: 60px;'><span class='basicGreen'>Курс доллара успешно изменён.</span></div>";
 											break;
 										case 'false':
-											echo "<span class='basicRed'>При изменении курса произошла ошибка. Попробуйте снова.</span>";
+											echo "<div class='notification'><span class='basicRed'>При изменении курса произошла ошибка. Попробуйте снова.</span></div>";
 											break;
 										case 'empty':
-											echo "<span class='basicRed'>Вы не ввели курс доллара.</span>";
+											echo "<div class='notification'><span class='basicRed'>Вы не ввели курс доллара.</span></div>";
 											break;
 										case 'format':
-											echo "<span class='basicRed'>Курс доллара может состоять только из цифр.</span>";
+											echo "<div class='notification'><span class='basicRed'>Курс доллара может состоять только из цифр.</span></div>";
 											break;
 										default:
 											break;
