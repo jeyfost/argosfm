@@ -340,9 +340,9 @@
 						</div>
 					</div>
 				";
+		unset($_SESSION['registration']);
 	}
 
-	unset($_SESSION['registration']);
 	?>
 
 	<div id='registrationWindow' onmousemove='resizeLayout()' onmousewheel='resizeLayout()' <?php if(isset($_SESSION['registration']) and $_SESSION['registration'] != 'ok'){echo "style='display: block;'";}else{echo "style='display: none;'";} ?>>

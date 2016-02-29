@@ -269,11 +269,10 @@
 					</div>
 				</div>
 			";
-		}
-		
-		unset($_SESSION['registration']);
-	?>
 
+            unset($_SESSION['registration']);
+		}
+	?>
     	<div id='registrationWindow' onmousemove='resizeLayout()' onmousewheel='resizeLayout()' <?php if(isset($_SESSION['registration']) and $_SESSION['registration'] != 'ok'){echo "style='display: block;'";}else{echo "style='display: none;'";} ?>>
         	<form name='registrationForm' id='registrationForm' method='post' action='scripts/registration.php'>
             	<center><span class='headerStyleRed'>Регистрация нового пользователя</span></center>
@@ -324,15 +323,15 @@
                 <br />
                 <label>Логин:</label>
                 <br />
-                <input type='text' class='admInput' name='userLogin' id='userLoginInput' <?php if(isset($_SESSION['registration_login'])){echo "value='".$_SESSION['registration_login']."'";} ?> />
+                <input type='text' class='admInput' name='userLogin' id='userLoginInput' <?php if(isset($_SESSION['registration_login'])){echo " value='".$_SESSION['registration_login']."'";} ?> />
                 <br /><br />
                 <label>Пароль:</label>
                 <br />
-                <input type='password' class='admInput' name='userPassword' id='userPasswordInput' <?php if(isset($_SESSION['registration_password'])){echo "value='".$_SESSION['registration_password']."'";} ?> />
+                <input type='password' class='admInput' name='userPassword' id='userPasswordInput' <?php if(isset($_SESSION['registration_password'])){echo " value='".$_SESSION['registration_password']."'";} ?> />
                 <br /><br />
                 <label>E-mail:</label>
                 <br />
-                <input type='text' class='admInput' name='userEmail' id='userEmailInput' <?php if(isset($_SESSION['registration_email'])){echo "value='".$_SESSION['registration_email']."'";} ?> />
+                <input type='text' class='admInput' name='userEmail' id='userEmailInput' <?php if(isset($_SESSION['registration_email'])){echo " value='".$_SESSION['registration_email']."'";} ?> />
                 <?php
 					if((isset($_SESSION['registration_type']) and $_SESSION['registration_type'] == 1) or !isset($_SESSION['registration_type']))
 					{
@@ -340,22 +339,17 @@
 							<br /><br />
 							<label>Название организации:</label>
 							<br />
-							<input type='text' class='admInput' name='organisation' id='organisationInput' ";
-							if(isset($_SESSION['registration_organisation'])){echo "value='".$_SESSION['registration_organisation']."'";}
-							
-						echo "
-							/>
-						";
+							<input type='text' class='admInput' name='organisation' id='organisationInput' "; if(isset($_SESSION['registration_organisation'])){echo " value='".$_SESSION['registration_organisation']."'";} echo "/>";
 					}
 				?>
                 <br /><br />
                 <label>Контактное лицо:</label>
                 <br />
-                <input type='text' class='admInput' name='userName' id='userNameInput' <?php if(isset($_SESSION['registration_name'])){echo "value='".$_SESSION['registration_name']."'";} ?> />
+                <input type='text' class='admInput' name='userName' id='userNameInput' <?php if(isset($_SESSION['registration_name'])){echo " value='".$_SESSION['registration_name']."'";} ?> />
                 <br /><br />
                 <label>Контактный телефон:</label>
                 <br />
-                <input type='text' class='admInput' name='userPhone' id='userPhoneInput' <?php if(isset($_SESSION['registration_phone'])){echo "value='".$_SESSION['registration_phone']."'";} ?> />
+                <input type='text' class='admInput' name='userPhone' id='userPhoneInput' <?php if(isset($_SESSION['registration_phone'])){echo " value='".$_SESSION['registration_phone']."'";} ?> />
 				<br /><br />
                 <input type='submit' class='windowSubmit' value='Зарегистрироваться' id='registrationSubmit' />
                 <input type='button' class='windowSubmit' value='Отмена' id='loginCancel' onclick='resetBlocks();' />
@@ -623,7 +617,6 @@
 		unset($_SESSION['basket']);
 	}
     ?>
-    
     <div id='content_main'>
     	<div id='fa_main_block'>
         	<h1 class='headerStyle'>мебелльная фурнитура</h1>
@@ -738,7 +731,7 @@
         </div>
 
     </div>
-    
+
     <footer>
 		<div id='footerContent'>
         	<div id='location'>

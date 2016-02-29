@@ -10,11 +10,11 @@
 			$login = trim(htmlspecialchars($_POST['userLogin']));
 			$password = $_POST['userPassword'];
 			$email = strtolower($_POST['userEmail']);
-			$organisation = addslashes(htmlspecialchars($_POST['organisation']));
-			$name = addslashes(htmlspecialchars($_POST['userName']));
-			$phone = addslashes(htmlspecialchars($_POST['userPhone']));
+			$organisation = addslashes($_POST['organisation']);
+			$name = addslashes($_POST['userName']);
+			$phone = addslashes($_POST['userPhone']);
 			
-			$_SESSION['registration_type'] = 1;
+			$_SESSION['registration_type'] = '1';
 			$_SESSION['registration_login'] = $login;
 			$_SESSION['registration_password'] = $password;
 			$_SESSION['registration_email'] = $email;
@@ -24,7 +24,7 @@
 			
 			if(preg_match("~^[a-zA-Z0-9_.-]{3,32}~u", $login))
 			{
-				if(strlen($password) >= 5 and strlen($password) <= 25)
+				if(strlen($password) >= 5)
 				{
 					$loginResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE login = '".$login."'");
 					$L = $loginResult->fetch_array(MYSQLI_NUM);
@@ -207,10 +207,10 @@
 			$login = trim(htmlspecialchars($_POST['userLogin']));
 			$password = $_POST['userPassword'];
 			$email = strtolower($_POST['userEmail']);
-			$name = addslashes(htmlspecialchars($_POST['userName']));
-			$phone = addslashes(htmlspecialchars($_POST['userPhone']));
+			$name = addslashes($_POST['userName']);
+			$phone = addslashes($_POST['userPhone']);
 			
-			$_SESSION['registration_type'] = 2;
+			$_SESSION['registration_type'] = '2';
 			$_SESSION['registration_login'] = $login;
 			$_SESSION['registration_password'] = $password;
 			$_SESSION['registration_email'] = $email;

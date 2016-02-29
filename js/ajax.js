@@ -325,3 +325,195 @@ $(document).mouseup(function (e) {
         container.hide();
     }
 });
+
+$(document).ready(function() {
+	$('#userLoginInput').keyup(function() {
+		loginCheck();
+	});
+});
+
+function loginCheck() {
+	var login = $('#userLoginInput').val();
+
+		if(login.length < 3 || login.length > 32) {
+			$('#userLoginInput').css('background-color', '#ffb1ad');
+			$('#userLoginInput').css('border', '1px solid #df4e47');
+		} else {
+			$.ajax({
+				type: 'POST',
+				data: {"login": login},
+				url: 'scripts/ajaxCheckLogin.php',
+				success: function(response) {
+					if(response == "a") {
+						$('#userLoginInput').css('background-color', '#dddddd');
+						$('#userLoginInput').css('border', 'none');
+					}
+
+					if(response == "b") {
+						$('#userLoginInput').css('background-color', '#ffb1ad');
+						$('#userLoginInput').css('border', '1px solid #df4e47');
+					}
+				}
+			});
+		}
+}
+
+$(document).ready(function() {
+	$('#userPasswordInput').keyup(function() {
+		passwordCheck();
+	});
+});
+
+function passwordCheck() {
+	var password = $('#userPasswordInput').val();
+
+		if(password.length < 5) {
+			$('#userPasswordInput').css('background-color', '#ffb1ad');
+			$('#userPasswordInput').css('border', '1px solid #df4e47');
+		} else {
+			$('#userPasswordInput').css('background-color', '#dddddd');
+			$('#userPasswordInput').css('border', 'none');
+		}
+}
+
+$(document).ready(function() {
+	$('#userEmailInput').keyup(function() {
+		emailCheck();
+	});
+});
+
+function emailCheck() {
+	var email = $('#userEmailInput').val();
+
+		if(email.length < 1) {
+			$('#userEmailInput').css('background-color', '#ffb1ad');
+			$('#userEmailInput').css('border', '1px solid #df4e47');
+		} else {
+			$.ajax({
+				type: 'POST',
+				data: {"email": email},
+				url: 'scripts/ajaxCheckEmail.php',
+				success: function(response) {
+					if(response == "a") {
+						$('#userEmailInput').css('background-color', '#dddddd');
+						$('#userEmailInput').css('border', 'none');
+					}
+
+					if(response == "b") {
+						$('#userEmailInput').css('background-color', '#ffb1ad');
+						$('#userEmailInput').css('border', '1px solid #df4e47');
+					}
+				}
+			});
+		}
+}
+
+$(document).ready(function() {
+	$('#organisationInput').keyup(function() {
+		organisationCheck();
+	});
+});
+
+function organisationCheck() {
+	var organisation = $('#organisationInput').val();
+
+		if(organisation.length < 1) {
+			$('#organisationInput').css('background-color', '#ffb1ad');
+			$('#organisationInput').css('border', '1px solid #df4e47');
+		} else {
+			$.ajax({
+				type: 'POST',
+				data: {"organisation": organisation},
+				url: 'scripts/ajaxCheckOrganisation.php',
+				success: function(response) {
+					if(response == "a") {
+						$('#organisationInput').css('background-color', '#dddddd');
+						$('#organisationInput').css('border', 'none');
+					}
+
+					if(response == "b") {
+						$('#organisationInput').css('background-color', '#ffb1ad');
+						$('#organisationInput').css('border', '1px solid #df4e47');
+					}
+				}
+			});
+		}
+}
+
+$(document).ready(function() {
+	$('#recoveryInput').keyup(function() {
+		var recovery = $('#recoveryInput').val();
+
+		if(recovery.length < 3) {
+			$('#recoveryInput').css('background-color', '#ffb1ad');
+			$('#recoveryInput').css('border', '1px solid #df4e47');
+		} else {
+			$('#recoveryInput').css('background-color', '#dddddd');
+			$('#recoveryInput').css('border', 'none');
+		}
+	});
+});
+
+$(document).ready(function() {
+	$('#userNameInput').keyup(function() {
+		nameCheck();
+	});
+});
+
+function nameCheck() {
+	var name = $('#userNameInput').val();
+
+		if(name.length < 1) {
+			$('#userNameInput').css('background-color', '#ffb1ad');
+			$('#userNameInput').css('border', '1px solid #df4e47');
+		} else {
+			$.ajax({
+				type: 'POST',
+				data: {"name": name},
+				url: 'scripts/ajaxCheckUserName.php',
+				success: function(response) {
+					if(response == "a") {
+						$('#userNameInput').css('background-color', '#dddddd');
+						$('#userNameInput').css('border', 'none');
+					}
+
+					if(response == "b") {
+						$('#userNameInput').css('background-color', '#ffb1ad');
+						$('#userNameInput').css('border', '1px solid #df4e47');
+					}
+				}
+			});
+		}
+}
+
+$(document).ready(function() {
+	$('#userPhoneInput').keyup(function() {
+		phoneCheck();
+	});
+});
+
+function phoneCheck() {
+	var phone = $('#userPhoneInput').val();
+
+		if(phone.length < 1) {
+			$('#userPhoneInput').css('background-color', '#ffb1ad');
+			$('#userPhoneInput').css('border', '1px solid #df4e47');
+		} else {
+			$.ajax({
+				type: 'POST',
+				data: {"phone": phone},
+				url: 'scripts/ajaxCheckPhone.php',
+				success: function(response) {
+					if(response == "a") {
+						$('#userPhoneInput').css('background-color', '#dddddd');
+						$('#userPhoneInput').css('border', 'none');
+					}
+
+					if(response == "b") {
+						$('#userPhoneInput').css('background-color', '#ffb1ad');
+						$('#userPhoneInput').css('border', '1px solid #df4e47');
+					}
+				}
+			});
+		}
+}
