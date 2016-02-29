@@ -401,5 +401,5 @@ ul, li {color: #df4e47;}
 .orderGoodDelete {position: absolute; width: 16px; height: 16px; cursor: pointer; top: 5px; right: 140px; z-index: 3;}
 .windowInput {width: 220px; height: 40px; padding: 0px 5px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #df4e47; margin-top: 3px; background-color: #dddddd; border: none;}
 .windowSubmit {width: 100px; height: 40px; line-height: 40px; text-align: center; padding: 0px 5px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #ffffff; margin-top: 3px; background-color: #df4e47; border: none; cursor: pointer;}
-.notification {padding: 5px; background-color: #dddddd; border: 2px solid #df4e47; text-align: left; margin-top: 20px; width: auto; text-align: center;}
-.notificationOK {padding: 5px; background-color: #dddddd; border: 2px solid #093; text-align: left; margin-top: 20px; width: auto; text-align: center;}
+.notification {padding: 5px; background-color: #dddddd; border: 2px solid #df4e47; margin-top: 20px; width: auto; text-align: center;}
+.notificationOK {padding: 5px; background-color: #dddddd; border: 2px solid #093; margin-top: 20px; width: auto; text-align: center;}
