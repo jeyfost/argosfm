@@ -410,7 +410,7 @@
     	<div id='headerBlock'>
         	<a href='index.php' class='noBorder'>
                 <div id='logo'>
-                    <img src='pictures/system/logo.png' class='noBorder' />
+					<img src='pictures/system/logo.png' class='noBorder' id='logoIMG' onmouseover='logoChange(1)' onmouseout='logoChange(0)' />
                 </div>
             </a>
             <menu>

@@ -406,7 +406,7 @@
     	<div id='headerBlock'>
         	<a href='index.php' class='noBorder'>
                 <div id='logo'>
-                    <img src='pictures/system/logo.png' class='noBorder' />
+                    <img src='pictures/system/logo.png' class='noBorder' id='logoIMG' onmouseover='logoChange(1)' onmouseout='logoChange(0)' />
                 </div>
             </a>
             <menu>
@@ -619,7 +619,7 @@
     ?>
     <div id='content_main'>
     	<div id='fa_main_block'>
-        	<h1 class='headerStyle'>мебелльная фурнитура</h1>
+        	<h1 class='headerStyle'>Мебельная фурнитура</h1>
             <div class='mainIMGContainer'>
             	<a href='catalogue.php?type=fa' class='noBorder'><img src='pictures/system/fa.png' class='noBorder' title='В каталог' /></a>
             </div>
@@ -628,12 +628,12 @@
             </div>
             <a href='catalogue.php?type=fa' class='noBorder'>
                 <div class='toCatalogueButton' style='margin-top: 17px;'>
-                    <span class='toCatBText'>в каталог</span>
+                    <span class='toCatBText'>В каталог</span>
                 </div>
             </a>
         </div>
         <div id='em_main_block'>
-        	<h1 class='headerStyle'>кромочные материалы</h1>
+        	<h1 class='headerStyle'>Кромочные материалы</h1>
             <div class='mainIMGContainer'>
             	<a href='catalogue.php?type=em' class='noBorder'><img src='pictures/system/em.png' class='noBorder' title='В каталог' /></a>
             </div>
@@ -642,12 +642,12 @@
             </div>
             <a href='catalogue.php?type=em' class='noBorder'>
                 <div class='toCatalogueButton' style='margin-top: 33px;'>
-                    <span class='toCatBText'>в каталог</span>
+                    <span class='toCatBText'>В каталог</span>
                 </div>
             </a>
         </div>
         <div id='ca_main_block'>
-        	<h1 class='headerStyle'>аксессуары для штор</h1>
+        	<h1 class='headerStyle'>Аксессуары для штор</h1>
             <div class='mainIMGContainer'>
             	<a href='catalogue.php?type=ca' class='noBorder'><img src='pictures/system/ca.png' class='noBorder' title='В каталог' /></a>
             </div>
@@ -656,7 +656,7 @@
             </div>
             <a href='catalogue.php?type=ca' class='noBorder'>
                 <div class='toCatalogueButton' style='margin-top: 60px;'>
-                    <span class='toCatBText'>в каталог</span>
+                    <span class='toCatBText'>В каталог</span>
                 </div>
             </a>
         </div>

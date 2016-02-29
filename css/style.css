@@ -93,16 +93,16 @@ ul, li {color: #df4e47;}
 #offersPointCenter {position: relative; margin: 0 auto; width: 97px; height: 70px;}
 #opTopActive {width: 97px; height: 3px; background-color: #df4e47;}
 #opTop {width: 97px; height: 3px; background-color: #ffffff;}
-#login {width: 15px; height: 16px; margin-top: 27px; position: relative; float: left; cursor: pointer;}
-#loginL {width: 60px; height: 16px; margin-top: 27px; position: relative; float: left; margin-left: -23px;}
+#login {width: 15px; height: 16px; margin-top: 27px; position: relative; float: left; cursor: pointer; margin-left: -30px;}
+#loginL {width: 60px; height: 16px; margin-top: 27px; position: relative; float: left; margin-left: -45px;}
 #searchBlock {width: 202px; height: 70px; float: right; margin-top: -70px;}
 #searchField {margin-top: 15px; width: 120px; height: 40px; line-height: 40px; background-color: #dddddd; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #5a5a5a; font-size: 14px; padding-right: 26px; padding-left: 10px; border: none; float: right; position: relative;}
 #searchSubmit {background: url(../pictures/system/search.png) no-repeat top left; border: none; width: 14px; height: 14px; cursor: pointer; position: absolute; top: 28px; right: 10px;}
 #content {position: relative; margin: 0 auto; width: 1000px; min-height: 415px; height: auto !important; padding: 20px auto;}
 #content_main {position: relative; margin: 20px auto auto auto; width: 1000px; height: 100px;}
-#fa_main_block {position: relative; float: left; width: 280px; height: 375px; background-color: #ffffff; padding: 20px; text-align: center;}
-#em_main_block {position: relative; float: left; width: 280px; height: 375px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center;}
-#ca_main_block {position: relative; float: left; width: 280px; height: 375px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center;}
+#fa_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; padding: 20px; text-align: center;}
+#em_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center;}
+#ca_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center;}
 #footerContent {width: 1000px; height: auto; position: relative; margin: 0 auto;}
 #location {height: 40px; width: 200px; padding-top: 15px;}
 #copyright {position: relative; margin: 0 auto; width: 300px; height: 55px; text-align: center; line-height: 67px; margin-top: -56px;}
@@ -299,7 +299,7 @@ ul, li {color: #df4e47;}
 .headerStyleRedHover {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #df4e47;}
 .mainIMGContainer {position: relative; width: 230px; height: 173px; margin-top: 20px; margin-left: 25px;}
 .mainIMGText {position: relative; text-align: left; margin-top: 20px;}
-.toCatalogueButton {position: relative; margin: 0 auto; background-color: #df4e47; width: 100px; height: 20px; bottom: 0px; text-align: center;}
+.toCatalogueButton {position: relative; margin: 0 auto; background-color: #df4e47; width: 100px; height: 25px; bottom: 0px; text-align: center; line-height: 25px;}
 .toCatBText {font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #ffffff;}
 .categoriesBlock {width: 270px; height: auto; margin: 10px auto;}
 .categoryLine {width: 270px; height: auto;}

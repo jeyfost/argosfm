@@ -697,7 +697,7 @@
     	<div id='headerBlock'>
         	<a href='index.php' class='noBorder'>
                 <div id='logo'>
-                    <img src='pictures/system/logo.png' class='noBorder' />
+					<img src='pictures/system/logo.png' class='noBorder' id='logoIMG' onmouseover='logoChange(1)' onmouseout='logoChange(0)' />
                 </div>
             </a>
             <menu>
@@ -863,11 +863,11 @@
             	<?php
 					if($_REQUEST['type'] == 'fa')
 					{
-						echo "<span class='headerStyleRed'>мебельная фурнитура</span>";
+						echo "<h1 class='headerStyleRed'>Мебельная фурнитура</h1>";
 					}
 					else
 					{
-						echo "<span class='headerStyleHover'>мебельная фурнитура</span>";
+						echo "<h1 class='headerStyleHover'>Мебельная фурнитура</h1>";
 					}
 				?>
             </a>
@@ -1014,11 +1014,11 @@
 				<?php
                     if($_REQUEST['type'] == 'em')
                     {
-                        echo "<span class='headerStyleRed'>кромочные материалы</span>";
+                        echo "<h1 class='headerStyleRed'>Кромочные материалы</h1>";
                     }
                     else
                     {
-                        echo "<span class='headerStyleHover'>кромочные материалы</span>";
+                        echo "<h1 class='headerStyleHover'>Кромочные материалы</h1>";
                     }
                 ?>
             </a>
@@ -1162,11 +1162,11 @@
 				<?php
                     if($_REQUEST['type'] == 'ca')
                     {
-                        echo "<span class='headerStyleRed'>аксессуары для штор</span>";
+                        echo "<h1 class='headerStyleRed'>Аксессуары для штор</h1>";
                     }
                     else
                     {
-                        echo "<span class='headerStyleHover'>аксессуары для штор</span>";
+                        echo "<h1 class='headerStyleHover'>Аксессуары для штор</h1>";
                     }
                 ?>
             </a>
@@ -1383,13 +1383,13 @@
 						switch($_REQUEST['type'])
 						{
 							case 'fa':
-								echo "<span class='headerStyle'>мебельная фурнитура</span><br /><br /><br />";
+								echo "<span class='headerStyle'>Мебельная фурнитура</span><br /><br /><br />";
 								break;
 							case 'em':
-								echo "<span class='headerStyle'>кромочные материалы</span><br /><br /><br />";
+								echo "<span class='headerStyle'>Кромочные материалы</span><br /><br /><br />";
 								break;
 							case 'ca':
-								echo "<span class='headerStyle'>аксессуары для штор</span><br /><br /><br />";
+								echo "<span class='headerStyle'>Аксессуары для штор</span><br /><br /><br />";
 								break;
 							default:
 								break;
@@ -1934,6 +1934,7 @@
     
     <script type='text/javascript'>
 		footerPos();
+
 		$(document).ready(function() {
 
 			var nextRight = $('#pbNext').offset().left + $('#pbNext').width();

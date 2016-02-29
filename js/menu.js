@@ -252,3 +252,13 @@ function resizeLayout() {
 
 	$('#layout').height(scrollHeight); 
 }
+
+function logoChange(action) {
+	if(action == 1) {
+		document.getElementById('logoIMG').src = 'pictures/system/logoDark.png';
+	}
+
+	if(action == 0) {
+		document.getElementById('logoIMG').src = 'pictures/system/logo.png';
+	}
+}
