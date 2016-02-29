@@ -621,7 +621,7 @@
     	<div id='fa_main_block'>
         	<h1 class='headerStyle'>Мебельная фурнитура</h1>
             <div class='mainIMGContainer'>
-            	<a href='catalogue.php?type=fa' class='noBorder'><img src='pictures/system/fa.png' class='noBorder' title='В каталог' /></a>
+            	<a href='catalogue.php?type=fa' class='noBorder'><img src='pictures/system/fa.png' class='noBorder' title='В каталог мебельной фурнитуры' /></a>
             </div>
             <div class='mainIMGText'>
             	<h2 class='basic'>Основное направление деятельности компании — комплексные поставки мебельной фурнитуры, материалов и комплектующих импортного и отечественного производства для мебельных фабрик и производителей мебели. Работая на рынке мебельной фурнитуры, мы постоянно расширяем ассортимент предлагаемой продукции.</h2>
@@ -635,7 +635,7 @@
         <div id='em_main_block'>
         	<h1 class='headerStyle'>Кромочные материалы</h1>
             <div class='mainIMGContainer'>
-            	<a href='catalogue.php?type=em' class='noBorder'><img src='pictures/system/em.png' class='noBorder' title='В каталог' /></a>
+            	<a href='catalogue.php?type=em' class='noBorder'><img src='pictures/system/em.png' class='noBorder' title='В каталог кромочных материалов' /></a>
             </div>
             <div class='mainIMGText'>
             	<h2 class='basic'>Одним из ведущих направлений нашей деятельности является поставка кромочных материалов толщиной от 0.4мм до 2мм и шириной от 19мм до 42мм из высококачественного ПВХ. Складская программа насчитывает более 40 древоподобных и 20 однотонных декоров.</h2>
@@ -649,7 +649,7 @@
         <div id='ca_main_block'>
         	<h1 class='headerStyle'>Аксессуары для штор</h1>
             <div class='mainIMGContainer'>
-            	<a href='catalogue.php?type=ca' class='noBorder'><img src='pictures/system/ca.png' class='noBorder' title='В каталог' /></a>
+            	<a href='catalogue.php?type=ca' class='noBorder'><img src='pictures/system/ca.png' class='noBorder' title='В каталог аксессуаров для штор' /></a>
             </div>
             <div class='mainIMGText'>
             	<h2 class='basic'>Предлагаем бахрому для штор, скатертей, подушек, обделочную тесьму для салфеток, мебели, окантовки краёв, декоративные шнуры, люверсы, кисти и подхваты для штор.</h2>
