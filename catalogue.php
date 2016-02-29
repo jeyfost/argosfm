@@ -873,7 +873,6 @@
             </a>
             <div class='categoriesBlock'>
             	<?php
-					
 					if(empty($_REQUEST['category']))
 					{
 						$fa_categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = 'fa' ORDER BY name");
@@ -1009,6 +1008,7 @@
 					}
 					
 				?>
+				<div style="clear: both;"></div>
             </div>
             <a href='catalogue.php?type=em' class='noBorder'>
 				<?php
@@ -1157,6 +1157,7 @@
 					}
 				
 				?>
+				<div style="clear: both;"></div>
             </div>
             <a href='catalogue.php?type=ca' class='noBorder'>
 				<?php
@@ -1315,7 +1316,7 @@
 			
 				if(empty($_REQUEST['type']))
 				{
-					echo "<span class='headerStyle'>Полный список товаров</span><br /><br /><br />";
+					echo "<h1 class='headerStyle'>Полный список товаров</h1><br /><br /><br />";
 					
 					$goodsResult = $mysqli->query("SELECT * FROM catalogue_new ORDER BY RAND() LIMIT ".$start.", 10");
 					while($goods = $goodsResult->fetch_assoc())
