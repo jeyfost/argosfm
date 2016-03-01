@@ -234,8 +234,8 @@
 			{
 				$date = ($i + 1)."-".$selectedMonth."-".$selectedYear;
 
-				$newsCountResult = $mysqli->query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
-				$newsCount = $newsCountResult->fetch_array(MYSQLI_NUM);
+				$newsCountResult = mysql_query("SELECT COUNT(id) FROM news WHERE date_dmy = '".$date."'");
+				$newsCount = mysql_fetch_array($newsCountResult, MYSQL_NUM);
 
 				$selectedDay = substr($selectedDate, 0, 2);
 
@@ -274,6 +274,15 @@
 						<div class='cBorder'></div>
 					</div>
 					<div class='cArrow'></div>
+			";
+
+			if(!empty($_REQUEST['date'])) {
+				echo "
+					<a href='news.php?p=1'><div id='resetDateButton' class='admSubmit'>—бросить дату</div></a>
+				";
+			}
+
+			echo "
 				</div>
 			";
 		}

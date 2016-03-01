@@ -662,7 +662,10 @@
         </div>
         
         <div id='newsMain'>
-        	<center>
+			<div id='help'>
+				<a href='help.php' class='noBorder'><span class='catalogueItemTextDecorated'>Помощь</span></a>
+			</div>
+			<center>
             	<span class='bigHeaderStyle'>Последние новости</span>
                 <br /><br />
             </center>

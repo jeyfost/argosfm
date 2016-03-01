@@ -128,6 +128,7 @@ h1, h2, h3, h4 {margin-top: 0px; display: inline;}
 #fastSearch {position: absolute; background-color: #f8f8f8; width: 410px; z-index: 20; padding: 10px; display: none; border: 1px solid #dddddd;}
 #loginSubmit {float: left;}
 #loginCancel {float: right;}
+#help {position: absolute; top: 20px; right: 22px;}
 
 /*catalogue.php*/
 #cataloguePoints {position: relative; float: left; width: 270px; height: auto; background-color: #ffffff; padding: 15px;}
@@ -188,6 +189,7 @@ h1, h2, h3, h4 {margin-top: 0px; display: inline;}
 #content_news_inner a, #content_news_inner ul, #content_news_inner ul li, #content_news_inner ul li a {color: #df4e47;}
 #deleteNewsRed {position: relative; float: right; left: -10px;}
 #newsAdminButtons {position: relative; float: right; margin-top: -80px;}
+#resetDateButton {position: relative; float: right; margin-top: 10px; margin-right: 60px;}
 
 /*admin index.php*/
 #adminAuth {position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 300px; height: 240px; margin: auto; background-color: #ffffff; padding: 20px;}
