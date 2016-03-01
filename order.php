@@ -1034,10 +1034,10 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 							switch($_SESSION['deleteFromBasket'])
 							{
 								case 'ok':
-									echo "<span class='basicGreen'>Товар успешно удалён из вашей корзины.</span>";
+									echo "<div class='notificationOK'><span class='basicGreen'>Товар успешно удалён из вашей корзины.</span></div>";
 									break;
 								case 'failed':
-									echo "<span class='basicGreen'>При удалении товара из корзины произошла ошибка. Попробуйте снова.</span>";
+									echo "<div class='notification'><span class='basicGreen'>При удалении товара из корзины произошла ошибка. Попробуйте снова.</span></div>";
 									break;
 								default:
 									break;
@@ -1051,13 +1051,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 							switch($_SESSION['clearBasket'])
 							{
 								case 'ok':
-									echo "<span class='basicGreen'>Корзина очищена.</span>";
+									echo "<div class='notificationOK'><span class='basicGreen'>Корзина очищена.</span></div>";
 									break;
 								case 'failed':
-									echo "<span class='basicGreen'>При очистке корзины произошла ошибка. Попробуйте снова.</span>";
+									echo "<div class='notification'><span class='basicGreen'>При очистке корзины произошла ошибка. Попробуйте снова.</span></div>";
 									break;
 								case 'empty':
-									echo "<span class='basicGreen'>Коризна не может быть очищена, так как уже пуста.</span>";
+									echo "<div class='notification'><span class='basicGreen'>Коризна не может быть очищена, так как уже пуста.</span></div>";
 									break;
 								default:
 									break;	
