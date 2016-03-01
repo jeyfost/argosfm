@@ -884,7 +884,7 @@
 										<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><img src='pictures/icons/".$fa_categories['picture']."' class='noBorder' id='i".$fa_categories['id']."' /></a>
 									</div>
 									<div class='categoryName'>
-										<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><span class='basic' id='n".$fa_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$fa_categories['id']."\", \"n".$fa_categories['id']."\", \"".$fa_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$fa_categories['id']."\", \"n".$fa_categories['id']."\", \"".$fa_categories['picture']."\"); document.getElementById(\"n".$fa_categories['id']."\").style.color = \"#3f3f3f\"'>".$fa_categories['name']."</span></a>
+										<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><h2 class='basic' id='n".$fa_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$fa_categories['id']."\", \"n".$fa_categories['id']."\", \"".$fa_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$fa_categories['id']."\", \"n".$fa_categories['id']."\", \"".$fa_categories['picture']."\"); document.getElementById(\"n".$fa_categories['id']."\").style.color = \"#3f3f3f\"'>".$fa_categories['name']."</h2></a>
 									</div>
 								</div>
 							";
@@ -903,7 +903,7 @@
 											<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><img src='pictures/icons/".$fa_categories['picture']."' class='noBorder' id='i".$fa_categories['id']."' /></a>
 										</div>
 										<div class='categoryName'>
-											<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><span class='basic' id='n".$fa_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$fa_categories['id']."\", \"n".$fa_categories['id']."\", \"".$fa_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$fa_categories['id']."\", \"n".$fa_categories['id']."\", \"".$fa_categories['picture']."\"); document.getElementById(\"n".$fa_categories['id']."\").style.color = \"#3f3f3f\"'>".$fa_categories['name']."</span></a>
+											<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><h2 class='basic' id='n".$fa_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$fa_categories['id']."\", \"n".$fa_categories['id']."\", \"".$fa_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$fa_categories['id']."\", \"n".$fa_categories['id']."\", \"".$fa_categories['picture']."\"); document.getElementById(\"n".$fa_categories['id']."\").style.color = \"#3f3f3f\"'>".$fa_categories['name']."</h2></a>
 										</div>
 									</div>
 								";
@@ -916,7 +916,7 @@
 											<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><img src='pictures/icons/".$fa_categories['picture_red']."' class='noBorder' id='i".$fa_categories['id']."' /></a>
 										</div>
 										<div class='categoryName'>
-											<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><span class='basicRed' id='n".$fa_categories['id']."'>".$fa_categories['name']."</span></a>
+											<a href='catalogue.php?type=fa&category=".$fa_categories['id']."' class='noBorder'><h2 class='basicRed' id='n".$fa_categories['id']."'>".$fa_categories['name']."</h2></a>
 										</div>
 										<div class='subcategoriesBlock'>
 								";
@@ -928,7 +928,7 @@
 									{
 										echo "
 											<br />
-											<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicHover'>".$subcategories['name']."</span></a>
+											<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicHover'>".$subcategories['name']."</h3></a>
 										";
 									}
 								}
@@ -945,14 +945,14 @@
 												{
 													echo "
 														<br />
-														<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicHover'>".$subcategories['name']."</span></a>
+														<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicHover'>".$subcategories['name']."</h3></a>
 													";
 												}
 												else
 												{
 													echo "
 														<br />
-														<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicRed'>".$subcategories['name']."</span></a>
+														<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicRed'>".$subcategories['name']."</h3></a>
 													";
 													
 													$s2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
@@ -969,7 +969,7 @@
 															{
 																echo "
 																	<br />
-																	<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicHover'>".$s2['name']."</span></a>
+																	<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicHover'>".$s2['name']."</h4></a>
 																";
 															}
 															else
@@ -978,14 +978,14 @@
 																{
 																	echo "
 																		<br />
-																		<span class='basicRed' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicRed'>".$s2['name']."</span></a>
+																		<span class='basicRed' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicRed'>".$s2['name']."</h4></a>
 																	";
 																}
 																else
 																{
 																	echo "
 																		<br />
-																		<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicHover'>".$s2['name']."</span></a>
+																		<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicHover'>".$s2['name']."</h4></a>
 																	";
 																}
 															}
@@ -1036,7 +1036,7 @@
 										<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><img src='pictures/icons/".$em_categories['picture']."' class='noBorder' id='i".$em_categories['id']."' /></a>
 									</div>
 									<div class='categoryName'>
-										<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><span class='basic' id='n".$em_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$em_categories['id']."\", \"n".$em_categories['id']."\", \"".$em_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$em_categories['id']."\", \"n".$em_categories['id']."\", \"".$em_categories['picture']."\"); document.getElementById(\"n".$em_categories['id']."\").style.color = \"#3f3f3f\"'>".$em_categories['name']."</span></a>
+										<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><h2 class='basic' id='n".$em_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$em_categories['id']."\", \"n".$em_categories['id']."\", \"".$em_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$em_categories['id']."\", \"n".$em_categories['id']."\", \"".$em_categories['picture']."\"); document.getElementById(\"n".$em_categories['id']."\").style.color = \"#3f3f3f\"'>".$em_categories['name']."</h2></a>
 									</div>
 								</div>
 							";
@@ -1055,7 +1055,7 @@
 											<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><img src='pictures/icons/".$em_categories['picture']."' class='noBorder' id='i".$em_categories['id']."' /></a>
 										</div>
 										<div class='categoryName'>
-											<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><span class='basic' id='n".$em_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$em_categories['id']."\", \"n".$em_categories['id']."\", \"".$em_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$em_categories['id']."\", \"n".$em_categories['id']."\", \"".$em_categories['picture']."\"); document.getElementById(\"n".$em_categories['id']."\").style.color = \"#3f3f3f\"'>".$em_categories['name']."</span></a>
+											<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><h2 class='basic' id='n".$em_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$em_categories['id']."\", \"n".$em_categories['id']."\", \"".$em_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$em_categories['id']."\", \"n".$em_categories['id']."\", \"".$em_categories['picture']."\"); document.getElementById(\"n".$em_categories['id']."\").style.color = \"#3f3f3f\"'>".$em_categories['name']."</h2></a>
 										</div>
 									</div>
 								";
@@ -1068,7 +1068,7 @@
 											<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><img src='pictures/icons/".$em_categories['picture_red']."' class='noBorder' id='i".$em_categories['id']."' /></a>
 										</div>
 										<div class='categoryName'>
-											<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><span class='basicRed' id='n".$em_categories['id']."'>".$em_categories['name']."</span></a>
+											<a href='catalogue.php?type=em&category=".$em_categories['id']."' class='noBorder'><h2 class='basicRed' id='n".$em_categories['id']."'>".$em_categories['name']."</h2></a>
 										</div>
 										<div class='subcategoriesBlock'>
 								";
@@ -1080,7 +1080,7 @@
 									{
 										echo "
 											<br />
-											<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicHover'>".$subcategories['name']."</span></a>
+											<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicHover'>".$subcategories['name']."</h3></a>
 										";
 									}
 								}
@@ -1095,14 +1095,14 @@
 											{
 												echo "
 													<br />
-													<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicHover'>".$subcategories['name']."</span></a>
+													<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicHover'>".$subcategories['name']."</h3></a>
 												";
 											}
 											else
 											{
 												echo "
 													<br />
-													<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicRed'>".$subcategories['name']."</span></a>
+													<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicRed'>".$subcategories['name']."</h3></a>
 												";
 												
 												$s2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
@@ -1119,7 +1119,7 @@
 															{
 																echo "
 																	<br />
-																	<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicHover'>".$s2['name']."</span></a>
+																	<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicHover'>".$s2['name']."</h4></a>
 																";
 															}
 															else
@@ -1128,14 +1128,14 @@
 																{
 																	echo "
 																		<br />
-																		<span class='basicRed' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicRed'>".$s2['name']."</span></a>
+																		<span class='basicRed' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicRed'>".$s2['name']."</h4></a>
 																	";
 																}
 																else
 																{
 																	echo "
 																		<br />
-																		<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicHover'>".$s2['name']."</span></a>
+																		<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicHover'>".$s2['name']."</h4></a>
 																	";
 																}
 															}
@@ -1185,7 +1185,7 @@
 										<a href='catalogue.php?type=ca&category=".$ca_categories['id']."' class='noBorder'><img src='pictures/icons/".$ca_categories['picture']."' class='noBorder' id='i".$ca_categories['id']."' /></a>
 									</div>
 									<div class='categoryName'>
-										<a href='catalogue.php?type=ca&category=".$ca_categories['id']."' class='noBorder'><span class='basic' id='n".$ca_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$ca_categories['id']."\", \"n".$ca_categories['id']."\", \"".$ca_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$ca_categories['id']."\", \"n".$ca_categories['id']."\", \"".$ca_categories['picture']."\"); document.getElementById(\"n".$ca_categories['id']."\").style.color = \"#3f3f3f\"'>".$ca_categories['name']."</span></a>
+										<a href='catalogue.php?type=ca&category=".$ca_categories['id']."' class='noBorder'><h2 class='basic' id='n".$ca_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$ca_categories['id']."\", \"n".$ca_categories['id']."\", \"".$ca_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$ca_categories['id']."\", \"n".$ca_categories['id']."\", \"".$ca_categories['picture']."\"); document.getElementById(\"n".$ca_categories['id']."\").style.color = \"#3f3f3f\"'>".$ca_categories['name']."</h2></a>
 									</div>
 								</div>
 							";
@@ -1204,7 +1204,7 @@
 											<a href='catalogue.php?type=ca&category=".$ca_categories['id']."' class='noBorder'><img src='pictures/icons/".$ca_categories['picture']."' class='noBorder' id='i".$ca_categories['id']."' /></a>
 										</div>
 										<div class='categoryName'>
-											<a href='catalogue.php?type=fa&category=".$ca_categories['id']."' class='noBorder'><span class='basic' id='n".$ca_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$ca_categories['id']."\", \"n".$ca_categories['id']."\", \"".$ca_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$ca_categories['id']."\", \"n".$ca_categories['id']."\", \"".$ca_categories['picture']."\"); document.getElementById(\"n".$ca_categories['id']."\").style.color = \"#3f3f3f\"'>".$ca_categories['name']."</span></a>
+											<a href='catalogue.php?type=fa&category=".$ca_categories['id']."' class='noBorder'><h2 class='basic' id='n".$ca_categories['id']."' onmouseover='categoryColor(\"1\", \"i".$ca_categories['id']."\", \"n".$ca_categories['id']."\", \"".$ca_categories['picture_red']."\")' onmouseout='categoryColor(\"0\", \"i".$ca_categories['id']."\", \"n".$ca_categories['id']."\", \"".$ca_categories['picture']."\"); document.getElementById(\"n".$ca_categories['id']."\").style.color = \"#3f3f3f\"'>".$ca_categories['name']."</h2></a>
 										</div>
 									</div>
 								";
@@ -1217,7 +1217,7 @@
 											<a href='catalogue.php?type=ca&category=".$ca_categories['id']."' class='noBorder'><img src='pictures/icons/".$ca_categories['picture_red']."' class='noBorder' id='i".$ca_categories['id']."' /></a>
 										</div>
 										<div class='categoryName'>
-											<a href='catalogue.php?type=ca&category=".$ca_categories['id']."' class='noBorder'><span class='basicRed' id='n".$ca_categories['id']."'>".$ca_categories['name']."</span></a>
+											<a href='catalogue.php?type=ca&category=".$ca_categories['id']."' class='noBorder'><h2 class='basicRed' id='n".$ca_categories['id']."'>".$ca_categories['name']."</h2></a>
 										</div>
 										<div class='subcategoriesBlock'>
 								";
@@ -1229,7 +1229,7 @@
 									{
 										echo "
 											<br />
-											<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicHover'>".$subcategories['name']."</span></a>
+											<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicHover'>".$subcategories['name']."</h3></a>
 										";
 									}
 								}
@@ -1246,14 +1246,14 @@
 												{
 													echo "
 														<br />
-														<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicHover'>".$subcategories['name']."</span></a>
+														<span class='basic' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicHover'>".$subcategories['name']."</h3></a>
 													";
 												}
 												else
 												{
 													echo "
 														<br />
-														<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><span class='basicRed'>".$subcategories['name']."</span></a>
+														<span class='basicRed' id='s".$subcategories['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$subcategories['id']."&p=1' class='noBorder'><h3 class='basicRed'>".$subcategories['name']."</h3></a>
 													";
 													
 													$s2CountResult = $mysqli->query("SELECT COUNT(id) FROM subcategories2 WHERE subcategory = '".$_REQUEST['subcategory']."'");
@@ -1270,7 +1270,7 @@
 															{
 																echo "
 																	<br />
-																	<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicHover'>".$s2['name']."</span></a>
+																	<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicHover'>".$s2['name']."</h4></a>
 																";
 															}
 															else
@@ -1279,14 +1279,14 @@
 																{
 																	echo "
 																		<br />
-																		<span class='basicRed' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicRed'>".$s2['name']."</span></a>
+																		<span class='basicRed' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicRed'>".$s2['name']."</h4></a>
 																	";
 																}
 																else
 																{
 																	echo "
 																		<br />
-																		<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><span class='basicHover'>".$s2['name']."</span></a>
+																		<span class='basic' id='s2".$s2['id']."'>- </span><a href='catalogue.php?type=".$_REQUEST['type']."&category=".$_REQUEST['category']."&subcategory=".$_REQUEST['subcategory']."&subcategory2=".$s2['id']."&p=1' class='noBorder'><h4 class='basicHover'>".$s2['name']."</h4></a>
 																	";
 																}
 															}
@@ -1384,13 +1384,13 @@
 						switch($_REQUEST['type'])
 						{
 							case 'fa':
-								echo "<span class='headerStyle'>Мебельная фурнитура</span><br /><br /><br />";
+								echo "<h1 class='headerStyle'>Мебельная фурнитура</h1><br /><br /><br />";
 								break;
 							case 'em':
-								echo "<span class='headerStyle'>Кромочные материалы</span><br /><br /><br />";
+								echo "<h1 class='headerStyle'>Кромочные материалы</h1><br /><br /><br />";
 								break;
 							case 'ca':
-								echo "<span class='headerStyle'>Аксессуары для штор</span><br /><br /><br />";
+								echo "<h1 class='headerStyle'>Аксессуары для штор</h1><br /><br /><br />";
 								break;
 							default:
 								break;
@@ -1402,18 +1402,18 @@
 							echo "
 								<div class='goodBlock'>
 									<div class='picture'>
-										<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' /></a>
+										<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' alt='".$goods['name']."' /></a>
 									</div>
 									<div class='goodContent'>
 										<div class='goodTopLine'>
 											<div class='redStripe'></div>
 											<div class='goodName'>
-												<span class='goodStyle'>".$goods['name']."</span>
+												<h2 class='goodStyle'>".$goods['name']."</h2>
 											</div>
 										</div>
 										<div class='goodDescription'>
 											<div class='goodDescriptionLeft'>
-												<span class='basic'>".$goods['description']."</span>
+												<h3 class='basic'>".$goods['description']."</h3>
 												<br /><br />
 												<div>
 													<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
@@ -1460,7 +1460,7 @@
 						{
 							$cNameResult = $mysqli->query("SELECT name FROM categories_new WHERE id = '".$_REQUEST['category']."'");
 							$cName = $cNameResult->fetch_array(MYSQLI_NUM);
-							echo "<span class='headerStyle'>".$cName[0]."</span><br /><br /><br />";
+							echo "<h1 class='headerStyle'>".$cName[0]."</h1><br /><br /><br />";
 							
 							$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE category = '".$_REQUEST['category']."' ORDER BY RAND() LIMIT ".$start.", 10");
 							while($goods = $goodsResult->fetch_assoc())
@@ -1468,18 +1468,18 @@
 								echo "
 									<div class='goodBlock'>
 										<div class='picture'>
-											<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' /></a>
+											<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' alt='".$goods['name']."' /></a>
 										</div>
 										<div class='goodContent'>
 											<div class='goodTopLine'>
 												<div class='redStripe'></div>
 												<div class='goodName'>
-													<span class='goodStyle'>".$goods['name']."</span>
+													<h2 class='goodStyle'>".$goods['name']."</h2>
 												</div>
 											</div>
 											<div class='goodDescription'>
 												<div class='goodDescriptionLeft'>
-													<span class='basic'>".$goods['description']."</span>
+													<h3 class='basic'>".$goods['description']."</h3>
 													<br /><br />
 													<div>
 														<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
@@ -1531,7 +1531,7 @@
 								{
 									$sNameResult = $mysqli->query("SELECT name FROM subcategories_new WHERE id = '".$_REQUEST['subcategory']."'");
 									$sName = $sNameResult->fetch_array(MYSQLI_NUM);
-									echo "<span class='headerStyle'>".$sName[0]."</span><br /><br /><br />";
+									echo "<h1 class='headerStyle'>".$sName[0]."</h1><br /><br /><br />";
 									
 									$count = 0;
 									$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['subcategory']."' ORDER BY RAND() LIMIT ".$start.", 10");
@@ -1542,18 +1542,18 @@
 										echo "
 											<div class='goodBlock'>
 												<div class='picture'>
-													<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' /></a>
+													<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' alt='".$goods['name']."' /></a>
 												</div>
 												<div class='goodContent'>
 													<div class='goodTopLine'>
 														<div class='redStripe'></div>
 														<div class='goodName'>
-															<span class='goodStyle'>".$goods['name']."</span>
+															<h2 class='goodStyle'>".$goods['name']."</h2>
 														</div>
 													</div>
 													<div class='goodDescription'>
 														<div class='goodDescriptionLeft'>
-															<span class='basic'>".$goods['description']."</span>
+															<h3 class='basic'>".$goods['description']."</h3>
 															<br /><br />
 															<div>
 																<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
@@ -1603,7 +1603,7 @@
 								{
 									$s2NameResult = $mysqli->query("SELECT name FROM subcategories2 WHERE id = '".$_REQUEST['subcategory2']."'");
 									$s2Name = $s2NameResult->fetch_array(MYSQLI_NUM);
-									echo "<span class='headerStyle'>".$s2Name[0]."</span><br /><br /><br />";
+									echo "<h1 class='headerStyle'>".$s2Name[0]."</h1><br /><br /><br />";
 									
 									$count = 0;
 									$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory2 = '".$_REQUEST['subcategory2']."' ORDER BY priority LIMIT ".$start.", 10");
@@ -1614,18 +1614,18 @@
 										echo "
 											<div class='goodBlock'>
 												<div class='picture'>
-													<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' /></a>
+													<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' alt='".$goods['name']."' /></a>
 												</div>
 												<div class='goodContent'>
 													<div class='goodTopLine'>
 														<div class='redStripe'></div>
 														<div class='goodName'>
-															<span class='goodStyle'>".$goods['name']."</span>
+															<h2 class='goodStyle'>".$goods['name']."</h2>
 														</div>
 													</div>
 													<div class='goodDescription'>
 														<div class='goodDescriptionLeft'>
-															<span class='basic'>".$goods['description']."</span>
+															<h3 class='basic'>".$goods['description']."</h3>
 															<br /><br />
 															<div>
 																<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
@@ -1676,7 +1676,7 @@
 							{
 								$sNameResult = $mysqli->query("SELECT name FROM subcategories_new WHERE id = '".$_REQUEST['subcategory']."'");
 								$sName = $sNameResult->fetch_array(MYSQLI_NUM);
-								echo "<span class='headerStyle'>".$sName[0]."</span><br /><br /><br />";
+								echo "<h1 class='headerStyle'>".$sName[0]."</h1><br /><br /><br />";
 									
 								$count = 0;
 								$goodsResult = $mysqli->query("SELECT * FROM catalogue_new WHERE subcategory = '".$_REQUEST['subcategory']."' ORDER BY priority LIMIT ".$start.", 10");
@@ -1687,18 +1687,18 @@
 									echo "
 										<div class='goodBlock'>
 											<div class='picture'>
-												<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' /></a>
+												<a href='pictures/catalogue/big/".$goods['picture']."' class='noBorder' rel='lightbox'><img src='pictures/catalogue/small/".$goods['small']."' class='noBorder' alt='".$goods['name']."' /></a>
 											</div>
 											<div class='goodContent'>
 												<div class='goodTopLine'>
 													<div class='redStripe'></div>
 													<div class='goodName'>
-														<span class='goodStyle'>".$goods['name']."</span>
+														<h2 class='goodStyle'>".$goods['name']."</span>
 													</div>
 												</div>
 												<div class='goodDescription'>
 													<div class='goodDescriptionLeft'>
-														<span class='basic'>".$goods['description']."</span>
+														<h3 class='basic'>".$goods['description']."</span>
 														<br /><br />
 														<div>
 															<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
