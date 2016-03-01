@@ -681,11 +681,11 @@
 					
 					if($newsCount == 1)
 					{
-						echo "<a href='news.php?id=".$news['id']."' clas='noBorder'><div class='newsEntry' title='Прочитать новость'>";
+						echo "<a href='news.php?id=".$news['id']."' class='noBorder'><div class='newsEntry' title='Прочитать новость'>";
 					}
 					else
 					{
-						echo "<a href='news.php?id=".$news['id']."' clas='noBorder'><div class='newsEntry' style='margin-top: 10px;' title='Прочитать новость'>";
+						echo "<a href='news.php?id=".$news['id']."' class='noBorder'><div class='newsEntry' style='margin-top: 10px;' title='Прочитать новость'>";
 					}
 					echo "
 							<span class='newsHeadingFont'>".$news['header']."</span>

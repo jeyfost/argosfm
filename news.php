@@ -140,7 +140,6 @@
     <script type='text/javascript' src='js/ajax.js'></script>
     <script type='text/javascript' src='js/functions.js'></script>
     <script type='text/javascript' src='js/shadowbox/source/shadowbox.js'></script>
-	<script type='text/javascript' src='js/catalogue.js'></script>
 
     <?php
     	if(!isset($_SESSION['background']))
@@ -712,11 +711,11 @@
 						
 						if($newsCount == 1)
 						{
-							echo "<a href='news.php?id=".$news['id']."' clas='noBorder'><div class='newsEntryFull' title='Прочитать новость'>";
+							echo "<a href='news.php?id=".$news['id']."' class='noBorder'><div class='newsEntryFull' title='Прочитать новость'>";
 						}
 						else
 						{
-							echo "<a href='news.php?id=".$news['id']."' clas='noBorder'><div class='newsEntryFull' style='margin-top: 10px;' title='Прочитать новость'>";
+							echo "<a href='news.php?id=".$news['id']."' class='noBorder'><div class='newsEntryFull' style='margin-top: 10px;' title='Прочитать новость'>";
 						}
 						echo "
 								<span class='newsHeadingFont'>".$news['header']."</span>
@@ -739,7 +738,7 @@
 
 					echo "
 						<center><span class='bigHeaderStyleRed'>".$newsFull['header']."</span></center>
-						<br r/><br />
+						<br /><br />
 						<div id='newsPath'>
 							<span class='catalogueItemTextItalic'><a href='news.php' class='noBorder' style='color: #3f3f3f;'>Новости</a></span><span class='newsPathText'> > </span><span class='catalogueItemTextItalic'><a href='news.php?id=".$newsFull['id']."' class='noBorder' style='color: #3f3f3f;'>".$newsFull['header']."</a></span>
 						</div>
