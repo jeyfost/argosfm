@@ -20,18 +20,14 @@
 
 html {background-color: #dddddd;}
 
-.toCatalogueButton:hover {background-color: #b3413c;}
-#indexNewsButtons .catalogueItemTextDecorated:hover {color: #b3413c;}
 .button:hover {background-color: #b3413c; color: #ffffff;}
-.headerStyleRedHover:hover, catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover {color: #b3413c;}
+.headerStyleRedHover:hover, .catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover, #indexNewsButtons .catalogueItemTextDecorated:hover {color: #b3413c;}
 .headerStyleHover:hover, .basicHover:hover {color: #df4e47;}
-.catalogueItemTextItalic:hover, .redItalicHover:hover, #content_news_inner a:hover, ul .basicBigRed:hover {text-decoration: underline;}
+.catalogueItemTextItalic:hover, .redItalicHover:hover, #content_news_inner a:hover, ul .basicBigRed:hover, .admULFont:hover, .admUL li:hover {text-decoration: underline;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
-.admULFont:hover, .admUL li:hover {text-decoration: underline;}
 .admSubmit:hover, .windowSubmit:hover {color: #df4e47; background-color: #dddddd;}
-.admSelect:hover, .admInput:hover, .windowInput:hover {background-color: #c0c0c0;}
-
-#toAdminButton:hover, #backToAdminButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover {background-color: #b3413c;}
+.admSelect:hover, .admInput:hover, .windowInput:hover, #searchField:hover {background-color: #c0c0c0;}
+#toAdminButton:hover, #backToAdminButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover, .toCatalogueButton:hover {background-color: #b3413c;}
 
 .tableStyle[title]:hover:after {
 	content: attr(title);
