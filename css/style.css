@@ -339,7 +339,7 @@ a h1 {text-decoration: none;}
 .searchItem {width: 970px; min-height: 120px; margin-bottom: 150px;}
 .searchContent {float: right; width: 850px;}
 .searchTopLine {position: relative; float: right; width: 850px; height: 30px;}
-.searchName {position: relative; float: right; width: 830px; height: 30px; line-height: 30px;}
+.searchName {position: relative; float: right; width: 820px; height: 30px; line-height: 30px; background-color: #ececec; padding-left: 10px;}
 .searchDescription {position: relative; float: right; width: 830px; margin-top: 10px;}
 .searchSketch {position: relative; float: right; width: 830px; margin-top: 10px;}
 .colorItem {width: 600px; height: auto; margin-bottom: 20px;}
