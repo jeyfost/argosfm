@@ -7,15 +7,6 @@
 	{
 		$login = stripslashes(htmlspecialchars($_POST['recovery']));
 		
-		$symbols = array('1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', 'a', 's', 'd', 'f', 'g', 'h', 'h', 'j', 'k', 'l', 'z', 'x', 'c', 'v', 'b', 'n', 'm', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M');
-		$password = '';
-		
-		for($i = 0; $i < 10; $i++)
-		{
-			$number = mt_rand(0, count($symbols) - 1);
-			$password .= $symbols[$number];
-		}
-		
 		$userResult = $mysqli->query("SELECT * FROM users WHERE login = '".$login."'");
 		$user = $userResult->fetch_assoc();
 		
@@ -26,8 +17,8 @@
 			
 			if(!empty($user))
 			{
-				sendMail($user['email'], $password);
-				$mysqli->query("UPDATE users SET password = '".md5($password)."' WHERE id = '".$user['id']."'");
+				sendMail($user['email'], $user['hash']);
+
 				$_SESSION['recovery'] = 'sent';
 				$_SESSION['recovery_email'] = $user['email'];
 				if(isset($_SESSION['last_page']))
@@ -54,8 +45,8 @@
 		}
 		else
 		{
-			sendMail($user['email'], $password);
-			$mysqli->query("UPDATE users SET password = '".md5($password)."' WHERE id = '".$user['id']."'");
+			sendMail($user['email'], $user['hash']);
+
 			$_SESSION['recovery'] = 'sent';
 			$_SESSION['recovery_email'] = $user['email'];
 			if(isset($_SESSION['last_page']))
@@ -81,12 +72,12 @@
 		}
 	}
 
-function sendMail($address, $new_password)
+function sendMail($address, $hash)
 {
 	$to = $address;
 
 	$subject = "Восстановление пароля на сайте Аргос-ФМ";
-	$message = "Ваш пароль на сайте <a href='http://argos-fm.by/'>argos-fm.by</a> был изменён.<br />Новый пароль: <b>".$new_password."</b><br /><br />Изменить пароль можно в <a href='http://argos-fm.by/settings.php'>личном кабинете</a>, предварительно авторизовавшись на сайте.";
+	$message = "Здравствуйте!<br /><br />От вашего имени поступил запрос на изменение пароля на сайте <a href='http://argos-fm.by/'>argos-fm.by</a> .<br /><br />Для изменения пароля перейдите по следующему адресу: <a href='http://argos-fm.by/scripts/password.php?hash=".$hash."'>изменить ваш пароль</a>.<br /><br />Если вы не отправляли запрос на изменение пароля, то ничего делать не нужно. Можно просто удалить это письмо.";
 
 	$headers = "Content-type: text/html; charset=windows-1251 \r\n";
 	$headers .= "From: Администрация сайта Аргос-ФМ <no-reply@argos-fm.by>\r\n";
