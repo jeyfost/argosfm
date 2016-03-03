@@ -326,6 +326,13 @@ $(document).mouseup(function (e) {
     }
 });
 
+$(document).mouseup(function (e) {
+    var container = $('#newsFastSearch');
+    if (container.has(e.target).length === 0){
+        container.hide();
+    }
+});
+
 $(document).ready(function() {
 	$('#userLoginInput').keyup(function() {
 		loginCheck();
@@ -517,3 +524,39 @@ function phoneCheck() {
 			});
 		}
 }
+
+$(document).ready(function() {
+	$('#newsSearchInput').keyup(function() {
+		var query = $('#newsSearchInput').val();
+
+		if(query != "" && query != "Найти новость...") {
+			$.ajax({
+				type: 'POST',
+				url: 'scripts/ajaxSearchNews.php',
+				data: {"query": query},
+				success: function(response) {
+					$('#newsFastSearch').css('display', 'block');
+					$('#newsFastSearch').html(response);
+				}
+			});
+		}
+	});
+});
+
+$(document).ready(function() {
+	$('#newsSearchInput').click(function() {
+		var query = $('#newsSearchInput').val();
+
+		if(query != "" && query != "Найти новость...") {
+			$.ajax({
+				type: 'POST',
+				url: 'scripts/ajaxSearchNews.php',
+				data: {"query": query},
+				success: function(response) {
+					$('#newsFastSearch').css('display', 'block');
+					$('#newsFastSearch').html(response);
+				}
+			});
+		}
+	});
+});

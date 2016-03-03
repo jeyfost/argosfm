@@ -140,6 +140,7 @@
     <script type='text/javascript' src='js/ajax.js'></script>
     <script type='text/javascript' src='js/functions.js'></script>
     <script type='text/javascript' src='js/shadowbox/source/shadowbox.js'></script>
+	<script type='text/javascript' src='js/catalogue.js'></script>
 
     <?php
     	if(!isset($_SESSION['background']))
@@ -685,6 +686,12 @@
     	<div id='content_news_inner'>
             <span class='bigHeaderStyle'>Новости</span>
             <div style='height: 20px;'></div>
+			<div id='newsSearch'>
+				<form id='newsSearchForm'>
+					<input type='text' class='admInput' id='newsSearchInput' name='newsSearchInput' placeholder='Найти новость...' onfocus='if(this.value == "Найти новость...") {this.value = "";}' onblur='if(this.value == "") {this.value = "Найти новость..."}' value='Найти новость...' />
+				</form>
+			</div>
+			<div id='newsFastSearch' style='right: 30px; top: 100px;'></div>
             <?php
             	if(empty($_REQUEST['id']))
             	{
@@ -1116,11 +1123,18 @@
     <script type='text/javascript'>
 		$(window).load(function(e) {
 			var fullHeight = $('#content_news').offset().top + $('#content_news').height() + 50;
-			var counter = 0;
 	
 			if($('footer').offset().top < fullHeight) {
 				$('footer').offset({top: fullHeight});
-			}  
+			}
+
+			var newsBottom = parseInt($('#content_news').offset().top + $('#content_news').height());
+			var calendarFull = parseInt($('#calendar').offset().top + $('#calendar').height());
+
+			if(newsBottom < parseInt(calendarFull + 500)) {
+				$('#content_news').height(parseInt(calendarFull + 50));
+				$('#indexNewsButtons').offset({top: parseInt($('#indexNewsButtons').offset().top + 130)});
+			}
         });
     </script>
     
