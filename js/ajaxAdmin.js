@@ -265,7 +265,7 @@ $(document).ready(function() {
   $('#userSearchInput').keyup(function() {
     var search = $('#userSearchInput').val();
     if(search != "Поиск..." && search.length > 0) {
-      $('#admSearchResult').css('display', 'block');
+      $('#admSearchResult').css('display', 'inline-block');
       $.ajax({
         type: 'POST',
         url: '../scripts/admin/ajaxUserSearch.php',
@@ -296,7 +296,7 @@ $(document).ready(function() {
   $('#userSearchInput').focus(function() {
     var search = $('#userSearchInput').val();
     if(search != "Поиск..." && search.length > 0) {
-      $('#admSearchResult').css('display', 'block');
+      $('#admSearchResult').css('display', 'inline-block');
       $.ajax({
         type: 'POST',
         url: '../scripts/admin/ajaxUserSearch.php',
@@ -324,7 +324,7 @@ $(document).ready(function() {
   $('#newsSearchInput').keyup(function() {
     var search = $('#newsSearchInput').val();
     if(search != "Поиск..." && search.length > 0) {
-      $('#admSearchResult').css('display', 'block');
+      $('#admSearchResult').css('display', 'inline-block');
       $.ajax({
         type: 'POST',
         url: '../scripts/admin/ajaxNewsSearch.php',
@@ -355,7 +355,7 @@ $(document).ready(function() {
   $('#newsSearchInput').focus(function() {
     var search = $('#newsSearchInput').val();
     if(search != "Поиск..." && search.length > 0) {
-      $('#admSearchResult').css('display', 'block');
+      $('#admSearchResult').css('display', 'inline-block');
       $.ajax({
         type: 'POST',
         url: '../scripts/admin/ajaxNewsSearch.php',

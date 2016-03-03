@@ -4900,6 +4900,19 @@
         }
     ?>
 
+    <script type='text/javascript'>
+        $(window).load(function() {
+            if(document.getElementById('admPageNumbers')) {
+                var contentBottom = $('#admContent').offset().top + $('#admContent').height();
+                var numbersBottom = $('#admPageNumbers').offset().top + $('#admPageNumbers').height();
+
+                if(contentBottom < numbersBottom) {
+                    $('#admContent').height(parseInt(numbersBottom - 100))
+                }
+            }
+        });
+    </script>
+
 </body>
 
 </html>
