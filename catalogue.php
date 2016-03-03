@@ -1382,7 +1382,7 @@
 											</div>
 										</div>
 						";
-						if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1)
+						if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1 and $user['activated'] == 1)
 						{
 							echo "
 											<div class='goodDescriptionRight'>
@@ -1460,7 +1460,7 @@
 												</div>
 											</div>
 							";
-							if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1)
+							if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1 and $user['activated'] == 1)
 							{
 								echo "
 												<div class='goodDescriptionRight'>
@@ -1526,7 +1526,7 @@
 													</div>
 												</div>
 								";
-								if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1)
+								if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1 and $user['activated'] == 1)
 								{
 									echo "
 												<div class='goodDescriptionRight'>
@@ -1600,7 +1600,7 @@
 															</div>
 														</div>
 										";
-										if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1)
+										if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1 and $user['activated'] == 1)
 										{
 											echo "
 														<div class='goodDescriptionRight'>
@@ -1672,7 +1672,7 @@
 															</div>
 														</div>
 											";
-											if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1)
+											if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1 and $user['activated'] == 1)
 											{
 												echo "
 														<div class='goodDescriptionRight'>
@@ -1745,7 +1745,7 @@
 														</div>
 													</div>
 									";
-									if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1)
+									if(isset($_SESSION['userID']) and $_SESSION['userID'] != 1 and $user['activated'] == 1)
 									{
 										echo "
 													<div class='goodDescriptionRight'>
