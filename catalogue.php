@@ -392,6 +392,7 @@
 	<div id='layout' <?php if((isset($_SESSION['login']) and $_SESSION['login'] != 1) or isset($_SESSION['recovery']) or isset($_SESSION['recovery_final']) or isset($_SESSION['registration']) or isset($_SESSION['activation']) or isset($_SESSION['activationFalse']) or isset($_SESSION['registration_cancel']) or isset($_SESSION['delete']) or isset($_SESSION['basket'])) {echo "style='display: block;'";} else {echo "style='display: none;'";} ?> onclick='resetBlocks();' onmousemove='resizeLayout()' onmousewheel='resizeLayout()'></div>
 
 	<?php
+
 	if(!empty($_SESSION['recovery']) and $_SESSION['recovery'] == 'sent')
 	{
 		echo "
@@ -466,7 +467,7 @@
 		unset($_SESSION['basket']);
 	}
 
-	if(isset($_SESSION['activationFalse']) and $_SESSION['activationFalse'] == 'no')
+	if(isset($_SESSION['activationFalse']))
 	{
 		echo "
 					<div id='notificationWindowOuter' style='display: block;'>
@@ -481,7 +482,6 @@
 						</div>
 					</div>
 				";
-		unset($_SESSION['activationFalse']);
 	}
 
 	if(isset($_SESSION['delete']))
@@ -583,9 +583,9 @@
 					<div id='notificationRegistrationWindowOuter' style='display: block;'>
 						<div id='notificationRegistrationWindow'>
 							<form id='registrationNotificationForm'>
-								<center><span class='headerStyleRed'>Регистрация завершена!</span></center>
+								<center><span class='headerStyleRed'>Регистрация почти завершена!</span></center>
 								<br /><br />
-								<span class='basic'>Поздравляем! Вы успешно зарегистрировались. Теперь вы можете оформлять онлайн-заказы в </span><span class='basicRed'><a href='catalogue.php' class='noBorder'>каталоге</a></span><span class='basic'>.</span>
+								<span class='basic'>Поздравляем! Вы успешно зарегистрировались. Теперь вам необходимо подтвердить ваш электронный адрес. Для этого перейдите по ссылке из письма, которое мы вам отправили.</span>
 								<br /><br />
 								<center><input type='button' class='windowSubmit' onclick='closeNotification()' value='OK' id='loginCancel' style='float: none;' /></center>
 							</form>

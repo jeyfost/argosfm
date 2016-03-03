@@ -292,24 +292,24 @@
 			
 			unset($_SESSION['registration_cancel']);
 		}
-		
+
 		if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 		{
 			echo "
-				<div id='notificationRegistrationWindowOuter' style='display: block;'>
-					<div id='notificationRegistrationWindow'>
-						<form id='registrationNotificationForm'>
-							<center><span class='headerStyleRed'>Регистрация завершена!</span></center>
-							<br /><br />
-							<span class='basic'>Поздравляем! Вы успешно зарегистрировались. Теперь вы можете оформлять онлайн-заказы в </span><span class='basicRed'><a href='catalogue.php' class='noBorder'>каталоге</a></span><span class='basic'>.</span>
-							<br /><br />
-							<center><input type='button' class='windowSubmit' onclick='closeNotification()' value='OK' id='loginCancel' style='float: none;' /></center>
-						</form>
-					</div>
-				</div>
-			";
+						<div id='notificationRegistrationWindowOuter' style='display: block;'>
+							<div id='notificationRegistrationWindow'>
+								<form id='registrationNotificationForm'>
+									<center><span class='headerStyleRed'>Регистрация почти завершена!</span></center>
+									<br /><br />
+									<span class='basic'>Поздравляем! Вы успешно зарегистрировались. Теперь вам необходимо подтвердить ваш электронный адрес. Для этого перейдите по ссылке из письма, которое мы вам отправили.</span>
+									<br /><br />
+									<center><input type='button' class='windowSubmit' onclick='closeNotification()' value='OK' id='loginCancel' style='float: none;' /></center>
+								</form>
+							</div>
+						</div>
+					";
 
-            unset($_SESSION['registration']);
+			unset($_SESSION['registration']);
 		}
 	?>
     	<div id='registrationWindow' onmousemove='resizeLayout()' onmousewheel='resizeLayout()' <?php if(isset($_SESSION['registration']) and $_SESSION['registration'] != 'ok'){echo "style='display: block;'";}else{echo "style='display: none;'";} ?>>
