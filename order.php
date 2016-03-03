@@ -40,6 +40,23 @@
 		unset($_SESSION['quantity']);
 	}
 
+	$userResult = $mysqli->query("SELECT * FROM users WHERE id = '".$_SESSION['userID']."'");
+	$user = $userResult->fetch_assoc();
+
+	if($user['activated'] == 0)
+	{
+		$_SESSION['activationFalse'] = "no";
+
+		if(isset($_SESSION['last_page']))
+		{
+			header("Location: ".$_SESSION['last_page']);
+		}
+		else
+		{
+			header("Location: ../index.php");
+		}
+	}
+
 	if(!empty($_REQUEST['customer']) and $_REQUEST['customer'] != 'all') {
 		$cResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE id = '".$_REQUEST['customer']."'");
 		$c = $cResult->fetch_array(MYSQLI_NUM);
@@ -186,7 +203,7 @@
 
 <body onresize='footerPos()'>
 
-<div id='layout' <?php if((isset($_SESSION['login']) and $_SESSION['login'] != 1) or isset($_SESSION['recovery']) or isset($_SESSION['recovery_final']) or isset($_SESSION['registration']) or isset($_SESSION['activation']) or isset($_SESSION['activationFalse']) or isset($_SESSION['registration_cancel']) or isset($_SESSION['delete']) or isset($_SESSION['basket'])) {echo "style='display: block;'";} else {echo "style='display: none;'";} ?> onclick='resetBlocks();' onmousemove='resizeLayout()' onmousewheel='resizeLayout()'></div>
+<div id='layout' <?php if((isset($_SESSION['login']) and $_SESSION['login'] != 1) or isset($_SESSION['recovery']) or isset($_SESSION['recovery_final']) or isset($_SESSION['registration']) or isset($_SESSION['activation']) or isset($_SESSION['registration_cancel']) or isset($_SESSION['delete']) or isset($_SESSION['basket'])) {echo "style='display: block;'";} else {echo "style='display: none;'";} ?> onclick='resetBlocks();' onmousemove='resizeLayout()' onmousewheel='resizeLayout()'></div>
 
 <?php
 if(!empty($_SESSION['recovery']) and $_SESSION['recovery'] == 'sent')
@@ -261,24 +278,6 @@ if(isset($_SESSION['basket']))
 				</div>
 			";
 	unset($_SESSION['basket']);
-}
-
-if(isset($_SESSION['activationFalse']) and $_SESSION['activationFalse'] == 'no')
-{
-	echo "
-				<div id='notificationWindowOuter' style='display: block;'>
-					<div id='notificationWindow'>
-						<form id='recoveryNotificationForm'>
-							<center><span class='headerStyleRed'>Аккаунт не активирован.</span></center>
-							<br /><br />
-							<span class='basic'>Вы не сможете заходить на страницу личных настроек и совершать онлайн-заказы до тех пор, пока не активация не будет завершена. Для этого проверьте свою электронную почту.</span>
-							<br /><br />
-							<center><input type='button' class='windowSubmit' onclick='closeNotification()' value='OK' id='loginCancel' style='float: none;' /></center>
-						</form>
-					</div>
-				</div>
-			";
-	unset($_SESSION['activationFalse']);
 }
 
 if(isset($_SESSION['delete']))
