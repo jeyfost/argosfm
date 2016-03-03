@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/catalogue.php" afterPath="$PROJECT_DIR$/catalogue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/confirm.php" afterPath="$PROJECT_DIR$/scripts/confirm.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="catalogue.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="catalogue.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/catalogue.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.28158295">
-              <caret line="1392" column="78" selection-start-line="1392" selection-start-column="78" selection-end-line="1392" selection-end-column="78" />
+            <state vertical-scroll-proportion="14.329268">
+              <caret line="1408" column="61" selection-start-line="1408" selection-start-column="61" selection-end-line="1408" selection-end-column="61" />
               <folding>
                 <marker date="1457013628090" expanded="true" signature="635:691" placeholder="SELECT * FRO... users" />
                 <marker date="1457013628090" expanded="true" signature="1101:1166" placeholder="SELECT * FRO... users" />
@@ -291,6 +291,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="confirm.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/confirm.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.16830294">
+              <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+              <folding>
+                <marker date="1457017073198" expanded="true" signature="270:323" placeholder="SELECT * FRO... users" />
+                <marker date="1457017073198" expanded="true" signature="414:478" placeholder="UPDATE users... " />
+                <marker date="1457017073198" expanded="true" signature="527:569" placeholder="SELECT COUNT... mail" />
+                <marker date="1457017073198" expanded="true" signature="527:588" placeholder="SELECT COUNT... mail" />
+                <marker date="1457017073198" expanded="true" signature="1295:1350" placeholder="INSERT INTO mail... " />
+                <marker date="1457017073198" expanded="true" signature="1295:1401" placeholder="INSERT INTO mail... " />
+                <marker date="1457017073198" expanded="true" signature="1456:1509" placeholder="SELECT * FRO... mail" />
+                <marker date="1457017073198" expanded="true" signature="1618:1633" placeholder="UPDATE mail " />
+                <marker date="1457017073198" expanded="true" signature="1618:1652" placeholder="UPDATE mail " />
+                <marker date="1457017073198" expanded="true" signature="1618:1662" placeholder="UPDATE mail " />
+                <marker date="1457017073198" expanded="true" signature="1618:1687" placeholder="UPDATE mail " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -340,7 +362,6 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/scripts/registration.php" />
-        <option value="$PROJECT_DIR$/scripts/confirm.php" />
         <option value="$PROJECT_DIR$/settings.php" />
         <option value="$PROJECT_DIR$/colors.php" />
         <option value="$PROJECT_DIR$/contacts.php" />
@@ -350,6 +371,7 @@
         <option value="$PROJECT_DIR$/search.php" />
         <option value="$PROJECT_DIR$/order.php" />
         <option value="$PROJECT_DIR$/catalogue.php" />
+        <option value="$PROJECT_DIR$/scripts/confirm.php" />
       </list>
     </option>
   </component>
@@ -800,7 +822,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457013239517</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="Запрет добавления товаров в корзину для неактивированных пользователей">
+      <created>1457013686825</created>
+      <option name="number" value="00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1457013686825</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -839,7 +867,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Переработан стиль аттрибута title в обработаных заказах" />
     <MESSAGE value="Исправлена ошибка в отображении изображений в быстром поиске" />
     <MESSAGE value="Переработан стиль окна входа в панель администрирования" />
     <MESSAGE value="Мелкие правки в коде" />
@@ -864,7 +891,8 @@
     <MESSAGE value="Исправлен блок контента в админке" />
     <MESSAGE value="Реализована активация аккаунта" />
     <MESSAGE value="Запрет посещения корзины и статистики заказов для неактивированных пользователей" />
-    <option name="LAST_COMMIT_MESSAGE" value="Запрет посещения корзины и статистики заказов для неактивированных пользователей" />
+    <MESSAGE value="Запрет добавления товаров в корзину для неактивированных пользователей" />
+    <option name="LAST_COMMIT_MESSAGE" value="Запрет добавления товаров в корзину для неактивированных пользователей" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1650,25 +1678,6 @@
             <marker date="1457001175686" expanded="true" signature="385829:386484" placeholder="..." />
             <marker date="1457001175686" expanded="true" signature="387261:387372" placeholder="..." />
             <marker date="1457001175686" expanded="true" signature="387511:387622" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/confirm.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.830189">
-          <caret line="51" column="28" selection-start-line="51" selection-start-column="28" selection-end-line="51" selection-end-column="28" />
-          <folding>
-            <marker date="1457005544385" expanded="true" signature="270:323" placeholder="SELECT * FRO... users" />
-            <marker date="1457005544385" expanded="true" signature="414:478" placeholder="UPDATE users... " />
-            <marker date="1457005544385" expanded="true" signature="527:569" placeholder="SELECT COUNT... mail" />
-            <marker date="1457005544385" expanded="true" signature="527:588" placeholder="SELECT COUNT... mail" />
-            <marker date="1457005544385" expanded="true" signature="1295:1350" placeholder="INSERT INTO mail... " />
-            <marker date="1457005544385" expanded="true" signature="1295:1401" placeholder="INSERT INTO mail... " />
-            <marker date="1457005544385" expanded="true" signature="1617:1632" placeholder="UPDATE mail " />
-            <marker date="1457005544385" expanded="true" signature="1617:1651" placeholder="UPDATE mail " />
-            <marker date="1457005544385" expanded="true" signature="1617:1661" placeholder="UPDATE mail " />
-            <marker date="1457005544385" expanded="true" signature="1617:1686" placeholder="UPDATE mail " />
           </folding>
         </state>
       </provider>
@@ -2470,8 +2479,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/catalogue.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28158295">
-          <caret line="1392" column="78" selection-start-line="1392" selection-start-column="78" selection-end-line="1392" selection-end-column="78" />
+        <state vertical-scroll-proportion="14.329268">
+          <caret line="1408" column="61" selection-start-line="1408" selection-start-column="61" selection-end-line="1408" selection-end-column="61" />
           <folding>
             <marker date="1457013628090" expanded="true" signature="635:691" placeholder="SELECT * FRO... users" />
             <marker date="1457013628090" expanded="true" signature="1101:1166" placeholder="SELECT * FRO... users" />
@@ -2715,6 +2724,26 @@
             <marker date="1457013628090" expanded="true" signature="95102:95270" placeholder="..." />
             <marker date="1457013628090" expanded="true" signature="95303:95497" placeholder="..." />
             <marker date="1457013628090" expanded="true" signature="95524:95734" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/confirm.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.16830294">
+          <caret line="48" column="53" selection-start-line="48" selection-start-column="53" selection-end-line="48" selection-end-column="53" />
+          <folding>
+            <marker date="1457017073198" expanded="true" signature="270:323" placeholder="SELECT * FRO... users" />
+            <marker date="1457017073198" expanded="true" signature="414:478" placeholder="UPDATE users... " />
+            <marker date="1457017073198" expanded="true" signature="527:569" placeholder="SELECT COUNT... mail" />
+            <marker date="1457017073198" expanded="true" signature="527:588" placeholder="SELECT COUNT... mail" />
+            <marker date="1457017073198" expanded="true" signature="1295:1350" placeholder="INSERT INTO mail... " />
+            <marker date="1457017073198" expanded="true" signature="1295:1401" placeholder="INSERT INTO mail... " />
+            <marker date="1457017073198" expanded="true" signature="1456:1509" placeholder="SELECT * FRO... mail" />
+            <marker date="1457017073198" expanded="true" signature="1618:1633" placeholder="UPDATE mail " />
+            <marker date="1457017073198" expanded="true" signature="1618:1652" placeholder="UPDATE mail " />
+            <marker date="1457017073198" expanded="true" signature="1618:1662" placeholder="UPDATE mail " />
+            <marker date="1457017073198" expanded="true" signature="1618:1687" placeholder="UPDATE mail " />
           </folding>
         </state>
       </provider>

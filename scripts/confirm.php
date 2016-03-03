@@ -45,7 +45,7 @@
 
 					$mysqli->query("INSERT INTO mail (email, name, hash, in_send) VALUES ('".$user['email']."', '".$name."', '".$hash."', '1')");
 				} else {
-					$contactResult = $mysqli->query("SELEC * FROM mail WHERE email = '".$user['email']."'");
+					$contactResult = $mysqli->query("SELECT * FROM mail WHERE email = '".$user['email']."'");
 					$contact = $contactResult->fetch_assoc();
 
 					if(empty($contact['name'])) {
