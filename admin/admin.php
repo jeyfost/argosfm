@@ -449,7 +449,7 @@
     <link rel='shortcut icon' href='../pictures/icons/favicon.ico' type='image/x-icon'>
 	<link rel='icon' href='../pictures/icons/favicon.ico' type='image/x-icon'>
     <link rel='stylesheet' media='screen' type='text/css' href='../css/style.css'>
-    <link rel='stylesheet' media='screen' type='text/css' href='../lightbox/css/lightbox.css'>
+    <link rel='stylesheet' type='text/css' href='../js/shadowbox/source/shadowbox.css'>
     <?php
 		if(strpos($_SERVER['HTTP_USER_AGENT'], 'Opera') !== false)
 		{
@@ -462,7 +462,7 @@
     <script type='text/javascript' src='../js/footer.js'></script>
     <script type='text/javascript' src='../js/jquery-1.8.3.min.js'></script>
     <script type='text/javascript' src='../js/ajaxAdmin.js'></script>
-    <script type='text/javascript' src='../lightbox/js/lightboxAdmin.js'></script>
+    <script type='text/javascript' src='../js/shadowbox/source/shadowbox.js'></script>
     <script type='text/javascript' src='http://js.nicedit.com/nicEdit-latest.js'></script>
 
     <script type='text/javascript'>
