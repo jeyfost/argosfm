@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin.php" afterPath="$PROJECT_DIR$/admin/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ajax.js" afterPath="$PROJECT_DIR$/js/ajax.js" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -289,8 +289,8 @@
       <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/admin/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.19214587">
-              <caret line="451" column="52" selection-start-line="451" selection-start-column="52" selection-end-line="451" selection-end-column="52" />
+            <state vertical-scroll-proportion="0.76437587">
+              <caret line="475" column="19" selection-start-line="475" selection-start-column="19" selection-end-line="475" selection-end-column="19" />
               <folding>
                 <element signature="e#8343#9293#0#PHP" expanded="false" />
                 <marker date="1457092503863" expanded="true" signature="1994:2054" placeholder="SELECT * FRO... catalogue_new" />
@@ -949,12 +949,6 @@
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
     </task>
-    <task id="LOCAL-00003" summary="Фикс календаря">
-      <created>1456295397587</created>
-      <option name="number" value="00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1456295397587</updated>
-    </task>
     <task id="LOCAL-00004" summary="Исправление иконки корзины">
       <created>1456295984024</created>
       <option name="number" value="00004" />
@@ -1243,7 +1237,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457092131094</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="В админке lightbox заменён на shadowbox">
+      <created>1457092630220</created>
+      <option name="number" value="00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1457092630220</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1282,7 +1282,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Мелкие правки в коде" />
     <MESSAGE value="layout на всю высоту страницы" />
     <MESSAGE value="Изменены стили модальных окон и уведомлений" />
     <MESSAGE value="Вся проверка данных переведена на Ajax" />
@@ -1307,7 +1306,8 @@
     <MESSAGE value="Запрет добавления товаров в корзину для неактивированных пользователей" />
     <MESSAGE value="Исправлена ошибка в подтверждении регистрации" />
     <MESSAGE value="Исправлен выбор пользователя в админке" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен выбор пользователя в админке" />
+    <MESSAGE value="В админке lightbox заменён на shadowbox" />
+    <option name="LAST_COMMIT_MESSAGE" value="В админке lightbox заменён на shadowbox" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1921,8 +1921,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19214587">
-          <caret line="451" column="52" selection-start-line="451" selection-start-column="52" selection-end-line="451" selection-end-column="52" />
+        <state vertical-scroll-proportion="0.76437587">
+          <caret line="475" column="19" selection-start-line="475" selection-start-column="19" selection-end-line="475" selection-end-column="19" />
           <folding>
             <element signature="e#8343#9293#0#PHP" expanded="false" />
             <marker date="1457092503863" expanded="true" signature="1994:2054" placeholder="SELECT * FRO... catalogue_new" />

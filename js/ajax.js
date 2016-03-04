@@ -282,6 +282,13 @@ $(document).ready(function() {
 				url: 'scripts/ajaxSearch.php',
 				success: function(response) {
 					$('#fastSearch').html(response);
+
+					var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
+					var f = parseInt($('footer').offset().top + $('footer').height());
+
+					if(fb > f) {
+						$('footer').offset({top: parseInt(fb - f  + $('footer').offset().top + 30)});
+					}
 				}
 			});
 		}
@@ -310,6 +317,13 @@ $(document).ready(function() {
 				url: 'scripts/ajaxSearch.php',
 				success: function(response) {
 					$('#fastSearch').html(response);
+
+					var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
+					var f = parseInt($('footer').offset().top + $('footer').height());
+
+					if(fb > f) {
+						$('footer').offset({top: parseInt(fb - f  + $('footer').offset().top + 30)});
+					}
 				}
 			});
 		}
