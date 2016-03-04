@@ -86,8 +86,7 @@
     if(!empty($_REQUEST['user']))
     {
         $usersCountResult = $mysqli->query("SELECT COUNT(id) FROM users WHERE id = '".$_REQUEST['user']."'");
-        if($usersCountResult->num_rows
-            == 0)
+        if($usersCountResult->num_rows == 0)
         {
             header("Location: admin.php");
         }
@@ -426,7 +425,7 @@
             }
         }
 
-        if($_REQUEST['action'] == "users" and empty($_REQUEST['p']))
+        if($_REQUEST['action'] == "users" and empty($_REQUEST['p']) and empty($_REQUEST['user']))
         {
             header("Location: admin.php?section=users&action=users&p=1");
         }
