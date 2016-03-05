@@ -27,6 +27,7 @@ html {background-color: #dddddd;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
 .admSubmit:hover, .windowSubmit:hover {color: #df4e47; background-color: #dddddd;}
 .admSelect:hover, .admInput:hover, .windowInput:hover, #searchField:hover {background-color: #c0c0c0;}
+.hintText:hover {color: #b3413c; border-bottom: 1px dashed #b3413c;}
 #toAdminButton:hover, #backToAdminButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover, .toCatalogueButton:hover {background-color: #b3413c;}
 #newsFastSearch .searchLine:hover {background-color: #e8e8e8;}
 #newsFastSearch .searchGreyBG:hover {background-color: #d0d0d0;}
@@ -50,6 +51,11 @@ html {background-color: #dddddd;}
 	background-image: -ms-linear-gradient(top, #eeeeee, #cccccc);
 	background-image: -o-linear-gradient(top, #eeeeee, #cccccc);
 }
+
+#hintLogin[title]:hover:after {content: attr(title); padding: 4px 8px; color: #333; position: absolute; top: 133px; right: 0; z-index: 20; white-space: nowrap; height: 20px; line-height: 20px; -moz-box-shadow: 0px 0px 4px #222; -webkit-box-shadow: 0px 0px 4px #222; box-shadow: 0px 0px 4px #222; background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc)); background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc); background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); background-image: -ms-linear-gradient(top, #eeeeee, #cccccc); background-image: -o-linear-gradient(top, #eeeeee, #cccccc);}
+#hintPassword[title]:hover:after {content: attr(title); padding: 4px 8px; color: #333; position: absolute; top: 208px; right: 0; z-index: 20; white-space: nowrap; height: 20px; line-height: 20px; -moz-box-shadow: 0px 0px 4px #222; -webkit-box-shadow: 0px 0px 4px #222; box-shadow: 0px 0px 4px #222; background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc)); background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc); background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); background-image: -ms-linear-gradient(top, #eeeeee, #cccccc); background-image: -o-linear-gradient(top, #eeeeee, #cccccc);}
+#hintPhone[title]:hover:after {content: attr(title); padding: 4px 8px; color: #333; position: absolute; top: 508px; right: 0; z-index: 20; white-space: nowrap; height: 20px; line-height: 20px; -moz-box-shadow: 0px 0px 4px #222; -webkit-box-shadow: 0px 0px 4px #222; box-shadow: 0px 0px 4px #222; background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc)); background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc); background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); background-image: -ms-linear-gradient(top, #eeeeee, #cccccc); background-image: -o-linear-gradient(top, #eeeeee, #cccccc);}
+#hintPhone2[title]:hover:after {content: attr(title); padding: 4px 8px; color: #333; position: absolute; top: 433px; right: 0; z-index: 20; white-space: nowrap; height: 20px; line-height: 20px; -moz-box-shadow: 0px 0px 4px #222; -webkit-box-shadow: 0px 0px 4px #222; box-shadow: 0px 0px 4px #222; background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #eeeeee),color-stop(1, #cccccc)); background-image: -webkit-linear-gradient(top, #eeeeee, #cccccc); background-image: -moz-linear-gradient(top, #eeeeee, #cccccc); background-image: -ms-linear-gradient(top, #eeeeee, #cccccc); background-image: -o-linear-gradient(top, #eeeeee, #cccccc);}
 
 body {
 	padding: 0px;
@@ -408,3 +414,4 @@ a h1 {text-decoration: none;}
 .windowSubmit {width: 100px; height: 40px; line-height: 40px; text-align: center; padding: 0px 5px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; color: #ffffff; margin-top: 3px; background-color: #df4e47; border: none; cursor: pointer;}
 .notification {padding: 5px; background-color: #dddddd; border: 2px solid #df4e47; margin-top: 20px; width: auto; text-align: center;}
 .notificationOK {padding: 5px; background-color: #dddddd; border: 2px solid #093; margin-top: 20px; width: auto; text-align: center;}
+.hintText {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47; border-bottom: 1px dashed #df4e47; cursor: help;}
