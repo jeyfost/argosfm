@@ -2096,7 +2096,7 @@
                                                                 <option value=''>- Выберите товар -</option>
                                                     ";
 
-                                                    while($goods = $goodsResult->fetch_assoc($goodsResult))
+                                                    while($goods = $goodsResult->fetch_assoc())
                                                     {
                                                         echo "<option value='".$goods['id']."'"; if($goods['id'] == $_REQUEST['id']) {echo " selected";} echo ">".$goods['name']."</option>";
                                                     }
