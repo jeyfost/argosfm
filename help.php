@@ -617,7 +617,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 
 <div id='content_news'>
     <div id='content_news_inner'>
-        <span class='bigHeaderStyle'>Помощь. Как работать с сайтом "</span><a href='index.php' class='noBorder'><h1 class='headerStyleRedHover'>Аргос-ФМ</h1></a><span class='bigHeaderStyle'>"</span>
+        <span class='bigHeaderStyle'>Помощь. Как работать с сайтом "</span><a href='index.php' class='noBorder'><h1 class='headerStyleRedHover' style='text-decoration: none;'>Аргос-ФМ</h1></a><span class='bigHeaderStyle'>"</span>
         <div style='height: 20px;'></div>
 
     </div>

@@ -77,7 +77,7 @@ select {width: 290px; height: 20px; padding: 0px 5px; font-family: Cambria, Aria
 input {width: 220px; height: 20px; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px; padding-right: 3px; padding-left: 3px; border: 1px solid #df4e47; position: relative;}
 ul, li {color: #df4e47;}
 h1, h2, h3, h4 {margin-top: 0px; display: inline;}
-a h1 {text-decoration: none;}
+a, a h1, a h1:hover {text-decoration: none !important; border: none;}
 
 /*index.php + common styles*/
 #layout {position: absolute; width: 100%; height: 100%; opacity: 0.85; background-color: #000000; margin: 0px; padding: 0px; z-index: 100;}
@@ -307,7 +307,7 @@ a h1 {text-decoration: none;}
 .headerStyleWhite {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #ffffff;}
 .headerStyleHover {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #3f3f3f;}
 .headerStyleRed {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #df4e47;}
-.headerStyleRedHover {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #df4e47;}
+.headerStyleRedHover {font-family: Play, Arial, Helvetica, sans-serif; font-size: 18px; font-weight: normal; font-style: normal; color: #df4e47; text-decoration: none;}
 .mainIMGContainer {position: relative; width: 230px; height: 173px; margin-top: 20px; margin-left: 25px;}
 .mainIMGText {position: relative; text-align: left; margin-top: 20px;}
 .toCatalogueButton {position: relative; margin: 0 auto; background-color: #df4e47; width: 100px; height: 25px; bottom: 0px; text-align: center; line-height: 25px;}
