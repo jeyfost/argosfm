@@ -659,7 +659,6 @@ $_SESSION['last_page'] = getUrl();
 <script type='text/javascript'>
     $(window).load(function(e) {
         var fullHeight = $('#content_news').offset().top + $('#content_news').height() + 50;
-        var counter = 0;
 
         if($('footer').offset().top < fullHeight) {
             $('footer').offset({top: fullHeight});
