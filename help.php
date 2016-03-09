@@ -661,7 +661,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "1":
                             echo "
                                 <h2 class='goodStyle'>Структура главной страницы</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Главная страница</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=1' class='noBorder'><span class='catalogueItemTextItalic'>Главная страница</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Главная страница сайта <a href='index.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из трёх конструктивных блоков:</p>
                                     <ol>
@@ -671,11 +671,12 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                     </ol>
                                 </div>
                                 <div class='helpBlock'><p>Навигационный блок служит для быстрого перехода в интересующий вас раздел <a href='catalogue.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>каталога</span><span style='color: #3f3f3f;'> (<a href='catalogue.php?type=fa&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>) путём нажатия на соответствующую кнопку <b>\"В каталог\"</b> или на изображение.</span></p></div>
-                               <div class='helpBlock'> <p>Блок последних новостей содержит в себе три последние новости, опубликованные на сайте. Прочитать полный текст новости можно, нажав на блок с названием и кратким описанием интересующей вас новости. Данный блок также содержит 2 ссылки: <b>\"Помощь\"</b> (ведёт на <a href='help.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу помощи по сайту</span></a>) и <b>\"Все новости\"</b> (ведёт на <a href='news.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу с полным списком новостей</span></a>).</p></div>
+                               <div class='helpBlock'> <p>Блок последних новостей содержит в себе три последние новости, опубликованные на сайте. Прочитать полный текст новости можно, нажав на блок с названием и кратким описанием интересующей вас новости. Данный блок также содержит 2 ссылки: <b>\"Помощь\"</b> (ведёт на <a href='help.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу помощи по сайту</span></a>) и <b>\"Все новости\"</b> (ведёт на <a href='news.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу с полным списком новостей</span></a>).</p><p>Для помощи по странице новостей перейдите по <a href='help.php?section=3' class='noBorder'><span class='basicRed' style='font-size: 14px;'>данной ссылке</span></a>.</p></div>
                                 <div class='helpBlock'><p>Партнёрский блок содержит ссылки на официальные сайты наших партнёров в виде их логотипов.</p></div>
                             ";
                             break;
                         case "2":
+
                             break;
                         case "3":
                             break;
