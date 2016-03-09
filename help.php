@@ -460,7 +460,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
         </a>
         <menu>
             <a href='index.php' class='noBorder' title='Вернуться на главную страницу'>
-                <div id='mainPoint'>
+                <div id='mainPoint' onmouseover='menuVisual("1", "mpIMG", "mpTop")' onmouseout='menuDefault1()'>
                     <div id='mainPointCenter'>
                         <div id='mpTop'></div>
                         <div class='pBottom'>
@@ -686,7 +686,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                         <li><a href='pictures/help/catalogue_content.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок с содержимым каталога</a></li>
                                     </ol>
                                 </div>
-                                <div class='helpBlock'><p>Навигационный блок состоит из трёх основных разделов: <a href='catalogue.php?type=fa&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>. Большинство разделов состоят из подразделов. Заходя в выбранный вами раздел <a href='pictures/help/catalogue_nav_selected.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>развернётся меню его подразделов</span></a>, где вам необходимо будет выбрать интересующий вас подраздел.</p></div>
+                                <div class='helpBlock'><p>Навигационный блок состоит из трёх основных разделов: <a href='catalogue.php?type=fa&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>. Большинство разделов состоят из подразделов. Заходя в выбранный вами раздел <a href='pictures/help/catalogue_nav_selected.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>развернётся меню его подразделов</span></a>, где вам необходимо будет выбрать интересующий вас подраздел. У подразделов также <a href='pictures/help/catalogue_nav_selected2.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>могут быть подкатегории</span></a>.</p></div>
                             ";
                             break;
                         case "3":
