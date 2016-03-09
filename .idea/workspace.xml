@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -700,12 +699,6 @@
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
     </task>
-    <task id="LOCAL-00018" summary="Исправлено отображение количества обработанных заказов у пользователя">
-      <created>1456387774467</created>
-      <option name="number" value="00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1456387774467</updated>
-    </task>
     <task id="LOCAL-00019" summary="При удалении информация о пользователе сохраняется в отдельную таблицу">
       <created>1456388807992</created>
       <option name="number" value="00019" />
@@ -994,7 +987,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457523594039</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="Исправлена страница помощи. Главная страница">
+      <created>1457524285886</created>
+      <option name="number" value="00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1457524285886</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1033,7 +1032,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Изменены стили уведомлений в корзине" />
     <MESSAGE value="Правка title иконки корзины для администратора" />
     <MESSAGE value="Изменён стиль названия товаров в поиске" />
     <MESSAGE value="Восстановление пароля происходит после перехода по ссылке из письма" />
@@ -1058,7 +1056,8 @@
     <MESSAGE value="Сделана стартовая страница помощи для пользователя" />
     <MESSAGE value="Дополнена стартовая страница помощи для пользователя" />
     <MESSAGE value="Страница помощи. Г" />
-    <option name="LAST_COMMIT_MESSAGE" value="Страница помощи. Г" />
+    <MESSAGE value="Исправлена страница помощи. Главная страница" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлена страница помощи. Главная страница" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
