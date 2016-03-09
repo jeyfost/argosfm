@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,7 +50,7 @@
       <file leaf-file-name="help.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/help.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.63674617">
+            <state vertical-scroll-proportion="1.0659187">
               <caret line="691" column="410" selection-start-line="691" selection-start-column="410" selection-end-line="691" selection-end-column="410" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -715,12 +714,6 @@
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
     </task>
-    <task id="LOCAL-00023" summary="Исправление высоты основого блока на странице поиске">
-      <created>1456401687715</created>
-      <option name="number" value="00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1456401687715</updated>
-    </task>
     <task id="LOCAL-00024" summary="Переработан стиль аттрибута title в обработаных заказах">
       <created>1456402895016</created>
       <option name="number" value="00024" />
@@ -1009,7 +1002,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457532476046</updated>
     </task>
-    <option name="localTasksCounter" value="72" />
+    <task id="LOCAL-00072" summary="Частично сделана страница помощи по новостям">
+      <created>1457534359143</created>
+      <option name="number" value="00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1457534359143</updated>
+    </task>
+    <option name="localTasksCounter" value="73" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1048,7 +1047,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлен блок контента в админке" />
     <MESSAGE value="Реализована активация аккаунта" />
     <MESSAGE value="Запрет посещения корзины и статистики заказов для неактивированных пользователей" />
     <MESSAGE value="Запрет добавления товаров в корзину для неактивированных пользователей" />
@@ -1073,7 +1071,8 @@
     <MESSAGE value="Добавлен target blank к ссылкам на странице помощи" />
     <MESSAGE value="Исправлено меню на странице помощи" />
     <MESSAGE value="Доделана страница помощи по каталогу" />
-    <option name="LAST_COMMIT_MESSAGE" value="Доделана страница помощи по каталогу" />
+    <MESSAGE value="Частично сделана страница помощи по новостям" />
+    <option name="LAST_COMMIT_MESSAGE" value="Частично сделана страница помощи по новостям" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2749,7 +2748,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/help.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.63674617">
+        <state vertical-scroll-proportion="1.0659187">
           <caret line="691" column="410" selection-start-line="691" selection-start-column="410" selection-end-line="691" selection-end-column="410" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
