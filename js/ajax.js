@@ -17,6 +17,13 @@ function addToBasket(id) {
 						document.getElementById('basketIcon').setAttribute('onmouseover', 'changeBasketFullIcon(1)');
 						document.getElementById('basketIcon').setAttribute('onmouseout', 'changeBasketFullIcon(0)');
 					}
+
+					var f = $('footer').offset().top + $('footer').height();
+					var c = $('#catalogueGoods').offset().top + $('#catalogueGoods').height();
+
+					if(f > parseInt(c + 50)) {
+						$('footer').offset({top: parseInt(c + 50)});
+					}
 				}
 		});
 	}
