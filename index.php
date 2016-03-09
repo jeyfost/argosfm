@@ -763,7 +763,7 @@
             	<span class='bigHeaderStyle'>Наши партнеры</span>
                 <br /><br /><br />
                 <div style='position: relative; margin: 0 auto;'>
-                	<a href='http://ozkardeslermetal.com.tr/en/' class='noBorder'><img src='pictures/system/partner_ozkm.png' class='noBorder' title='OZKARDESLER METAL, Турция' /></a>
+                	<a href='http://ozkardeslermetal.com.tr/' class='noBorder'><img src='pictures/system/partner_ozkm.png' class='noBorder' title='OZKARDESLER METAL, Турция' /></a>
                     <div class='tableSpace'></div>
                     <a href='http://www.boyard.biz/' class='noBorder' style='margin-left: 30px;'><img src='pictures/system/partner_boyard.png' class='noBorder' title='BOYARD, Россия' /></a>
                     <div class='tableSpace'></div>

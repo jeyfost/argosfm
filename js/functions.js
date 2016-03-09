@@ -242,3 +242,13 @@ function deleteIcon(action, id) {
 		document.getElementById(id).src = 'pictures/system/deleteRed.png';
 	}
 }
+
+function helpText(action, id) {
+	if(action == 1) {
+		document.getElementById(id).style.color = '#b3413c';
+	}
+
+	if(action == 0) {
+		document.getElementById(id).style.color = '#df4e47';
+	}
+}

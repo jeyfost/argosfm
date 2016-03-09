@@ -619,7 +619,31 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
     <div id='content_news_inner'>
         <span class='bigHeaderStyle'>Помощь. Как работать с сайтом "</span><a href='index.php' class='noBorder'><h1 class='headerStyleRedHover' style='text-decoration: none;'>Аргос-ФМ</h1></a><span class='bigHeaderStyle'>"</span>
         <div style='height: 20px;'></div>
+        <?php
+            if($_SESSION['userID'] == 1) {
 
+            } else {
+                echo "
+                    <h2 class='goodStyle'>Страницы</h2>
+                    <ol>
+                        <li><a href='help.php?section=1' class='noBorder' id='hlp1' onmouseover='helpText(1, \"hlp1\")' onmouseout='helpText(0, \"hlp1\")'>Главная страница</a></li>
+                        <li><a href='help.php?section=2' class='noBorder' id='hlp2' onmouseover='helpText(1, \"hlp2\")' onmouseout='helpText(0, \"hlp2\")'>Каталог</a></li>
+                        <li><a href='help.php?section=3' class='noBorder' id='hlp3' onmouseover='helpText(1, \"hlp3\")' onmouseout='helpText(0, \"hlp3\")'>Новости и предложения</a></li>
+                        <li><a href='help.php?section=4' class='noBorder' id='hlp4' onmouseover='helpText(1, \"hlp4\")' onmouseout='helpText(0, \"hlp4\")'>Контактная инфрмация</a></li>
+                        <li><a href='help.php?section=5' class='noBorder' id='hlp5' onmouseover='helpText(1, \"hlp5\")' onmouseout='helpText(0, \"hlp5\")'>Страница поиска</a></li>
+                        <li><a href='help.php?section=6' class='noBorder' id='hlp6' onmouseover='helpText(1, \"hlp6\")' onmouseout='helpText(0, \"hlp6\")'>Личный кабинет</a></li>
+                        <li><a href='help.php?section=7' class='noBorder' id='hlp7' onmouseover='helpText(1, \"hlp7\")' onmouseout='helpText(0, \"hlp7\")'>Корзина</a></li>
+                        <li><a href='help.php?section=8' class='noBorder' id='hlp8' onmouseover='helpText(1, \"hlp8\")' onmouseout='helpText(0, \"hlp8\")'>История заказов</a></li>
+                    </ol>
+                    <h2 class='goodStyle'>Блок регистрации и авторизации</h2>
+                    <ol>
+                        <li><a href='help.php?section=9' class='noBorder' id='hlp9' onmouseover='helpText(1, \"hlp9\")' onmouseout='helpText(0, \"hlp9\")'>Авторизация</a></li>
+                        <li><a href='help.php?section=10' class='noBorder' id='hlp10' onmouseover='helpText(1, \"hlp10\")' onmouseout='helpText(0, \"hlp10\")'>Регистрация</a></li>
+                        <li><a href='help.php?section=11' class='noBorder' id='hlp11' onmouseover='helpText(1, \"hlp11\")' onmouseout='helpText(0, \"hlp11\")'>Восстановление пароля</a></li>
+                    </ol>
+                ";
+            }
+        ?>
     </div>
 </div>
 

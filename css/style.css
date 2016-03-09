@@ -21,7 +21,7 @@
 html {background-color: #dddddd;}
 
 .button:hover {background-color: #b3413c; color: #ffffff;}
-.headerStyleRedHover:hover, .catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover, #indexNewsButtons .catalogueItemTextDecorated:hover {color: #b3413c;}
+.headerStyleRedHover:hover, .catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover, #indexNewsButtons .catalogueItemTextDecorated:hover, ol li a:hover {color: #b3413c;}
 .headerStyleHover:hover, .basicHover:hover {color: #df4e47;}
 .catalogueItemTextItalic:hover, .redItalicHover:hover, #content_news_inner a:hover, ul .basicBigRed:hover, .admULFont:hover, .admUL li:hover {text-decoration: underline;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
@@ -78,6 +78,8 @@ input {width: 220px; height: 20px; font-family: Cambria, Arial, Helvetica, sans-
 ul, li {color: #df4e47;}
 h1, h2, h3, h4 {margin-top: 0px; display: inline;}
 a, a h1, a h1:hover {text-decoration: none !important; border: none;}
+ol, ol li {color: #000000;}
+ol li a {color: #df4e47;}
 
 /*index.php + common styles*/
 #layout {position: absolute; width: 100%; height: 100%; opacity: 0.85; background-color: #000000; margin: 0px; padding: 0px; z-index: 100;}
@@ -319,7 +321,7 @@ a, a h1, a h1:hover {text-decoration: none !important; border: none;}
 .icon {position: relative; float: left; width: 21px; height: 21px; padding-left: 10px;}
 .categoryName {position: relative; float: right; width: 219px; height: 21px; line-height: 21px; text-align: left;}
 .basic {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
-.basicBig {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f;}
+.basicBig, ol {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f;}
 .basicBigLink {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #df4e47;}
 .basicHover {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
 .basicRed {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47;}
