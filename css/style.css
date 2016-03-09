@@ -26,7 +26,7 @@ html {background-color: #dddddd;}
 .catalogueItemTextItalic:hover, .redItalicHover:hover, #content_news_inner a:hover, ul .basicBigRed:hover, .admULFont:hover, .admUL li:hover {text-decoration: underline;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
 .admSubmit:hover, .windowSubmit:hover {color: #df4e47; background-color: #dddddd;}
-.admSelect:hover, .admInput:hover, .windowInput:hover, #searchField:hover {background-color: #c0c0c0;}
+.admSelect:hover, .admInput:hover, .windowInput:hover, #searchField:hover, #inputReadOnly:hover {background-color: #c0c0c0;}
 .hintText:hover {color: #b3413c; border-bottom: 1px dashed #b3413c;}
 #toAdminButton:hover, #backToAdminButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover, .toCatalogueButton:hover {background-color: #b3413c;}
 #newsFastSearch .searchLine:hover {background-color: #e8e8e8;}
@@ -161,7 +161,7 @@ a, a h1, a h1:hover {text-decoration: none !important; border: none;}
 #settingBlockInner {position: relative; float: left; width: 600px;}
 #settingsCaptcha {position: relative; float: left;}
 #settings1Submit {width: 150px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
-#inputReadOnly {background-color: #e7e7e7;}
+#inputReadOnly {background-color: #dddddd;}
 #newPasswordSubmit {width: 150px;font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
 #deleteAccountSubmit {width: 150px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}
 #siteSettingsSubmit {width: 150px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; padding-bottom: 20px;}

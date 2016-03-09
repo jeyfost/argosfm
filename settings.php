@@ -726,7 +726,7 @@
 								<form name='settings1Form' id='settings1Form' method='post' action='scripts/changeUserSettings.php'>
 									<label>Контактное лицо:</label>
 									<br />
-									<input type='text' class='admInput' name=settingsName'' value='".$user['person']."' />
+									<input type='text' class='admInput' name=settingsName'' value='".$user['person']."' "; if($_SESSION['userID'] == 1) {echo "readonly";} echo " />
 									<br /><br />
 							";
 							if(!empty($user['organisation']))
@@ -734,7 +734,7 @@
 								echo "
 									<label>Название организации:</label>
 									<br />
-									<input type='text' class='admInput' name='settingsOrganisation' value='".$user['organisation']."' />
+									<input type='text' class='admInput' name='settingsOrganisation' value='".$user['organisation']."' "; if($_SESSION['userID'] == 1) {echo "readonly";} echo " />
 									<br /><br />
 								";	
 							}
@@ -750,7 +750,7 @@
 							echo "
 									<label>Контактный телефон:</label>
 									<br />
-									<input type='text' class='admInput' name='settingsPhone' value='".$user['phone']."' />
+									<input type='text' class='admInput' name='settingsPhone' value='".$user['phone']."' "; if($_SESSION['userID'] == 1) {echo "readonly";} echo " />
 									<br /><br />
 									<input type='submit' class='admSubmit' id='settings1Submit' value='Внести изменения' />
 								</form>
