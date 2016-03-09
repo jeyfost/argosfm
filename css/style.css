@@ -21,7 +21,7 @@
 html {background-color: #dddddd;}
 
 .button:hover {background-color: #b3413c; color: #ffffff;}
-.headerStyleRedHover:hover, .catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover, #indexNewsButtons .catalogueItemTextDecorated:hover, ol li a:hover, a .basicRed:hover {color: #b3413c;}
+.headerStyleRedHover:hover, .catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover, #indexNewsButtons .catalogueItemTextDecorated:hover, a .basicRed:hover {color: #b3413c;}
 .headerStyleHover:hover, .basicHover:hover {color: #df4e47;}
 .catalogueItemTextItalic:hover, .redItalicHover:hover, #content_news_inner a:hover, ul .basicBigRed:hover, .admULFont:hover, .admUL li:hover {text-decoration: underline;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
@@ -31,6 +31,7 @@ html {background-color: #dddddd;}
 #toAdminButton:hover, #backToAdminButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover, .toCatalogueButton:hover {background-color: #b3413c;}
 #newsFastSearch .searchLine:hover {background-color: #e8e8e8;}
 #newsFastSearch .searchGreyBG:hover {background-color: #d0d0d0;}
+.basicBlue:hover {color: #0078bc;}
 
 .tableStyle[title]:hover:after {
 	content: attr(title);
@@ -79,7 +80,7 @@ ul, li {color: #df4e47;}
 h1, h2, h3, h4 {margin-top: 0px; display: inline;}
 a, a h1, a h1:hover {text-decoration: none !important; border: none;}
 ol, ol li {color: #000000;}
-ol li a {color: #df4e47;}
+ol li a {color: #008fe1;}
 
 /*index.php + common styles*/
 #layout {position: absolute; width: 100%; height: 100%; opacity: 0.85; background-color: #000000; margin: 0px; padding: 0px; z-index: 100;}
@@ -324,9 +325,9 @@ ol li a {color: #df4e47;}
 .basicBig, ol, p {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f;}
 .basicBigLink {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #df4e47;}
 .basicHover {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
-.basicRed {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47;}
 .basicGreen {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #093;}
 .basicRed {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47;}
+.basicBlue {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #008fe1;}
 .smallBasicRed {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 10px; font-weight: normal; font-style: normal; color: #df4e47;}
 .goodBlock {width: 620px; min-height: 100px; position: relative; float: left; margin-bottom: 50px;}
 .picture {position: relative; float: left; width: 100px; height: 100px;}

@@ -252,3 +252,13 @@ function helpText(action, id) {
 		document.getElementById(id).style.color = '#df4e47';
 	}
 }
+
+function helpTextB(action, id) {
+	if(action == 1) {
+		document.getElementById(id).style.color = '#0078bc';
+	}
+
+	if(action == 0) {
+		document.getElementById(id).style.color = '#008fe1';
+	}
+}

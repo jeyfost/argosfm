@@ -665,9 +665,9 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                 <div class='helpBlock'>
                                     <p>Главная страница сайта <a href='index.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из трёх конструктивных блоков:</p>
                                     <ol>
-                                        <li><a href='pictures/help/index.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpText(1, \"hlp1\")' onmouseout='helpText(0, \"hlp1\")'>Навигационный блок</a></li>
-                                        <li><a href='pictures/help/index_news.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpText(1, \"hlp2\")' onmouseout='helpText(0, \"hlp2\")'>Блок последних новостей</a></li>
-                                        <li><a href='pictures/help/index_partners.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpText(1, \"hlp3\")' onmouseout='helpText(0, \"hlp3\")'>Ссылки на партнёров</a></li>
+                                        <li><a href='pictures/help/index.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Навигационный блок</a></li>
+                                        <li><a href='pictures/help/index_news.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок последних новостей</a></li>
+                                        <li><a href='pictures/help/index_partners.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Ссылки на партнёров</a></li>
                                     </ol>
                                 </div>
                                 <div class='helpBlock'><p>Навигационный блок служит для быстрого перехода в интересующий вас раздел <a href='catalogue.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>каталога</span><span style='color: #3f3f3f;'> (<a href='catalogue.php?type=fa&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>) путём нажатия на соответствующую кнопку <b>\"В каталог\"</b> или на изображение.</span></p></div>
@@ -676,7 +676,18 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "2":
-
+                            echo "
+                                <h2 class='goodStyle'>Структура каталога</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=2' class='noBorder'><span class='catalogueItemTextItalic'>Каталог</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>Страница каталога <a href='index.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из трёх двух блоков:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/catalogue_nav.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Навигационный блок</a></li>
+                                        <li><a href='pictures/help/catalogue_content.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок с содержимым каталога</a></li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>Навигационный блок состоит из трёх основных разделов: <a href='catalogue.php?type=fa&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>. Большинство разделов состоят из подразделов. Заходя в выбранный вами раздел <a href='pictures/help/catalogue_nav_selected.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>развернётся меню его подразделов</span></a>, где вам необходимо будет выбрать интересующий вас подраздел.</p></div>
+                            ";
                             break;
                         case "3":
                             break;
