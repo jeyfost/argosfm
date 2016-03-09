@@ -623,38 +623,96 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
             if($_SESSION['userID'] == 1) {
 
             } else {
-                echo "
-                    <h2 class='goodStyle'>Основные страницы сайта</h2>
-                    <ol>
-                        <li><a href='help.php?section=1' class='noBorder' id='hlp1' onmouseover='helpText(1, \"hlp1\")' onmouseout='helpText(0, \"hlp1\")'>Главная страница</a></li>
-                        <li><a href='help.php?section=2' class='noBorder' id='hlp2' onmouseover='helpText(1, \"hlp2\")' onmouseout='helpText(0, \"hlp2\")'>Каталог</a></li>
-                        <li><a href='help.php?section=3' class='noBorder' id='hlp3' onmouseover='helpText(1, \"hlp3\")' onmouseout='helpText(0, \"hlp3\")'>Новости и предложения</a></li>
-                        <li><a href='help.php?section=4' class='noBorder' id='hlp4' onmouseover='helpText(1, \"hlp4\")' onmouseout='helpText(0, \"hlp4\")'>Контактная инфрмация</a></li>
-                        <li><a href='help.php?section=5' class='noBorder' id='hlp5' onmouseover='helpText(1, \"hlp5\")' onmouseout='helpText(0, \"hlp5\")'>Страница поиска</a></li>
-                        <li><a href='help.php?section=6' class='noBorder' id='hlp6' onmouseover='helpText(1, \"hlp6\")' onmouseout='helpText(0, \"hlp6\")'>Личный кабинет</a></li>
-                        <li><a href='help.php?section=7' class='noBorder' id='hlp7' onmouseover='helpText(1, \"hlp7\")' onmouseout='helpText(0, \"hlp7\")'>Корзина</a></li>
-                        <li><a href='help.php?section=8' class='noBorder' id='hlp8' onmouseover='helpText(1, \"hlp8\")' onmouseout='helpText(0, \"hlp8\")'>История заказов</a></li>
-                    </ol>
-                    <h2 class='goodStyle'>Блок регистрации и авторизации</h2>
-                    <ol>
-                        <li><a href='help.php?section=9' class='noBorder' id='hlp9' onmouseover='helpText(1, \"hlp9\")' onmouseout='helpText(0, \"hlp9\")'>Авторизация</a></li>
-                        <li><a href='help.php?section=10' class='noBorder' id='hlp10' onmouseover='helpText(1, \"hlp10\")' onmouseout='helpText(0, \"hlp10\")'>Регистрация</a></li>
-                        <li><a href='help.php?section=11' class='noBorder' id='hlp11' onmouseover='helpText(1, \"hlp11\")' onmouseout='helpText(0, \"hlp11\")'>Восстановление пароля</a></li>
-                    </ol>
-                    <h2 class='goodStyle'>Ценовая политика</h2>
-                    <ol>
-                        <li><a href='help.php?section=12' class='noBorder' id='hlp12' onmouseover='helpText(1, \"hlp12\")' onmouseout='helpText(0, \"hlp12\")'>Основные положения</a></li>
-                        <li><a href='help.php?section=13' class='noBorder' id='hlp13' onmouseover='helpText(1, \"hlp13\")' onmouseout='helpText(0, \"hlp13\")'>Динамическое изменение цен в заказе</a></li>
-                    </ol>
-                    <h2 class='goodStyle'>Функции сайта</h2>
-                    <ol>
-                        <li><a href='help.php?section=14' class='noBorder' id='hlp14' onmouseover='helpText(1, \"hlp14\")' onmouseout='helpText(0, \"hlp14\")'>Оформление заказа</a></li>
-                        <li><a href='help.php?section=15' class='noBorder' id='hlp15' onmouseover='helpText(1, \"hlp15\")' onmouseout='helpText(0, \"hlp15\")'>Изменение отправленной заявки</a></li>
-                        <li><a href='help.php?section=16' class='noBorder' id='hlp16' onmouseover='helpText(1, \"hlp16\")' onmouseout='helpText(0, \"hlp16\")'>Редактирование личных данных</a></li>
-                        <li><a href='help.php?section=17' class='noBorder' id='hlp17' onmouseover='helpText(1, \"hlp17\")' onmouseout='helpText(0, \"hlp17\")'>Изменения пароля</a></li>
-                        <li><a href='help.php?section=18' class='noBorder' id='hlp18' onmouseover='helpText(1, \"hlp18\")' onmouseout='helpText(0, \"hlp18\")'>Удаление аккаунта</a></li>
-                    </ol>
-                ";
+                if(empty($_REQUEST['section'])) {
+                    echo "
+                        <h2 class='goodStyle'>Основные страницы сайта</h2>
+                        <ol>
+                            <li><a href='help.php?section=1' class='noBorder' id='hlp1' onmouseover='helpText(1, \"hlp1\")' onmouseout='helpText(0, \"hlp1\")'>Главная страница</a></li>
+                            <li><a href='help.php?section=2' class='noBorder' id='hlp2' onmouseover='helpText(1, \"hlp2\")' onmouseout='helpText(0, \"hlp2\")'>Каталог</a></li>
+                            <li><a href='help.php?section=3' class='noBorder' id='hlp3' onmouseover='helpText(1, \"hlp3\")' onmouseout='helpText(0, \"hlp3\")'>Новости и предложения</a></li>
+                            <li><a href='help.php?section=4' class='noBorder' id='hlp4' onmouseover='helpText(1, \"hlp4\")' onmouseout='helpText(0, \"hlp4\")'>Контактная инфрмация</a></li>
+                            <li><a href='help.php?section=5' class='noBorder' id='hlp5' onmouseover='helpText(1, \"hlp5\")' onmouseout='helpText(0, \"hlp5\")'>Страница поиска</a></li>
+                            <li><a href='help.php?section=6' class='noBorder' id='hlp6' onmouseover='helpText(1, \"hlp6\")' onmouseout='helpText(0, \"hlp6\")'>Личный кабинет</a></li>
+                            <li><a href='help.php?section=7' class='noBorder' id='hlp7' onmouseover='helpText(1, \"hlp7\")' onmouseout='helpText(0, \"hlp7\")'>Корзина</a></li>
+                            <li><a href='help.php?section=8' class='noBorder' id='hlp8' onmouseover='helpText(1, \"hlp8\")' onmouseout='helpText(0, \"hlp8\")'>История заказов</a></li>
+                        </ol>
+                        <h2 class='goodStyle'>Блок регистрации и авторизации</h2>
+                        <ol>
+                            <li><a href='help.php?section=9' class='noBorder' id='hlp9' onmouseover='helpText(1, \"hlp9\")' onmouseout='helpText(0, \"hlp9\")'>Авторизация</a></li>
+                            <li><a href='help.php?section=10' class='noBorder' id='hlp10' onmouseover='helpText(1, \"hlp10\")' onmouseout='helpText(0, \"hlp10\")'>Регистрация</a></li>
+                            <li><a href='help.php?section=11' class='noBorder' id='hlp11' onmouseover='helpText(1, \"hlp11\")' onmouseout='helpText(0, \"hlp11\")'>Восстановление пароля</a></li>
+                        </ol>
+                        <h2 class='goodStyle'>Ценовая политика</h2>
+                        <ol>
+                            <li><a href='help.php?section=12' class='noBorder' id='hlp12' onmouseover='helpText(1, \"hlp12\")' onmouseout='helpText(0, \"hlp12\")'>Основные положения</a></li>
+                            <li><a href='help.php?section=13' class='noBorder' id='hlp13' onmouseover='helpText(1, \"hlp13\")' onmouseout='helpText(0, \"hlp13\")'>Динамическое изменение цен в заказе</a></li>
+                        </ol>
+                        <h2 class='goodStyle'>Функции сайта</h2>
+                        <ol>
+                            <li><a href='help.php?section=14' class='noBorder' id='hlp14' onmouseover='helpText(1, \"hlp14\")' onmouseout='helpText(0, \"hlp14\")'>Оформление заказа</a></li>
+                            <li><a href='help.php?section=15' class='noBorder' id='hlp15' onmouseover='helpText(1, \"hlp15\")' onmouseout='helpText(0, \"hlp15\")'>Изменение отправленной заявки</a></li>
+                            <li><a href='help.php?section=16' class='noBorder' id='hlp16' onmouseover='helpText(1, \"hlp16\")' onmouseout='helpText(0, \"hlp16\")'>Редактирование личных данных</a></li>
+                            <li><a href='help.php?section=17' class='noBorder' id='hlp17' onmouseover='helpText(1, \"hlp17\")' onmouseout='helpText(0, \"hlp17\")'>Изменения пароля</a></li>
+                            <li><a href='help.php?section=18' class='noBorder' id='hlp18' onmouseover='helpText(1, \"hlp18\")' onmouseout='helpText(0, \"hlp18\")'>Удаление аккаунта</a></li>
+                        </ol>
+                    ";
+                } else {
+                    switch($_REQUEST['section']) {
+                        case "1":
+                            echo "
+                                <h2 class='goodStyle'>Структура главной страницы</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Главная страница</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>Главная страница сайта <a href='index.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из трёх конструктивных блоков:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/index.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpText(1, \"hlp1\")' onmouseout='helpText(0, \"hlp1\")'>Навигационный блок</a></li>
+                                        <li><a href='pictures/help/index_news.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpText(1, \"hlp2\")' onmouseout='helpText(0, \"hlp2\")'>Блок последних новостей</a></li>
+                                        <li><a href='pictures/help/index_partners.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpText(1, \"hlp3\")' onmouseout='helpText(0, \"hlp3\")'>Ссылки на партнёров</a></li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>Навигационный блок служит для быстрого перехода в интересующий вас раздел <a href='catalogue.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>каталога</span><span style='color: #3f3f3f;'> (<a href='catalogue.php?type=fa&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>) путём нажатия на соответствующую кнопку <b>\"В каталог\"</b> или на изображение.</span></p></div>
+                               <div class='helpBlock'> <p>Блок последних новостей содержит в себе три последние новости, опубликованные на сайте. Прочитать полный текст новости можно, нажав на блок с названием и кратким описанием интересующей вас новости. Данный блок также содержит 2 ссылки: <b>\"Помощь\"</b> (ведёт на <a href='help.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу помощи по сайту</span></a>) и <b>\"Все новости\"</b> (ведёт на <a href='news.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу с полным списком новостей</span></a>).</p></div>
+                                <div class='helpBlock'><p>Партнёрский блок содержит ссылки на официальные сайты наших партнёров в виде их логотипов.</p></div>
+                            ";
+                            break;
+                        case "2":
+                            break;
+                        case "3":
+                            break;
+                        case "4":
+                            break;
+                        case "5":
+                            break;
+                        case "6":
+                            break;
+                        case "7":
+                            break;
+                        case "8":
+                            break;
+                        case "9":
+                            break;
+                        case "10":
+                            break;
+                        case "11":
+                            break;
+                        case "12":
+                            break;
+                        case "13":
+                            break;
+                        case "14":
+                            break;
+                        case "15":
+                            break;
+                        case "16":
+                            break;
+                        case "17":
+                            break;
+                        case "18":
+                            break;
+                        default:
+                            break;
+                    }
+                }
             }
         ?>
     </div>
