@@ -624,7 +624,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 
             } else {
                 echo "
-                    <h2 class='goodStyle'>Страницы</h2>
+                    <h2 class='goodStyle'>Основные страницы сайта</h2>
                     <ol>
                         <li><a href='help.php?section=1' class='noBorder' id='hlp1' onmouseover='helpText(1, \"hlp1\")' onmouseout='helpText(0, \"hlp1\")'>Главная страница</a></li>
                         <li><a href='help.php?section=2' class='noBorder' id='hlp2' onmouseover='helpText(1, \"hlp2\")' onmouseout='helpText(0, \"hlp2\")'>Каталог</a></li>
@@ -640,6 +640,19 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         <li><a href='help.php?section=9' class='noBorder' id='hlp9' onmouseover='helpText(1, \"hlp9\")' onmouseout='helpText(0, \"hlp9\")'>Авторизация</a></li>
                         <li><a href='help.php?section=10' class='noBorder' id='hlp10' onmouseover='helpText(1, \"hlp10\")' onmouseout='helpText(0, \"hlp10\")'>Регистрация</a></li>
                         <li><a href='help.php?section=11' class='noBorder' id='hlp11' onmouseover='helpText(1, \"hlp11\")' onmouseout='helpText(0, \"hlp11\")'>Восстановление пароля</a></li>
+                    </ol>
+                    <h2 class='goodStyle'>Ценовая политика</h2>
+                    <ol>
+                        <li><a href='help.php?section=12' class='noBorder' id='hlp12' onmouseover='helpText(1, \"hlp12\")' onmouseout='helpText(0, \"hlp12\")'>Основные положения</a></li>
+                        <li><a href='help.php?section=13' class='noBorder' id='hlp13' onmouseover='helpText(1, \"hlp13\")' onmouseout='helpText(0, \"hlp13\")'>Динамическое изменение цен в заказе</a></li>
+                    </ol>
+                    <h2 class='goodStyle'>Функции сайта</h2>
+                    <ol>
+                        <li><a href='help.php?section=14' class='noBorder' id='hlp14' onmouseover='helpText(1, \"hlp14\")' onmouseout='helpText(0, \"hlp14\")'>Оформление заказа</a></li>
+                        <li><a href='help.php?section=15' class='noBorder' id='hlp15' onmouseover='helpText(1, \"hlp15\")' onmouseout='helpText(0, \"hlp15\")'>Изменение отправленной заявки</a></li>
+                        <li><a href='help.php?section=16' class='noBorder' id='hlp16' onmouseover='helpText(1, \"hlp16\")' onmouseout='helpText(0, \"hlp16\")'>Редактирование личных данных</a></li>
+                        <li><a href='help.php?section=17' class='noBorder' id='hlp17' onmouseover='helpText(1, \"hlp17\")' onmouseout='helpText(0, \"hlp17\")'>Изменения пароля</a></li>
+                        <li><a href='help.php?section=18' class='noBorder' id='hlp18' onmouseover='helpText(1, \"hlp18\")' onmouseout='helpText(0, \"hlp18\")'>Удаление аккаунта</a></li>
                     </ol>
                 ";
             }
