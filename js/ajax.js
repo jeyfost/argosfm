@@ -283,12 +283,24 @@ $(document).ready(function() {
 				success: function(response) {
 					$('#fastSearch').html(response);
 
-					var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
-					var f = parseInt($('footer').offset().top + $('footer').height());
+					if(document.getElementById('footerOrder')) {
+						var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
+						var f = parseInt($('#footerOrder').offset().top + $('#footerOrder').height());
 
-					if(fb > f) {
-						$('footer').offset({top: parseInt(fb - f  + $('footer').offset().top + 30)});
+						if(fb > f) {
+							$('#footerOrder').offset({top: parseInt(fb - f  + $('#footerOrder').offset().top + 30)});
+						}
 					}
+
+					if(document.getElementsByTagName('footer')) {
+						var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
+						var f = parseInt($('footer').offset().top + $('footer').height());
+
+						if(fb > f) {
+							$('footer').offset({top: parseInt(fb - f  + $('footer').offset().top + 30)});
+						}
+					}
+					
 				}
 			});
 		}
@@ -318,11 +330,31 @@ $(document).ready(function() {
 				success: function(response) {
 					$('#fastSearch').html(response);
 
-					var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
-					var f = parseInt($('footer').offset().top + $('footer').height());
+					if(document.getElementsByTagName('footer')) {
+						var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
+						var f = parseInt($('footer').offset().top + $('footer').height());
 
-					if(fb > f) {
-						$('footer').offset({top: parseInt(fb - f  + $('footer').offset().top + 30)});
+						if(fb > f) {
+							$('footer').offset({top: parseInt(fb - f  + $('footer').offset().top + 30)});
+						}
+					}
+
+					if(document.getElementById('footerOrder')) {
+						var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
+						var f = parseInt($('#footerOrder').offset().top + $('#footerOrder').height());
+
+						if(fb > f) {
+							$('#footerOrder').offset({top: parseInt(fb - f  + $('#footerOrder').offset().top + 30)});
+						}
+					}
+
+					if(document.getElementsByTagName('footer')) {
+						var fb = parseInt($('#fastSearch').offset().top + $('#fastSearch').height());
+						var f = parseInt($('footer').offset().top + $('footer').height());
+
+						if(fb > f) {
+							$('footer').offset({top: parseInt(fb - f  + $('footer').offset().top + 30)});
+						}
 					}
 				}
 			});
