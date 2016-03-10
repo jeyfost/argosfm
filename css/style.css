@@ -152,7 +152,7 @@ ol li a {color: #008fe1;}
 #contacts {position: relative; float: right; width: 350px; height: 415px; background-color: #ffffff; padding: 15px;}
 
 /*search.php*/
-#search {position: relative; width: 970px; padding: 15px; background-color: #ffffff; min-height: 350px;}
+#search {position: relative; width: 970px; padding: 15px; background-color: #ffffff; min-height: 350px; display: inline-block;}
 #searchPages {position: relative; width: 970px; margin-top: 20px; text-align: center;}
 
 /*colors.php*/
@@ -350,7 +350,7 @@ ol li a {color: #008fe1;}
 .redItalicHover {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; color: #df4e47;}
 .sketch {position: relative; float: right; width: 480px; margin-top: 10px;}
 .sketchStyle {font-family: Play, Arial, Helvetica, sans-serif; font-size: 16px; font-weight: normal; font-style: normal; color: #df4e47; text-decoration: underline;}
-.searchItem {width: 970px; min-height: 120px; margin-bottom: 150px;}
+.searchItem {width: 100%; display: inline-block; padding-bottom: 40px;}
 .searchContent {float: right; width: 850px;}
 .searchTopLine {position: relative; float: right; width: 850px; height: 30px;}
 .searchName {position: relative; float: right; width: 820px; height: 30px; line-height: 30px; background-color: #ececec; padding-left: 10px;}
@@ -367,7 +367,7 @@ ol li a {color: #008fe1;}
 .basicBigDecorated {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f; text-decoration: underline;}
 .formTextarea {width: 280px; height: 120px; padding: 0px 5px; font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f;}
 .priorityGood {position: relative; float: left; width: 690px; height: 20px; padding: 5px; border: 1px solid #999999; margin-top: 2px;}
-.location {width: 100%; height: 20px; position: relative;}
+.location {width: 100%; height: 20px; position: relative; padding-bottom: 10px;}
 .radio {padding: 0px; margin: 0px; width: 30px; height: auto; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px;}
 .settingsMenuButton {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; text-align: center; background-color: #ffffff;}
 .settingsMenuButtonActive {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; text-align: center; background-color: #df4e47;}
