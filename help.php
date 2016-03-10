@@ -768,9 +768,10 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                     <div class='helpBlock'><p>В разделе обработанных заказов содержится вся история ваших заявок. Обработанные заявки отображаются по 10 на странице. Для перехода на другую страницу, воспользуйтесь <a href='pictures/help/catalogue_nav_numbers.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>блоком постраничной навигации</span></a>, расположенным внизу.</p></div>
                                 ";
                             break;
-                        case "8":
-                            break;
                         case "9":
+                            echo "
+
+                            ";
                             break;
                         case "10":
                             break;
@@ -787,6 +788,8 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "16":
                             break;
                         case "17":
+                            break;
+                        case "8":
                             break;
                         default:
                             echo "

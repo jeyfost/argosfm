@@ -1968,7 +1968,29 @@
 	?>
     
     <script type='text/javascript'>
-		footerPos();
+		$(window).load(function() {
+			footerPos();
+
+			var m = parseInt($('#cataloguePoints').offset().top + $('#cataloguePoints').height());
+			var c = parseInt($('#catalogueGoods').offset().top + $('#catalogueGoods').height());
+			var f = parseInt($('footer').offset().top + $('footer').height());
+
+			if($('#cataloguePoints').offset().top < 90) {
+				$('#cataloguePoints').offset({top: 90});
+			}
+
+			if($('#catalogueGoods').offset().top < 90) {
+				$('#catalogueGoods').offset({top: 90});
+			}
+
+			if(m > parseInt(f - 80)) {
+				$('footer').offset({top: parseInt(m + 70)});
+			}
+
+			if(c > parseInt(f - 80)) {
+				$('footer').offset({top: parseInt(c + 70)});
+			}
+		});
 
 		$(document).ready(function() {
 
