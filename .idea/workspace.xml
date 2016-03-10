@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,7 +51,7 @@
         <entry file="file://$PROJECT_DIR$/help.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.7419355">
-              <caret line="778" column="34" selection-start-line="778" selection-start-column="34" selection-end-line="778" selection-end-column="34" />
+              <caret line="778" column="32" selection-start-line="778" selection-start-column="32" selection-end-line="778" selection-end-column="32" />
               <folding>
                 <marker date="1457613284453" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
                 <marker date="1457613284453" expanded="true" signature="1150:1215" placeholder="SELECT * FRO... users" />
@@ -409,12 +408,6 @@
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
     </task>
-    <task id="LOCAL-00035" summary="Изменены стили уведомлений в личном кабинете">
-      <created>1456764786627</created>
-      <option name="number" value="00035" />
-      <option name="project" value="LOCAL" />
-      <updated>1456764786627</updated>
-    </task>
     <task id="LOCAL-00036" summary="Исправление стилей уведомлений">
       <created>1456765243649</created>
       <option name="number" value="00036" />
@@ -703,7 +696,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457612309087</updated>
     </task>
-    <option name="localTasksCounter" value="84" />
+    <task id="LOCAL-00084" summary="Добавлена страница помощи о разделе авторизации">
+      <created>1457613343967</created>
+      <option name="number" value="00084" />
+      <option name="project" value="LOCAL" />
+      <updated>1457613343968</updated>
+    </task>
+    <option name="localTasksCounter" value="85" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -742,7 +741,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Изменён стиль ссылок на странице помощи" />
     <MESSAGE value="Убрана лишняя переменна я в js" />
     <MESSAGE value="Исправлен адаптивный футер и панель быстрого поиска" />
     <MESSAGE value="Запрет изменения личных данных для администратора" />
@@ -767,7 +765,8 @@
     <MESSAGE value="Добавлена страница помощи по корзине" />
     <MESSAGE value="Правки на странице помощи" />
     <MESSAGE value="Исправлен js в каталоге" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлен js в каталоге" />
+    <MESSAGE value="Добавлена страница помощи о разделе авторизации" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница помощи о разделе авторизации" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2207,7 +2206,7 @@
     <entry file="file://$PROJECT_DIR$/help.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7419355">
-          <caret line="778" column="34" selection-start-line="778" selection-start-column="34" selection-end-line="778" selection-end-column="34" />
+          <caret line="778" column="32" selection-start-line="778" selection-start-column="32" selection-end-line="778" selection-end-column="32" />
           <folding>
             <marker date="1457613284453" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
             <marker date="1457613284453" expanded="true" signature="1150:1215" placeholder="SELECT * FRO... users" />
