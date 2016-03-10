@@ -609,7 +609,7 @@
     	<div id='search'>
         	<?php
 			
-				echo "<span class='headerStyle'>поиск по каталогу</span><br /><br />";
+				echo "<span class='headerStyle'>Поиск по каталогу</span><br /><br />";
 				
 				$search_result = $mysqli->query("SELECT * FROM catalogue_new WHERE name LIKE '%".$_SESSION['query']."%' OR code LIKE '%".$_SESSION['query']."%' ORDER BY name LIMIT ".$start.", 10");
 				$count = 0;
