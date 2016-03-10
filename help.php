@@ -680,7 +680,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                 <h2 class='goodStyle'>Структура каталога</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=2' class='noBorder'><span class='catalogueItemTextItalic'>Каталог</span></a></p>
                                 <div class='helpBlock'>
-                                    <p>Страница каталога <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из двух блоков:</p>
+                                    <p>Страница каталога <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из двух конструктивных блоков:</p>
                                     <ol>
                                         <li><a href='pictures/help/catalogue_nav.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Навигационный блок</a></li>
                                         <li><a href='pictures/help/catalogue_content.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок с содержимым каталога</a></li>
@@ -698,9 +698,25 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                 <h2 class='goodStyle'>Структура страницы новостей</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=3' class='noBorder'><span class='catalogueItemTextItalic'>Новости</span></a></p>
                                 <div class='helpBlock'><p>На странице новостей показаны все новости и коммерческие предложения, которые когда-либо были опубликованы. На этой странице показано 10 новостей на одной странице. Они отсортированы по дате публикации. Для просмотра более ранних публикаций, необходимо воспользоваться <a href='pictures/help/catalogue_nav_numbers.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>панелью постраничной навигации</span></a>, расположенной внизу страницы.</p></div>
+                                <div class='helpBlock'><p>Поиск новостей может осуществляться по дате при помощи <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>календаря</span></a> в верхней правой части страницы и <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>панели поиска</span></a>.</p></div>
+                                <div class='helpBlock'><p>Поиск по дате осуществляется путём выбора даты в календаре. Если в определённый день были публикации, дата в календаре будет написана <a href='pictures/help/news_calendar_date.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>красным цветом на сером фоне</span></a>. При выборе даты <a href='pictures/help/news_date.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>будут показаны новости</span></a>, написанные в этот день. Под календарём появится кнопка <b>\"Сбросить дату\"</b>, которая необходима для возврата к списку всех новостей.</p></div>
+                                <div class='helpBlock'><p>Для поиска новости по заголовки, котороткому описанию или тексту новости, начните набирать текст <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>в поле для поиска</span></a>. В процессе набора вам будут показаны найденные совпадения <a href='pictures/help/news_search.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>в выпадающем блоке</span></a>. Если совпадений не будет найдено, вы увидите надпись <b>\"К сожалению, ничего похожего не найдено\"</b>. Чтобы закрыть выпадающий блок, нажмите на любое место на экране вне самого блока.</p></div>
+                                <div class='helpBlock'><p>Для прочтения новости нажмите на блок с её заголовком и коротким описанием в общем списке новостей или в выпадающем блоке поиска.</p></div>
                             ";
                             break;
                         case "4":
+                            echo "
+                                <h2 class='goodStyle'>Структура страницы с контактной информацией</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=4' class='noBorder'><span class='catalogueItemTextItalic'>Контактная информация</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>Страница с контактной информацией <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из двух конструктивных блоков:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/contacts_map.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Блок с интерактивной картой</a></li>
+                                        <li><a href='pictures/help/contacts.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок с контактной информацией</a></li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>С интерактивной картой можно взаимодействовать: изменять масштаб, перемещаться, включать отображение пробок и построение маршрутов.</p></div>
+                            ";
                             break;
                         case "5":
                             break;
