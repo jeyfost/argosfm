@@ -667,10 +667,11 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                     <ol>
                                         <li><a href='pictures/help/index.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Навигационный блок</a></li>
                                         <li><a href='pictures/help/index_news.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок последних новостей</a></li>
+                                        <li><a href='pictures/help/index_news.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок последних новостей</a></li>
                                         <li><a href='pictures/help/index_partners.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Ссылки на партнёров</a></li>
                                     </ol>
                                 </div>
-                                <div class='helpBlock'><p>Навигационный блок служит для быстрого перехода в интересующий вас раздел <a href='catalogue.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>каталога</span><span style='color: #3f3f3f;'> (<a href='catalogue.php?type=fa&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>) путём нажатия на соответствующую кнопку <b>\"В каталог\"</b> или на изображение.</span></p></div>
+                                <div class='helpBlock'><p>Навигационный блок служит для быстрого перехода в интересующий вас раздел <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>каталога</span><span style='color: #3f3f3f;'> (<a href='catalogue.php?type=fa&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>) путём нажатия на соответствующую кнопку <b>\"В каталог\"</b> или на изображение.</span></p></div>
                                <div class='helpBlock'> <p>Блок последних новостей содержит в себе три последние новости, опубликованные на сайте. Прочитать полный текст новости можно, нажав на блок с названием и кратким описанием интересующей вас новости. Данный блок также содержит 2 ссылки: <b>\"Помощь\"</b> (ведёт на <a href='help.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу помощи по сайту</span></a>) и <b>\"Все новости\"</b> (ведёт на <a href='news.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу с полным списком новостей</span></a>).</p><p>Для помощи по странице новостей перейдите по <a href='help.php?section=3' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>данной ссылке</span></a>.</p></div>
                                 <div class='helpBlock'><p>Партнёрский блок содержит ссылки на официальные сайты наших партнёров в виде их логотипов.</p></div>
                             ";
@@ -728,6 +729,21 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "6":
+                            echo "
+                                <h2 class='goodStyle'>Структура личного кабинета</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=5' class='noBorder'><span class='catalogueItemTextItalic'>Личный кабинет</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>Личный кабинет состоит из трёх конструктивных блоков:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/settings_1.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Основные настройки</a></li>
+                                        <li><a href='pictures/help/settings_2.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Изменение пароля</a></li>
+                                        <li><a href='pictures/help/settings_3.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Удаление аккаунта</a></li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>Помощь по изменению личной информации читайте в <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Помощь по изменению пароля читайте в <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Помощь по удалению вашего аккаунта читайте в <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                            ";
                             break;
                         case "7":
                             break;
