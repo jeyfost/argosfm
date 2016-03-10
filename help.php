@@ -634,7 +634,6 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             <li><a href='help.php?section=5' class='noBorder' id='hlp5' onmouseover='helpText(1, \"hlp5\")' onmouseout='helpText(0, \"hlp5\")'>Страница поиска</a></li>
                             <li><a href='help.php?section=6' class='noBorder' id='hlp6' onmouseover='helpText(1, \"hlp6\")' onmouseout='helpText(0, \"hlp6\")'>Личный кабинет</a></li>
                             <li><a href='help.php?section=7' class='noBorder' id='hlp7' onmouseover='helpText(1, \"hlp7\")' onmouseout='helpText(0, \"hlp7\")'>Корзина и страница заказов</a></li>
-                            <li><a href='help.php?section=8' class='noBorder' id='hlp8' onmouseover='helpText(1, \"hlp8\")' onmouseout='helpText(0, \"hlp8\")'>История заказов</a></li>
                         </ol>
                         <h2 class='goodStyle'>Блок регистрации и авторизации</h2>
                         <ol>
@@ -653,7 +652,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             <li><a href='help.php?section=15' class='noBorder' id='hlp15' onmouseover='helpText(1, \"hlp15\")' onmouseout='helpText(0, \"hlp15\")'>Изменение отправленной заявки</a></li>
                             <li><a href='help.php?section=16' class='noBorder' id='hlp16' onmouseover='helpText(1, \"hlp16\")' onmouseout='helpText(0, \"hlp16\")'>Редактирование личных данных</a></li>
                             <li><a href='help.php?section=17' class='noBorder' id='hlp17' onmouseover='helpText(1, \"hlp17\")' onmouseout='helpText(0, \"hlp17\")'>Изменения пароля</a></li>
-                            <li><a href='help.php?section=18' class='noBorder' id='hlp18' onmouseover='helpText(1, \"hlp18\")' onmouseout='helpText(0, \"hlp18\")'>Удаление аккаунта</a></li>
+                            <li><a href='help.php?section=8' class='noBorder' id='hlp18' onmouseover='helpText(1, \"hlp18\")' onmouseout='helpText(0, \"hlp18\")'>Удаление аккаунта</a></li>
                         </ol>
                     ";
                 } else {
@@ -789,9 +788,10 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             break;
                         case "17":
                             break;
-                        case "18":
-                            break;
                         default:
+                            echo "
+                                <div class='helpBlock'><p>Такой страницы не существует. Вернитесь к <a href='help.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>списку разделов</span>.</p></div>
+                            ";
                             break;
                     }
                 }
