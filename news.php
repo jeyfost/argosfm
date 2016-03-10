@@ -524,7 +524,7 @@
             <menu>
             	<a href='index.php' class='noBorder' title='Вернуться на главную страницу'>
                     <div id='mainPoint'>
-                        <div id='mainPointCenter'>
+                        <div id='mainPointCenter' onmouseover='menuVisual("1", "mpIMG", "mpTop")' onmouseout='menuDefault1()'>
                             <div id='mpTop'></div>
                             <div class='pBottom'>
                                 <img src='pictures/system/mainText.png' id='mpIMG' class='noBorder'>
