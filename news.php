@@ -682,11 +682,17 @@
     	<div id='content_news_inner'>
             <span class='bigHeaderStyle'>Новости</span>
             <div style='height: 20px;'></div>
-			<div id='newsSearch'>
-				<form id='newsSearchForm'>
-					<input type='text' class='admInput' id='newsSearchInput' name='newsSearchInput' placeholder='Найти новость...' onfocus='if(this.value == "Найти новость...") {this.value = "";}' onblur='if(this.value == "") {this.value = "Найти новость..."}' value='Найти новость...' />
-				</form>
-			</div>
+			<?php
+				if(empty($_REQUEST['id'])) {
+					echo "
+					<div id='newsSearch'>
+						<form id='newsSearchForm'>
+							<input type='text' class='admInput' id='newsSearchInput' name='newsSearchInput' placeholder='Найти новость...' onfocus='if(this.value == \"Найти новость...\") {this.value = \"\";}' onblur='if(this.value == \"\") {this.value = \"Найти новость...\"}' value='Найти новость...' />
+						</form>
+					</div>
+					";
+				}
+			?>
 			<div id='newsFastSearch' style='right: 30px; top: 100px;'></div>
             <?php
             	if(empty($_REQUEST['id']))
