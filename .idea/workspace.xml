@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,8 +50,8 @@
       <file leaf-file-name="help.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/help.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75584793">
-              <caret line="744" column="92" selection-start-line="744" selection-start-column="92" selection-end-line="744" selection-end-column="92" />
+            <state vertical-scroll-proportion="0.73099416">
+              <caret line="743" column="243" selection-start-line="743" selection-start-column="243" selection-end-line="743" selection-end-column="243" />
               <folding>
                 <marker date="1457605667862" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
                 <marker date="1457605667862" expanded="true" signature="1150:1215" placeholder="SELECT * FRO... users" />
@@ -732,12 +731,6 @@
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
     </task>
-    <task id="LOCAL-00030" summary="Вся проверка данных переведена на Ajax">
-      <created>1456754878134</created>
-      <option name="number" value="00030" />
-      <option name="project" value="LOCAL" />
-      <updated>1456754878134</updated>
-    </task>
     <task id="LOCAL-00031" summary="Переработан стиль поля поиска">
       <created>1456755403014</created>
       <option name="number" value="00031" />
@@ -1026,7 +1019,13 @@
       <option name="project" value="LOCAL" />
       <updated>1457601719904</updated>
     </task>
-    <option name="localTasksCounter" value="79" />
+    <task id="LOCAL-00079" summary="Добавлена страница помощи по личному кабинету">
+      <created>1457605688050</created>
+      <option name="number" value="00079" />
+      <option name="project" value="LOCAL" />
+      <updated>1457605688050</updated>
+    </task>
+    <option name="localTasksCounter" value="80" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1065,7 +1064,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Панель быстрого поиска теперь сдвигает футер вниз" />
     <MESSAGE value="Исправлен раздел редактирования товаров" />
     <MESSAGE value="Исправлен раздел редактирования товаров v2" />
     <MESSAGE value="Добавлены подсказки при регстрации" />
@@ -1090,7 +1088,8 @@
     <MESSAGE value="Исправлена страница поиска. Выравнивание блоков изменено" />
     <MESSAGE value="Исправлена передача переменных сессии в поиске" />
     <MESSAGE value="Добавлена страница помощи по поиску" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница помощи по поиску" />
+    <MESSAGE value="Добавлена страница помощи по личному кабинету" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница помощи по личному кабинету" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2295,8 +2294,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/help.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75584793">
-          <caret line="744" column="92" selection-start-line="744" selection-start-column="92" selection-end-line="744" selection-end-column="92" />
+        <state vertical-scroll-proportion="0.73099416">
+          <caret line="743" column="243" selection-start-line="743" selection-start-column="243" selection-end-line="743" selection-end-column="243" />
           <folding>
             <marker date="1457605667862" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
             <marker date="1457605667862" expanded="true" signature="1150:1215" placeholder="SELECT * FRO... users" />
