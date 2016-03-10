@@ -633,7 +633,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             <li><a href='help.php?section=4' class='noBorder' id='hlp4' onmouseover='helpText(1, \"hlp4\")' onmouseout='helpText(0, \"hlp4\")'>Контактная инфрмация</a></li>
                             <li><a href='help.php?section=5' class='noBorder' id='hlp5' onmouseover='helpText(1, \"hlp5\")' onmouseout='helpText(0, \"hlp5\")'>Страница поиска</a></li>
                             <li><a href='help.php?section=6' class='noBorder' id='hlp6' onmouseover='helpText(1, \"hlp6\")' onmouseout='helpText(0, \"hlp6\")'>Личный кабинет</a></li>
-                            <li><a href='help.php?section=7' class='noBorder' id='hlp7' onmouseover='helpText(1, \"hlp7\")' onmouseout='helpText(0, \"hlp7\")'>Корзина</a></li>
+                            <li><a href='help.php?section=7' class='noBorder' id='hlp7' onmouseover='helpText(1, \"hlp7\")' onmouseout='helpText(0, \"hlp7\")'>Корзина и страница заказов</a></li>
                             <li><a href='help.php?section=8' class='noBorder' id='hlp8' onmouseover='helpText(1, \"hlp8\")' onmouseout='helpText(0, \"hlp8\")'>История заказов</a></li>
                         </ol>
                         <h2 class='goodStyle'>Блок регистрации и авторизации</h2>
@@ -731,7 +731,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "6":
                             echo "
                                 <h2 class='goodStyle'>Структура личного кабинета</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=5' class='noBorder'><span class='catalogueItemTextItalic'>Личный кабинет</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=6' class='noBorder'><span class='catalogueItemTextItalic'>Личный кабинет</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Личный кабинет состоит из трёх конструктивных блоков:</p>
                                     <ol>
@@ -746,6 +746,28 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "7":
+                                echo "
+                                    <h2 class='goodStyle'>Структура страницы заказов</h2>
+                                    <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=7' class='noBorder'><span class='catalogueItemTextItalic'>Страница заказов</span></a></p>
+                                    <div class='helpBlock'>
+                                        <p>Страница заказов состоит из двух конструктивных блоков:</p>
+                                        <ol>
+                                            <li><a href='pictures/help/order_basket.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Текущий заказ или Корзина</a></li>
+                                            <li><a href='pictures/help/order_history.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>История заказов</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class='helpBlock'><p>На странице текущего заказа изображены все товары, которые вы добавили в коризну в <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>каталоге</span></a>. Под списком товаров находится общая сумма заказа в белорусских рублях. Подробно о функциях корзины читайте <a href='help.php?section=14' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>в соответствующей ветке</span></a>.</p></div>
+                                    <div class='helpBlock'><p>На вкладке <b>\"История заказов\"</b> в скобках написано общее число совершённых вами заказов.</p></div>
+                                    <div class='helpBlock'><p>
+                                        Страница <b>\"История заказов\"</b> делится на два блока:
+                                        <ol>
+                                            <li style='color: #3f3f3f;'>Необработанные заказы</li>
+                                            <li style='color: #3f3f3f;'>Обработанные заказы</li>
+                                        </ol>
+                                    </p></div>
+                                    <div class='helpBlock'><p>В разделе необработанных заказов содержатся ваши заявки, которые уже были отправлены менеджерам на рассмотрение, но ещё не отданы на сборку.</p></div>
+                                    <div class='helpBlock'><p>В разделе обработанных заказов содержится вся история ваших заявок. Обработанные заявки отображаются по 10 на странице. Для перехода на другую страницу, воспользуйтесь <a href='pictures/help/catalogue_nav_numbers.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>блоком постраничной навигации</span></a>, расположенным внизу.</p></div>
+                                ";
                             break;
                         case "8":
                             break;
