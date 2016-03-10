@@ -1,7 +1,7 @@
 <?php
 	
 	session_start();
-	
+
 	if(empty($_SESSION['query']))
 	{
 		header("Location: index.php");
