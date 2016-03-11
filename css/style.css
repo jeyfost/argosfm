@@ -21,7 +21,7 @@
 html {background-color: #dddddd;}
 
 .button:hover {background-color: #b3413c; color: #ffffff;}
-.headerStyleRedHover:hover, .catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover, #indexNewsButtons .catalogueItemTextDecorated:hover, a .basicRed:hover {color: #b3413c;}
+.headerStyleRedHover:hover, .catalogueItemTextDecorated:hover, .sketchStyle:hover, .tableStyleDecorated:hover, #indexNewsButtons .catalogueItemTextDecorated:hover, a .basicRed:hover, .basicBigLink:hover {color: #b3413c;}
 .headerStyleHover:hover, .basicHover:hover {color: #df4e47;}
 .catalogueItemTextItalic:hover, .redItalicHover:hover, #content_news_inner a:hover, ul .basicBigRed:hover, .admULFont:hover, .admUL li:hover {text-decoration: underline;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
