@@ -610,7 +610,10 @@
         	<?php
 			
 				echo "<span class='headerStyle'>Поиск по каталогу</span><br /><br />";
-				
+
+				$rateResult = $mysqli->query("SELECT rate FROM currency WHERE code = 'usd'");
+				$rate = $rateResult->fetch_array(MYSQLI_NUM);
+
 				$search_result = $mysqli->query("SELECT * FROM catalogue_new WHERE name LIKE '%".$_SESSION['query']."%' OR code LIKE '%".$_SESSION['query']."%' ORDER BY name LIMIT ".$start.", 10");
 				$count = 0;
 						
@@ -693,6 +696,7 @@
 									<br /><br />
 									<div>
 										<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$search['code']."</span></div>
+										<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$search['id']."' onclick='showForm(\"gp".$search['id']."\", \"".$search['price']."\", \"".$search['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} echo "><span class='basic'><b>Цена:</b> ".ceil($search['price']*$rate[0])." бел. руб.</span></div>
 									</div>
 								</div>
 					";
