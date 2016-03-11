@@ -589,11 +589,11 @@
                 <br />
                 Республика Беларусь, г. Могилев, ул. Залуцкого, 21
                 <br /><br />
-                <span class='headerStyle'>Телефон/факс:</span>
+                <span class='headerStyle'>Телефон/факс (отдел маркетинга):</span>
                 <br />
                 +375 (222) 707-707
                 <br /><br />
-                <span class='headerStyle'>Телефон:</span>
+                <span class='headerStyle'>Телефон (директор):</span>
                 <br />
                 +375 (222) 44-70-30
                 <br /><br />
