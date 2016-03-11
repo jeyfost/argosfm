@@ -10,9 +10,9 @@
 	{
 		if(!empty($_POST['settingsName']) and !empty($_POST['settingsOrganisation']) and !empty($_POST['settingsPhone']))
 		{
-			$organisation = trim(htmlspecialchars($_POST['settingsOrganisation']));
-			$person = trim(htmlspecialchars($_POST['settingsName']));
-			$phone = trim(htmlspecialchars($_POST['settingsPhone']));
+			$organisation = mysqli_real_escape_string($mysqli, $_POST['settingsOrganisation']);
+			$person = mysqli_real_escape_string($mysqli, $_POST['settingsName']);
+			$phone = mysqli_real_escape_string($mysqli, $_POST['settingsPhone']);
 			
 			if($mysqli->query("UPDATE users SET organisation = '".$organisation."', person = '".$person."', phone = '".$person."' WHERE id = '".$_SESSION['userID']."'"))
 			{
@@ -36,8 +36,8 @@
 	{
 		if(!empty($_POST['settingsName']) and !empty($_POST['settingsPhone']))
 		{
-			$person = trim(htmlspecialchars($_POST['settingsName']));
-			$phone = trim(htmlspecialchars($_POST['settingsPhone']));
+			$person = mysqli_real_escape_string($mysqli, $_POST['settingsName']);
+			$phone = mysqli_real_escape_string($_POST['settingsPhone']);
 			
 			if($mysqli->query("UPDATE users SET person = '".$person."', phone = '".$person."' WHERE id = '".$_SESSION['userID']."'"))
 			{

@@ -10,9 +10,9 @@
 			$login = trim(htmlspecialchars($_POST['userLogin']));
 			$password = $_POST['userPassword'];
 			$email = strtolower($_POST['userEmail']);
-			$organisation = addslashes($_POST['organisation']);
-			$name = addslashes($_POST['userName']);
-			$phone = addslashes($_POST['userPhone']);
+			$organisation = mysqli_real_escape_string($mysqli, $_POST['organisation']);
+			$name = mysqli_real_escape_string($mysqli, $_POST['userName']);
+			$phone = mysqli_real_escape_string($mysqli, $_POST['userPhone']);
 			
 			$_SESSION['registration_type'] = '1';
 			$_SESSION['registration_login'] = $login;
