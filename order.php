@@ -304,6 +304,7 @@ if(isset($_SESSION['activation']))
 				<div id='notificationWindowOuter' style='display: block;'>
 					<div id='notificationWindow'>
 						<form id='recoveryNotificationForm'>
+							<div  style='width: 100%; height: 20px;'></div>
 							<center><span class='headerStyleRed'>Завершение регистрации</span></center>
 							<br /><br />
 			";
