@@ -19,8 +19,10 @@
 	<?php
 		$codes = array();
 		$free = array();
-		$codeResult = $mysqli->query("SELECT code FROM catalogue_new ORDER BY code");
-		while($code = $codeResult->fetch_array(MYSQLI_NUM))
+
+		$codeResult = mysql_query("SELECT code FROM catalogue_new ORDER BY code");
+
+		while($code = mysql_fetch_array($codeResult, MYSQL_NUM))
 		{
 			if($code[0] != 0)
 			{
@@ -46,9 +48,19 @@
 			}
 		}
 		
+		$index = 0;
+
 		for($i = 0; $i < count($free); $i++)
 		{
-			echo $free[$i]."<br />";
+			if($index % 2 == 0) {
+				echo "<div style='position: relative; float: left; padding: 5px; margin: 5px; background-color: #ffffff;'>";
+			} else {
+				echo "<div style='position: relative; float: left; padding: 5px; margin: 5px; background-color: #dddddd;'>";
+			}
+
+			echo $free[$i]."</div>";
+
+			$index++;
 		}
 	?>
 </body>
