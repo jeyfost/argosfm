@@ -740,9 +740,9 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                         <li><a href='pictures/help/settings_3.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Удаление аккаунта</a></li>
                                     </ol>
                                 </div>
-                                <div class='helpBlock'><p>Помощь по изменению личной информации читайте в <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
-                                <div class='helpBlock'><p>Помощь по изменению пароля читайте в <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
-                                <div class='helpBlock'><p>Помощь по удалению вашего аккаунта читайте в <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Помощь по изменению личной информации читайте в <a href='help.php?section=16' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Помощь по изменению пароля читайте в <a href='help.php?section=17' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Помощь по удалению вашего аккаунта читайте в <a href='help.php?section=8' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
                             ";
                             break;
                         case "7":
@@ -812,6 +812,11 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "12":
+                            echo "
+                                <h2 class='goodStyle'>Основные положения ценовой политики</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=11' class='noBorder'><span class='catalogueItemTextItalic'>Основные положения ценовой политики</span></a></p>
+                                <div class='helpBlock'><p>Цены на сайте <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> отображаются в белорусских рублях, однако они привязаны к официальным курсам валют Национального Банка Республики Беларусь.</p></div>
+                            ";
                             break;
                         case "13":
                             break;
