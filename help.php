@@ -661,7 +661,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "1":
                             echo "
                                 <h2 class='goodStyle'>Структура главной страницы</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=1' class='noBorder'><span class='catalogueItemTextItalic'>Главная страница</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=1' class='noBorder'><span class='catalogueItemTextItalic'>Главная страница</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Главная страница сайта <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из трёх конструктивных блоков:</p>
                                     <ol>
@@ -679,7 +679,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "2":
                             echo "
                                 <h2 class='goodStyle'>Структура каталога</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=2' class='noBorder'><span class='catalogueItemTextItalic'>Каталог</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=2' class='noBorder'><span class='catalogueItemTextItalic'>Каталог</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Страница каталога <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из двух конструктивных блоков:</p>
                                     <ol>
@@ -697,7 +697,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "3":
                             echo "
                                 <h2 class='goodStyle'>Структура страницы новостей</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=3' class='noBorder'><span class='catalogueItemTextItalic'>Новости</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=3' class='noBorder'><span class='catalogueItemTextItalic'>Новости</span></a></p>
                                 <div class='helpBlock'><p>На странице новостей показаны все новости и коммерческие предложения, которые когда-либо были опубликованы. На этой странице показано 10 новостей на одной странице. Они отсортированы по дате публикации. Для просмотра более ранних публикаций, необходимо воспользоваться <a href='pictures/help/catalogue_nav_numbers.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>панелью постраничной навигации</span></a>, расположенной внизу страницы.</p></div>
                                 <div class='helpBlock'><p>Поиск новостей может осуществляться по дате при помощи <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>календаря</span></a> в верхней правой части страницы и <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>панели поиска</span></a>.</p></div>
                                 <div class='helpBlock'><p>Поиск по дате осуществляется путём выбора даты в календаре. Если в определённый день были публикации, дата в календаре будет написана <a href='pictures/help/news_calendar_date.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>красным цветом на сером фоне</span></a>. При выборе даты <a href='pictures/help/news_date.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>будут показаны новости</span></a>, написанные в этот день. Под календарём появится кнопка <b>\"Сбросить дату\"</b>, которая необходима для возврата к списку всех новостей.</p></div>
@@ -708,7 +708,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "4":
                             echo "
                                 <h2 class='goodStyle'>Структура страницы с контактной информацией</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=4' class='noBorder'><span class='catalogueItemTextItalic'>Контактная информация</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=4' class='noBorder'><span class='catalogueItemTextItalic'>Контактная информация</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Страница с контактной информацией <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из двух конструктивных блоков:</p>
                                     <ol>
@@ -722,7 +722,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "5":
                             echo "
                                 <h2 class='goodStyle'>Структура страницы поиска</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=5' class='noBorder'><span class='catalogueItemTextItalic'>Страница поиска</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=5' class='noBorder'><span class='catalogueItemTextItalic'>Страница поиска</span></a></p>
                                 <div class='helpBlock'><p>На странице поиска выводятся товары, название которых или артикул максимально похожи с введёнными вами данными. На странице <a href='pictures/help/search.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>отображено по 10 товаров</span></a>, если было найдено 10 или более совпадений. Для перехода на следующую страницу воспользуйтесь <a href='pictures/help/catalogue_nav_numbers.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>блоком постраничной навигации</span></a>, расположенным внизу странцы.</p></div>
                                 <div class='helpBlock'><p><a href='pictures/help/search_item.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Блок отдельного товара</span></a> на странице поиска состоит из панели навигации, фотографии, названия, описания, артикула, цены и чертежа.</p></div>
                                 <div class='helpBlock'><p><a href='pictures/help/search_nav.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Панель навигации товара</span></a> показывает, в каких разделах данный товар расположен.</p></div>
@@ -731,7 +731,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "6":
                             echo "
                                 <h2 class='goodStyle'>Структура личного кабинета</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=6' class='noBorder'><span class='catalogueItemTextItalic'>Личный кабинет</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=6' class='noBorder'><span class='catalogueItemTextItalic'>Личный кабинет</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Личный кабинет состоит из трёх конструктивных блоков:</p>
                                     <ol>
@@ -748,7 +748,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "7":
                                 echo "
                                     <h2 class='goodStyle'>Структура страницы заказов</h2>
-                                    <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=7' class='noBorder'><span class='catalogueItemTextItalic'>Страница заказов</span></a></p>
+                                    <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=7' class='noBorder'><span class='catalogueItemTextItalic'>Страница заказов</span></a></p>
                                     <div class='helpBlock'>
                                         <p>Страница заказов состоит из двух конструктивных блоков:</p>
                                         <ol>
@@ -772,7 +772,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "9":
                             echo "
                                 <h2 class='goodStyle'>Авторизация</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=9' class='noBorder'><span class='catalogueItemTextItalic'>Авторизация</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=9' class='noBorder'><span class='catalogueItemTextItalic'>Авторизация</span></a></p>
                                 <div class='helpBlock'><p><a href='pictures/help/auth.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Блок авторизации</span></a> представляет собой окно, расположенное поверх страницы сайта. Окно содержит поля ввода логина и пароля, а также ссылки на разделы регистрации и восстановления пароля. О разделах <a href='help.php?section=10' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>регистрации</span></a> и <a href='help.php?section=11' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>восстановления пароля</span></a> вы можете прочитать в соответствующих ветках.</p></div>
                                 <div class='helpBlock'><p>Попасть в раздел авторизации можно путём нажатия на <a href='pictures/help/header.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>иконку в меню сайта</span></a>, находящуюся между блоком с названиями разделов и блоком поиска.</p></div>
                                 <div class='helpBlock'><p>Авторизация необходима для оформления онлайн-заявок.</p></div>
@@ -782,7 +782,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "10":
                             echo "
                                 <h2 class='goodStyle'>Регистрация нового пользователя</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalic'> > </span><a href='help.php?section=10' class='noBorder'><span class='catalogueItemTextItalic'>Регистрация</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=10' class='noBorder'><span class='catalogueItemTextItalic'>Регистрация</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Раздел регистрации нового пользователя представляет собой окно, расположенное поверх страницы сайт, разделённый на два блока:</p>
                                     <ol>
@@ -803,6 +803,10 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "11":
+                            echo "
+                                <h2 class='goodStyle'>Восстановление пароля</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=11' class='noBorder'><span class='catalogueItemTextItalic'>Восстановление пароля</span></a></p>
+                            ";
                             break;
                         case "12":
                             break;

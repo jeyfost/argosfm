@@ -345,7 +345,7 @@ ol li a {color: #008fe1;}
 .goodDescriptionRight {position: relative; float: right; width: 100px; text-align: left;}
 .catalogueItemTextDecorated {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47; text-decoration: underline;}
 .catalogueItemText {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47;}
-.catalogueItemTextItalic, .newsPathText {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; color: #3f3f3f;}
+.catalogueItemTextItalic, .catalogueItemTextItalicNoHover, .newsPathText {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; color: #3f3f3f;}
 .redItalic {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; color: #3f3f3f;}
 .redItalicHover {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: italic; color: #df4e47;}
 .sketch {position: relative; float: right; width: 480px; margin-top: 10px;}
