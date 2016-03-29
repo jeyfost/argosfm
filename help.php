@@ -815,11 +815,18 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             echo "
                                 <h2 class='goodStyle'>Основные положения ценовой политики</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=11' class='noBorder'><span class='catalogueItemTextItalic'>Основные положения ценовой политики</span></a></p>
-                                <div class='helpBlock'><p>Цены на сайте <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> отображаются в белорусских рублях, однако они привязаны к официальным курсам валют Национального Банка Республики Беларусь. Это означает, что с изменениями официальных курсов будут меняться и цены в белорусских рублях на сайте.</p></div>
-                                <div class='helpBlock'><p>С изменениями официальных курсов будут меняться и цены в белорусских рублях на сайте.</p></div>
+                                <div class='helpBlock'><p>Цены на сайте <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> отображаются в белорусских рублях, однако они привязаны к официальным курсам валют Национального Банка Республики Беларусь.</p></div>
+                                <div class='helpBlock'><p>Как правило, изменения в ценах происходят сразу после опубликования официальных курсов валют на сайте Национального Банка Республики Беларусь.</p></div>
+                                <div class='helpBlock'><p>С изменениями официальных курсов будут меняться и цены в белорусских рублях в каталоге.</p></div>
                             ";
                             break;
                         case "13":
+                            echo "
+                                <h2 class='goodStyle'>Об изменении цен в оформленном заказе</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=11' class='noBorder'><span class='catalogueItemTextItalic'>Динамическое изменение цен в заказе</span></a></p>
+                                <div class='helpBlock'><p>Поскольку <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>цены на товары привязаны к официальным курсам валют Национального Банка Республики Беларусь</span></a>, сумма в белорусских рублях в оформленном заказе также может изменятся, если по какой-либо причине ваш заказ не был выполнен. Если новая цена вас не устроит, вы будете вправе отказаться от оформленного заказа без каких-либо штрафов либо оговорить с менеджером возможность приобретения товаров по цене, сформированной на момент оформления заказа.</p></div>
+                                <div class='helpBlock'><p>Процент скидки от итоговой цены оговаривается напрямую с менеджером в зависимости от объёма заказа или от вашей личной скидки.</p></div>
+                            ";
                             break;
                         case "14":
                             break;

@@ -373,15 +373,19 @@ $(document).ready(function() {
 });
 
 $(document).mouseup(function (e) {
-    var container = $('#fastSearch');
-    if (container.has(e.target).length === 0){
-        container.hide();
+    var container1 = $('#fastSearch');
+    var container2 = $('#shadow');
+    var container3 = $('#sb-overlay');
+    var container4 = $('#sb-close');
+
+    if (container1.has(e.target).length === 0 && container2.has(e.target).length === 0 && container3.has(e.target).length === 0 && container4.has(e.target).length === 0) {
+        container1.hide();
     }
 });
 
 $(document).mouseup(function (e) {
     var container = $('#newsFastSearch');
-    if (container.has(e.target).length === 0){
+    if (container.has(e.target).length === 0) {
         container.hide();
     }
 });
