@@ -852,12 +852,6 @@
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
     </task>
-    <task id="LOCAL-00053" summary="Панель быстрого поиска теперь сдвигает футер вниз">
-      <created>1457093609033</created>
-      <option name="number" value="00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1457093609033</updated>
-    </task>
     <task id="LOCAL-00054" summary="Исправлен раздел редактирования товаров">
       <created>1457167694523</created>
       <option name="number" value="00054" />
@@ -1146,7 +1140,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459257076852</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="Добавлена страница помощи по оформлению заказа">
+      <created>1459265039241</created>
+      <option name="number" value="00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1459265039241</updated>
+    </task>
+    <option name="localTasksCounter" value="103" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1185,7 +1185,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлена передача переменных сессии в поиске" />
     <MESSAGE value="Добавлена страница помощи по поиску" />
     <MESSAGE value="Добавлена страница помощи по личному кабинету" />
     <MESSAGE value="Доработана страница помощи по поиску" />
@@ -1210,7 +1209,8 @@
     <MESSAGE value="Создана страница помощи по динамическим изменениям цен в оформленных заказах + правки других страниц помощи и js-скрипта" />
     <MESSAGE value="Изменён стиль фотографий товаров в каталоге" />
     <MESSAGE value="Исправлена страница помощи по динамическому изменению цены в оформленной заказе" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлена страница помощи по динамическому изменению цены в оформленной заказе" />
+    <MESSAGE value="Добавлена страница помощи по оформлению заказа" />
+    <option name="LAST_COMMIT_MESSAGE" value="Добавлена страница помощи по оформлению заказа" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
