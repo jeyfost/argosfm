@@ -152,12 +152,16 @@
     <link rel='shortcut icon' href='pictures/icons/favicon.ico' type='image/x-icon'>
 	<link rel='icon' href='pictures/icons/favicon.ico' type='image/x-icon'>
     <link rel='stylesheet' media='screen' type='text/css' href='css/style.css'>
-    <link rel='stylesheet' type='text/css' href='js/shadowbox/source/shadowbox.css'>
     
 	<?php
-		if(strpos($_SERVER['HTTP_USER_AGENT'], 'Opera') !== false)
-		{
+		if(strpos($_SERVER['HTTP_USER_AGENT'], 'Opera') !== false) {
 			echo "<link rel='stylesheet' media='screen' type='text/css' href='css/styleOpera.css'>";
+		}
+
+		if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false) {
+			echo "<link rel='stylesheet' type='text/css' href='js/lightbox/css/lightbox.css'>";
+		} else {
+			echo "<link rel='stylesheet' type='text/css' href='js/shadowbox/source/shadowbox.css'>";
 		}
 	?>
     
@@ -165,9 +169,16 @@
     <script type='text/javascript' src='js/footerO.js'></script>
     <script type='text/javascript' src='js/catalogue.js'></script>
     <script type='text/javascript' src='js/jquery-1.8.3.min.js'></script>
-    <script type='text/javascript' src='js/shadowbox/source/shadowbox.js'></script>
     <script type='text/javascript' src='js/ajax.js'></script>
     <script type='text/javascript' src='js/functions.js'></script>
+
+	<?php
+		if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false) {
+			echo "<script type='text/javascript' src='js/lightbox/js/lightbox.js'></script>";
+		} else {
+			echo "<script type='text/javascript' src='js/shadowbox/source/shadowbox.js'></script>";
+		}
+	?>
 
     <?php
     	if(!isset($_SESSION['background']))
