@@ -379,7 +379,7 @@ ol li a {color: #008fe1;}
 .basketPointActive {position: relative; float: left; width: 200px; height: 40px; line-height: 40px; background-color: #df4e47; text-align: center;}
 .basketGood {position: relative; float: left; width: 100%; padding-bottom: 20px; min-height: 180px;}
 .basketGoodH {position: relative; float: left; margin-left: 65px; width: 100%; padding-bottom: 20px; min-height: 180px;}
-.basketGoodPicture {position: relative; float: left;}
+.basketGoodPicture {position: relative; float: left; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 .basketGoodContent {position: relative; float: left; width: 600px; padding-left: 20px;}
 .basketGoodTopLine {position: relative; float: left; width: 600px; height: 30px;}
 .basketGTLRed {position: relative; float: left; width: 5px; height: 30px; background-color: #df4e47;}

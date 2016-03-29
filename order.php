@@ -1062,7 +1062,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 					{
 						echo "<div style='height: 30px;'></div>";
 						
-						echo "<div style='padding: auto 20px;'>";
+						echo "<div style='margin-left: 5px;'>";
 						if(isset($_SESSION['deleteFromBasket']))
 						{
 							switch($_SESSION['deleteFromBasket'])
@@ -1122,7 +1122,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 						$goodsResult = $mysqli->query("SELECT * FROM basket WHERE user_id = '".$_SESSION['userID']."' AND status = '0'");
 						if($goodsResult->num_rows == 0)
 						{
-							echo "<span class='basic'>На данный момент ваша корзина пуста. Чтобы оформить заказ, посетите <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span>";
+							echo "<div style='margin-left: 5px;'><span class='basic'>На данный момент ваша корзина пуста. Чтобы оформить заказ, посетите <a href='catalogue.php' class='noBorder'><span class='catalogueItemTextDecorated'>каталог</span></a> и выберите необходимые вам товары.</span></div>";
 						}
 						else
 						{
