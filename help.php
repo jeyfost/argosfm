@@ -815,7 +815,8 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             echo "
                                 <h2 class='goodStyle'>Основные положения ценовой политики</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=11' class='noBorder'><span class='catalogueItemTextItalic'>Основные положения ценовой политики</span></a></p>
-                                <div class='helpBlock'><p>Цены на сайте <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> отображаются в белорусских рублях, однако они привязаны к официальным курсам валют Национального Банка Республики Беларусь.</p></div>
+                                <div class='helpBlock'><p>Цены на сайте <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> отображаются в белорусских рублях, однако они привязаны к официальным курсам валют Национального Банка Республики Беларусь. Это означает, что с изменениями официальных курсов будут меняться и цены в белорусских рублях на сайте.</p></div>
+                                <div class='helpBlock'><p>С изменениями официальных курсов будут меняться и цены в белорусских рублях на сайте.</p></div>
                             ";
                             break;
                         case "13":

@@ -70,9 +70,9 @@ body {
 	font-style: normal;
 	/* [disabled]color: #3f3f3f; */
 }
-header {width: 100%; min-width: 1000px; height: 70px; background-color: #ffffff; top: 0px; left: 0px;}
+header {width: 100%; min-width: 1000px; height: 70px; background-color: #ffffff; top: 0px; left: 0px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 menu {position: relative; width: 516px; height: 70px; margin: 0 auto; margin-top: 0px;}
-footer {width: 100%; min-width: 1000px; height: 70px; background-color: #ffffff; position: absolute; bottom: 0;}
+footer {width: 100%; min-width: 1000px; height: 70px; background-color: #ffffff; position: absolute; bottom: 0; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 label {font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-weight: normal; font-style: normal; color: #3f3f3f;}
 select {width: 290px; height: 20px; padding: 0px 5px; font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #3f3f3f; margin-top: 3px;}
 input {width: 220px; height: 20px; font-family: Cambria, Arial, Helvetica, sans-serif; font-style: italic; color: #3f3f3f; font-size: 14px; padding-right: 3px; padding-left: 3px; border: 1px solid #df4e47; position: relative;}
@@ -109,9 +109,9 @@ ol li a {color: #008fe1;}
 #searchSubmit {background: url(../pictures/system/search.png) no-repeat top left; border: none; width: 14px; height: 14px; cursor: pointer; position: absolute; top: 28px; right: 10px;}
 #content {position: relative; margin: 0 auto; width: 1000px; min-height: 415px; height: auto !important; padding: 20px auto;}
 #content_main {position: relative; margin: 20px auto auto auto; width: 1000px; height: 100px;}
-#fa_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; padding: 20px; text-align: center;}
-#em_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center;}
-#ca_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center;}
+#fa_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; padding: 20px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+#em_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+#ca_main_block {position: relative; float: left; width: 280px; background-color: #ffffff; margin-left: 20px; padding: 20px; text-align: center; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 #footerContent {width: 1000px; height: auto; position: relative; margin: 0 auto;}
 #location {height: 40px; width: 200px; padding-top: 15px;}
 #copyright {position: relative; margin: 0 auto; width: 300px; height: 55px; text-align: center; line-height: 67px; margin-top: -56px;}
@@ -136,23 +136,23 @@ ol li a {color: #008fe1;}
 #userIcon {position: relative; float: left;}
 #basketIcon {position: relative; float: left; margin-left: 5px;}
 #exitIcon {position: relative; float: right;}
-#newsMain, #partners {position: relative; float: left; width: 100%; background-color: #ffffff; margin-top: 15px; padding: 10px 0 10px 0;}
-#fastSearch, #newsFastSearch {position: absolute; background-color: #f8f8f8; width: 410px; z-index: 20; padding: 10px; display: none; border: 1px solid #dddddd;}
+#newsMain, #partners {position: relative; float: left; width: 100%; background-color: #ffffff; margin-top: 15px; padding: 10px 0 10px 0; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+#fastSearch, #newsFastSearch {position: absolute; background-color: #f8f8f8; width: 410px; z-index: 20; padding: 10px; display: none; border: 1px solid #dddddd; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 #loginSubmit {float: left;}
 #loginCancel {float: right;}
 #help {position: absolute; top: 20px; right: 22px;}
 #newsFastSearch .searchLine, #newsFastSearch .searchGreyBG {width: calc(100% - 20px); padding: 10px;}
 
 /*catalogue.php*/
-#cataloguePoints {position: relative; float: left; width: 270px; height: auto; background-color: #ffffff; padding: 15px;}
-#catalogueGoods {position: relative; float: right; width: 620px; height: auto; background-color: #ffffff; padding: 15px;}
+#cataloguePoints {position: relative; float: left; width: 270px; height: auto; background-color: #ffffff; padding: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+#catalogueGoods {position: relative; float: right; width: 620px; height: auto; background-color: #ffffff; padding: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 
 /*contacts.php*/
-#map {position: relative; float: left; width: 570px; background-color: #ffffff; padding: 15px;}
-#contacts {position: relative; float: right; width: 350px; height: 415px; background-color: #ffffff; padding: 15px;}
+#map {position: relative; float: left; width: 570px; background-color: #ffffff; padding: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+#contacts {position: relative; float: right; width: 350px; height: 415px; background-color: #ffffff; padding: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 
 /*search.php*/
-#search {position: relative; width: 970px; padding: 15px; background-color: #ffffff; min-height: 350px; display: inline-block;}
+#search {position: relative; width: 970px; padding: 15px; background-color: #ffffff; min-height: 350px; display: inline-block; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 #searchPages {position: relative; width: 970px; margin-top: 20px; text-align: center;}
 
 /*colors.php*/
@@ -195,7 +195,7 @@ ol li a {color: #008fe1;}
 #backToCurrentNews {position: relative; float: right; margin-top: -22px; margin-right: 410px; width: 100px; height: 20px; line-height: 20px; font-family: Play, Arial, Helvetica, sans-serif; font-size: 14px; font-style: normal; font-weight: normal; background-color: #df4e47; color: #ffffff; cursor: pointer; text-align: center;}
 
 /*news.php*/
-#content_news {position: relative; margin: 20px auto auto auto; width: 1000px; background-color: #ffffff; padding-bottom: 20px;}
+#content_news {position: relative; margin: 20px auto auto auto; width: 1000px; background-color: #ffffff; padding-bottom: 20px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 #content_news_inner {position: relative; width: 960px; padding: 10px 20px; background-color: #ffffff; display: inline-block; min-height: 300px;}
 #content_news img {margin: 10px;}
 #newsPath, #editNewsRed {position: relative; float: left;}
