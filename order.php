@@ -158,10 +158,10 @@
 			echo "<link rel='stylesheet' media='screen' type='text/css' href='css/styleOpera.css'>";
 		}
 
-		if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false) {
-			echo "<link rel='stylesheet' type='text/css' href='js/lightbox/css/lightbox.css'>";
-		} else {
+		if(strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') !== false) {
 			echo "<link rel='stylesheet' type='text/css' href='js/shadowbox/source/shadowbox.css'>";
+		} else {
+			echo "<link rel='stylesheet' type='text/css' href='js/lightbox/css/lightbox.css'>";
 		}
 	?>
     
@@ -173,10 +173,10 @@
     <script type='text/javascript' src='js/functions.js'></script>
 
 	<?php
-		if(strpos($_SERVER['HTTP_USER_AGENT'], 'MSIE') !== false) {
-			echo "<script type='text/javascript' src='js/lightbox/js/lightbox.js'></script>";
-		} else {
+		if(strpos($_SERVER['HTTP_USER_AGENT'], 'Chrome') !== false) {
 			echo "<script type='text/javascript' src='js/shadowbox/source/shadowbox.js'></script>";
+		} else {
+			echo "<script type='text/javascript' src='js/lightbox/js/lightbox.js'></script>";
 		}
 	?>
 
