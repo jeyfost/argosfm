@@ -32,6 +32,7 @@ html {background-color: #dddddd;}
 #newsFastSearch .searchLine:hover {background-color: #e8e8e8;}
 #newsFastSearch .searchGreyBG:hover {background-color: #d0d0d0;}
 .basicBlue:hover {color: #0078bc;}
+.partner:hover {box-shadow: 0 0 10px rgba(0,0,0,0.2);}
 
 .tableStyle[title]:hover:after {
 	content: attr(title);
@@ -419,3 +420,4 @@ ol li a {color: #008fe1;}
 .notificationOK {padding: 5px; background-color: #dddddd; border: 2px solid #093; margin-top: 20px; width: auto; text-align: center;}
 .hintText {font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 12px; font-weight: normal; font-style: normal; color: #df4e47; border-bottom: 1px dashed #df4e47; cursor: help;}
 .helpBlock {width: calc(100% - 20px); padding: 10px; background-color: #dddddd; margin-top: 10px;}
+.partner {border: none; text-decoration: none; box-shadow: none;}
