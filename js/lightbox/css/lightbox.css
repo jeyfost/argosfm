@@ -179,3 +179,9 @@
 .lb-data .lb-close:hover {
   cursor: pointer;
 }
+
+.lb-closeContainer {
+  position: relative;
+  margin: -25px -12px auto auto;
+  z-index: 1000;
+}
