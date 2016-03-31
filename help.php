@@ -836,7 +836,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             echo "
                                 <h2 class='goodStyle'>Об изменении цен в оформленном заказе</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=13' class='noBorder'><span class='catalogueItemTextItalic'>Динамическое изменение цен в заказе</span></a></p>
-                                <div class='helpBlock'><p>Поскольку <a href='help.php?section=12' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>цены на товары привязаны к официальным курсам валют Национального Банка Республики Беларусь</span></a>, сумма в белорусских рублях в оформленном заказе также может изменятся, если по какой-либо причине ваш заказ не был выполнен. Если новая цена вас не устроит, вы будете вправе отказаться от оформленного заказа без каких-либо штрафов либо оговорить с менеджером возможность приобретения товаров по цене, сформированной на момент оформления заказа.</p></div>
+                                <div class='helpBlock'><p>Поскольку <a href='help.php?section=12' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>цены на товары привязаны к официальным курсам валют Национального Банка Республики Беларусь</span></a>, сумма в белорусских рублях в оформленном заказе также может изменяться, если по какой-либо причине ваш заказ не был выполнен. Если новая цена вас не устроит, вы будете вправе отказаться от оформленного заказа без каких-либо штрафов либо оговорить с менеджером возможность приобретения товаров по цене, сформированной на момент оформления заказа.</p></div>
                                 <div class='helpBlock'><p>Процент скидки от итоговой цены оговаривается напрямую с менеджером в зависимости от объёма заказа или от вашей личной скидки.</p></div>
                             ";
                             break;
@@ -855,6 +855,20 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "15":
+                            echo "
+                                <h2 class='goodStyle'>Как редактировать отправленную заявку</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=15' class='noBorder'><span class='catalogueItemTextItalic'>Изменение отправленной заявки</span></a></p>
+                                <div class='helpBlock'><p>Посмотреть отправленные заявки вы можете во вкладке \"<a href='order.php?s=2&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>История заказов</span></a>\" в вашей корзине. Как попасть в корзину, читайте в <a href='help.php?section=14' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'>
+                                    <p>Вкладка \"<a href='order.php?s=2&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>История заказов</span></a>\" разделена на 2 блока:</p>
+                                    <ol>
+                                            <li><span style='font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; color: #3f3f3f;'>Необработанные заказы (это те заказы, которые ещё не были подтверждены и отданы на сборку)</span></li>
+                                            <li><span style='font-family: Cambria, Arial, Helvetica, sans-serif; font-size: 14px; color: #3f3f3f;'>Обработанные заказы (это те заказы, которые вы уже забрали, либо те, которые уже собраны для вас)</span></li>
+                                        </ol>
+                                </div>
+                                <div class='helpBlock'><p>Обработанные заказы вы можете только просматривать, нажав на его номер. После нажатия откроется <a href='pictures/help/order_completed.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>детальная информация</span></a> о заказе.</p></div>
+                                <div class='helpBlock'><p>До тех пор, пока менеджер не примет ваш заказ, у вас есть возможность его отредактировать: удалить любые группы товаров. Для этого вам необходимо нажать на номер заказа, после чего откроется <a href='pictures/help/order_sent_detailed.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>детальная информация</span></a> о выбранном заказе. Нажимая на крестик в верхнем правом углу выбранный группы товаров, вы удалите выбранную группу товаров. При этом общая стоимость вашего заказа пересчитается автоматически.</p></div>
+                            ";
                             break;
                         case "16":
                             break;
