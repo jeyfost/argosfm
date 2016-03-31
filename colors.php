@@ -654,12 +654,14 @@
 
     <script type='text/javascript'>footerPosition();</script>
     <script type='text/javascript'>
-		var fullHeight = $('#color').height() + $('#color').offset().top + 50;
-		var newOffset = parseInt(fullHeight + 20);
+		$(window).load(function() {
+			var fullHeight = $('#color').height() + $('#color').offset().top + 100;
+			var newOffset = parseInt(fullHeight - 40);
 
-		if($('footer').offset().top < fullHeight) {
-			$('footer').offset({top: newOffset});
-		}
+			if($('footer').offset().top < fullHeight) {
+				$('footer').offset({top: newOffset});
+			}
+		});
 	</script>
 
     
