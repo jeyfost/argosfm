@@ -693,7 +693,12 @@
     
     <div id='content_news'>
     	<div id='content_news_inner'>
-            <span class='bigHeaderStyle'>Новости</span>
+			<?php
+				if(empty($_REQUEST['id'])) {
+					echo "<span class='bigHeaderStyle'>Новости</span>";
+				}
+			?>
+
             <div style='height: 20px;'></div>
 			<?php
 				if(empty($_REQUEST['id'])) {
