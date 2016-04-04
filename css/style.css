@@ -223,7 +223,7 @@ ol li a {color: #008fe1;}
 #admBody {background-color: #dddddd;}
 #admMenu {position: relative; height: 67px; width: 750px; float: right;}
 #admTopMenu {position: relative; float: right; width: 750px; height: 3px;}
-#admContent {position: relative; margin: 20px auto auto auto; width: 960px; background-color: #ffffff; padding: 20px; z-index: 2;}
+#admContent {position: relative; margin: 20px auto auto auto; width: 960px; background-color: #ffffff; padding: 20px; z-index: 2; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 #admGoodsWindow, #admCategoriesWindow {position: absolute; width: 170px; height: 122px; background-color: #787878; top: 80px; display: none;}
 #admGoodsWindowInner, #admCategoriesWindowInner {position: relative; margin: 1px auto; width: 168px; height: 120px; background-color: #ffffff;}
 #admDifferentWindow {position: absolute; width: 170px; height: 162px; background-color: #787878; top: 80px; display: none;}

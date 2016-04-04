@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,20 +38,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.927273">
-              <caret line="255" column="33" selection-start-line="255" selection-start-column="33" selection-end-line="255" selection-end-column="33" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="225" column="167" selection-start-line="225" selection-start-column="167" selection-end-line="225" selection-end-column="167" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="help.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57223004">
+            <state vertical-scroll-proportion="33.346153">
               <caret line="703" column="193" selection-start-line="703" selection-start-column="193" selection-end-line="703" selection-end-column="193" />
               <folding>
                 <marker date="1459768020793" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
@@ -268,8 +268,8 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/news.php" />
         <option value="$PROJECT_DIR$/colors.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/help.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -431,12 +431,6 @@
       <created>1456207155890</created>
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
-    </task>
-    <task id="LOCAL-00066" summary="Страница помощи. Г">
-      <created>1457523594039</created>
-      <option name="number" value="00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1457523594039</updated>
     </task>
     <task id="LOCAL-00067" summary="Исправлена страница помощи. Главная страница">
       <created>1457524285886</created>
@@ -726,7 +720,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459764530794</updated>
     </task>
-    <option name="localTasksCounter" value="115" />
+    <task id="LOCAL-00115" summary="Создана страница с разделами помощи для администратора">
+      <created>1459768047386</created>
+      <option name="number" value="00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1459768047386</updated>
+    </task>
+    <option name="localTasksCounter" value="116" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -765,7 +765,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлена форма регистрации" />
     <MESSAGE value="Правка на странице контактов" />
     <MESSAGE value="Изменение стилей для некоторых ссылок" />
     <MESSAGE value="Изменена обработка данных при регситрации и редактировании личных данных" />
@@ -790,7 +789,8 @@
     <MESSAGE value="Создана страница помощи по изменению пароля" />
     <MESSAGE value="Создана страница помощи по удалению аккаунта" />
     <MESSAGE value="Изменён стиль модальных окон на странице заказов" />
-    <option name="LAST_COMMIT_MESSAGE" value="Изменён стиль модальных окон на странице заказов" />
+    <MESSAGE value="Создана страница с разделами помощи для администратора" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создана страница с разделами помощи для администратора" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1582,17 +1582,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.927273">
-          <caret line="255" column="33" selection-start-line="255" selection-start-column="33" selection-end-line="255" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57223004">
+        <state vertical-scroll-proportion="33.346153">
           <caret line="703" column="193" selection-start-line="703" selection-start-column="193" selection-end-line="703" selection-end-column="193" />
           <folding>
             <marker date="1459768020793" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
@@ -1748,6 +1740,14 @@
             <marker date="1459768020793" expanded="true" signature="85223:85431" placeholder="..." />
             <marker date="1459768020793" expanded="false" signature="85739:85755" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="225" column="167" selection-start-line="225" selection-start-column="167" selection-end-line="225" selection-end-column="167" />
+          <folding />
         </state>
       </provider>
     </entry>
