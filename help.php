@@ -808,6 +808,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "8":
+                            echo "
+                                <h2 class='goodStyle'>Изменение стоимости товара в каталоге</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Изменение стоимости товара в каталоге</span></a></p>
+                                <div class='helpBlock'><p>Для изменения стоимости товара необходимо нажать на его цену в каталоге. На месте цены <a href='pictures/help/catalogue_price.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>появится поле для ввода</span></a>, в котором уже будет указана стоимость в долларах.</p></div>
+                                <div class='helpBlock'><p>Новую стоимость можно написать цифрами, либо изменить её при помощи стрелок в правой части поля ввода. Одно нажатие на стрелку изменяет цену на $0.001.</p></div>
+                                <div class='helpBlock'><p>После того, как вы введёте новую стоимость, нажмите на любое место страницы вне поля ввода. Поле ввода исчезнет, а цена автоматически пересчитается в белорусские рубли согласно указанному в разделе управленя сайтом курсу.</p></div>
+                            ";
                             break;
                         case "9":
                             echo "
@@ -869,11 +876,6 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "14":
-                            echo "
-                                <h2 class='goodStyle'>Изменение стоимости товара в каталоге</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Изменение стоимости товара в каталоге</span></a></p>
-                                
-                            ";
                             break;
                         case "15":
                             break;
