@@ -793,6 +793,19 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "7":
+                            echo "
+                                <h2 class='goodStyle'>Структура страницы заявок</h2>
+                                    <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=7' class='noBorder'><span class='catalogueItemTextItalic'>Страница заявок</span></a></p>
+                                    <div class='helpBlock'>
+                                        <p>Страница заявок состоит из двух конструктивных блоков:</p>
+                                        <ol>
+                                            <li><a href='pictures/help/orders.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Активные заявки</a></li>
+                                            <li><a href='pictures/help/orders_history.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>История заказов</a></li>
+                                        </ol>
+                                    </div>
+                                    <div class='helpBlock'><p>На <a href='pictures/help/orders.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'><span class='basicBlue'>странице активных заявок</span></a> отображаются все непринятые заказы. Об обработке заказов читайте в <a href='help.php?section=14' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                    <div class='helpBlock'><p>На <a href='pictures/help/orders_history.jpg' class='noBorder' rel='shadowbox' id='hlp4' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp4\")' style='color: #008fe1;'><span class='basicBlue'>странице с историей заказов</span></a> отображаются все принятые заявки. Помощь по странице принятых заказов вы найдёт в <a href='help.php?section=16' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                            ";
                             break;
                         case "8":
                             break;
