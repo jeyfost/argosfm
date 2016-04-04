@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="Создана страница помощи по удалению аккаунта">
+    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="Изменён стиль модальных окон на странице заказов">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,20 +38,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="159" column="137" selection-start-line="159" selection-start-column="137" selection-end-line="159" selection-end-column="137" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="244" column="146" selection-start-line="244" selection-start-column="146" selection-end-line="244" selection-end-column="146" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="help.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8092567">
+            <state vertical-scroll-proportion="96.15385">
               <caret line="897" column="0" selection-start-line="897" selection-start-column="0" selection-end-line="897" selection-end-column="0" />
               <folding>
                 <marker date="1459762521011" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
@@ -259,9 +259,9 @@
         <option value="$PROJECT_DIR$/settings.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/news.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/colors.php" />
         <option value="$PROJECT_DIR$/help.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -305,6 +305,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -367,7 +368,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -423,12 +423,6 @@
       <created>1456207155890</created>
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Исправлено смещение футера в каталоге">
-      <created>1457508024551</created>
-      <option name="number" value="00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1457508024551</updated>
     </task>
     <task id="LOCAL-00064" summary="Сделана стартовая страница помощи для пользователя">
       <created>1457517179160</created>
@@ -718,7 +712,13 @@
       <option name="project" value="LOCAL" />
       <updated>1459761967766</updated>
     </task>
-    <option name="localTasksCounter" value="112" />
+    <task id="LOCAL-00112" summary="Создана страница помощи по удалению аккаунта">
+      <created>1459762548838</created>
+      <option name="number" value="00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1459762548838</updated>
+    </task>
+    <option name="localTasksCounter" value="113" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -757,7 +757,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Добавлена стоимость товаров на странице поиска и возможность редактирования цены для администратора" />
     <MESSAGE value="Исправлена форма регистрации" />
     <MESSAGE value="Правка на странице контактов" />
     <MESSAGE value="Изменение стилей для некоторых ссылок" />
@@ -782,7 +781,8 @@
     <MESSAGE value="Создана страница помощи по изменению личных данных" />
     <MESSAGE value="Создана страница помощи по изменению пароля" />
     <MESSAGE value="Создана страница помощи по удалению аккаунта" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создана страница помощи по удалению аккаунта" />
+    <MESSAGE value="Изменён стиль модальных окон на странице заказов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Изменён стиль модальных окон на странице заказов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1567,14 +1567,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="159" column="137" selection-start-line="159" selection-start-column="137" selection-end-line="159" selection-end-column="137" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/colors.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1584,7 +1576,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/help.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8092567">
+        <state vertical-scroll-proportion="96.15385">
           <caret line="897" column="0" selection-start-line="897" selection-start-column="0" selection-end-line="897" selection-end-column="0" />
           <folding>
             <marker date="1459762521011" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
@@ -1732,6 +1724,14 @@
             <marker date="1459762521011" expanded="true" signature="75509:75717" placeholder="..." />
             <marker date="1459762521011" expanded="false" signature="76025:76041" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="244" column="146" selection-start-line="244" selection-start-column="146" selection-end-line="244" selection-end-column="146" />
+          <folding />
         </state>
       </provider>
     </entry>
