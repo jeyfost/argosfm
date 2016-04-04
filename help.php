@@ -706,7 +706,110 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                     ";
                 } else {
                     switch($_REQUEST['section']) {
-
+                        case "1":
+                            echo "
+                                <h2 class='goodStyle'>Структура главной страницы</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=1' class='noBorder'><span class='catalogueItemTextItalic'>Главная страница</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>Главная страница сайта <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>Аргос-ФМ</span></a> состоит из трёх конструктивных блоков:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/index.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Навигационный блок</a></li>
+                                        <li><a href='pictures/help/index_news_adm.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок последних новостей</a></li>
+                                        <li><a href='pictures/help/index_partners.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Ссылки на сайты партнёров</a></li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>Навигационный блок служит для быстрого перехода в интересующий вас раздел <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>каталога</span><span style='color: #3f3f3f;'> (<a href='catalogue.php?type=fa&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>) путём нажатия на соответствующую кнопку <b>\"В каталог\"</b> или на изображение.</span></p></div>
+                               <div class='helpBlock'> <p>Блок последних новостей содержит в себе три последние новости, опубликованные на сайте. Прочитать полный текст новости можно, нажав на блок с названием и кратким описанием интересующей вас новости. Данный блок также содержит 3 ссылки: <b>\"Помощь\"</b> (ведёт на <a href='help.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу помощи по сайту</span></a>), <b>\"Все новости\"</b> (ведёт на <a href='news.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу с полным списком новостей</span></a>) и <b>\"Написать новость\"</b> (ведёт на <a href='admin/admin.php?section=users&action=addNews' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>страницу написания новости</span></a>).</p><p>Для помощи по странице новостей перейдите по <a href='help.php?section=3' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>данной ссылке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Партнёрский блок содержит ссылки на официальные сайты наших партнёров в виде их логотипов.</p></div>
+                            ";
+                            break;
+                        case "2":
+                            break;
+                        case "3":
+                            break;
+                        case "4":
+                            break;
+                        case "5":
+                            break;
+                        case "6":
+                            break;
+                        case "7":
+                            break;
+                        case "8":
+                            break;
+                        case "9":
+                            break;
+                        case "10":
+                            break;
+                        case "11":
+                            break;
+                        case "12":
+                            break;
+                        case "13":
+                            break;
+                        case "14":
+                            break;
+                        case "15":
+                            break;
+                        case "16":
+                            break;
+                        case "17":
+                            break;
+                        case "18":
+                            break;
+                        case "19":
+                            break;
+                        case "20":
+                            break;
+                        case "21":
+                            break;
+                        case "22":
+                            break;
+                        case "23":
+                            break;
+                        case "24":
+                            break;
+                        case "25":
+                            break;
+                        case "26":
+                            break;
+                        case "27":
+                            break;
+                        case "28":
+                            break;
+                        case "29":
+                            break;
+                        case "30":
+                            break;
+                        case "31":
+                            break;
+                        case "32":
+                            break;
+                        case "33":
+                            break;
+                        case "34":
+                            break;
+                        case "35":
+                            break;
+                        case "36":
+                            break;
+                        case "37":
+                            break;
+                        case "38":
+                            break;
+                        case "39":
+                            break;
+                        case "40":
+                            break;
+                        case "41":
+                            break;
+                        case "42":
+                            break;
+                        default:
+                            echo "
+                                <div class='helpBlock'><p>Такой страницы не существует. Вернитесь к <a href='help.php' class='noBorder'><span class='basicRed' style='font-size: 14px;'>списку разделов</span>.</p></div>
+                            ";
+                            break;
                     }
                 }
             } else {
@@ -753,8 +856,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                     <ol>
                                         <li><a href='pictures/help/index.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Навигационный блок</a></li>
                                         <li><a href='pictures/help/index_news.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок последних новостей</a></li>
-                                        <li><a href='pictures/help/index_news.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок последних новостей</a></li>
-                                        <li><a href='pictures/help/index_partners.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Ссылки на партнёров</a></li>
+                                        <li><a href='pictures/help/index_partners.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Ссылки на сайты партнёров</a></li>
                                     </ol>
                                 </div>
                                 <div class='helpBlock'><p>Навигационный блок служит для быстрого перехода в интересующий вас раздел <a href='catalogue.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>каталога</span><span style='color: #3f3f3f;'> (<a href='catalogue.php?type=fa&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>мебельная фурнитура</span></a>, <a href='catalogue.php?type=em&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>кромочные материалы</span></a>, <a href='catalogue.php?type=ca&p=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>аксессуары для штор</span></a>) путём нажатия на соответствующую кнопку <b>\"В каталог\"</b> или на изображение.</span></p></div>
