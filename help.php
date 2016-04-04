@@ -843,6 +843,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "11":
+                            echo "
+                                <h2 class='goodStyle'>Восстановление пароля</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=11' class='noBorder'><span class='catalogueItemTextItalic'>Восстановление пароля</span></a></p>
+                                <div class='helpBlock'><p><a href='pictures/help/recovery.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Блок восстановления пароля</span></a> представляет собой окно, расположенное поверх страницы сайта.</p></div>
+                                <div class='helpBlock'><p>Попасть в раздел регистрации можно путём нажатия на <a href='pictures/help/header.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>иконку в меню сайта</span></a>, находящуюся между блоком с названиями разделов и блоком поиска. Далее необходимо нажать на надпись <b>\"Забыли пароль?\"</b> внизу появившегося <a href='pictures/help/auth.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>блока авторизации</span></a>.</p></div>
+                                <div class='helpBlock'><p>Для восстановления забытого пароля вам необходимо ввести ваш логин или e-mail, указанный при регистрации, после чего на ваш электронный адрес придёт письмо со ссылкой, перейдя по которой для вас сгенерируется новый случайный пароль. Изменить его можно будет в <a href='help.php?section=6' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>личном кабинете</span></a> после <a href='help.php?section=9' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>авторизации</span></a>.</p></div>
+                            ";
                             break;
                         case "12":
                             break;
