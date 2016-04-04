@@ -776,6 +776,21 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "6":
+                            echo "
+                                <h2 class='goodStyle'>Структура личного кабинета</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=6' class='noBorder'><span class='catalogueItemTextItalic'>Личный кабинет</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>Личный кабинет состоит из трёх конструктивных блоков:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/settings_1_adm.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Основные настройки</a></li>
+                                        <li><a href='pictures/help/settings_2.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Изменение пароля</a></li>
+                                        <li><a href='pictures/help/settings_3_adm.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Управление сайтом</a></li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>Помощь по изменению личной информации читайте в <a href='help.php?section=21' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Помощь по изменению пароля читайте в <a href='help.php?section=22' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Помощь по изменению курса доллара читайте в <a href='help.php?section=20' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                            ";
                             break;
                         case "7":
                             break;
