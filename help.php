@@ -873,13 +873,20 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "16":
                             echo "
                                 <h2 class='goodStyle'>Редактирование личных данных</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=15' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование личных данных</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=16' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование личных данных</span></a></p>
                                 <div class='helpBlock'><p>Для редактирования личных данных вам нужно <a href='help.php?section=9' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>авторизоваться</span></a> на сайте и войти в <a href='settings.php?s=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>личный кабинет</span></a>.</p></div>
                                 <div class='helpBlock'><p>Раздел редактирования личных данных находится во вкладке \"<a href='pictures/help/settings_personal.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Основные настройки</span></a>\".</p></div>
                                 <div class='helpBlock'><p>Для редактирования своих личных данных введите новую информацию о себе и нажмите на кнопку \"<b>Внести изменения</b>\".</p></div>
                             ";
                             break;
                         case "17":
+                            echo "
+                                <h2 class='goodStyle'>Изменения пароля</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=17 class='noBorder'><span class='catalogueItemTextItalic'>Изменение пароля</span></a></p>
+                                <div class='helpBlock'><p>Для изменения пароля вам нужно <a href='help.php?section=9' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>авторизоваться</span></a> на сайте и войти в <a href='settings.php?s=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>личный кабинет</span></a>.</p></div>
+                                <div class='helpBlock'><p>Раздел изменения пароля находится во вкладке \"<a href='pictures/help/settings_password.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Изменение пароля</span></a>\".</p></div>
+                                <div class='helpBlock'><p>Для изменения пароля введите новый пароль и его подтверждение в соответствующие поля ввода, затем нажмите на кнопку \"<b>Изменить пароль</b>\".</p></div>
+                            ";
                             break;
                         case "8":
                             break;
