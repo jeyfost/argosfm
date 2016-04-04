@@ -852,8 +852,21 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "12":
+                            echo "
+                                <h2 class='goodStyle'>ќсновные положени€ ценовой политики</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>ѕомощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=12' class='noBorder'><span class='catalogueItemTextItalic'>ќсновные положени€ ценовой политики</span></a></p>
+                                <div class='helpBlock'><p>÷ены на сайте <a href='index.php' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>јргос-‘ћ</span></a> отображаютс€ в белорусских рубл€х, однако они прив€заны к курсу доллара, указанном в <a href='settings.php?s=3' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>разделе управлени€ сайтом</span></a>.</p></div>
+                                <div class='helpBlock'><p>ѕроцесс изменени€ курса доллара на сайте описан в <a href='help.php?section=20' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>ѕосле установки нового курса цены пересчитываютс€ автоматически.</p></div>
+                            ";
                             break;
                         case "13":
+                            echo "
+                                <h2 class='goodStyle'>ќб изменении цен в оформленном заказе</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>ѕомощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=13' class='noBorder'><span class='catalogueItemTextItalic'>ƒинамическое изменение цен в заказе</span></a></p>
+                                <div class='helpBlock'><p>ѕоскольку <a href='help.php?section=12' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>цены на товары прив€заны к курсу доллара, указанному в разделе управлени€ сайтом</span></a>, сумма в белорусских рубл€х в оформленном заказе также будет измен€тьс€, если по какой-либо причине за€вка не была прин€та.</p></div>
+                                <div class='helpBlock'><p>»сход€ из вышеописанного, имеет смысл обработать все за€вки до изменени€ курса доллара в разделе управлени€ сайтом.</p></div>
+                            ";
                             break;
                         case "14":
                             break;
