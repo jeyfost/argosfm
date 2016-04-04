@@ -869,6 +869,11 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "14":
+                            echo "
+                                <h2 class='goodStyle'>Изменение стоимости товара в каталоге</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Изменение стоимости товара в каталоге</span></a></p>
+                                
+                            ";
                             break;
                         case "15":
                             break;
