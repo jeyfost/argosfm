@@ -889,6 +889,14 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "8":
+                            echo "
+                                <h2 class='goodStyle'>Удаление аккаунта</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=17 class='noBorder'><span class='catalogueItemTextItalic'>Удаление аккаунта</span></a></p>
+                                <div class='helpBlock'><p>Для удаления аккаунта вам нужно <a href='help.php?section=9' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>авторизоваться</span></a> на сайте и войти в <a href='settings.php?s=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>личный кабинет</span></a>.</p></div>
+                                <div class='helpBlock'><p>Раздел удаления находится во вкладке \"<a href='pictures/help/settings_delete.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Удаление аккаунта</span></a>\".</p></div>
+                                <div class='helpBlock'><p>Для удаления аккаунта нажмите на кнопку \"<b>Удалить аккаунт</b>\". При удалении имейте ввиду, что аккаунт будет удалён безвозвратно без возможности восстановления. Все личные данные также будут удалены.
+</p></div>
+                            ";
                             break;
                         default:
                             echo "
