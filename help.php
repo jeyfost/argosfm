@@ -810,6 +810,14 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "8":
                             break;
                         case "9":
+                            echo "
+                                <h2 class='goodStyle'>Авторизация</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=9' class='noBorder'><span class='catalogueItemTextItalic'>Авторизация</span></a></p>
+                                <div class='helpBlock'><p><a href='pictures/help/auth.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Блок авторизации</span></a> представляет собой окно, расположенное поверх страницы сайта. Окно содержит поля ввода логина и пароля, а также ссылки на разделы регистрации и восстановления пароля. О разделах <a href='help.php?section=10' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>регистрации</span></a> и <a href='help.php?section=11' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>восстановления пароля</span></a> вы можете прочитать в соответствующих ветках.</p></div>
+                                <div class='helpBlock'><p>Попасть в раздел авторизации можно путём нажатия на <a href='pictures/help/header.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>иконку в меню сайта</span></a>, находящуюся между блоком с названиями разделов и блоком поиска.</p></div>
+                                <div class='helpBlock'><p>Авторизация необходима для оформления онлайн-заявок.</p></div>
+                                <div class='helpBlock'><p>Для авторизации введите свой логин и пароль и  кнопку <b>\"Войти\"</b>.</p></div>
+                            ";
                             break;
                         case "10":
                             break;
