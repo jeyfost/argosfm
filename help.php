@@ -888,6 +888,12 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "15":
+                            echo "
+                                <h2 class='goodStyle'>Обработка заявок</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Обработка заявок</span></a></p>
+                                <div class='helpBlock'><p>Каждый заказ содержит в себе группы товаров. Группа товаров состоит из фотографии, названия, описание, цены за единицу, цены за всю группу данного товара и количества. В ещё не принятых заказах количество товаров в группах можно изменять, нажав на количество. После этого появится <a href='pictures/help/orders_detailed_q.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>поле для ввода</span></a>. После того, как необходимое количество будет установлено, нажмите на любое место страницы вне поля ввода. Поле заменится строкой, а цена за группу и общая стоимость заказа автоматически пересчитаются.</p></div>
+                                <div class='helpBlock'><p>Любую группу товаров можно удалить из неприянтого заказа. Для этого необходимо нажать на крест в верхней правой части группы товаров. При этом общая стоимость заказа автоматически пересчитается.</p></div>
+                            ";
                             break;
                         case "16":
                             break;
