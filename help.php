@@ -880,7 +880,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                 <h2 class='goodStyle'>Обработка заявок</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Обработка заявок</span></a></p>
                                 <div class='helpBlock'><p><b>Все заявки необходимо утверждать только после согласования с заказчиком.</b></p></div>
-                                <div class='helpBlock'><p>Необработанные заявки находятся во вкладке \"<a href='pictures/help/orders.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Активные заявки</span></a>\".</p></div>
+                                <div class='helpBlock'><p>Необработанные заявки находятся во вкладке \"<a href='pictures/help/orders.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Активные заявки</span></a>\" в <a href='order.php?s=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>разделе заказов</span></a>.</p></div>
                                 <div class='helpBlock'><p>Каждая заявка располагается в отдельной строке таблицы, содержащей в себе ячейки с номером и датой заявки, с кнопками управления и информацией о заказчике.</p></div>
                                 <div class='helpBlock'><p>Информацию о заказчике можно посмотреть, нажав на <a href='pictures/help/order_buttons.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>кнопку \"<b>Заказчик</b>\"</span></a>, расположенную в верхней правой части шапки заявки. После нажатия откроется <a href='pictures/help/order_person.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>окно с детальной информацией</span></a> о человеке и (если указана) организации.</p></div>
                                 <div class='helpBlock'><p>Для детального просмотра заявки необходимо нажать на ячейку с её номером и датой подачи. После нажатия заявка развернётся и вы увидите <a href='pictures/help/orders_detailed.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>полный список товаров</span></a>, которые она в себе содержит.</p></div>
@@ -896,6 +896,14 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "16":
+                            echo "
+                                <h2 class='goodStyle'>История заявок</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>История заявок</span></a></p>
+                                <div class='helpBlock'><p>Историю заявок можно посмотреть во вкладке \"<a href='pictures/help/orders_history.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>История заказов</span></a>\" в <a href='order.php?s=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>разделе заказов</span></a>.</p></div>
+                                <div class='helpBlock'><p>Любую заявку можно просмотреть детально. Как это сделать, описано в <a href='help.php?section=14' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>ветке помощи по оформлению заявки</span></a>.</p></div>
+                                <div class='helpBlock'><p>Для просмотра всех заявок конкретного покупателя необходимо найти его и выбрать в <a href='pictures/help/orders_history_customers.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>выпадающем списке</span></a>.</p></div>
+                                <div class='helpBlock'><p>Если пользователь удалил свой аккаунт, история его заказов остаётся и в выпадающем списке её можно найти по названию его организации с префиксом \"<b>[удалён]</b>\".</p></div>
+                            ";
                             break;
                         case "17":
                             break;
