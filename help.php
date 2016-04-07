@@ -922,6 +922,20 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "18":
+                            echo "
+                                <h2 class='goodStyle'>–едактирование новости</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>ѕомощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>–едактирование новости</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>ѕерейти к редактированию новости можно двум€ способами:</p>
+                                    <ol>
+                                        <li>„ерез <a href='pictures/help/news_text.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>страницу с текстом новости.</a> ƒл€ редактировани€ необходимо нажать на иконку карандаша в верхней правой части блока с новостью.</li>
+                                        <li>„ерез <a href='pictures/help/admin_news.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>раздел \"<b>Ќовости</b>\" в панели администрировани€</a>. ƒл€ редактировани€ необходимо нажать на иконку справа отс соответствующей новости.</li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>ѕосле нажати€ откроетс€ <a href='pictures/help/admin_news_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>раздел редактировани€ новости</span></a>.</p></div>
+                                <div class='helpBlock'><p>–едактирование новости происходит по тем же правилам, что и добавление. ѕрочитать об этом можно в <a href='help.php?section=17' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>ѕри необходимости новости можно удал€ть. ƒл€ этого нажмите на крестик в верхней правой части <a href='pictures/help/news_text.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>страницы с текстом новости</span></a> или на крестик справа от соответствующей новости в <a href='pictures/help/admin_news.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>разделе новостей в панели администрировани€</span></a>. ѕосле удалени€ новость невозможно будет восстановить.</p></div>
+                            ";
                             break;
                         case "19":
                             break;
