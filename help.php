@@ -906,6 +906,20 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "17":
+                            echo "
+                                <h2 class='goodStyle'>Добавление новости</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Добавление новости</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>Войти в раздел добавления новостей можно следующими способами:</p>
+                                    <ol>
+                                        <li>Через <a href='pictures/help/index_news_adm.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>блок новостей на главной странице</a></li>
+                                        <li>Через <a href='pictures/help/news_adm.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>страницу новостей</a></li>
+                                        <li>Через <a href='admin/admin.php?section=users&action=addNews' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>раздел в панели администрирования</a></li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>Раздел добавления новости выгляит <a href='pictures/help/news_add.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>так</span></a>.</p></div>
+                                <div class='helpBlock'><p>Для добавления новости необходимо ввести заголовок, краткое описание и текст. При помощи встроенного текстового редактора можно форматиповать текст, вставлять изображения, изменять выравнивание текста и т.д.</p></div>
+                            ";
                             break;
                         case "18":
                             break;
