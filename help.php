@@ -890,7 +890,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "15":
                             echo "
                                 <h2 class='goodStyle'>Обработка заявок</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Обработка заявок</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=15' class='noBorder'><span class='catalogueItemTextItalic'>Обработка заявок</span></a></p>
                                 <div class='helpBlock'><p>Каждый заказ содержит в себе группы товаров. Группа товаров состоит из фотографии, названия, описание, цены за единицу, цены за всю группу данного товара и количества. В ещё не принятых заказах количество товаров в группах можно изменять, нажав на количество. После этого появится <a href='pictures/help/orders_detailed_q.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>поле для ввода</span></a>. После того, как необходимое количество будет установлено, нажмите на любое место страницы вне поля ввода. Поле заменится строкой, а цена за группу и общая стоимость заказа автоматически пересчитаются.</p></div>
                                 <div class='helpBlock'><p>Любую группу товаров можно удалить из неприянтого заказа. Для этого необходимо нажать на крест в верхней правой части группы товаров. При этом общая стоимость заказа автоматически пересчитается.</p></div>
                             ";
@@ -898,7 +898,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "16":
                             echo "
                                 <h2 class='goodStyle'>История заявок</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>История заявок</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=16' class='noBorder'><span class='catalogueItemTextItalic'>История заявок</span></a></p>
                                 <div class='helpBlock'><p>Историю заявок можно посмотреть во вкладке \"<a href='pictures/help/orders_history.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>История заказов</span></a>\" в <a href='order.php?s=1' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>разделе заказов</span></a>.</p></div>
                                 <div class='helpBlock'><p>Любую заявку можно просмотреть детально. Как это сделать, описано в <a href='help.php?section=14' target='_blank' class='noBorder'><span class='basicRed' style='font-size: 14px;'>ветке помощи по оформлению заявки</span></a>.</p></div>
                                 <div class='helpBlock'><p>Для просмотра всех заявок конкретного покупателя необходимо найти его и выбрать в <a href='pictures/help/orders_history_customers.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>выпадающем списке</span></a>.</p></div>
@@ -908,7 +908,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "17":
                             echo "
                                 <h2 class='goodStyle'>Добавление новости</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Добавление новости</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=17' class='noBorder'><span class='catalogueItemTextItalic'>Добавление новости</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Войти в раздел добавления новостей можно следующими способами:</p>
                                     <ol>
@@ -924,7 +924,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "18":
                             echo "
                                 <h2 class='goodStyle'>Редактирование новости</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=14' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование новости</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=18' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование новости</span></a></p>
                                 <div class='helpBlock'>
                                     <p>Перейти к редактированию новости можно двумя способами:</p>
                                     <ol>
@@ -938,6 +938,15 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "19":
+                            echo "
+                                <h2 class='goodStyle'>Поиск новостей</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=18' class='noBorder'><span class='catalogueItemTextItalic'>Поиск новостей</span></a></p>
+                                <div class='helpBlock'><p>Поиск новостей может осуществляться по дате при помощи <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>календаря</span></a> в верхней правой части страницы и <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>панели поиска</span></a>.</p></div>
+                                <div class='helpBlock'><p>Поиск по дате осуществляется путём выбора даты в календаре. Если в определённый день были публикации, дата в календаре будет написана <a href='pictures/help/news_calendar_date.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>красным цветом на сером фоне</span></a>. При выборе даты <a href='pictures/help/news_date.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>будут показаны новости</span></a>, написанные в этот день. Под календарём появится кнопка <b>\"Сбросить дату\"</b>, которая необходима для возврата к списку всех новостей.</p></div>
+                                <div class='helpBlock'><p>Для поиска новости по заголовки, котороткому описанию или тексту новости, начните набирать текст <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>в поле для поиска</span></a>. В процессе набора вам будут показаны найденные совпадения <a href='pictures/help/news_search.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>в выпадающем блоке</span></a>. Если совпадений не будет найдено, вы увидите надпись <b>\"К сожалению, ничего похожего не найдено\"</b>. Чтобы закрыть выпадающий блок, нажмите на любое место на экране вне самого блока.</p></div>
+                                <div class='helpBlock'><p>Для прочтения новости нажмите на блок с её заголовком и коротким описанием в общем списке новостей или в выпадающем блоке поиска.</p></div>
+                                <div class='helpBlock'><p>Кроме того, новости можно искать при помощи панели поиска в <a href='pictures/help/admin_news.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>разделе новостей в панели администрирования</span></a>.</p></div>
+                            ";
                             break;
                         case "20":
                             break;
