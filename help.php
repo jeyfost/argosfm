@@ -983,6 +983,44 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "24":
+                            echo "
+                                <h2 class='goodStyle'>Структура панели администрирования</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=24' class='noBorder'><span class='catalogueItemTextItalic'>Структура панели администрирования</span></a></p>
+                                <div class='helpBlock'>
+                                    <p>Панель администрирования состоит из 11 основных модулей с нескольих вспомогательных:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/admin_main.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Главная страница</a></li>
+                                        <li>
+                                            Раздел управления товарами:
+                                            <ol>
+                                                <li><a href='pictures/help/admin_goods_add.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Добавление товаров</a>. Помощь по разделу добавления товаров ищите в <a href='help.php?section=25' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                                <li><a href='pictures/help/admin_goods_edit.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Редактирование товаров</a>. Помощь по разделу редактирования товаров ищите в <a href='help.php?section=26' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                                <li><a href='pictures/help/admin_goods_delete.jpg' class='noBorder' rel='shadowbox' id='hlp4' onmouseover='helpTextB(1, \"hlp4\")' onmouseout='helpTextB(0, \"hlp4\")' style='color: #008fe1;'>Удаление товаров</a>. Помощь по разделу удаления товаров ищите в <a href='help.php?section=27' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                            </ol>
+                                        </li>
+                                        <li>
+                                            Управления разделами:
+                                            <ol>
+                                                <li><a href='pictures/help/admin_categories_add.jpg' class='noBorder' rel='shadowbox' id='hlp5' onmouseover='helpTextB(1, \"hlp5\")' onmouseout='helpTextB(0, \"hlp5\")' style='color: #008fe1;'>Добавление разделов</a>. Помощь по разделу добавления разделов ищите в <a href='help.php?section=28' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                                <li><a href='pictures/help/admin_categories_edit.jpg' class='noBorder' rel='shadowbox' id='hlp6' onmouseover='helpTextB(1, \"hlp6\")' onmouseout='helpTextB(0, \"hlp6\")' style='color: #008fe1;'>Редактирование разделов</a>. Помощь по разделу редактирования разделов ищите в <a href='help.php?section=29' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                                <li><a href='pictures/help/admin_categories_delete.jpg' class='noBorder' rel='shadowbox' id='hlp7' onmouseover='helpTextB(1, \"hlp7\")' onmouseout='helpTextB(0, \"hlp7\")' style='color: #008fe1;'>Удаление разделов</a>. Помощь по удалению разделов ищите в <a href='help.php?section=30' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                            </ol>
+                                        </li>
+                                        <li><a href='pictures/help/admin_email.jpg' class='noBorder' rel='shadowbox' id='hlp8' onmouseover='helpTextB(1, \"hlp8\")' onmouseout='helpTextB(0, \"hlp8\")' style='color: #008fe1;'>Центр e-mail рассылок</a>. Помощь по e-mail рассылкам ищите в <a href='help.php?section=31' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                        <li><a href='pictures/help/admin_clients.jpg' class='noBorder' rel='shadowbox' id='hlp9' onmouseover='helpTextB(1, \"hlp9\")' onmouseout='helpTextB(0, \"hlp9\")' style='color: #008fe1;'>Клиентская база</a>. Помощь по структуре клиентской базы ищите в <a href='help.php?section=33' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                        <li><a href='pictures/help/admin_users.jpg' class='noBorder' rel='shadowbox' id='hlp10' onmouseover='helpTextB(1, \"hlp10\")' onmouseout='helpTextB(0, \"hlp10\")' style='color: #008fe1;'>Раздел управления пользователями</a>. Помощь по разделу управления пользователями ищите в <a href='help.php?section=40' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                        <li><a href='pictures/help/admin_news.jpg' class='noBorder' rel='shadowbox' id='hlp11' onmouseover='helpTextB(1, \"hlp11\")' onmouseout='helpTextB(0, \"hlp11\")' style='color: #008fe1;'>Раздел управления новостями</a>. Помощь по разделу управлениями новостями ищите в <a href='help.php?section=42' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>соответствующей ветке</span></a>.</li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'>
+                                    <p>Главная страница панели управления состоит из:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/admin_menu.jpg' class='noBorder' rel='shadowbox' id='hlp12' onmouseover='helpTextB(1, \"hlp12\")' onmouseout='helpTextB(0, \"hlp12\")' style='color: #008fe1;'>Панели навигации</a></li>
+                                        <li><a href='pictures/help/admin_main.jpg' class='noBorder' rel='shadowbox' id='hlp13' onmouseover='helpTextB(1, \"hlp13\")' onmouseout='helpTextB(0, \"hlp13\")' style='color: #008fe1;'>Блока с основной информацией</a></li>
+                                    </ol>
+                                </div>
+                                <div class='helpBlock'><p>В <a href='pictures/help/admin_main.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>блоке с основной информацией</span></a> продублированы ссылки из <a href='pictures/help/admin_menu.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>меню</span></a>.</p></div>
+                            ";
                             break;
                         case "25":
                             break;
