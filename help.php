@@ -1023,6 +1023,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "25":
+                            echo "
+                                <h2 class='goodStyle'>ƒобавление товара в каталог</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>ѕомощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=24' class='noBorder'><span class='catalogueItemTextItalic'>ƒобавление товара в каталог</span></a></p>
+                                <div class='helpBlock'><p>ƒл€ добавлени€ товара необходимо зайти в <a href='pictures/help/admin_goods_add.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>раздел добавлени€ товаров</span></a>; выбрать его будующее расположение, то есть все категории; ввести название; выбрать артикул или нажать на ссылку \"<b>установить первый незан€тый</b>\"; указать цену в долларах, написав цену вручную, либо при помощи стрелок в правой части пол€ ввода цены; установить позицию в разделе (по умолчнию товар ставитс€ в конец раздела); ввести описание и выбрать фотографию и, если есть, чертЄж товара.</p></div>
+                                <div class='helpBlock'><p>–азмер фотографии не имеет большого значени€. ќднако, желательно, чтобы размер был не менее, чем 100 пикселей по ширине и высоте. ќбрезка фотографии и изменение пропорций происходит автоматически.</p></div>
+                                <div class='helpBlock'><p>ѕри выборе фотографии товара желательно выбирать квадратную, чтобы избежать возможных неточностей в обрезке и масштабировании.</p></div>
+                            ";
                             break;
                         case "26":
                             break;
