@@ -949,6 +949,12 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "20":
+                            echo "
+                                <h2 class='goodStyle'>Изменение курса доллара</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=18' class='noBorder'><span class='catalogueItemTextItalic'>Изменение курса доллара</span></a></p>
+                                <div class='helpBlock'><p>Для изменения курса доллара нееобходимо перейти во <a href='pictures/help/settings_3_adm.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>вкладку \"<b>Управление сайтом</b>\"</span></a>, которая находится в <a href='admin/admin.php?section=users&action=addNews' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>личном кабинете</span></a>.</p></div>
+                                <div class='helpBlock'><p>Для установки нового курса введите новое значение в поле для ввода и нажмите на кнопку \"<b>Внести изменения</b>\". Цены в каталоге будут пересчитаны автоматически.</p></div>
+                            ";
                             break;
                         case "21":
                             break;
