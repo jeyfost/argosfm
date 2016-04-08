@@ -940,7 +940,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "19":
                             echo "
                                 <h2 class='goodStyle'>Поиск новостей</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=18' class='noBorder'><span class='catalogueItemTextItalic'>Поиск новостей</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=19' class='noBorder'><span class='catalogueItemTextItalic'>Поиск новостей</span></a></p>
                                 <div class='helpBlock'><p>Поиск новостей может осуществляться по дате при помощи <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>календаря</span></a> в верхней правой части страницы и <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>панели поиска</span></a>.</p></div>
                                 <div class='helpBlock'><p>Поиск по дате осуществляется путём выбора даты в календаре. Если в определённый день были публикации, дата в календаре будет написана <a href='pictures/help/news_calendar_date.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>красным цветом на сером фоне</span></a>. При выборе даты <a href='pictures/help/news_date.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>будут показаны новости</span></a>, написанные в этот день. Под календарём появится кнопка <b>\"Сбросить дату\"</b>, которая необходима для возврата к списку всех новостей.</p></div>
                                 <div class='helpBlock'><p>Для поиска новости по заголовки, котороткому описанию или тексту новости, начните набирать текст <a href='pictures/help/news_calendar.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>в поле для поиска</span></a>. В процессе набора вам будут показаны найденные совпадения <a href='pictures/help/news_search.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>в выпадающем блоке</span></a>. Если совпадений не будет найдено, вы увидите надпись <b>\"К сожалению, ничего похожего не найдено\"</b>. Чтобы закрыть выпадающий блок, нажмите на любое место на экране вне самого блока.</p></div>
@@ -951,12 +951,18 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "20":
                             echo "
                                 <h2 class='goodStyle'>Изменение курса доллара</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=18' class='noBorder'><span class='catalogueItemTextItalic'>Изменение курса доллара</span></a></p>
-                                <div class='helpBlock'><p>Для изменения курса доллара нееобходимо перейти во <a href='pictures/help/settings_3_adm.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>вкладку \"<b>Управление сайтом</b>\"</span></a>, которая находится в <a href='admin/admin.php?section=users&action=addNews' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>личном кабинете</span></a>.</p></div>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=20' class='noBorder'><span class='catalogueItemTextItalic'>Изменение курса доллара</span></a></p>
+                                <div class='helpBlock'><p>Для изменения курса доллара нееобходимо перейти во <a href='pictures/help/settings_3_adm.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>вкладку \"<b>Управление сайтом</b>\"</span></a>, которая находится в <a href='settings.php?s=3' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>личном кабинете</span></a>.</p></div>
                                 <div class='helpBlock'><p>Для установки нового курса введите новое значение в поле для ввода и нажмите на кнопку \"<b>Внести изменения</b>\". Цены в каталоге будут пересчитаны автоматически.</p></div>
                             ";
                             break;
                         case "21":
+                            echo "
+                                <h2 class='goodStyle'>Редактирование персональных данных</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=21' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование персональных данных</span></a></p>
+                                <div class='helpBlock'><p>Раздел редактирования личных данных находится в <a href='settings.php?s=1' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>личном кабинете</span></a>.</p></div>
+                                <div class='helpBlock'><p>Администратору изменять свои личные данные смысла нет, потому что их никто не видит. Изначально все  поля пустые.</p></div>
+                            ";
                             break;
                         case "22":
                             break;
