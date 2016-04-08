@@ -965,6 +965,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "22":
+                            echo "
+                                <h2 class='goodStyle'>Изменение пароля</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=22' class='noBorder'><span class='catalogueItemTextItalic'>Изменение пароля</span></a></p>
+                                <div class='helpBlock'><p>Раздел изменения пароля находится в <a href='settings.php?s=2' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>личном кабинете</span></a>.</p></div>
+                                <div class='helpBlock'><p>Без согласования пароль лучше не менять.</p></div>
+                                <div class='helpBlock'><p>При изменении пароля на сайте пароль в панели администрирования <b>не изменится</b>! По сути эти два пользователя с логином \"admin\" — разные. Менять пароль в панели администрирования можно только напрямую через базу данных.</p></div>
+                            ";
                             break;
                         case "23":
                             break;
