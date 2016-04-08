@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -514,12 +513,6 @@
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
     </task>
-    <task id="LOCAL-00090" summary="Правка на странице контактов">
-      <created>1457680298913</created>
-      <option name="number" value="00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1457680298913</updated>
-    </task>
     <task id="LOCAL-00091" summary="Изменение стилей для некоторых ссылок">
       <created>1457680443041</created>
       <option name="number" value="00091" />
@@ -808,7 +801,13 @@
       <option name="project" value="LOCAL" />
       <updated>1460099732689</updated>
     </task>
-    <option name="localTasksCounter" value="139" />
+    <task id="LOCAL-00139" summary="Создана страница помощи по входу в панель администрирования для администратора">
+      <created>1460100476122</created>
+      <option name="number" value="00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1460100476122</updated>
+    </task>
+    <option name="localTasksCounter" value="140" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -847,7 +846,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Изменён стиль модальных окон на странице заказов" />
     <MESSAGE value="Создана страница с разделами помощи для администратора" />
     <MESSAGE value="Изменён стиль основного блока в панели администрирования" />
     <MESSAGE value="Создана страница помощи по главной странице для администратора" />
@@ -872,7 +870,8 @@
     <MESSAGE value="Создана страница помощи по изменению курса доллара для администратора" />
     <MESSAGE value="Создана страница помощи по редактированию личных данных для администратора" />
     <MESSAGE value="Создана страница помощи по изменению пароля для администратора" />
-    <option name="LAST_COMMIT_MESSAGE" value="Создана страница помощи по изменению пароля для администратора" />
+    <MESSAGE value="Создана страница помощи по входу в панель администрирования для администратора" />
+    <option name="LAST_COMMIT_MESSAGE" value="Создана страница помощи по входу в панель администрирования для администратора" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
