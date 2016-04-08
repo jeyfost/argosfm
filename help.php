@@ -974,6 +974,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "23":
+                            echo "
+                                <h2 class='goodStyle'>Вход в панель администрирования</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=23' class='noBorder'><span class='catalogueItemTextItalic'>Вход в панель администрирования</span></a></p>
+                                <div class='helpBlock'><p>Войти в панель администрирования можно через личный кабинет (вкладка \"Управление сайтом\"). Там в <a href='pictures/help/settings_3_adm.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>нижней части блока</span></a> находится кнопка \"<b>Войти в панель администрирования</b>\", а также по прямой ссылке: <a href='http://argos-fm.by/admin/' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>http://argos-fm.by/admin/</span></a></p></div>
+                                <div class='helpBlock'><p>Вход в панель администрирования представляет собой <a href='pictures/help/admin_enter.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>окно с полями для ввода логина и пароля</span></a>.</p></div>
+                                <div class='helpBlock'><p>Введите логин и пароль администратора в соответствующие поля ввода и нажмите кнопку \"<b>Войти</b>\".</p></div>
+                            ";
                             break;
                         case "24":
                             break;
