@@ -1052,12 +1052,19 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             echo "
                                 <h2 class='goodStyle'>Добавление нового раздела</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=28' class='noBorder'><span class='catalogueItemTextItalic'>Добавление нового раздела</span></a></p>
-                                <div class='helpBlock'><p>Для доюавления нового раздела необходимо зайти в <a href='pictures/help/admin_categories_add.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию добавления новых разделов</span></a>; выбрать его расположение, то есть все категории.</p></div>
-                                <div class='helpBlock'><p>Если добавляется категория первого уровня, то помимо названия необходимо выбрать чёрную и красную пиктограммы. Их размер должен равняться строго 21x21 пиксель.</p></div>
-                                <div class='helpBlock'><p>Если добавляется раздел или подраздел, необъодимо ввести только его название.</p></div>
+                                <div class='helpBlock'><p>Для добавления нового раздела необходимо зайти в <a href='pictures/help/admin_categories_add.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию добавления новых разделов</span></a>; выбрать его расположение, то есть все категории.</p></div>
+                                <div class='helpBlock'><p>Если добавляется категория первого уровня, то помимо названия необходимо выбрать чёрную и красную пиктограммы. Их размер должен равняться строго 21x21 пиксель. Если необходимо, чтобы добавляемая категория впоследствии не содержала разделов и подразделов, то есть при выборе её в каталоге товары выводились сразу без выбора разделов и подразделов, необходимо поставить галочку \"<b>Категория без разедлов</b>\".</p></div>
+                                <div class='helpBlock'><p>Если добавляется раздел или подраздел, необходимо ввести только его название.</p></div>
                             ";
                             break;
                         case "29":
+                            echo "
+                                <h2 class='goodStyle'>Редактирование раздела</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=29' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование раздела</span></a></p>
+                                <div class='helpBlock'><p>Для редактирования раздела необходимо зайти в <a href='pictures/help/admin_categories_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию редактирования разделов</span></a>; выбрать его расположение, то есть все категории.</p></div>
+                                <div class='helpBlock'><p>Если редактируется категория первого уровня, то помимо изменения названия можно изменить её иконик. Для этого необходимо выбрать чёрную и красную пиктограммы. Их размер должен равняться строго 21x21 пиксель.</p></div>
+                                <div class='helpBlock'><p>Если редактируется раздел или подраздел, необходимо ввести только его новое название.</p></div>
+                            ";
                             break;
                         case "30":
                             break;
