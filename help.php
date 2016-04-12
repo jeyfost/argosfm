@@ -1044,7 +1044,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             echo "
                                 <h2 class='goodStyle'>Удаление товара</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=27' class='noBorder'><span class='catalogueItemTextItalic'>Удаление товара</span></a></p>
-                                <div class='helpBlock'><p>Для удаления товара необходимо зайти в <a href='pictures/help/admin_goods_delete.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>раздел удаления товаров</span></a>; выбрать его расположение, то есть все категории и нажать на кнопку \"<b>Удалить</b>\".</p></div>
+                                <div class='helpBlock'><p>Для удаления товара необходимо зайти в <a href='pictures/help/admin_goods_delete.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>раздел удаления товаров</span></a>, выбрать его расположение, то есть все категории и нажать на кнопку \"<b>Удалить</b>\".</p></div>
                                 <div class='helpBlock'><p>После удаления товар восстановить будет невозможно. Ошибочно удлённые товары придётся добавлять заново.</p></div>
                             ";
                             break;
@@ -1052,7 +1052,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             echo "
                                 <h2 class='goodStyle'>Добавление нового раздела</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=28' class='noBorder'><span class='catalogueItemTextItalic'>Добавление нового раздела</span></a></p>
-                                <div class='helpBlock'><p>Для добавления нового раздела необходимо зайти в <a href='pictures/help/admin_categories_add.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию добавления новых разделов</span></a>; выбрать его расположение, то есть все категории.</p></div>
+                                <div class='helpBlock'><p>Для добавления нового раздела необходимо зайти в <a href='pictures/help/admin_categories_add.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию добавления новых разделов</span></a> и выбрать его расположение, то есть все категории.</p></div>
                                 <div class='helpBlock'><p>Если добавляется категория первого уровня, то помимо названия необходимо выбрать чёрную и красную пиктограммы. Их размер должен равняться строго 21x21 пиксель. Если необходимо, чтобы добавляемая категория впоследствии не содержала разделов и подразделов, то есть при выборе её в каталоге товары выводились сразу без выбора разделов и подразделов, необходимо поставить галочку \"<b>Категория без разедлов</b>\".</p></div>
                                 <div class='helpBlock'><p>Если добавляется раздел или подраздел, необходимо ввести только его название.</p></div>
                             ";
@@ -1061,12 +1061,18 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             echo "
                                 <h2 class='goodStyle'>Редактирование раздела</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=29' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование раздела</span></a></p>
-                                <div class='helpBlock'><p>Для редактирования раздела необходимо зайти в <a href='pictures/help/admin_categories_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию редактирования разделов</span></a>; выбрать его расположение, то есть все категории.</p></div>
+                                <div class='helpBlock'><p>Для редактирования раздела необходимо зайти в <a href='pictures/help/admin_categories_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию редактирования разделов</span></a> и выбрать его расположение, то есть все категории.</p></div>
                                 <div class='helpBlock'><p>Если редактируется категория первого уровня, то помимо изменения названия можно изменить её иконик. Для этого необходимо выбрать чёрную и красную пиктограммы. Их размер должен равняться строго 21x21 пиксель.</p></div>
                                 <div class='helpBlock'><p>Если редактируется раздел или подраздел, необходимо ввести только его новое название.</p></div>
                             ";
                             break;
                         case "30":
+                            echo "
+                                <h2 class='goodStyle'>Удаление раздела</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=30' class='noBorder'><span class='catalogueItemTextItalic'>Удаление раздела</span></a></p>
+                                <div class='helpBlock'><p>Для удаления раздела необходимо зайти в <a href='pictures/help/admin_categories_delete.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию удаления разделов</span></a> и выбрать его расположение, то есть все категории.</p></div>
+                                <div class='helpBlock'><p>Также при удалении категории, раздела или подраздела желательно ставить галочку \"<b>Удалить раздел вместе с товарами</b>\", поскольку эти товары останутся неучтёнными — их нельзя будет увидеть в каталоге, поскольку у них не будет своего раздела. Оставлять товары при удалении разделов нужно только в том случае, если позже они вручную будут перенесены в другой раздел напрямую в базе данных.</p></div>
+                            ";
                             break;
                         case "31":
                             break;
