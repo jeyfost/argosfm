@@ -1025,13 +1025,20 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "25":
                             echo "
                                 <h2 class='goodStyle'>Добавление товара в каталог</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=24' class='noBorder'><span class='catalogueItemTextItalic'>Добавление товара в каталог</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=25' class='noBorder'><span class='catalogueItemTextItalic'>Добавление товара в каталог</span></a></p>
                                 <div class='helpBlock'><p>Для добавления товара необходимо зайти в <a href='pictures/help/admin_goods_add.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>раздел добавления товаров</span></a>; выбрать его будующее расположение, то есть все категории; ввести название; выбрать артикул или нажать на ссылку \"<b>установить первый незанятый</b>\"; указать цену в долларах, написав цену вручную, либо при помощи стрелок в правой части поля ввода цены; установить позицию в разделе (по умолчнию товар ставится в конец раздела); ввести описание и выбрать фотографию и, если есть, чертёж товара.</p></div>
                                 <div class='helpBlock'><p>Размер фотографии не имеет большого значения. Однако, желательно, чтобы размер был не менее, чем 100 пикселей по ширине и высоте. Обрезка фотографии и изменение пропорций происходит автоматически.</p></div>
                                 <div class='helpBlock'><p>При выборе фотографии товара желательно выбирать квадратную, чтобы избежать возможных неточностей в обрезке и масштабировании.</p></div>
                             ";
                             break;
                         case "26":
+                            echo "
+                                <h2 class='goodStyle'>Редактирование товара</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=25' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование товара</span></a></p>
+                                <div class='helpBlock'><p>Для редактирование товара необходимо зайти в <a href='pictures/help/admin_goods_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>раздел редактирования товаров</span></a>; выбрать его расположение, то есть все категории, изменить текст в необходимых местах и, если необходимо, выбрать новую фотографию и чертёж. Если не выбирать новые фотографии, старые удалены не будут.</p></div>
+                                <div class='helpBlock'><p>Размер фотографии не имеет большого значения. Однако, желательно, чтобы размер был не менее, чем 100 пикселей по ширине и высоте. Обрезка фотографии и изменение пропорций происходит автоматически.</p></div>
+                                <div class='helpBlock'><p>При выборе фотографии товара желательно выбирать квадратную, чтобы избежать возможных неточностей в обрезке и масштабировании.</p></div>
+                            ";
                             break;
                         case "27":
                             break;
