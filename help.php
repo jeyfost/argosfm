@@ -1045,10 +1045,17 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                 <h2 class='goodStyle'>Удаление товара</h2>
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=27' class='noBorder'><span class='catalogueItemTextItalic'>Удаление товара</span></a></p>
                                 <div class='helpBlock'><p>Для удаления товара необходимо зайти в <a href='pictures/help/admin_goods_delete.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>раздел удаления товаров</span></a>; выбрать его расположение, то есть все категории и нажать на кнопку \"<b>Удалить</b>\".</p></div>
-                                <div class='helpBlock'><p>После удаления товар восстановить будет невозможно.</p></div>
+                                <div class='helpBlock'><p>После удаления товар восстановить будет невозможно. Ошибочно удлённые товары придётся добавлять заново.</p></div>
                             ";
                             break;
                         case "28":
+                            echo "
+                                <h2 class='goodStyle'>Добавление нового раздела</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=28' class='noBorder'><span class='catalogueItemTextItalic'>Добавление нового раздела</span></a></p>
+                                <div class='helpBlock'><p>Для доюавления нового раздела необходимо зайти в <a href='pictures/help/admin_categories_add.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>секцию добавления новых разделов</span></a>; выбрать его расположение, то есть все категории.</p></div>
+                                <div class='helpBlock'><p>Если добавляется категория первого уровня, то помимо названия необходимо выбрать чёрную и красную пиктограммы. Их размер должен равняться строго 21x21 пиксель.</p></div>
+                                <div class='helpBlock'><p>Если добавляется раздел или подраздел, необъодимо ввести только его название.</p></div>
+                            ";
                             break;
                         case "29":
                             break;
