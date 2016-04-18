@@ -690,7 +690,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             <li><a href='help.php?section=28' class='noBorder' id='hlp28' onmouseover='helpText(1, \"hlp28\")' onmouseout='helpText(0, \"hlp28\")'>Добавление нового раздела</a></li>
                             <li><a href='help.php?section=29' class='noBorder' id='hlp29' onmouseover='helpText(1, \"hlp29\")' onmouseout='helpText(0, \"hlp29\")'>Редактирование раздела</a></li>
                             <li><a href='help.php?section=30' class='noBorder' id='hlp30' onmouseover='helpText(1, \"hlp30\")' onmouseout='helpText(0, \"hlp30\")'>Удаление раздела</a></li>
-                            <li><a href='help.php?section=31' class='noBorder' id='hlp31' onmouseover='helpText(1, \"hlp31\")' onmouseout='helpText(0, \"hlp31\")'>Отправка e-mail рассылок</a></li>
+                            <li><a href='help.php?section=31' class='noBorder' id='hlp31' onmouseover='helpText(1, \"hlp31\")' onmouseout='helpText(0, \"hlp31\")'>Отправление e-mail рассылок</a></li>
                             <li><a href='help.php?section=32' class='noBorder' id='hlp32' onmouseover='helpText(1, \"hlp32\")' onmouseout='helpText(0, \"hlp32\")'>История e-mail рассылок</a></li>
                             <li><a href='help.php?section=33' class='noBorder' id='hlp33' onmouseover='helpText(1, \"hlp33\")' onmouseout='helpText(0, \"hlp33\")'>Структура страницы клиентской базы</a></li>
                             <li><a href='help.php?section=34' class='noBorder' id='hlp34' onmouseover='helpText(1, \"hlp34\")' onmouseout='helpText(0, \"hlp34\")'>Добавление адреса в клиентскую базу</a></li>
@@ -1075,6 +1075,10 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "31":
+                            echo "
+                                <h2 class='goodStyle'>Отправление e-mail рассылок</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=31' class='noBorder'><span class='catalogueItemTextItalic'>Отправление e-mail рассылок</span></a></p>
+                            ";
                             break;
                         case "32":
                             break;

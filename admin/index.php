@@ -40,7 +40,7 @@
     <?php
 		if(!empty($_REQUEST['error']) and $_REQUEST['error'] == "true" and !empty($_SESSION['error']))
 		{
-			echo "<div id='adminAuthBig'>";
+			echo "<div id='adminAuthBig' style='height: 240px;'>";
 		}
 		else
 		{
@@ -64,26 +64,26 @@
         </form>
         
         <?php
-		
+
 			if(!empty($_REQUEST['error']) and $_REQUEST['error'] == "true" and !empty($_SESSION['error']))
 			{
 				echo "
 					<br />
 				";
-				
+
 				switch($_SESSION['error'])
 				{
 					case "empty":
-						echo "<span class='basicRed'>Необходимо заполнить все поля.</span>";
+						echo "<span class='basicRed' style='position: absolute; top: 50px;'>Необходимо заполнить все поля.</span>";
 						break;
 					case "password":
-						echo "<span class='basicRed'>Неверно введён логин или пароль.</span>";
+						echo "<span class='basicRed' style='position: absolute; top: 50px;'>Неверно введён логин или пароль.</span>";
 						break;
 					default:
 						break;
 				}
 			}
-			
+
 		?>
         
     </div>
