@@ -2,8 +2,14 @@
 	session_start();
     include('../scripts/connect.php');
 
+    if(!isset($_SESSION['adminAccess'])) {
+        $_SESSION['adminAccess'] = '1';
+    }
+
 	if(empty($_SESSION['userID']) or $_SESSION['userID'] != 1)
 	{
+        $_SESSION['redirect'] = '1';
+
 		header("Location: ../index.php");
 	}
 

@@ -117,7 +117,15 @@
 
 <body onresize = 'footerPos()'>
 
-	<div id='layout' <?php if((isset($_SESSION['login']) and $_SESSION['login'] != 1) or isset($_SESSION['recovery']) or isset($_SESSION['recovery_final']) or isset($_SESSION['registration']) or isset($_SESSION['activation']) or isset($_SESSION['activationFalse']) or isset($_SESSION['registration_cancel']) or isset($_SESSION['delete']) or isset($_SESSION['basket'])) {echo "style='display: block;'";} else {echo "style='display: none;'";} ?> onclick='resetBlocks();' onmousemove='resizeLayout()' onmousewheel='resizeLayout()'></div>
+<?php
+	if((!isset($_SESSION['redirect']) or $_SESSION['redirect'] != '1') and (!isset($_SESSION['adminAccess']) or $_SESSION['adminAccess'] != '1')) {
+		echo "<div id='layout' "; if((isset($_SESSION['login']) and $_SESSION['login'] != 1) or isset($_SESSION['recovery']) or isset($_SESSION['recovery_final']) or isset($_SESSION['registration']) or isset($_SESSION['activation']) or isset($_SESSION['activationFalse']) or isset($_SESSION['registration_cancel']) or isset($_SESSION['delete']) or isset($_SESSION['basket'])) {echo "style='display: block;'";} else {echo "style='display: none;'";} echo " onclick='resetBlocks();' onmousemove='resizeLayout()' onmousewheel='resizeLayout()'></div>";
+	} else {
+		unset($_SESSION['redirect']);
+		unset($_SESSION['adminAccess']);
+	}
+?>
+
     
     <?php
 		if(!empty($_SESSION['recovery']) and $_SESSION['recovery'] == 'sent')

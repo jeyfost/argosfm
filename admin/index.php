@@ -10,7 +10,10 @@
 	{
 		unset($_SESSION['quantity']);
 	}
-	
+
+	if($_SESSION['userID'] == 1) {
+		header("Location: admin.php");
+	}
 ?>
 
 <!doctype html>
