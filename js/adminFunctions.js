@@ -23,13 +23,7 @@ function addressGroup() {
 	}
 
 	if(!document.getElementById('addressGroupSelect')) {
-		$.ajax({
-			type: 'POST',
-			url: '../scripts/admin/ajaxSelectLocations.php',
-			success: function(response) {
-				$('#addressField').html(response);
-			}
-		});
+		$('#addressField').html("<br /><br /><label class='admLabel'>Выберите область:</label><br /><select class='admSelect' name='addressGroupSelect' id='addressGroupSelect'><option value='1'>Брестская</option><option value='2'>Витебская</option><option value='3'>Гомельская</option><option value='4'>Гродненская</option><option value='5'>Минская</option><option value='6'>Могилёвская</option><option value='7'>Другая</option><option value='8'>Не определено</option></select>");
 	}
 }
 

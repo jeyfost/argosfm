@@ -1,5 +1,7 @@
 <?php
 	include('config.php');
+
+	global $mysqli;
 	
 	$mysqli = new mysqli($host, $user, $password, $db);
 
