@@ -8,13 +8,35 @@ function checkboxClick(id) {
 }
 
 function addressField() {
+	if(document.getElementById('addressGroupSelect')) {
+		hideField();
+	}
+
 	if(!document.getElementById('addressFieldInput')) {
 		$('#addressField').html("<br /><br /><label class='admLabel'>Введите адрес получателя:</label><br /><input type='text' class='admInput' name='emailAddress' id='addressFieldInput' />");
 	}
 }
 
+function addressGroup() {
+	if(!document.getElementById('addressFieldInput')) {
+		hideField();
+	}
+
+	if(!document.getElementById('addressGroupSelect')) {
+		$.ajax({
+			type: 'POST',
+			url: '../scripts/admin/ajaxSelectLocations.php',
+			success: function(response) {
+				$('#addressField').html(response);
+			}
+		});
+	}
+}
+
 function hideField() {
-	$('#addressField').html("");
+	if($('#addressFieldInput') || $('#addressGroupSelect')) {
+		$('#addressField').html("");
+	}
 }
 
 function admPageBlock(action, block, text) {
@@ -54,6 +76,84 @@ function editEmail(id, email, block) {
 function editName(id, name, block) {
 	document.getElementById(block).innerHTML = "<form name='editName' method='post'><input type='text' name='editName' id='editNameInput' class='admInput' onblur='saveName(\"" + id + "\", \"nameBlock" + id + "\")' value='" + name + "' /></form>";
 	document.getElementById('editNameInput').focus();
+}
+
+function editLocation(id, location, block) {
+	var content = "<form name='editLocationForm' method='post'><select class='admSelect' name='editLocation' id='editLocationSelect' onblur='saveLocation(\"" + id + "\", \"" + block + "\")' onchange='saveLocation(\"" + id + "\", \"" + block + "\")'>";
+
+	if(location == 1) {
+		content += "<option value='1' selected='selected'>Брестская</option>";
+	} else {
+		content += "<option value='1'>Брестская</option>";
+	}
+
+	if(location == 2) {
+		content += "<option value='2' selected='selected'>Витебская</option>";
+	} else {
+		content += "<option value='2'>Витебская</option>";
+	}
+
+	if(location == 3) {
+		content += "<option value='3' selected='selected'>Гомельская</option>";
+	} else {
+		content += "<option value='3'>Гомельская</option>";
+	}
+
+	if(location == 4) {
+		content += "<option value='4' selected='selected'>Гродненская</option>";
+	} else {
+		content += "<option value='4'>Гродненская</option>";
+	}
+
+	if(location == 5) {
+		content += "<option value='5' selected='selected'>Минская</option>";
+	} else {
+		content += "<option value='5'>Минская</option>";
+	}
+
+	if(location == 6) {
+		content += "<option value='6' selected='selected'>Могилёвская</option>";
+	} else {
+		content += "<option value='6'>Могилёвская</option>";
+	}
+
+	if(location == 7) {
+		content += "<option value='7' selected='selected'>Другая</option>";
+	} else {
+		content += "<option value='7'>Другая</option>";
+	}
+
+	if(location == 8) {
+		content += "<option value='8' selected='selected'>Не определено</option>";
+	} else {
+		content += "<option value='8'>Не определено</option>";
+	}
+
+	content += "</select></form>";
+
+	document.getElementById(block).innerHTML = content;
+	document.getElementById("editLocationSelect").focus();
+}
+
+function saveLocation (id, block) {
+	var location = $('#editLocationSelect').val();
+	var name  = $('#editLocationSelect option:selected').text();
+	if(location != 0) {
+		$.ajax({
+			type: 'POST',
+			data: {"locationID": id, "location": location},
+			url: '../scripts/admin/ajaxLocation.php',
+			success: function(response) {
+				if(response == "a") {
+					document.getElementById(block).innerHTML = "<span class='admULFont' style='cursor: pointer;' title='Изменить местонахождение' onclick='editLocation(\"" + id + "\", \"" + location + "\", \"" + block + "\")'>" + name + "</span>";
+				}
+
+				if(response == "b") {
+
+				}
+			}
+		});
+	}
 }
 
 function saveEmail(id, block) {

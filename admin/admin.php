@@ -3521,11 +3521,14 @@
                                             <input type='radio' name='emailType' id='sendAll' class='admRadio' onclick='hideField()' value='all'"; if(empty($_SESSION['emailType']) or $_SESSION['emailType'] == "all") {echo " checked='checked'";} echo " />
                                             <label class='admRadioLabel' for='sendAll' onclick='hideField()'>Отправить по всем адресам из клиентской базы</label>
                                             <br />
+                                            <input type='radio' name='emailType' id='sendGroup' class='admRadio' onclick='addressGroup()' value='group'"; if($_SESSION['emailType'] == "group") {echo " checked='checked'";} echo " />
+                                            <label class='admRadioLabel' for='sendOne' onclick='addressGroup()'>Отправить всем из выбранной области</label>
+                                            <br />
                                             <input type='radio' name='emailType' id='sendOne' class='admRadio' onclick='addressField()' value='one'"; if($_SESSION['emailType'] == "one") {echo " checked='checked'";} echo " />
                                             <label class='admRadioLabel' for='sendOne' onclick='addressField()'>Отправить одному клиенту</label>
                                             <div id='addressField'>
                                     ";
-                                    if(isset($_SESSION['emailAddress']))
+                                    if($_SESSION['emailAddress'] == "one")
                                     {
                                         echo "<br /><br /><label class='admLabel'>Введите адрес получателя:</label><br /><input type='text' class='admInput' name='emailAddress' id='addressFieldInput' value='".$_SESSION['emailAdress']."' />";
                                     }
@@ -3768,6 +3771,8 @@
 
                                     echo "
                                         <div id='addressSearchResult'></div>
+                                        <div class='container'>
+                                        <div id='clientsList'>
                                         <span class='admMenuFont'>Список адресов клиентской базы</span>
                                         <br /><br ><br />
                                         ";
@@ -3822,7 +3827,54 @@
                                     echo "
                                             </select>
                                         </form>
-                                        <br /><br /><br />
+                                        </div>
+                                    ";
+
+                                    echo "
+                                            <div id='newAddress'>
+                                                <span class='admMenuFont'>Добавление адреса в клиентскую базу</span>
+                                                <br /><br ><br />
+                                                <form name='newAddressForm' id='newAddressForm' method='post' action='../scripts/admin/addAddress.php'>
+                                                    <label class='admLabel'>Введите новый e-mail адрес:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='newAddress' id='newAddressInput'"; if(!empty($_SESSION['newAddress'])) {echo " value='".$_SESSION['newAddress']."'";} echo " autofocus />
+                                                    <br /><br />
+                                                    <label class='admLabel'>Введите имя / название организации:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='newName' id='newAddressInput'"; if(!empty($_SESSION['newName'])) {echo " value='".$_SESSION['newName']."'";} echo " />
+                                                    <br /><br />
+                                                    <label class='admLabel' for='newLocationSelect'>Выберите область:</label>
+                                                    <br />
+                                                    <select name='newLocation' id='newLocationSelect' class='admSelect'>
+                                    ";
+
+                                    $locationResult = $mysqli->query("SELECT * FROM locations ORDER BY id");
+                                    while($location = $locationResult->fetch_assoc()) {
+                                        echo "
+                                            <option value=".$location['id']." "; if($location['id'] == 8) {echo "selected ";} echo ">".$location['name']."</option>
+                                        ";
+                                    }
+
+                                    echo "
+                                                    </select>
+                                                    <br /><br />
+                                                    <input type='submit' class='admSubmit' value='Добавить' style='right: 0px;' />
+                                                </form>
+                                                <br /><br />
+                                                <form id='searchAddressForm' id='searchAddressForm' method='post'>
+                                                    <label class='admLabel'>Поиск e-mail адреса:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='addressSearch' id='addressSearchInput' />
+                                                </form>
+                                            </div>
+                                        ";
+
+                                    unset($_SESSION['newAddress']);
+                                    unset($_SESSION['newName']);
+
+                                    echo "
+                                        <div style='clear: both;'></div>
+                                        </div>
                                     ";
 
                                     if(!empty($_REQUEST['start']))
@@ -3855,7 +3907,7 @@
                                         {
                                             $count = 0;
 
-                                            echo "<table>";
+                                            echo "<table id='clientsTable'>";
 
                                             if($_REQUEST['active'] == "true")
                                             {
@@ -3870,6 +3922,9 @@
                                                         <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Имя/Организация</span>
                                                         </td>
+                                                        <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                            <span class='admLabel'>Область</span>
+                                                        </td>
                                                         <td class='adminTDButtons'style='background-color: #dddddd;'>
                                                             <span class='admLabel'>Функции</span>
                                                         </td>
@@ -3881,6 +3936,9 @@
                                                     $count++;
                                                     $addressNumber = $count;
 
+                                                    $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$address['location']."'");
+                                                    $location = $locationResult->fetch_array(MYSQLI_NUM);
+
                                                     echo "
                                                         <tr>
                                                             <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -3891,6 +3949,9 @@
                                                             </td>
                                                             <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                                 <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                            </td>
+                                                            <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                                <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
                                                             </td>
                                                             <td class='adminTDButtons'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <a href='../scripts/admin/deleteAddress.php?id=".$address['id']."' class='noBorder'><img id='mi".$address['id']."' src='../pictures/system/cross.png' class='noBorder' title='Удалить адрес из клиентской базы' style='margin-top: 12px;' onmouseover='mailIcon(\"1\", \"mi".$address['id']."\")' onmouseout='mailIcon(\"0\", \"mi".$address['id']."\")' /></a>
@@ -3913,6 +3974,9 @@
                                                         <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Имя/Организация</span>
                                                         </td>
+                                                        <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                            <span class='admLabel'>Область</span>
+                                                        </td>
                                                         <td class='adminTDDate'style='background-color: #dddddd;'>
                                                             <span class='admLabel'>Дата отписки</span>
                                                         </td>
@@ -3927,6 +3991,9 @@
                                                     $count++;
                                                     $addressNumber = $count;
 
+                                                    $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$address['location']."'");
+                                                    $location = $locationResult->fetch_array(MYSQLI_NUM);
+
                                                     echo "
                                                         <tr>
                                                             <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -3937,6 +4004,9 @@
                                                             </td>
                                                             <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                                 <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                            </td>
+                                                            <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                                <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
                                                             </td>
                                                             <td class='adminTDDate'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <span class='admLabel'>".$address['disactivation_date']."</span>
@@ -3962,40 +4032,13 @@
                                                 echo "<span class='admMenuFont'>Адресов, начинающихся с символа '".$_REQUEST['start']."' в клиентской базе нет.</span>";
                                             }
                                         }
-
-                                        echo "
-                                            <div id='newAddress'>
-                                                <span class='admMenuFont'>Добавление адреса в клиентскую базу</span>
-                                                <br /><br ><br />
-                                                <form name='newAddressForm' id='newAddressForm' method='post' action='../scripts/admin/addAddress.php'>
-                                                    <label class='admLabel'>Введите новый e-mail адрес:</label>
-                                                    <br />
-                                                    <input type='text' class='admInput' name='newAddress' id='newAddressInput'"; if(!empty($_SESSION['newAddress'])) {echo " value='".$_SESSION['newAddress']."'";} echo " autofocus />
-                                                    <br /><br />
-                                                    <label class='admLabel'>Введите имя / название организации:</label>
-                                                    <br />
-                                                    <input type='text' class='admInput' name='newName' id='newNameInput'"; if(!empty($_SESSION['newName'])) {echo " value='".$_SESSION['newName']."'";} echo " />
-                                                    <br /><br />
-                                                    <input type='submit' class='admSubmit' value='Добавить' style='right: 0px;' />
-                                                </form>
-                                                <br /><br />
-                                                <form id='searchAddressForm' id='searchAddressForm' method='post'>
-                                                    <label class='admLabel'>Поиск e-mail адреса:</label>
-                                                    <br />
-                                                    <input type='text' class='admInput' name='addressSearch' id='addressSearchInput' />
-                                                </form>
-                                            </div>
-                                        ";
-
-                                        unset($_SESSION['newAddress']);
-                                        unset($_SESSION['newName']);
                                     }
                                     
                                     if(!empty($_REQUEST['p']) and empty($_REQUEST['start']))
                                     {
                                         $count = 0;
 
-                                        echo "<table>";
+                                        echo "<table id='clientsTable'>";
 
                                         if($_REQUEST['active'] == "true")
                                         {
@@ -4010,6 +4053,9 @@
                                                     <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Имя/Организация</span>
                                                     </td>
+                                                    <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                        <span class='admLabel'>Область</span>
+                                                    </td>
                                                     <td class='adminTDButtons'style='background-color: #dddddd;'>
                                                         <span class='admLabel'>Функции</span>
                                                     </td>
@@ -4023,6 +4069,9 @@
                                                 $count++;
                                                 $addressNumber = $_REQUEST['p'] * 10 - 10 + $count;
 
+                                                $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$address['location']."'");
+                                                $location = $locationResult->fetch_array(MYSQLI_NUM);
+
                                                 echo "
                                                     <tr>
                                                         <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4033,6 +4082,9 @@
                                                         </td>
                                                         <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                             <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                        </td>
+                                                        <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                            <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
                                                         </td>
                                                         <td class='adminTDButtons'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <a href='../scripts/admin/deleteAddress.php?id=".$address['id']."' class='noBorder'><img id='mi".$address['id']."' src='../pictures/system/cross.png' class='noBorder' title='Удалить адрес из клиентской базы' style='margin-top: 12px;' onmouseover='mailIcon(\"1\", \"mi".$address['id']."\")' onmouseout='mailIcon(\"0\", \"mi".$address['id']."\")' /></a>
@@ -4055,6 +4107,9 @@
                                                     <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Имя/Организация</span>
                                                     </td>
+                                                    <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                        <span class='admLabel'>Область</span>
+                                                    </td>
                                                     <td class='adminTDDate'style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Дата отписки</span>
                                                     </td>
@@ -4071,6 +4126,9 @@
                                                 $count++;
                                                 $addressNumber = $_REQUEST['p'] * 10 - 10 + $count;
 
+                                                $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$address['location']."'");
+                                                $location = $locationResult->fetch_array(MYSQLI_NUM);
+
                                                 echo "
                                                     <tr>
                                                         <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4081,6 +4139,9 @@
                                                         </td>
                                                         <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                             <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                        </td>
+                                                        <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                            <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
                                                         </td>
                                                         <td class='adminTDDate'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <span class='admLabel'>".$address['disactivation_date']."</span>
@@ -4095,32 +4156,6 @@
                                         
                                         echo "</table>";
 
-                                        echo "
-                                            <div id='newAddress'>
-                                                <span class='admMenuFont'>Добавление адреса в клиентскую базу</span>
-                                                <br /><br ><br />
-                                                <form name='newAddressForm' id='newAddressForm' method='post' action='../scripts/admin/addAddress.php'>
-                                                    <label class='admLabel'>Введите новый e-mail адрес:</label>
-                                                    <br />
-                                                    <input type='text' class='admInput' name='newAddress' id='newAddressInput'"; if(!empty($_SESSION['newAddress'])) {echo " value='".$_SESSION['newAddress']."'";} echo " autofocus />
-                                                    <br /><br />
-                                                    <label class='admLabel'>Введите имя / название организации:</label>
-                                                    <br />
-                                                    <input type='text' class='admInput' name='newName' id='newAddressInput'"; if(!empty($_SESSION['newName'])) {echo " value='".$_SESSION['newName']."'";} echo " />
-                                                    <br /><br />
-                                                    <input type='submit' class='admSubmit' value='Добавить' style='right: 0px;' />
-                                                </form>
-                                                <br /><br />
-                                                <form id='searchAddressForm' id='searchAddressForm' method='post'>
-                                                    <label class='admLabel'>Поиск e-mail адреса:</label>
-                                                    <br />
-                                                    <input type='text' class='admInput' name='addressSearch' id='addressSearchInput' />
-                                                </form>
-                                            </div>
-                                        ";
-
-                                        unset($_SESSION['newAddress']);
-                                        unset($_SESSION['newName']);
 
                                         if($numbers > 1)
                                         {

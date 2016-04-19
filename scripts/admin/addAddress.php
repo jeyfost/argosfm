@@ -26,7 +26,7 @@
 
 						$name = strtolower($_POST['newAddress']);
 
-						if($mysqli->query("INSERT INTO mail (email, name, hash, in_send) VALUES ('".$name."', '".htmlspecialchars($_POST['newName'])."', '".$hash."', '1')"))
+						if($mysqli->query("INSERT INTO mail (email, name, location, hash, in_send) VALUES ('".$name."', '".htmlspecialchars($_POST['newName'])."', '".$_POST['newLocation']."', '".$hash."', '1')"))
 						{
 							$_SESSION['addAddress'] = "ok";
 							
