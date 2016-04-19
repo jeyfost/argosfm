@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/scripts/admin/ajaxSelectLocations.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/adminFunctions.js" afterPath="$PROJECT_DIR$/js/adminFunctions.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/connect.php" afterPath="$PROJECT_DIR$/scripts/connect.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -815,13 +812,13 @@
       <file leaf-file-name="adminFunctions.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.4536517">
-              <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.5969101">
+              <caret line="25" column="383" selection-start-line="25" selection-start-column="383" selection-end-line="25" selection-end-column="383" />
               <folding>
-                <marker date="1461073561841" expanded="true" signature="4878:4894" placeholder="..." />
-                <marker date="1461073561841" expanded="true" signature="5584:5600" placeholder="..." />
-                <marker date="1461073561841" expanded="true" signature="6418:6434" placeholder="..." />
-                <marker date="1461073561841" expanded="true" signature="7987:8052" placeholder="..." />
+                <marker date="1461073718952" expanded="true" signature="4887:4903" placeholder="..." />
+                <marker date="1461073718952" expanded="true" signature="5593:5609" placeholder="..." />
+                <marker date="1461073718952" expanded="true" signature="6427:6443" placeholder="..." />
+                <marker date="1461073718952" expanded="true" signature="7996:8061" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -1100,12 +1097,6 @@
       <created>1456207155890</created>
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
-    </task>
-    <task id="LOCAL-00101" summary="Исправлена страница помощи по динамическому изменению цены в оформленной заказе">
-      <created>1459257076852</created>
-      <option name="number" value="00101" />
-      <option name="project" value="LOCAL" />
-      <updated>1459257076852</updated>
     </task>
     <task id="LOCAL-00102" summary="Добавлена страница помощи по оформлению заказа">
       <created>1459265039241</created>
@@ -1395,7 +1386,13 @@
       <option name="project" value="LOCAL" />
       <updated>1461070633648</updated>
     </task>
-    <option name="localTasksCounter" value="150" />
+    <task id="LOCAL-00150" summary="Исправлена конфигурация подключения к БД и исключены проблемы с кодировкой">
+      <created>1461073653015</created>
+      <option name="number" value="00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1461073653015</updated>
+    </task>
+    <option name="localTasksCounter" value="151" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -1434,7 +1431,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Создана страница помощи по регистрации для администратора" />
     <MESSAGE value="Создана страница помощи по восстановлению пароля для администратора" />
     <MESSAGE value="Создана страница помощи по динамическому изменению цен на сайте для администратора" />
     <MESSAGE value="Создана страница помощи по изменению цены товара в каталоге для администратора" />
@@ -1459,7 +1455,8 @@
     <MESSAGE value="Исправлена форма входа в панель администрирования" />
     <MESSAGE value="Layout не показывается после входа в панель администрирования" />
     <MESSAGE value="Добавлена возможноть рассылок писем по областям" />
-    <option name="LAST_COMMIT_MESSAGE" value="Добавлена возможноть рассылок писем по областям" />
+    <MESSAGE value="Исправлена конфигурация подключения к БД и исключены проблемы с кодировкой" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлена конфигурация подключения к БД и исключены проблемы с кодировкой" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2643,13 +2640,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4536517">
-          <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.5969101">
+          <caret line="25" column="383" selection-start-line="25" selection-start-column="383" selection-end-line="25" selection-end-column="383" />
           <folding>
-            <marker date="1461073561841" expanded="true" signature="4878:4894" placeholder="..." />
-            <marker date="1461073561841" expanded="true" signature="5584:5600" placeholder="..." />
-            <marker date="1461073561841" expanded="true" signature="6418:6434" placeholder="..." />
-            <marker date="1461073561841" expanded="true" signature="7987:8052" placeholder="..." />
+            <marker date="1461073718952" expanded="true" signature="4887:4903" placeholder="..." />
+            <marker date="1461073718952" expanded="true" signature="5593:5609" placeholder="..." />
+            <marker date="1461073718952" expanded="true" signature="6427:6443" placeholder="..." />
+            <marker date="1461073718952" expanded="true" signature="7996:8061" placeholder="..." />
           </folding>
         </state>
       </provider>
