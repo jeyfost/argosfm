@@ -439,6 +439,20 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+   $('#emailThemeInput').keyup(function() {
+       var theme = $('#emailThemeInput').val();
+
+       if(theme > 0) {
+           $('#emailThemeInput').css('border', 'none');
+           $('#emailThemeInput').css('background-color', '#ddd');
+       } else {
+           $('#emailThemeInput').css('border', '1px solid #df4e47');
+           $('#emailThemeInput').css('background-color', '#ffb1ad');
+       }
+   });
+});
+
 function validateClientEmail()
 {
     var address = $('#addressFieldInput').val();
