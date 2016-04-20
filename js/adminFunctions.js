@@ -13,7 +13,7 @@ function addressField() {
 	}
 
 	if(!document.getElementById('addressFieldInput')) {
-		$('#addressField').html("<br /><br /><label class='admLabel'>Введите адрес получателя:</label><br /><input type='text' class='admInput' name='emailAddress' id='addressFieldInput' />");
+		$('#addressField').html("<br /><br /><label class='admLabel'>Введите адрес получателя:</label><br /><input type='text' class='admInput' name='emailAddress' id='addressFieldInput' onkeyup='validateClientEmail()' />");
 	}
 }
 

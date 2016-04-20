@@ -439,6 +439,32 @@ $(document).ready(function() {
   });
 });
 
+function validateClientEmail()
+{
+    var address = $('#addressFieldInput').val();
+    if (address.length > 0) {
+        $.ajax({
+            type: 'POST',
+            data: {"email": address},
+            url: '../scripts/admin/ajaxValidateEmail.php',
+            success: function (response) {
+                if (response == "a") {
+                    $('#addressFieldInput').css('border', 'none');
+                    $('#addressFieldInput').css('background-color', '#ddd');
+                }
+
+                if (response == "b") {
+                    $('#addressFieldInput').css('border', '1px solid #df4e47');
+                    $('#addressFieldInput').css('background-color', '#ffb1ad');
+                }
+            }
+        });
+    } else {
+        $('#addressFieldInput').css('border', '1px solid #df4e47');
+        $('#addressFieldInput').css('background-color', '#ffb1ad');
+    }
+}
+
 $(document).mouseup(function (e) {
     var container = $('#addressSearchResult');
     if (container.has(e.target).length === 0){
