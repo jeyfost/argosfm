@@ -1095,6 +1095,20 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "33":
+                            echo "
+                                <h2 class='goodStyle'>Структура страницы клиентской базы</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=33' class='noBorder'><span class='catalogueItemTextItalic'>Структура страницы клиентской базы</span></a></p>
+                                <div class='helpBlock'>
+                                    <p><a href='pictures/help/admin_clients.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Страница управления клиентской базой</span></a> состоит из 5-ти блоков:</p>
+                                    <ol>
+                                        <li><a href='pictures/help/admin_clients_switch.jpg' class='noBorder' rel='shadowbox' id='hlp1' onmouseover='helpTextB(1, \"hlp1\")' onmouseout='helpTextB(0, \"hlp1\")' style='color: #008fe1;'>Блок переключения</a> между активными и отписавшимися от рассылки клиентами. Подробнее в <a href='help.php?section=39' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</li>
+                                        <li><a href='pictures/help/admin_clients_search_letter.jpg' class='noBorder' rel='shadowbox' id='hlp2' onmouseover='helpTextB(1, \"hlp2\")' onmouseout='helpTextB(0, \"hlp2\")' style='color: #008fe1;'>Блок выбора адресов</a> по первому символу. Подробнее в <a href='help.php?section=37' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</li>
+                                        <li><a href='pictures/help/admin_clients_add.jpg' class='noBorder' rel='shadowbox' id='hlp3' onmouseover='helpTextB(1, \"hlp3\")' onmouseout='helpTextB(0, \"hlp3\")' style='color: #008fe1;'>Блок добавления новой записи</a> в клиентскую базу. Подробнее в <a href='help.php?section=34' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</li>
+                                        <li><a href='pictures/help/admin_clients_search.jpg' class='noBorder' rel='shadowbox' id='hlp4' onmouseover='helpTextB(1, \"hlp4\")' onmouseout='helpTextB(0, \"hlp4\")' style='color: #008fe1;'>Блок быстрого поиска адреса</a>. Подробнее в <a href='help.php?section=37' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</li>
+                                        <li><a href='pictures/help/admin_clients_table.jpg' class='noBorder' rel='shadowbox' id='hlp5' onmouseover='helpTextB(1, \"hlp5\")' onmouseout='helpTextB(0, \"hlp5\")' style='color: #008fe1;'>Таблица с записями из клиентской базы с меню постраничной навигации</a>. О функциях таблицы читайте в <a href='help.php?section=35' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой</span></a> и <a href='help.php?section=36' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</li>
+                                    </ol>
+                                </div>
+                            ";
                             break;
                         case "34":
                             break;
