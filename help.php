@@ -1086,6 +1086,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "32":
+                            echo "
+                                <h2 class='goodStyle'>История e-mail рассылок</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=32' class='noBorder'><span class='catalogueItemTextItalic'>История e-mail рассылок</span></a></p>
+                                <div class='helpBlock'><p>В раздел истории рассылок можно попасть через <a href='admin/admin.php?section=users&action=mail' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>страницу отправления рассылок</span></a>. На ней необходимо нажать на кнопку \"<b>История рассылок</b>\" в верхнем правом углу.</p></div>
+                                <div class='helpBlock'><p>История рассылок <a href='pictures/help/admin_email_history.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>представляет собой таблицу</span></a>, в которой указаны тема рассылки, её текст, получатели и дата отправления.</p></div>
+                                <div class='helpBlock'><p>Посмотреть текст рассылки можно нажав на строку \"<b>Текст рассылки</b>\". После нажатия откроется <a href='pictures/help/admin_email_history_text.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>окно с текстом</span></a>.</p></div>
+                            ";
                             break;
                         case "33":
                             break;
