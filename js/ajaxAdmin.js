@@ -453,8 +453,7 @@ $(document).ready(function() {
    });
 });
 
-function validateClientEmail()
-{
+function validateClientEmail() {
     var address = $('#addressFieldInput').val();
     if (address.length > 0) {
         $.ajax({
@@ -476,6 +475,32 @@ function validateClientEmail()
     } else {
         $('#addressFieldInput').css('border', '1px solid #df4e47');
         $('#addressFieldInput').css('background-color', '#ffb1ad');
+    }
+}
+
+function editClientEmail() {
+    var address = $('#editEmailInput').val();
+
+    if(address.length > 0) {
+        $.ajax({
+            type: 'POST',
+            data: {"email": address},
+            url: '../scripts/admin/ajaxValidateEmailAdmin.php',
+            success: function(response) {
+                if(response == "a") {
+                    $('#editEmailInput').css('border', 'none');
+                    $('#editEmailInput').css('background-color', '#ddd');
+                }
+
+                if(response == "b") {
+                    $('#editEmailInput').css('border', '1px solid #df4e47');
+                    $('#editEmailInput').css('background-color', '#ffb1ad');
+                }
+            }
+        });
+    } else {
+        $('#editEmailInput').css('border', '1px solid #df4e47');
+        $('#editEmailInput').css('background-color', '#ffb1ad');
     }
 }
 

@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/help.php" afterPath="$PROJECT_DIR$/help.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/admin/ajaxValidateEmailAdmin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/adminFunctions.js" afterPath="$PROJECT_DIR$/js/adminFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ajaxAdmin.js" afterPath="$PROJECT_DIR$/js/ajaxAdmin.js" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="help.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="help.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/help.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6830295">
+            <state vertical-scroll-proportion="213.38461">
               <caret line="1128" column="622" selection-start-line="1128" selection-start-column="622" selection-end-line="1128" selection-end-column="622" />
               <folding>
                 <marker date="1461167145333" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
@@ -343,12 +346,35 @@
         <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="65" column="218" selection-start-line="65" selection-start-column="218" selection-end-line="65" selection-end-column="218" />
+              <caret line="65" column="245" selection-start-line="65" selection-start-column="245" selection-end-line="65" selection-end-column="245" />
               <folding>
-                <marker date="1461151011926" expanded="true" signature="4919:4935" placeholder="..." />
-                <marker date="1461151011926" expanded="true" signature="5625:5641" placeholder="..." />
-                <marker date="1461151011926" expanded="true" signature="6459:6475" placeholder="..." />
-                <marker date="1461151011926" expanded="true" signature="8028:8093" placeholder="..." />
+                <marker date="1461169159149" expanded="true" signature="4947:4963" placeholder="..." />
+                <marker date="1461169159149" expanded="true" signature="5653:5669" placeholder="..." />
+                <marker date="1461169159149" expanded="true" signature="6487:6503" placeholder="..." />
+                <marker date="1461169159149" expanded="true" signature="8056:8121" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxAdmin.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/ajaxAdmin.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="488" column="41" selection-start-line="488" selection-start-column="41" selection-end-line="488" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxValidateEmailAdmin.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxValidateEmailAdmin.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.047685836">
+              <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+              <folding>
+                <marker date="1461169445897" expanded="true" signature="129:159" placeholder="SELECT * FRO... mail" />
+                <marker date="1461169445897" expanded="true" signature="129:183" placeholder="SELECT * FRO... mail" />
               </folding>
             </state>
           </provider>
@@ -362,7 +388,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/admin/editNews.php" />
         <option value="$PROJECT_DIR$/scripts/admin/addNews.php" />
         <option value="$PROJECT_DIR$/scripts/cancelOrder.php" />
         <option value="$PROJECT_DIR$/scripts/acceptOrder.php" />
@@ -410,9 +435,10 @@
         <option value="$PROJECT_DIR$/scripts/admin/ajaxSelectLocations.php" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/scripts/admin/ajaxValidateEmail.php" />
-        <option value="$PROJECT_DIR$/js/ajaxAdmin.js" />
-        <option value="$PROJECT_DIR$/js/adminFunctions.js" />
         <option value="$PROJECT_DIR$/help.php" />
+        <option value="$PROJECT_DIR$/js/adminFunctions.js" />
+        <option value="$PROJECT_DIR$/js/ajaxAdmin.js" />
+        <option value="$PROJECT_DIR$/scripts/admin/ajaxValidateEmailAdmin.php" />
       </list>
     </option>
   </component>
@@ -981,13 +1007,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/scripts/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/chooseStartSymbol.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1865,14 +1884,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/ajaxAdmin.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21786198">
-          <caret line="447" column="30" selection-start-line="447" selection-start-column="30" selection-end-line="447" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="15.076923">
@@ -1881,22 +1892,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="65" column="218" selection-start-line="65" selection-start-column="218" selection-end-line="65" selection-end-column="218" />
-          <folding>
-            <marker date="1461151011926" expanded="true" signature="4919:4935" placeholder="..." />
-            <marker date="1461151011926" expanded="true" signature="5625:5641" placeholder="..." />
-            <marker date="1461151011926" expanded="true" signature="6459:6475" placeholder="..." />
-            <marker date="1461151011926" expanded="true" signature="8028:8093" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/help.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6830295">
+        <state vertical-scroll-proportion="213.38461">
           <caret line="1128" column="622" selection-start-line="1128" selection-start-column="622" selection-end-line="1128" selection-end-column="622" />
           <folding>
             <marker date="1461167145333" expanded="true" signature="661:717" placeholder="SELECT * FRO... users" />
@@ -2180,6 +2178,38 @@
             <marker date="1461167145333" expanded="true" signature="163043:163260" placeholder="..." />
             <marker date="1461167145333" expanded="true" signature="163046:163254" placeholder="..." />
             <marker date="1461167145333" expanded="false" signature="163562:163578" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="65" column="245" selection-start-line="65" selection-start-column="245" selection-end-line="65" selection-end-column="245" />
+          <folding>
+            <marker date="1461169159149" expanded="true" signature="4947:4963" placeholder="..." />
+            <marker date="1461169159149" expanded="true" signature="5653:5669" placeholder="..." />
+            <marker date="1461169159149" expanded="true" signature="6487:6503" placeholder="..." />
+            <marker date="1461169159149" expanded="true" signature="8056:8121" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/ajaxAdmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="488" column="41" selection-start-line="488" selection-start-column="41" selection-end-line="488" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxValidateEmailAdmin.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.047685836">
+          <caret line="2" column="27" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding>
+            <marker date="1461169445897" expanded="true" signature="129:159" placeholder="SELECT * FRO... mail" />
+            <marker date="1461169445897" expanded="true" signature="129:183" placeholder="SELECT * FRO... mail" />
           </folding>
         </state>
       </provider>

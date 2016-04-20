@@ -63,7 +63,7 @@ function editIcon(action, id) {
 }
 
 function editEmail(id, email, block) {
-	document.getElementById(block).innerHTML = "<form name='editEmail' method='post'><input type='text' name='editEmail' id='editEmailInput' class='admInput' onblur='saveEmail(\"" + id + "\", \"emailBlock" + id + "\")' value='" + email + "' /></form>";
+	document.getElementById(block).innerHTML = "<form name='editEmail' method='post'><input type='text' name='editEmail' id='editEmailInput' class='admInput' onblur='saveEmail(\"" + id + "\", \"emailBlock" + id + "\")' onkeyup='editClientEmail()' value='" + email + "' /></form>";
 	document.getElementById('editEmailInput').focus();
 }
 
