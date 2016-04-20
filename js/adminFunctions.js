@@ -68,7 +68,7 @@ function editEmail(id, email, block) {
 }
 
 function editName(id, name, block) {
-	document.getElementById(block).innerHTML = "<form name='editName' method='post'><input type='text' name='editName' id='editNameInput' class='admInput' onblur='saveName(\"" + id + "\", \"nameBlock" + id + "\")' value='" + name + "' /></form>";
+	document.getElementById(block).innerHTML = "<form name='editName' method='post'><input type='text' name='editName' id='editNameInput' class='admInput' onblur='saveName(\"" + id + "\", \"nameBlock" + id + "\")' onkeyup='editClientName()' value='" + name + "' /></form>";
 	document.getElementById('editNameInput').focus();
 }
 

@@ -504,6 +504,18 @@ function editClientEmail() {
     }
 }
 
+function editClientName() {
+    var name = $('#editNameInput').val();
+
+    if(name.length > 0) {
+        $('#editNameInput').css('border', 'none');
+        $('#editNameInput').css('background-color', '#ddd');
+    } else {
+        $('#editNameInput').css('border', '1px solid #df4e47');
+        $('#editNameInput').css('background-color', '#ffb1ad');
+    }
+}
+
 $(document).mouseup(function (e) {
     var container = $('#addressSearchResult');
     if (container.has(e.target).length === 0){
