@@ -3578,6 +3578,9 @@
                                                 <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                     <span class='admLabel'>Текст рассылки</span>
                                                 </td>
+                                                <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                    <span class='admLabel'>Получатель</span>
+                                                </td>
                                                 <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
                                                     <span class='admLabel'>Дата отправления</span>
                                                 </td>
@@ -3589,6 +3592,27 @@
                                         $count++;
                                         $number = $mailCount[0] - $_REQUEST['p'] * 10 + 11 - $count;
 
+                                        if(substr_count($mail['to'], '@') == 1) {
+                                            $from = $mail['to'];
+                                        } else {
+                                            if(strlen($mail['to']) == 1) {
+                                                $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$mail['to']."'");
+                                                $location = $locationResult->fetch_array(MYSQLI_NUM);
+
+                                                $from = $location[0];
+
+                                                if($mail['to'] != 8) {
+                                                    $from .= " область";
+                                                }
+                                            } else {
+                                                if($mail['to'] == "all") {
+                                                    $from  = "Всем клиентам";
+                                                } else {
+                                                    $from = "";
+                                                }
+                                            }
+                                        }
+
                                         echo "
                                             <tr>
                                                 <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
@@ -3599,6 +3623,9 @@
                                                 </td>
                                                 <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
                                                     <span class='admULFont' style='cursor: pointer;' onclick='showMailText(\"".$mail['id']."\")'>Текст рассылки</span>
+                                                </td>
+                                                <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
+                                                    <span class='admLabel'>".$from."</span>
                                                 </td>
                                                 <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
                                                     <span class='admLabel'>".substr($mail['date'], 0, 10)." в ".substr($mail['date'], 11)."</span>
