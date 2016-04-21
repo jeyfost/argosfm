@@ -4677,7 +4677,7 @@
                                         echo "</table>";
 
                                         echo "
-                                            <div id='newAddress'>
+                                            <div id='findNews'>
                                                 <span class='admMenuFont'>Найти новость</span>
                                                 <br /><br />
                                                 <form name='admSearchNews' id='admSearchNewsForm' method='post'>

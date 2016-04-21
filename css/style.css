@@ -246,6 +246,7 @@ ol li a {color: #008fe1;}
 #addressSearchResult {position: absolute; padding: 10px; border: 1px solid #787878; background-color: #ffffff; top: 335px; left: 692px; display: none; z-index: 999;}
 #mailHistoryButton {position: absolute; top: 30px; right: 30px;}
 #mailTextBlock {background-color: #dddddd; border: 2px dotted #df4e47; padding: 10px; position: absolute; opacity: 0; max-width: 400px; z-index: 1; display: none; top: 30px; left: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+#findNews {position: absolute; top: 60px; right: 20px;}
 
 /* calendar.php */
 #calendar {position: absolute; top: 100px; right: 10px; width: 262px; background-color: #ffffff;}
