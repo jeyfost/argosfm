@@ -1155,6 +1155,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "39":
+                            echo "
+                                <h2 class='goodStyle'>Список клиентов, удалившихся из рассылки</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=39' class='noBorder'><span class='catalogueItemTextItalic'>Список клиентов, удалившихся из рассылки</span></a></p>
+                                <div class='helpBlock'><p>Чтобы увидеть список тех клиентов, которые отпиались от рассылок, необходимо на <a href='pictures/help/admin_clients.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>странице управления клиентской базой</span></a> нажать на кнопку \"<b>Неактивные</b>\".</p></div>
+                                <div class='helpBlock'><p><a href='pictures/help/admin_clients_inactive.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Страница с отписавшимися от рассылки клиентами</span></a> выглядит так же, как и <a href='pictures/help/admin_clients.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>страница управления клиентской базой</span></a>, только в таблице размещена информация об отписавшихся клиентах.</p></div>
+                                <div class='helpBlock'><p><a href='pictures/help/admin_clients_inactive.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Если есть необходимость, то эти записи также, как и активные, можно <a href='help.php?section=35' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>редактировать</span></a> и <a href='help.php?section=36' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>удалять</span></a>.</p></div>
+                            ";
                             break;
                         case "40":
                             break;
