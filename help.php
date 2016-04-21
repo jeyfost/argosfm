@@ -1130,6 +1130,12 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "36":
+                            echo "
+                                <h2 class='goodStyle'>”даление записи из клиентской базы</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>ѕомощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=36' class='noBorder'><span class='catalogueItemTextItalic'>–едактирование записи из клиентской базы</span></a></p>
+                                <div class='helpBlock'><p>ƒл€ удалени€ записи из клиентской базы необходимо нажать на крестик в соответствующей строке <a href='pictures/help/admin_clients_table.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>таблицы клиентов</span></a>.</p></div>
+                                <div class='helpBlock'><p>ќбратите внимание, что после удалени€ восстановить запись будет уже невозможно.</p></div>
+                            ";
                             break;
                         case "37":
                             break;
