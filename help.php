@@ -1166,13 +1166,20 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                         case "40":
                             echo "
                                 <h2 class='goodStyle'>Страница управления пользователями</h2>
-                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=39' class='noBorder'><span class='catalogueItemTextItalic'>Страница управления пользователями</span></a></p>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=40' class='noBorder'><span class='catalogueItemTextItalic'>Страница управления пользователями</span></a></p>
                                 <div class='helpBlock'><p>На <a href='pictures/help/admin_users.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>странице управления пользователями</span></a> находится списко всех зарегистрированных на сайте пользователей и блок поиска пользователей.</p></div>
                                 <div class='helpBlock'><p>При нажатии на логин пользователя вы попадёте на <a href='pictures/help/admin_users_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>страницу редактирования его личной информации</span></a>. Подробнее о редактировании читайте в <a href='help.php?section=41' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</p></div>
                                 <div class='helpBlock'><p>Для поиска пользователя по логину воспользуйтесь <a href='pictures/help/admin_users_search.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>блоком быстрого поиска</span></a>, который расположен в верхней правой части <a href='pictures/help/admin_users.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>страницы управления пользователями</span></a>. При вводе вам будут предлагаться похожие варианты в <a href='pictures/help/admin_users_search_list.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>появишемся блоке</span></a>. Если искомый логин есть в появившемся поле, значит пользователь с таким логином сушествует. Для редактирования или просмотра его личных данных нажмите на логин.</p></div>
                             ";
                             break;
                         case "41":
+                            echo "
+                                <h2 class='goodStyle'>Редактирование личных данных пользователей</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=41' class='noBorder'><span class='catalogueItemTextItalic'>Редактирование личных данных пользователей</span></a></p>
+                                <div class='helpBlock'><p><a href='pictures/help/admin_users_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>Страница редактирования личных данных пользователей</span></a> представляет собой набор текстовых полей ввода.</div>
+                                <div class='helpBlock'><p>Изменять можно любое поле, но для того, чтобы изменения вступили в силу, под изменяемым полем необходимо написать причину изменения. Письмо с причинами модификации личной информации и новыми данными будет автоматически выслано на электронную почту пользователя.</div>
+                                <div class='helpBlock'><p>Изменять информацию стоит только в том случае, если пользователь сам попросил об этом или в том случае, если его личная информация содержит нецензурные выражения либо другую неприемлимую по тем или иным причинам информацию.</div>
+                            ";
                             break;
                         case "42":
                             break;
