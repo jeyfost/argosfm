@@ -1138,6 +1138,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "37":
+                            echo "
+                                <h2 class='goodStyle'>Ѕыстрый поиск адреса в клиентской базе</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>ѕомощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=37' class='noBorder'><span class='catalogueItemTextItalic'>Ѕыстрый поиск адреса в клиентской базе</span></a></p>
+                                <div class='helpBlock'><p>„тобы проверить, существует ли email-адрес в клиентской базе, можно написать его в <a href='pictures/help/admin_clients_search.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>поле дл€ поиска</span></a>. ≈сли адрес есть, то вы увидите его в по€вившемс€ блоке. ≈сли нет, то в по€вившемс€ блоке будет строка \"<b>  сожалению, ничего не найдено.</b>\"</p></div>
+                                <div class='helpBlock'><p>≈сли нажать на адрес в по€вившемс€ блоке, его можно редактировать. ќ редактировании адресов читайте в <a href='help.php?section=35' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>јдреса можно искать по первому символу. ƒл€ этого выберите в <a href='pictures/help/admin_clients_search_letter.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>выпадающем списке</span></a> соответствующий символ. ѕосле выбора <a href='pictures/help/admin_clients_table.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>таблица с клиентской базой</span></a> автоматически перестроитс€.</p></div>
+                            ";
                             break;
                         case "38":
                             break;
