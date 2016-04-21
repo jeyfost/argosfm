@@ -1164,6 +1164,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "40":
+                            echo "
+                                <h2 class='goodStyle'>—траница управлени€ пользовател€ми</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>ѕомощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=39' class='noBorder'><span class='catalogueItemTextItalic'>—траница управлени€ пользовател€ми</span></a></p>
+                                <div class='helpBlock'><p>Ќа <a href='pictures/help/admin_users.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>странице управлени€ пользовател€ми</span></a> находитс€ списко всех зарегистрированных на сайте пользователей и блок поиска пользователей.</p></div>
+                                <div class='helpBlock'><p>ѕри нажатии на логин пользовател€ вы попадЄте на <a href='pictures/help/admin_users_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>страницу редактировани€ его личной информации</span></a>. ѕодробнее о редактировании читайте в <a href='help.php?section=41' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</p></div>
+                                <div class='helpBlock'><p>ƒл€ поиска пользовател€ по логину воспользуйтесь <a href='pictures/help/admin_users_search.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>блоком быстрого поиска</span></a>, который расположен в верхней правой части <a href='pictures/help/admin_users.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>страницы управлени€ пользовател€ми</span></a>. ѕри вводе вам будут предлагатьс€ похожие варианты в по€вишемс€ блоке. ≈сли искомый логин есть в по€вившемс€ поле, значит пользователь с таким логином сушествует. ƒл€ редактировани€ или просмотра его личных данных нажмите на логин.</p></div>
+                            ";
                             break;
                         case "41":
                             break;
