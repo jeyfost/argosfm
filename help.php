@@ -1143,10 +1143,16 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                                 <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=37' class='noBorder'><span class='catalogueItemTextItalic'>Быстрый поиск адреса в клиентской базе</span></a></p>
                                 <div class='helpBlock'><p>Чтобы проверить, существует ли email-адрес в клиентской базе, можно написать его в <a href='pictures/help/admin_clients_search.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>поле для поиска</span></a>. Если адрес есть, то вы увидите его в появившемся блоке. Если нет, то в появившемся блоке будет строка \"<b>К сожалению, ничего не найдено.</b>\"</p></div>
                                 <div class='helpBlock'><p>Если нажать на адрес в появившемся блоке, его можно редактировать. О редактировании адресов читайте в <a href='help.php?section=35' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</p></div>
-                                <div class='helpBlock'><p>Адреса можно искать по первому символу. Для этого выберите в <a href='pictures/help/admin_clients_search_letter.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>выпадающем списке</span></a> соответствующий символ. После выбора <a href='pictures/help/admin_clients_table.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>таблица с клиентской базой</span></a> автоматически перестроится.</p></div>
+                                <div class='helpBlock'><p>О поиске адресов по первому символу читайте в <a href='help.php?section=38' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</p></div>
                             ";
                             break;
                         case "38":
+                            echo "
+                                <h2 class='goodStyle'>Поиск адреса в клиентской базе по первому символу</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>Помощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=38' class='noBorder'><span class='catalogueItemTextItalic'>Поиск адреса в клиентской базе по первому символу</span></a></p>
+                                <div class='helpBlock'><p>Адреса в клиентской базе можно искать по первому символу. Для этого выберите в <a href='pictures/help/admin_clients_search_letter.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>выпадающем списке</span></a> соответствующий символ. После выбора <a href='pictures/help/admin_clients_table.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>таблица с клиентской базой</span></a> автоматически перестроится.</p></div>
+                                <div class='helpBlock'><p>О быстром поиске адресов из клиентской базы читайте в <a href='help.php?section=37' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</p></div>
+                            ";
                             break;
                         case "39":
                             break;
