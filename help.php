@@ -1182,6 +1182,13 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
                             ";
                             break;
                         case "42":
+                            echo "
+                                <h2 class='goodStyle'>—траница опубликованных новостей</h2>
+                                <p><a href='help.php' class='noBorder'><span class='catalogueItemTextItalic'>ѕомощь</span></a><span class='catalogueItemTextItalicNoHover'> > </span><a href='help.php?section=42' class='noBorder'><span class='catalogueItemTextItalic'>—траница опубликованных новостей</span></a></p>
+                                <div class='helpBlock'><p><a href='pictures/help/admin_news.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>—траница опубликованных новостей</span></a> представл€ет собой таблицу, содержащую заголовки опубликованных новостей с датой публикации и панель поиска новостей.</div>
+                                <div class='helpBlock'><p>ѕри нажатии на заголовок новости вы попадЄте на <a href='pictures/help/admin_news_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>страницу редактировани€ новости</span></a>. ѕодробнее о редактировании новостей читайте в <a href='help.php?section=18' class='noBorder' target='_blank'><span class='basicRed' style='font-size: 14px;'>этой ветке</span></a>.</div>
+                                <div class='helpBlock'><p>ƒл€ поиска новости начните вводить еЄ название в поле дл€ поиска. ¬ процессе ввода в <a href='pictures/help/admin_news_search_list.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>по€вившемс€ блоке</span></a> вам будут предложены различные новости с названи€ми, схожими с поисковым запросом. ≈сли вы ненадолго задержите курсор на названии новости, вы увидете во всплывающей подсказке еЄ краткое описание.ѕо завершении поиска выберите нужную новость и нажмите на неЄ. ѕосле нажати€ вас перенаправит на <a href='pictures/help/admin_news_edit.jpg' class='noBorder' rel='lightbox'><span class='basicBlue'>страницу редактировани€</span></a> выбранной новости.</div>
+                            ";
                             break;
                         default:
                             echo "
