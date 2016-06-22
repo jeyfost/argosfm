@@ -165,7 +165,7 @@ function changePrice(block, good, input, rate) {
 		data: {"goodID": good, "goodPrice": price},
 		success: function(response) {
 			if(response == "a") {
-				document.getElementById(block).innerHTML = "<span class='basic'><b>÷ена: </b>" + Math.floor((price * rate).toFixed(2)) + " руб. " + parseFloat((price * rate).toFixed(2) - Math.floor((price * rate).toFixed(2))).toFixed(2).substr(2) + " коп.</span>";
+				document.getElementById(block).innerHTML = "<span class='basic'><b>÷ена: </b>" + Math.floor((price * rate).toFixed(2)) + " руб. " + parseFloat((price * rate).toFixed(2) - Math.floor((price * rate).toFixed(2))).toFixed(2).substr(2, 2) + " коп.</span>";
 				document.getElementById(block).setAttribute("onclick", "showForm('gp" + good + "', '" + price +"', '" + good + "', '" + rate + "')");
 			}
 
