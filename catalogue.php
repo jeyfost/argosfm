@@ -1386,7 +1386,7 @@
 											<br /><br />
 											<div>
 												<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
-												<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".ceil($goods['price']*$rate[0])." бел. руб.</span></div>
+												<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".floor($goods['price']*$rate[0])." руб. ".substr((round($goods['price']*$rate[0], 2) - floor($goods['price']*$rate[0])), 2)." коп.</span></div>
 											</div>
 										</div>
 						";
@@ -1464,7 +1464,7 @@
 												<br /><br />
 												<div>
 													<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
-													<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".ceil($goods['price']*$rate[0])." бел. руб.</span></div>
+													<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".floor($goods['price']*$rate[0])." руб. ".substr((round($goods['price']*$rate[0], 2) - floor($goods['price']*$rate[0])), 2)." коп.</span></div>
 												</div>
 											</div>
 							";
@@ -1530,7 +1530,7 @@
 													<br /><br />
 													<div>
 														<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
-														<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".ceil($goods['price']*$rate[0])." бел. руб.</span></div>
+														<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".floor($goods['price']*$rate[0])." руб. ".substr((round($goods['price']*$rate[0], 2) - floor($goods['price']*$rate[0])), 2)." коп.</span></div>
 													</div>
 												</div>
 								";
@@ -1604,7 +1604,7 @@
 															<br /><br />
 															<div>
 																<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
-																<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".ceil($goods['price']*$rate[0])." бел. руб.</span></div>
+																<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".floor($goods['price']*$rate[0])." руб. ".substr((round($goods['price']*$rate[0], 2) - floor($goods['price']*$rate[0])), 2)." коп.</span></div>
 															</div>
 														</div>
 										";
@@ -1676,7 +1676,7 @@
 															<br /><br />
 															<div>
 																<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
-																<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".ceil($goods['price']*$rate[0])." бел. руб.</span></div>
+																<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".floor($goods['price']*$rate[0])." руб. ".substr((round($goods['price']*$rate[0], 2) - floor($goods['price']*$rate[0])), 2)." коп.</span></div>
 															</div>
 														</div>
 											";
@@ -1749,7 +1749,7 @@
 														<br /><br />
 														<div>
 															<div class='goodCode'><span class='basic'><b>Артикул:</b> ".$goods['code']."</span></div>
-															<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".ceil($goods['price']*$rate[0])." бел. руб.</span></div>
+															<div class='goodPrice'"; if($_SESSION['userID'] == 1) {echo " id='gp".$goods['id']."' onclick='showForm(\"gp".$goods['id']."\", \"".$goods['price']."\", \"".$goods['id']."\", \"".$rate[0]."\")' style='cursor: pointer;'";} if(!isset($_SESSION['userID']) or $_SESSION['userID'] == '1') {echo " style='margin-right: -60px;'";} echo "><span class='basic'><b>Цена:</b> ".floor($goods['price']*$rate[0])." руб. ".substr((round($goods['price']*$rate[0], 2) - floor($goods['price']*$rate[0])), 2)." коп.</span></div>
 														</div>
 													</div>
 									";
