@@ -4,7 +4,7 @@
 	
 	include('connect.php');
 	
-	if(!empty($_POST['searchQuery']) and $_POST['searchQuery'] != iconv('utf-8', 'windows-1251', 'Поиск...'))
+	if(!empty($_POST['searchQuery']) and $_POST['searchQuery'] != iconv('utf-8', 'windows-1251', 'Поиск...') and $_POST['searchQuery'] != "Поиск...")
 	{
 		$quantityNameResult = $mysqli->query("SELECT COUNT(id) FROM catalogue_new WHERE name LIKE '%".$_POST['searchQuery']."%'");
 		$quantityName = $quantityNameResult->fetch_array(MYSQLI_NUM);
