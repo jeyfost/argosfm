@@ -13,4 +13,4 @@ $order = $orderResult->fetch_assoc();
 
 $newSum = $order['quantity'] * $good['price'] * $rate[0];
 
-echo $newSum;
+echo floor(round($newSum, 2))." руб. ".substr((round($newSum, 2) - floor(round($newSum, 2))), 2); if(strlen(substr((round($newSum, 2) - floor(round($newSum, 2))), 2)) == 0) {echo "00";} echo " коп.";

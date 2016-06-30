@@ -15,4 +15,4 @@ while($goods = $goodsResult->fetch_assoc()) {
     $totalSum += $goodPrice[0] * $rate[0] * $goods['quantity'];
 }
 
-echo $totalSum;
+echo floor(round($totalSum, 2))." руб. ".substr((round($totalSum, 2) - floor(round($totalSum, 2))), 2); if(strlen(substr((round($totalSum, 2) - floor(round($totalSum, 2))), 2)) == 0) {echo "00";} echo " коп.";

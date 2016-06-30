@@ -1162,7 +1162,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 														<span class='basic'><b>Артикул: </b>".$good['code']."</span>
 													</div>
 													<div class='basketGoodPrice'>
-														<span class='basic'><b>Цена за ед.: </b>".($good['price']*$rate[0])." бел. руб.</span>
+														<span class='basic'><b>Цена за ед.: </b>".floor(round(($good['price']*$rate[0]), 2))." руб. ".substr((round(($good['price']*$rate[0]), 2) - floor(round(($good['price']*$rate[0]), 2))), 2); if(strlen(substr((round(($good['price']*$rate[0]), 2) - floor(round(($good['price']*$rate[0]), 2))), 2)) == 0) {echo "00";} echo " коп.</span>
 														<br />
 														<span class='basic'><b>Общая цена данной группы товаров: </b><span id='price".$good['id']."'>".($goods['quantity']*$good['price']*$rate[0])."</span> бел. руб.</span>
 													</div>
@@ -1189,7 +1189,7 @@ if(isset($_SESSION['registration']) and $_SESSION['registration'] == 'ok')
 									<input type='submit' value='Очистить корзину' id='clearBasketSubmit' />
 								</form>
 								<form name='completeOrderForm' id='completeOrderForm' method='post' action='scripts/checkout.php'>
-									<label style='font-size: 16px;'><b>Общая сумма заказа: </b><span id='totalPrice'>".$totalPrice."</span> бел. руб.</label>
+									<label style='font-size: 16px;'><b>Общая сумма заказа: </b><span id='totalPrice'>".floor(round($totalPrice, 2))." руб. ".substr((round($totalPrice, 2) - floor(round($totalPrice, 2))), 2); if(strlen(substr((round($totalPrice, 2) - floor(round($totalPrice, 2))), 2)) == 0) {echo "00";} echo "</span></label>
 									<br /><br />
 									<input type='submit' id='completeOrderSubmit' value='Отправить заказ менеджеру' />
 								</form>

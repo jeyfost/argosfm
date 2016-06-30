@@ -38,7 +38,7 @@
 				{
 					$goodResult = $mysqli->query("SELECT * FROM catalogue_new WHERE id = '".$goods['good_id']."'");
 					$good = $goodResult->fetch_assoc();
-					$total += $good['price']*$rate[0]*$goods['quantity'];
+					$total += $good['price'] * $rate[0] * $goods['quantity'];
 
 					echo "
 						<div class='basketGoodH'>
@@ -71,10 +71,10 @@
 										<span class='basic'><b>Артикул: </b>".$good['code']."</span>
 									</div>
 									<div class='basketGoodPrice'>
-										<span class='basic'><b>Цена за ед.: </b>".($good['price']*$rate[0])." бел. руб.</span>
+										<span class='basic'><b>Цена за ед.: </b>".floor(round($good['price']*$rate[0], 2))." руб. ".substr((round($good['price']*$rate[0], 2) - floor(round($good['price']*$rate[0], 2))), 2); if(strlen(substr((round($good['price']*$rate[0], 2) - floor(round($good['price']*$rate[0], 2))), 2)) == 0) {echo "00";} echo " коп.</span>
 										<br />
 										<div id='gq".$goods['id']."' "; if($order['status'] == 0 and $_SESSION['userID'] == 1) {echo "onclick='changeQuantity(\"gq".$goods['id']."\", \"gqt".$good['id']."\", \"".$goods['quantity']."\", \"".$goods['good_id']."\", \"".$order['id']."\")' style='cursor: pointer;' title='Изменить количество данного товара в заказе'";} echo "><span class='basic'><b>Количество: </b><span id='gqt".$good['id']."'>".$goods['quantity']."</span> шт.</span></div>
-										<span class='basic'><b>Общая стоимость данной группы товаров: </b><span id='price".$good['id']."'>".($goods['quantity']*$good['price']*$rate[0])."</span> бел. руб.</span>
+										<span class='basic'><b>Общая стоимость данной группы товаров: </b><span id='price".$good['id']."'>".floor(round($goods['quantity']*$good['price']*$rate[0], 2))." руб. ".substr((round($goods['quantity']*$good['price']*$rate[0], 2) - floor(round($goods['quantity']*$good['price']*$rate[0], 2))), 2); if(strlen(substr((round($goods['quantity']*$good['price']*$rate[0], 2) - floor(round($goods['quantity']*$good['price']*$rate[0], 2))), 2)) == 0) {echo "00";} echo " коп.</span></span>
 									</div>
 								</div>
 							</div>
@@ -88,8 +88,8 @@
 					echo "
 						<br />
 						<div style='position: relative; float: right; margin-top: 50px;'>
-							<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Общая стоимость заказа на момент офрмления:</b> ".$originalSum[0]." бел. руб.</span>
-							<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>Общая стоимость заказа на данный момент (согласно сегодняшнему курсу): </b><span id='totalPrice".$order['id']."'>".$total."</span> бел. руб.</span>
+							<span class='basic' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Общая стоимость заказа на момент офрмления:</b> ".floor(round($originalSum[0], 2))." руб. ".substr((round($originalSum[0], 2) - floor(round($originalSum[0], 2))), 2); if(strlen(substr((round($originalSum[0], 2) - floor(round($originalSum[0], 2))), 2)) == 0) {echo "00";} echo " коп.</span>
+							<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -25px;'><b>Общая стоимость заказа на данный момент (согласно сегодняшнему курсу): </b><span id='totalPrice".$order['id']."'>".floor(round($total, 2))." руб. ".substr((round($total, 2) - floor(round($total, 2))), 2); if(strlen(substr((round($total, 2) - floor(round($total, 2))), 2)) == 0) {echo "00";} echo " коп.</span></span>
 						</div>
 					";
 				}
@@ -98,8 +98,7 @@
 					echo "
 						<br />
 						<div style='position: relative; float: right; margin-top: 50px;'>
-							<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Общая стоимость заказа на момент принятия:</b> ".$order['sum_final']." бел. руб.</span>
-
+							<span class='basicGreen' style='float: right; margin-right: 75px; margin-top: -40px;'><b>Общая стоимость заказа на момент принятия:</b> ".floor(round($order['sum_final'], 2))." руб. ".substr((round($order['sum_final'], 2) - floor(round($order['sum_final'], 2))), 2); if(strlen(substr((round($order['sum_final'], 2) - floor(round($order['sum_final'], 2))), 2)) == 0) {echo "00";} echo " коп.</span>
 						</div>
 					";
 				}
