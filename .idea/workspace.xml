@@ -65,11 +65,11 @@
       <file leaf-file-name="search.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.35764375">
-              <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+            <state vertical-scroll-proportion="0.5245442">
+              <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
-                <marker date="1467285802915" expanded="true" signature="244:325" placeholder="SELECT COUNT... catalogue_new" />
-                <marker date="1467285802915" expanded="true" signature="434:515" placeholder="SELECT COUNT... catalogue_new" />
+                <marker date="1467286045992" expanded="true" signature="244:325" placeholder="SELECT COUNT... catalogue_new" />
+                <marker date="1467286045992" expanded="true" signature="434:515" placeholder="SELECT COUNT... catalogue_new" />
               </folding>
             </state>
           </provider>
@@ -402,12 +402,6 @@
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
     </task>
-    <task id="LOCAL-00119" summary="Создана страница помощи по странице новостей для администратора">
-      <created>1459770219596</created>
-      <option name="number" value="00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1459770219596</updated>
-    </task>
     <task id="LOCAL-00120" summary="Создана страница помощи по странице с контактной информацией для администратора">
       <created>1459778048120</created>
       <option name="number" value="00120" />
@@ -696,7 +690,13 @@
       <option name="project" value="LOCAL" />
       <updated>1467285483490</updated>
     </task>
-    <option name="localTasksCounter" value="168" />
+    <task id="LOCAL-00168" summary="Исправена кнопка поиска">
+      <created>1467285927422</created>
+      <option name="number" value="00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1467285927422</updated>
+    </task>
+    <option name="localTasksCounter" value="169" />
     <servers />
   </component>
   <component name="TodoView">
@@ -744,7 +744,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Создана страница помощи по удалению товара для администратора" />
     <MESSAGE value="Создана страница помощи по добавлению нового раздела для администратора" />
     <MESSAGE value="Создана страница помощи по редактированию раздела для администратора" />
     <MESSAGE value="Создана страница помощи по удалению раздела для администратора" />
@@ -769,7 +768,8 @@
     <MESSAGE value="Изменен скрипт изменения цены в каталоге" />
     <MESSAGE value="Изменен неверное отображение копеек в каталоге" />
     <MESSAGE value="Исправлено отображение цен" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлено отображение цен" />
+    <MESSAGE value="Исправена кнопка поиска" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправена кнопка поиска" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2489,11 +2489,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/search.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.35764375">
-          <caret line="15" column="51" selection-start-line="15" selection-start-column="51" selection-end-line="15" selection-end-column="51" />
+        <state vertical-scroll-proportion="0.5245442">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding>
-            <marker date="1467285802915" expanded="true" signature="244:325" placeholder="SELECT COUNT... catalogue_new" />
-            <marker date="1467285802915" expanded="true" signature="434:515" placeholder="SELECT COUNT... catalogue_new" />
+            <marker date="1467286045992" expanded="true" signature="244:325" placeholder="SELECT COUNT... catalogue_new" />
+            <marker date="1467286045992" expanded="true" signature="434:515" placeholder="SELECT COUNT... catalogue_new" />
           </folding>
         </state>
       </provider>
