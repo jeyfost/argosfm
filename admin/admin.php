@@ -4897,13 +4897,15 @@
                                             <input type='submit' value='Добавить' class='admSubmit' />
                                         </form>
 
-                                        <div id='newAddress'>
+                                        <div id='newAddress' style='margin-top: -40px;'>
                                             <a href='admin.php?section=users&action=news' class='noBorder'>
                                                 <div id='addNewsButton' onmouseover='buttonColor(\"1\", \"addNewsButton\", \"addNewsText\")' onmouseout='buttonColor(\"0\", \"addNewsButton\", \"addNewsText\")'>
                                                     <span class='admWhiteFont' id='addNewsText' style='font-size: 14px;'>Назад к списку новостей</span>
                                                 </div>
                                             </a>
                                         </div>
+
+                                        <div style='clear: both;'></div>
                                     ";
 
                                     unset($_SESSION['newsHeader']);
