@@ -1088,6 +1088,9 @@
                         case "notification":
                             echo "<div id='statusRed'><div id='status'><span class='fRed'>Личные данные пользвателя были изменены, но письмо с уведомлением не было отправлено.</span>";
                             break;
+                        case "noChanges":
+                            echo "<div id='statusRed'><div id='status'><span class='fRed'>Не было зафиксировано ни одного изменения.</span>";
+                            break;
                         default:
                             break;
                     }
@@ -4588,7 +4591,7 @@
                                                 <br />
                                                 <input type='text' class='admInput' name='userOrganisation' id='userOrganisationInput' value='".$user['organisation']."' />
                                                 <br /><br />
-                                                <label class='admLabel'>Причиэ изменения:</label>
+                                                <label class='admLabel'>Причина изменения:</label>
                                                 <br />
                                                 <input type='text' class='admInput' name='userOrganisationReason' id='userOrganisationReasonInput' />
                                                 <br /><br />
@@ -4613,6 +4616,8 @@
                                                 <br /><br />
                                                 <input type='submit' class='admSubmit' value='Редактировать' />
                                             </form>
+
+                                            <div style='clear: both;'></div>
                                         ";
                                     }
                                     break;

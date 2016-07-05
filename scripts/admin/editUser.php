@@ -43,7 +43,6 @@
 				$_SESSION['userPasswordReason'] = $_POST['userPasswordReason'];
 			}
 
-
 			if(!empty($_POST['userEmailReason']))
 			{
 				$_SESSION['userEmailReason'] = $_POST['userEmailReason'];
@@ -58,7 +57,7 @@
 			{
 				$_SESSION['userPhoneReason'] = $_POST['userPhoneReason'];
 			}
-			
+
 			$_SESSION['editUser'] = "empty";
 			header("Location: ../../admin/admin.php?section=users&action=users&user=".$_SESSION['user']);
 		}
@@ -100,7 +99,6 @@
 				$_SESSION['userPasswordReason'] = $_POST['userPasswordReason'];
 			}
 
-
 			if(!empty($_POST['userEmailReason']))
 			{
 				$_SESSION['userEmailReason'] = $_POST['userEmailReason'];
@@ -131,7 +129,7 @@
 		$reply = "mail@argos-fm.by";
 
 		$text = "Здравствуйте!<br /><br />Ваши личные данные на сайте Аргос-ФМ были исправлены администратором. Какие именно данные были изменены и причину их изменения вы можете узнать ниже.<br /><br />";
-		
+
 		$hash = md5(date('r', time()));
 
 		$headers = "From: ".$from."\nReply-To: ".$reply."\nMIME-Version: 1.0";
@@ -233,5 +231,3 @@
 	{
 		header("Location: ../../index.php");
 	}
-
-?>
