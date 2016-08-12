@@ -72,6 +72,17 @@ function editName(id, name, block) {
 	document.getElementById('editNameInput').focus();
 }
 
+function editPhone(id, phone, block) {
+	document.getElementById(block).innerHTML = "<form name='editPhone' method='post'><input type='text' name='editPhone' id='editPhoneInput' class='admInput' onblur='savePhone(\"" + id + "\", \"phoneBlock" + id + "\")' value='" + phone + "' /></form>";
+	document.getElementById('editPhoneInput').focus();
+}
+
+function editNotes(id, notes, block) {
+	notes = notes.replace(/<br>/g, "\n")
+	document.getElementById(block).innerHTML = "<form name='editNotes' method='post'><textarea class='admTextarea' name='editNotes' id='editNotesInput' onblur='saveNotes(\"" + id + "\", \"notesBlock" + id + "\")'>" + notes + "</textarea></form>";
+	document.getElementById('editNotesInput').focus();
+}
+
 function editLocation(id, location, block) {
 	var content = "<form name='editLocationForm' method='post'><select class='admSelect' name='editLocation' id='editLocationSelect' onblur='saveLocation(\"" + id + "\", \"" + block + "\")' onchange='saveLocation(\"" + id + "\", \"" + block + "\")'>";
 
@@ -204,6 +215,36 @@ function saveName(id, block) {
 		});
 		return false;
 	}
+}
+
+function savePhone(id, block) {
+	var phone = $('#editPhoneInput').val();
+
+	$.ajax({
+		type: 'POST',
+		data: {"phone": phone, "emailID": id},
+		url: '../scripts/admin/ajaxPhone.php',
+		success: function(response) {
+			if(response == "a") {
+				document.getElementById(block).innerHTML = "<span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"" + id + "\", \"" + phone.replace(/\\?("|')/g, '\\$1') + "\", \'phoneBlock" + id + "\")' title='Изменить номер телефона'>" + phone + "</span>";
+			}
+		}
+	});
+}
+
+function saveNotes(id, block) {
+	var notes = $('#editNotesInput').val();
+
+	$.ajax({
+		type: 'POST',
+		data: {"notes": notes, "emailID": id},
+		url: '../scripts/admin/ajaxNotes.php',
+		success: function(response) {
+			if(response == "a") {
+				document.getElementById(block).innerHTML = "<span class='admULFont' style='cursor: pointer;' onclick='editNotes(\"" + id +"\", \"" + notes.replace(/\\?("|')/g, '\\$1') + "\", \"notesBlock" + id + "\")' title='Редактировать заметки'>" + notes + "</span>";
+			}
+		}
+	});
 }
 
 function randomPassword() {

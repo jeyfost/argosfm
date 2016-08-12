@@ -10,11 +10,17 @@
 
 	if(!empty($_POST['startSymbolSelect']))
 	{
-		header("Location: ../admin/admin.php?section=users&action=maillist&active=".$_SESSION['active']."&start=".$_POST['startSymbolSelect']);
+		if(isset($_SESSION['province'])) {
+			header("Location: ../admin/admin.php?section=users&action=maillist&active=".$_SESSION['active']."&province=".$_SESSION['province']."&start=".$_POST['startSymbolSelect']);
+		} else {
+			header("Location: ../admin/admin.php?section=users&action=maillist&active=".$_SESSION['active']."&start=".$_POST['startSymbolSelect']);
+		}
 	}
 	else
 	{
-		header("Location: ../admin/admin.php?section=users&action=maillist&active=".$_SESSION['active']."&p=1");
+		if(isset($_SESSION['province'])) {
+			header("Location: ../admin/admin.php?section=users&action=maillist&active=".$_SESSION['active']."&province=".$_SESSION['province']."&p=1");
+		} else {
+			header("Location: ../admin/admin.php?section=users&action=maillist&active=".$_SESSION['active']."&p=1");
+		}
 	}
-
-?>

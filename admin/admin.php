@@ -113,6 +113,10 @@
         header("Location: admin.php?section=users&action=maillist&active=true&p=1");
     }
 
+    if(!empty($_REQUEST['province']) and $_REQUEST['province'] != '1' and $_REQUEST['province'] != '2' and $_REQUEST['province'] != '3' and $_REQUEST['province'] != '4' and $_REQUEST['province'] != '5' and $_REQUEST['province'] != '6' and $_REQUEST['province'] != '7' and $_REQUEST['province'] != '8') {
+        header("Location: admin.php?section=users&action=maillist&active=true&p=1");
+    }
+
     if(!empty($_REQUEST['section']))
     {
         $_SESSION['section'] = $_REQUEST['section'];
@@ -440,6 +444,19 @@
         $page = $_REQUEST['p'];
         $start = $page * 10 - 10;
     }
+
+    if(!empty($_REQUEST['start'])) {
+        $_SESSION['start'] = $_REQUEST['start'];
+    } else {
+        unset($_SESSION['start']);
+    }
+
+    if(!empty($_REQUEST['province'])) {
+        $_SESSION['province'] = $_REQUEST['province'];
+    } else {
+        unset($_SESSION['province']);
+    }
+
 ?>
 
 <!doctype html>
@@ -2823,7 +2840,7 @@
                                                 $categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
 
                                                 echo "
-                                                    <form name='selectCategoryForm' name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
+                                                    <form name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
                                                         <label class='admLabel'>Выберите категорию:</label>
                                                         <br />
                                                         <select class='admSelect' name='categorySelect' id='categorySelect' size='1' onchange='this.form.submit()'>
@@ -2898,7 +2915,7 @@
                                                     sort($namesArray);
 
                                                     echo "
-                                                        <form name='selectCategoryForm' name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
+                                                        <form name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
                                                             <label class='admLabel'>Выберите категорию:</label>
                                                             <br />
                                                             <select class='admSelect' name='categorySelect' id='categorySelect' size='1' onchange='this.form.submit()'>
@@ -2926,7 +2943,7 @@
                                                         $subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
 
                                                         echo "
-                                                            <form name='selectSubcategoryForm' name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
+                                                            <form name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
                                                                 <label class='admLabel'>Выберите раздел:</label>
                                                                 <br />
                                                                 <select class='admSelect' name='subcategorySelect' id='subcategorySelect' size='1' onchange='this.form.submit()'>
@@ -3022,7 +3039,7 @@
                                                     sort($namesArray);
 
                                                     echo "
-                                                        <form name='selectCategoryForm' name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
+                                                        <form name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
                                                             <label class='admLabel'>Выберите категорию:</label>
                                                             <br />
                                                             <select class='admSelect' name='categorySelect' id='categorySelect' size='1' onchange='this.form.submit()'>
@@ -3063,7 +3080,7 @@
                                                         sort($namesArray);
 
                                                         echo "
-                                                            <form name='selectSubcategoryForm' name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
+                                                            <form name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
                                                                 <label class='admLabel'>Выберите раздел:</label>
                                                                 <br />
                                                                 <select class='admSelect' name='subcategorySelect' id='subcategorySelect' size='1' onchange='this.form.submit()'>
@@ -3091,7 +3108,7 @@
                                                             $subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
 
                                                             echo "
-                                                                <form name='selectSubcategory2Form' name='selectSubcategory2Form' method='post' action='../scripts/admin/selectSubcategory2.php'>
+                                                                <form name='selectSubcategory2Form' method='post' action='../scripts/admin/selectSubcategory2.php'>
                                                                     <label class='admLabel'>Выберите подраздел:</label>
                                                                     <br />
                                                                     <select class='admSelect' name='subcategory2Select' id='subcategory2Select' size='1' onchange='this.form.submit()'>
@@ -3175,7 +3192,7 @@
                                                 $categoriesResult = $mysqli->query("SELECT * FROM categories_new WHERE type = '".$_REQUEST['type']."' ORDER BY name");
 
                                                 echo "
-                                                    <form name='selectCategoryForm' name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
+                                                    <form name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
                                                         <label class='admLabel'>Выберите категорию:</label>
                                                         <br />
                                                         <select class='admSelect' name='categorySelect' id='categorySelect' size='1' onchange='this.form.submit()'>
@@ -3243,7 +3260,7 @@
                                                     sort($namesArray);
 
                                                     echo "
-                                                        <form name='selectCategoryForm' name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
+                                                        <form name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
                                                             <label class='admLabel'>Выберите категорию:</label>
                                                             <br />
                                                             <select class='admSelect' name='categorySelect' id='categorySelect' size='1' onchange='this.form.submit()'>
@@ -3271,7 +3288,7 @@
                                                         $subcategoriesResult = $mysqli->query("SELECT * FROM subcategories_new WHERE category = '".$_REQUEST['c']."' ORDER BY name");
 
                                                         echo "
-                                                            <form name='selectSubcategoryForm' name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
+                                                            <form name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
                                                                 <label class='admLabel'>Выберите раздел:</label>
                                                                 <br />
                                                                 <select class='admSelect' name='subcategorySelect' id='subcategorySelect' size='1' onchange='this.form.submit()'>
@@ -3372,7 +3389,7 @@
                                                     sort($namesArray);
 
                                                     echo "
-                                                        <form name='selectCategoryForm' name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
+                                                        <form name='selectCategoryForm' method='post' action='../scripts/admin/selectCategoryC.php'>
                                                             <label class='admLabel'>Выберите категорию:</label>
                                                             <br />
                                                             <select class='admSelect' name='categorySelect' id='categorySelect' size='1' onchange='this.form.submit()'>
@@ -3413,7 +3430,7 @@
                                                         sort($namesArray);
 
                                                         echo "
-                                                            <form name='selectSubcategoryForm' name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
+                                                            <form name='selectSubcategoryForm' method='post' action='../scripts/admin/selectSubcategoryC.php'>
                                                                 <label class='admLabel'>Выберите раздел:</label>
                                                                 <br />
                                                                 <select class='admSelect' name='subcategorySelect' id='subcategorySelect' size='1' onchange='this.form.submit()'>
@@ -3441,7 +3458,7 @@
                                                             $subcategories2Result = $mysqli->query("SELECT * FROM subcategories2 WHERE subcategory = '".$_REQUEST['s']."'");
 
                                                             echo "
-                                                                <form name='selectSubcategory2Form' name='selectSubcategory2Form' method='post' action='../scripts/admin/selectSubcategory2.php'>
+                                                                <form name='selectSubcategory2Form' method='post' action='../scripts/admin/selectSubcategory2.php'>
                                                                     <label class='admLabel'>Выберите подраздел:</label>
                                                                     <br />
                                                                     <select class='admSelect' name='subcategory2Select' id='subcategory2Select' size='1' onchange='this.form.submit()'>
@@ -3805,6 +3822,7 @@
                                         <div id='clientsList'>
                                         <span class='admMenuFont'>Список адресов клиентской базы</span>
                                         <br /><br ><br />
+                                       <div id='activeFilters'>
                                         ";
 
                                     if($_REQUEST['active'] == "false")
@@ -3840,7 +3858,10 @@
                                     }
 
                                     echo "
-                                        <br /><br /><br /><br /><br />
+                                        <div style='clear: both;'></div>
+                                        </div>
+                                        <br />
+                                        <div id='filters'>
                                         <form name='chooseStartForm' id='chooseStartForm' method='post' action='../scripts/chooseStartSymbol.php'>
                                             <label class='admLabel'>Показать все адреса, начинающиеся с:</label>
                                             <br />
@@ -3857,6 +3878,33 @@
                                     echo "
                                             </select>
                                         </form>
+                                        <br /><br />
+                                        <form id='selectProvinceForm' method='post' action='../scripts/admin/chooseProvince.php'>
+                                            <label class='admLabel'>Показать все адреса из выбранной области:</label>
+                                            <br />
+                                            <select class='admSelect' name='provinceSelect' onchange='this.form.submit()'>
+                                                <option value=''"; if(empty($_REQUEST['province'])) {echo " selected";} echo ">Все области</option>
+                                    ";
+
+                                    $provincesResult = $mysqli->query("SELECT * FROM locations");
+                                    while($provinces = $provincesResult->fetch_assoc()) {
+                                        echo "
+                                            <option value='".$provinces['id']."'"; if($_REQUEST['province'] == $provinces['id']) {echo " selected";} echo ">".$provinces['name']."</option>
+                                        ";
+                                    }
+
+                                    echo "
+                                            </select>
+                                        </form>
+                                        </div>
+                                        <br /><br />
+                                        <div id='searchFormBlock'>
+                                            <form id='searchAddressForm' name='searchAddressForm' method='post'>
+                                                <label class='admLabel'>Поиск e-mail адреса:</label>
+                                                <br />
+                                                <input type='text' class='admInput' name='addressSearch' id='addressSearchInput' />
+                                            </form>
+                                        </div>
                                         </div>
                                     ";
 
@@ -3873,6 +3921,10 @@
                                                     <br />
                                                     <input type='text' class='admInput' name='newName' id='newAddressInput'"; if(!empty($_SESSION['newName'])) {echo " value='".$_SESSION['newName']."'";} echo " />
                                                     <br /><br />
+                                                    <label class='admLabel'>Введите телефон (опционально):</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='newPhone' id='newAddressInput'"; if(!empty($_SESSION['newPhone'])) {echo " value='".$_SESSION['newPhone']."'";} echo " />
+                                                    <br /><br />
                                                     <label class='admLabel' for='newLocationSelect'>Выберите область:</label>
                                                     <br />
                                                     <select name='newLocation' id='newLocationSelect' class='admSelect'>
@@ -3888,13 +3940,11 @@
                                     echo "
                                                     </select>
                                                     <br /><br />
-                                                    <input type='submit' class='admSubmit' value='Добавить' style='right: 0px;' />
-                                                </form>
-                                                <br /><br />
-                                                <form id='searchAddressForm' id='searchAddressForm' method='post'>
-                                                    <label class='admLabel'>Поиск e-mail адреса:</label>
+                                                    <label class='admLabel'>Заметки (опционально):</label>
                                                     <br />
-                                                    <input type='text' class='admInput' name='addressSearch' id='addressSearchInput' />
+                                                    <textarea class='admTextarea' name='newNotes' id='newNotesInput'"; if(!empty($_SESSION['newNotes'])) {echo " value='".$_SESSION['newNotes']."'";} echo ">"; if(isset($_SESSION['newNotes'])) {echo $_SESSION['newNotes'];} echo "</textarea>
+                                                    <br /><br />
+                                                    <input type='submit' class='admSubmit' value='Добавить' style='right: 0;' />
                                                 </form>
                                             </div>
                                         ";
@@ -3907,17 +3957,25 @@
                                         </div>
                                     ";
 
-                                    if(!empty($_REQUEST['start']))
+                                    if(!empty($_REQUEST['start']) or !empty($_REQUEST['province']))
                                     {
                                         if($_REQUEST['active'] == "true")
                                         {
                                             if($_REQUEST['start'] == "zero")
                                             {
-                                                $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '0%' ORDER BY email");
+                                                if(!empty($_REQUEST['province'])) {
+                                                    $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '0%' AND location = '".$_REQUEST['province']."' ORDER BY email");
+                                                } else {
+                                                    $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '0%' ORDER BY email");
+                                                }
                                             }
                                             else
                                             {
-                                                $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '".$_REQUEST['start']."%' ORDER BY email");
+                                                if(!empty($_REQUEST['province'])) {
+                                                    $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '".$_REQUEST['start']."%' AND location = '".$_REQUEST['province']."' ORDER BY email");
+                                                } else {
+                                                    $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1' AND email LIKE '".$_REQUEST['start']."%' ORDER BY email");
+                                                }
                                             }
                                         }
 
@@ -3925,11 +3983,19 @@
                                         {
                                             if($_REQUEST['start'] == "zero")
                                             {
-                                                $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '0%' ORDER BY disactivation_date DESC");
+                                                if(!empty($_REQUEST['province'])) {
+                                                    $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '0%' AND location = '".$_REQUEST['province']."' ORDER BY disactivation_date DESC");
+                                                } else {
+                                                    $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '0%' ORDER BY disactivation_date DESC");
+                                                }
                                             }
                                             else
                                             {
-                                                $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '".$_REQUEST['start']."%' ORDER BY disactivation_date DESC");
+                                                if(!empty($_REQUEST['province'])) {
+                                                    $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '".$_REQUEST['start']."%' AND location='".$_REQUEST['province']."' ORDER BY disactivation_date DESC");
+                                                } else {
+                                                    $mailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '0' AND email LIKE '".$_REQUEST['start']."%' ORDER BY disactivation_date DESC");
+                                                }
                                             }
                                         }
 
@@ -3943,19 +4009,25 @@
                                             {
                                                 echo "
                                                     <tr>
-                                                        <td class='adminTDNumber'style='background-color: #dddddd;'>
+                                                        <td class='adminTDNumber' style='background-color: #dddddd;'>
                                                             <span class='admLabel'>№</span>
                                                         </td>
-                                                        <td class='adminTDMail'style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Email</span>
                                                         </td>
-                                                        <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Имя/Организация</span>
                                                         </td>
-                                                        <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                            <span class='admLabel'>Телефон</span>
+                                                        </td>
+                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Область</span>
                                                         </td>
-                                                        <td class='adminTDButtons'style='background-color: #dddddd;'>
+                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                            <span class='admLabel'>Заметки</span>
+                                                        </td>
+                                                        <td class='adminTDButtons' style='background-color: #dddddd;'>
                                                             <span class='admLabel'>Функции</span>
                                                         </td>
                                                     </tr>
@@ -3980,8 +4052,14 @@
                                                             <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                                 <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                             </td>
+                                                            <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
+                                                                <div id='phoneBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")' title='Изменить номер телефона'>".$address['phone']."</span></div>
+                                                            </td>
                                                             <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
+                                                            </td>
+                                                            <td class='adminTDNotes'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editNotes(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['notes'])."\", \"notesBlock".$address['id']."\")'>
+                                                                <div id='notesBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Редактировать заметки' onclick='editNotes(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['notes'])."\", \"notesBlock".$address['id']."\")'>".$address['notes']."</span></div>
                                                             </td>
                                                             <td class='adminTDButtons'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <a href='../scripts/admin/deleteAddress.php?id=".$address['id']."' class='noBorder'><img id='mi".$address['id']."' src='../pictures/system/cross.png' class='noBorder' title='Удалить адрес из клиентской базы' style='margin-top: 12px;' onmouseover='mailIcon(\"1\", \"mi".$address['id']."\")' onmouseout='mailIcon(\"0\", \"mi".$address['id']."\")' /></a>
@@ -3995,22 +4073,28 @@
                                             {
                                                 echo "
                                                     <tr>
-                                                        <td class='adminTDNumber'style='background-color: #dddddd;'>
+                                                        <td class='adminTDNumber' style='background-color: #dddddd;'>
                                                             <span class='admLabel'>№</span>
                                                         </td>
-                                                        <td class='adminTDMail'style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Email</span>
                                                         </td>
-                                                        <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Имя/Организация</span>
                                                         </td>
-                                                        <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                            <span class='admLabel'>Телефон</span>
+                                                        </td>
+                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Область</span>
                                                         </td>
-                                                        <td class='adminTDDate'style='background-color: #dddddd;'>
+                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                            <span class='admLabel'>Заметки</span>
+                                                        </td>
+                                                        <td class='adminTDDate' style='background-color: #dddddd;'>
                                                             <span class='admLabel'>Дата отписки</span>
                                                         </td>
-                                                        <td class='adminTDButtons'style='background-color: #dddddd;'>
+                                                        <td class='adminTDButtons' style='background-color: #dddddd;'>
                                                             <span class='admLabel'>Функции</span>
                                                         </td>
                                                     </tr>
@@ -4035,8 +4119,14 @@
                                                             <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                                 <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                             </td>
+                                                            <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
+                                                                <div id='phoneBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")' title='Изменить номер телефона'>".$address['phone']."</span></div>
+                                                            </td>
                                                             <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
+                                                            </td>
+                                                            <td class='adminTDNotes'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editNotes(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['notes'])."\", \"notesBlock".$address['id']."\")'>
+                                                                <div id='notesBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Редактировать заметки' onclick='editNotes(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['notes'])."\", \"notesBlock".$address['id']."\")'>".$address['notes']."</span></div>
                                                             </td>
                                                             <td class='adminTDDate'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <span class='admLabel'>".$address['disactivation_date']."</span>
@@ -4064,7 +4154,7 @@
                                         }
                                     }
                                     
-                                    if(!empty($_REQUEST['p']) and empty($_REQUEST['start']))
+                                    if(!empty($_REQUEST['p']) and empty($_REQUEST['start']) and empty($_REQUEST['province']))
                                     {
                                         $count = 0;
 
@@ -4074,19 +4164,25 @@
                                         {
                                             echo "
                                                 <tr>
-                                                    <td class='adminTDNumber'style='background-color: #dddddd;'>
+                                                    <td class='adminTDNumber' style='background-color: #dddddd;'>
                                                         <span class='admLabel'>№</span>
                                                     </td>
-                                                    <td class='adminTDMail'style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Email</span>
                                                     </td>
-                                                    <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Имя/Организация</span>
                                                     </td>
-                                                    <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <span class='admLabel'>Телефон</span>
+                                                    </td>
+                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Область</span>
                                                     </td>
-                                                    <td class='adminTDButtons'style='background-color: #dddddd;'>
+                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <span class='admLabel'>Заметки</span>
+                                                    </td>
+                                                    <td class='adminTDButtons' style='background-color: #dddddd;'>
                                                         <span class='admLabel'>Функции</span>
                                                     </td>
                                                 </tr>
@@ -4112,9 +4208,14 @@
                                                         </td>
                                                         <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                             <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
+                                                            <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
+                                                                <div id='phoneBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")' title='Изменить номер телефона'>".$address['phone']."</span></div>
                                                         </td>
                                                         <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
+                                                        </td>
+                                                        <td class='adminTDNotes'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editNotes(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['notes'])."\", \"notesBlock".$address['id']."\")'>
+                                                                <div id='notesBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Редактировать заметки' onclick='editNotes(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['notes'])."\", \"notesBlock".$address['id']."\")'>".$address['notes']."</span></div>
                                                         </td>
                                                         <td class='adminTDButtons'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <a href='../scripts/admin/deleteAddress.php?id=".$address['id']."' class='noBorder'><img id='mi".$address['id']."' src='../pictures/system/cross.png' class='noBorder' title='Удалить адрес из клиентской базы' style='margin-top: 12px;' onmouseover='mailIcon(\"1\", \"mi".$address['id']."\")' onmouseout='mailIcon(\"0\", \"mi".$address['id']."\")' /></a>
@@ -4128,22 +4229,28 @@
                                         {
                                             echo "
                                                 <tr>
-                                                    <td class='adminTDNumber'style='background-color: #dddddd;'>
+                                                    <td class='adminTDNumber' style='background-color: #dddddd;'>
                                                         <span class='admLabel'>№</span>
                                                     </td>
-                                                    <td class='adminTDMail'style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Email</span>
                                                     </td>
-                                                    <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Имя/Организация</span>
                                                     </td>
-                                                    <td class='adminTDName'style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <span class='admLabel'>Телефон</span>
+                                                    </td>
+                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Область</span>
                                                     </td>
-                                                    <td class='adminTDDate'style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <span class='admLabel'>Заметки</span>
+                                                    </td>
+                                                    <td class='adminTDDate' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Дата отписки</span>
                                                     </td>
-                                                    <td class='adminTDButtons'style='background-color: #dddddd;'>
+                                                    <td class='adminTDButtons' style='background-color: #dddddd;'>
                                                         <span class='admLabel'>Функции</span>
                                                     </td>
                                                 </tr>
@@ -4170,9 +4277,15 @@
                                                         <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                             <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                         </td>
+                                                        <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
+                                                                <div id='phoneBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")' title='Изменить номер телефона'>".$address['phone']."</span></div>
+                                                        </td>
                                                         <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
                                                         </td>
+                                                        <td class='adminTDNotes'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editNotes(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['notes'])."\", \"notesBlock".$address['id']."\")'>
+                                                                <div id='notesBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Редактировать заметки' onclick='editNotes(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['notes'])."\", \"notesBlock".$address['id']."\")'>".$address['notes']."</span></div>
+                                                            </td>
                                                         <td class='adminTDDate'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <span class='admLabel'>".$address['disactivation_date']."</span>
                                                         </td>

@@ -237,16 +237,19 @@ ol li a {color: #008fe1;}
 #statusRed {position: relative; float:  left; padding-right: 2px; padding-left: 2px; height: 34px; line-height: 34px; background-color: #df4e47; text-align: center; font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal;}
 #statusBlue {position: relative; float:  left; padding-right: 2px; padding-left: 2px; height: 34px; line-height: 32px; background-color: #3084eb; text-align: center; font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal;}
 #admSearchBlock {position: absolute; top: 70px; right: 10px;}
-#newAddress {position: relative; float: right;}
+#newAddress {position: relative; float: right; background-color: #fff7cb; padding: 10px 5px 10px 10px;}
 #clientsList {position: relative; float: left; width: 350px;}
 #admPageNumbers {position: relative; float: left; height: 30px; line-height: 30px;}
 #pageNumbers {position: relative; height: 30px; line-height: 30px; overflow: visible;}
 #admSearchResult {position: absolute; top: 85px; right: 0px; min-width: 280px; border: 1px solid #787878; background-color: #ffffff; display: none; z-index: 9999;}
 #addNewsButton {position: relative; float: right; width: 200px; height: 40px; line-height: 40px; background-color: #df4e47; text-align: center; z-index: 3;}
-#addressSearchResult {position: absolute; padding: 10px; border: 1px solid #787878; background-color: #ffffff; top: 335px; left: 692px; display: none; z-index: 999;}
+#addressSearchResult {position: absolute; padding: 10px; border: 1px solid #787878; background-color: #ffffff; left: 20px; top: 435px; width: 400px; display: none; z-index: 999;}
 #mailHistoryButton {position: absolute; top: 30px; right: 30px;}
 #mailTextBlock {background-color: #dddddd; border: 2px dotted #df4e47; padding: 10px; position: absolute; opacity: 0; max-width: 400px; z-index: 1; display: none; top: 30px; left: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
 #findNews {position: absolute; top: 60px; right: 20px;}
+#filters {padding: 10px; width: 310px; background-color: #f8ecff;}
+#activeFilters {padding: 10px; width: 310px; background-color: #e9ffe5;}
+#searchFormBlock {padding: 10px; width: 310px; background-color: #ffe5e5;}
 
 /* calendar.php */
 #calendar {position: absolute; top: 100px; right: 10px; width: 262px; background-color: #ffffff;}
@@ -293,6 +296,7 @@ ol li a {color: #008fe1;}
 .adminTDLocation {height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
 .adminTDButtons {width: 60px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
 .adminTDDate {height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
+.adminTDNotes {width: 30px; height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px;}
 .admPageNumberBlock {position: relative; float: left; background-color: #ffffff; width: 40px; height: 30px; line-height: 30px; text-align: center;}
 .admPageNumberBlockActive {position: relative; float: left; background-color: #df4e47; width: 40px; height: 30px; line-height: 30px; text-align: center;}
 .admWhiteFont {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 16px; font-weight: normal; color: #ffffff;}
