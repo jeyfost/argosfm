@@ -443,7 +443,7 @@ $(document).ready(function() {
    $('#emailThemeInput').keyup(function() {
        var theme = $('#emailThemeInput').val();
 
-       if(theme > 0) {
+       if(theme.length > 0) {
            $('#emailThemeInput').css('border', 'none');
            $('#emailThemeInput').css('background-color', '#ddd');
        } else {

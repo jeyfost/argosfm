@@ -28,7 +28,7 @@
 
 				switch($_POST['emailType']) {
 					case "all":
-						$emailCountResult = $mysqli->query("SELECT COUNT(id) FROM mail");
+						$emailCountResult = $mysqli->query("SELECT COUNT(id) FROM mail WHERE in_send = '1'");
 						$emailCount = $emailCountResult->fetch_array(MYSQLI_NUM);
 
 						if(!empty($_FILES['emailFile']['name']))
@@ -52,23 +52,30 @@
 
 						$count = 0;
 
-						$emailResult = $mysqli->query("SELECT * FROM mail");
+						$emailResult = $mysqli->query("SELECT * FROM mail WHERE in_send = '1'");
 						while($email = $emailResult->fetch_assoc())
 						{
 							$fullMessage = $baseMessage."--PHP-mixed-".$hash."\n\n"."--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: www.argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: www.argos-fm.by/test/scripts/stopSending.php?hash=".$email['hash']."\n";
 
 							$fullMessage .= "--PHP-mixed-".$hash."\n";
 
-							if(@mail($email['email'], $subject, $fullMessage, $headers))
+							if(filter_var($email['email'], FILTER_VALIDATE_EMAIL) and @mail($email['email'], $subject, $fullMessage, $headers))
 							{
 								$count++;
+							} else {
+								$mailIDResult = $mysqli->query("SELECT MAX(id) FROM mail_result");
+								$mailID = $mailIDResult->fetch_array(MYSQLI_NUM);
+
+								$failedMailID = $mailID[0] + 1;
+
+								$mysqli->query("INSERT INTO mail_failed (mail_id, client_id) VALUES ('".$failedMailID."', '".$email['id']."')");
 							}
 						}
 
+						$mysqli->query("INSERT INTO mail_result (subject, text, send_to, date, count, send) VALUES ('".$subject."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', 'all', '".date('Y-m-d H:i:s')."', '".$emailCount[0]."', '".$count."')");
+
 						if($count == $emailCount[0])
 						{
-							$mysqli->query("INSERT INTO mail_result (subject, text, date) VALUES ('".htmlspecialchars($subject)."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".date('Y-m-d H:i:s')."')");
-
 							$_SESSION['sendEmail'] = "ok";
 
 							header("Location: ../../admin/admin.php?section=users&action=mail");
@@ -90,7 +97,7 @@
 						}
 						break;
 					case "group":
-						$emailCountResult = $mysqli->query("SELECT COUNT(id) FROM mail WHERE location = '".$_POST['addressGroupSelect']."'");
+						$emailCountResult = $mysqli->query("SELECT COUNT(id) FROM mail WHERE location = '".$_POST['addressGroupSelect']."' AND in_send = '1'");
 						$emailCount = $emailCountResult->fetch_array(MYSQLI_NUM);
 
 						if(!empty($_FILES['emailFile']['name']))
@@ -114,23 +121,30 @@
 
 						$count = 0;
 
-						$emailResult = $mysqli->query("SELECT * FROM mail WHERE location = '".$_POST['addressGroupSelect']."'");
+						$emailResult = $mysqli->query("SELECT * FROM mail WHERE location = '".$_POST['addressGroupSelect']."' AND in_send = '1'");
 						while($email = $emailResult->fetch_assoc())
 						{
 							$fullMessage = $baseMessage."--PHP-mixed-".$hash."\n\n"."--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: www.argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: www.argos-fm.by/test/scripts/stopSending.php?hash=".$email['hash']."\n";
 
 							$fullMessage .= "--PHP-mixed-".$hash."\n";
 
-							if(@mail($email['email'], $subject, $fullMessage, $headers))
+							if(filter_var($email['email'], FILTER_VALIDATE_EMAIL) and @mail($email['email'], $subject, $fullMessage, $headers))
 							{
 								$count++;
+							} else {
+								$mailIDResult = $mysqli->query("SELECT MAX(id) FROM mail_result");
+								$mailID = $mailIDResult->fetch_array(MYSQLI_NUM);
+
+								$failedMailID = $mailID[0] + 1;
+
+								$mysqli->query("INSERT INTO mail_failed (mail_id, client_id) VALUES ('".$failedMailID."', '".$email['id']."')");
 							}
 						}
 
+						$mysqli->query("INSERT INTO mail_result (subject, text, send_to, date, count, send) VALUES ('".$subject."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".$_POST['addressGroupSelect']."', '".date('Y-m-d H:i:s')."', '".$emailCount[0]."', '".$count."')");
+
 						if($count == $emailCount[0])
 						{
-							$mysqli->query("INSERT INTO mail_result (subject, text, date) VALUES ('".htmlspecialchars($subject)."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".date('Y-m-d H:i:s')."')");
-
 							$_SESSION['sendEmail'] = "ok";
 
 							header("Location: ../../admin/admin.php?section=users&action=mail");
@@ -178,12 +192,21 @@
 
 								if(@mail($to, $subject, $fullMessage, $headers))
 								{
+									$mysqli->query("INSERT INTO mail_result (subject, text, to, date, count, send) VALUES ('".htmlspecialchars($subject)."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".htmlspecialchars($to)."', '".date('Y-m-d H:i:s')."', '1', '1')");
+
 									$_SESSION['sendEmail'] = "ok";
 
 									header("Location: ../../admin/admin.php?section=users&action=mail");
 								}
 								else
 								{
+									$mysqli->query("INSERT INTO mail_result (subject, text, send_to, date, count, send) VALUES ('".$subject."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".$htmlspecialchars($to)."', '".date('Y-m-d H:i:s')."', '1', '0')");
+
+									$mailIDResult = $mysqli->query("SELECT MAX(id) FROM mail_result");
+									$mailID = $mailIDResult->fetch_array(MYSQLI_NUM);
+
+									$mysqli->query("INSERT INTO mail_failed (mail_id, client_id) VALUES ('".$mailID[0]."', '".$to."')");
+
 									$_SESSION['sendEmail'] = "failed";
 
 									header("Location: ../../admin/admin.php?section=users&action=mail");

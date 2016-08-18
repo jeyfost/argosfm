@@ -1040,7 +1040,7 @@
                             echo "<div id='statusBlue'><div id='status'><span class='fBlue'>Все письма успешно отправлены.</span>";
                             break;
                         case "failed":
-                            echo "<div id='statusRed'><div id='status'><span class='fRed'>При отправке писем произошла ошибка. Попробуйте снова.</span>";
+                            echo "<div id='statusRed'><div id='status'><span class='fRed'>Не все письма были успешно отправлены. В некоторых случаях произошли ошибки.</span>";
                             break;
                         case "count":
                             echo "<div id='statusRed'><div id='status'><span class='fRed'>Не все письма были успешно отправлены. В некоторых случаях произошли ошибки.</span>";
@@ -3604,6 +3604,15 @@
                                                 <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
                                                     <span class='admLabel'>Дата отправления</span>
                                                 </td>
+                                                <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
+                                                    <span class='admLabel'>Отправлялось</span>
+                                                </td>
+                                                <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
+                                                    <span class='admLabel'>Доставлено</span>
+                                                </td>
+                                                <td class='adminTDMail' style='background-color: #dddddd; text-align: center;'>
+                                                    <span class='admLabel'>Не доставлено</span>
+                                                </td>
                                             </tr>
                                     ";
 
@@ -3612,20 +3621,20 @@
                                         $count++;
                                         $number = $mailCount[0] - $_REQUEST['p'] * 10 + 11 - $count;
 
-                                        if(substr_count($mail['to'], '@') == 1) {
-                                            $from = $mail['to'];
+                                        if(substr_count($mail['send_to'], '@') == 1) {
+                                            $from = $mail['send_to'];
                                         } else {
-                                            if(strlen($mail['to']) == 1) {
-                                                $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$mail['to']."'");
+                                            if(strlen($mail['send_to']) == 1) {
+                                                $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$mail['send_to']."'");
                                                 $location = $locationResult->fetch_array(MYSQLI_NUM);
 
                                                 $from = $location[0];
 
-                                                if($mail['to'] != 8) {
+                                                if($mail['send_to'] != 8) {
                                                     $from .= " область";
                                                 }
                                             } else {
-                                                if($mail['to'] == "all") {
+                                                if($mail['send_to'] == "all") {
                                                     $from  = "Всем клиентам";
                                                 } else {
                                                     $from = "";
@@ -3650,6 +3659,23 @@
                                                 <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
                                                     <span class='admLabel'>".substr($mail['date'], 0, 10)." в ".substr($mail['date'], 11)."</span>
                                                 </td>
+                                                <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
+                                                    <span class='admLabel'>".$mail['count']."</span>
+                                                </td>
+                                                <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
+                                                    <span class='admLabel'>".$mail['send']."</span>
+                                                </td>
+                                                <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
+                                        ";
+
+                                        if(($mail['count'] - $mail['send']) > 0) {
+                                            echo "<span class='admULFont' style='cursor: pointer;' onclick='showFailedEmails(\"".$mail['id']."\")'>".($mail['count'] - $mail['send'])."</span>";
+                                        } else {
+                                            echo "<span class='admLabel'>0</span>";
+                                        }
+
+                                        echo "
+                                                </td>
                                             </tr>
                                         ";
                                     }
@@ -3667,7 +3693,7 @@
                                                 <br /><br />
                                                 <div id='admPageNumbers'>
                                             ";
-                                             
+
                                             if($_REQUEST['p'] == 1)
                                             {
                                                 echo "<div class='admPageNumberBlockSide' style='cursor: url(\"../pictures/cursor/no.cur\"), auto;'><span class='admMenuFont'>Предыдущая</span></div>";
@@ -3676,7 +3702,7 @@
                                             {
                                                 echo "<a href='admin.php?section=users&action=mail-history&p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='admMenuRedFont' id='pbtPrev'>Предыдущая</span></div></a>";
                                             }
-                                                    
+
                                             for($i = 1; $i <= $numbers; $i++)
                                             {
                                                 if($_REQUEST['p'] != $i)
@@ -3720,7 +3746,7 @@
                                                 {
                                                     echo "<a href='admin.php?section=users&action=mail-history&p=".($_REQUEST['p'] - 1)."' class='noBorder'><div class='admPageNumberBlockSide' id='pbPrev' onmouseover='admPageBlock(\"1\", \"pbPrev\", \"pbtPrev\")' onmouseout='admPageBlock(\"0\", \"pbPrev\", \"pbtPrev\")'><span class='admMenuRedFont' id='pbtPrev'>Предыдущая</span></div></a>";
                                                 }
-                                                    
+
                                                 for($i = 1; $i <= 5; $i++)
                                                 {
                                                     if($_REQUEST['p'] != $i)
@@ -3810,7 +3836,6 @@
                                             }
                                         }
                                     }
-
                                     
                                     break;
                                 case "maillist":

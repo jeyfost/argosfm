@@ -295,3 +295,18 @@ function hideMailText() {
 	$('#mailTextBlock').css('opacity', '0');
 	$('#admContent').css('overflow', 'hidden');
 }
+
+function showFailedEmails(id) {
+	$.ajax({
+		type: 'POST',
+		url: '../scripts/admin/ajaxFailedEmails.php',
+		data: {"id": id},
+		success: function(response) {
+			$('#mailTextBlock').html('<span class="admLabel">' + response + '</span><br /><br /><span class="basicRed" style="border-bottom: 1px dotted #df4e47; cursor: pointer; float: right;" onclick="hideMailText()">Закрыть</span>');
+			$('#mailTextBlock').css('z-index', '100');
+			$('#mailTextBlock').css('display', 'block');
+			$('#mailTextBlock').css('opacity', '1');
+			$('#admContent').css('overflow', 'visible');
+		}
+	});
+}
