@@ -5144,7 +5144,6 @@
                 }
 
                 if($('#admContent').height() > trueHeight) {
-                    alert(1);
                     $('#admContent').height($('#newAddress').height() + 70);
                 }
             }
