@@ -217,7 +217,8 @@ ol li a {color: #008fe1;}
 #adminBlock {position: absolute; top: 0px; bottom: 0px; left: 0px; right: 0px; width: 80%; margin: auto; background-color: #ffffff; padding: 20px;}
 #adminCategoryBlock {width: 100%;}
 #priorityBlock {position: absolute; top: 100px; right: 0px; width: 700px;}
-#clientsTable {width: 100%; margin-top: 20px;}
+#clientsTable {margin-top: 20px; background-color: #fff; width: 100%;}
+#tableContainer {width: calc(100% - 40px); background-color: #fff; position: absolute; top: 810px; left: 0; box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 10px; margin: auto 10px; z-index: 40;}
 
 /* new admin.php */
 #admHtml {background: none;}
@@ -290,13 +291,14 @@ ol li a {color: #008fe1;}
 .admRadioLabel {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal; color: #000000; margin-left: -200px;}
 .admRedText {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal; color: #df4e47;}
 .admWhiteText {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal; color: #ffffff;}
-.adminTDNumber {width: 30px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
-.adminTDMail {height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px; max-width: 230px;}
-.adminTDName {height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px; max-width: 260px;}
-.adminTDLocation {height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
-.adminTDButtons {width: 60px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
+.adminTDNumber {width: 20px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
+.adminTDMail {height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px; max-width: 10%;}
+.adminTDName {height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px; max-width: 10%;}
+.adminTDLocation {height: 30px; line-height: 30px; width: 120px; text-align: center; padding-left: 5px; padding-right: 5px;}
+.adminTDButtons {width: 30px; height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
 .adminTDDate {height: 30px; line-height: 30px; text-align: center; padding-left: 5px; padding-right: 5px;}
-.adminTDNotes {width: 30px; height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px;}
+.adminTDNotes {max-width: 30%; height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px;}
+.adminTDPhone {max-width: 30%; height: 30px; line-height: 30px; text-align: left; padding-left: 5px; padding-right: 5px;}
 .admPageNumberBlock {position: relative; float: left; background-color: #ffffff; width: 40px; height: 30px; line-height: 30px; text-align: center;}
 .admPageNumberBlockActive {position: relative; float: left; background-color: #df4e47; width: 40px; height: 30px; line-height: 30px; text-align: center;}
 .admWhiteFont {font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 16px; font-weight: normal; color: #ffffff;}

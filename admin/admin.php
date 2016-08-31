@@ -4024,6 +4024,8 @@
                                             }
                                         }
 
+                                        echo "</div><div style='clear: both;'></div><div id='tableContainer'>";
+
                                         if($mailResult->num_rows > 0)
                                         {
                                             $count = 0;
@@ -4043,13 +4045,13 @@
                                                         <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Имя/Организация</span>
                                                         </td>
-                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDPhone' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Телефон</span>
                                                         </td>
-                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDLocation' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Область</span>
                                                         </td>
-                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDNotes' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Заметки</span>
                                                         </td>
                                                         <td class='adminTDButtons' style='background-color: #dddddd;'>
@@ -4077,7 +4079,7 @@
                                                             <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                                 <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                             </td>
-                                                            <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
+                                                            <td class='adminTDPhone'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
                                                                 <div id='phoneBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")' title='Изменить номер телефона'>".$address['phone']."</span></div>
                                                             </td>
                                                             <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4107,13 +4109,13 @@
                                                         <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Имя/Организация</span>
                                                         </td>
-                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDPhone' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Телефон</span>
                                                         </td>
-                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDLocation' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Область</span>
                                                         </td>
-                                                        <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                        <td class='adminTDNotes' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Заметки</span>
                                                         </td>
                                                         <td class='adminTDDate' style='background-color: #dddddd;'>
@@ -4144,7 +4146,7 @@
                                                             <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                                 <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                             </td>
-                                                            <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
+                                                            <td class='adminTDPhone'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
                                                                 <div id='phoneBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")' title='Изменить номер телефона'>".$address['phone']."</span></div>
                                                             </td>
                                                             <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4183,7 +4185,12 @@
                                     {
                                         $count = 0;
 
-                                        echo "<table id='clientsTable'>";
+                                        echo "
+                                            </div>
+                                            <div style='clear: both;'></div>
+                                            <div id='tableContainer'>
+                                                <table id='clientsTable'>
+                                        ";
 
                                         if($_REQUEST['active'] == "true")
                                         {
@@ -4198,13 +4205,13 @@
                                                     <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Имя/Организация</span>
                                                     </td>
-                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDPhone' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Телефон</span>
                                                     </td>
-                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDLocation' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Область</span>
                                                     </td>
-                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDNotes' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Заметки</span>
                                                     </td>
                                                     <td class='adminTDButtons' style='background-color: #dddddd;'>
@@ -4233,7 +4240,7 @@
                                                         </td>
                                                         <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                             <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
-                                                            <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
+                                                            <td class='adminTDPhone'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
                                                                 <div id='phoneBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")' title='Изменить номер телефона'>".$address['phone']."</span></div>
                                                         </td>
                                                         <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4263,13 +4270,13 @@
                                                     <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Имя/Организация</span>
                                                     </td>
-                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDPhone' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Телефон</span>
                                                     </td>
-                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDLocation' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Область</span>
                                                     </td>
-                                                    <td class='adminTDName' style='background-color: #dddddd; text-align: center;'>
+                                                    <td class='adminTDNotes' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Заметки</span>
                                                     </td>
                                                     <td class='adminTDDate' style='background-color: #dddddd; text-align: center;'>
@@ -4302,7 +4309,7 @@
                                                         <td class='adminTDName'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")'>
                                                             <div id='nameBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editName(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['name'])."\", \"nameBlock".$address['id']."\")' title='Редактировать имя / название организации'>".$address['name']."</span></div>
                                                         </td>
-                                                        <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
+                                                        <td class='adminTDPhone'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")'>
                                                                 <div id='phoneBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' onclick='editPhone(\"".$address['id']."\", \"".$mysqli->real_escape_string($address['phone'])."\", \"phoneBlock".$address['id']."\")' title='Изменить номер телефона'>".$address['phone']."</span></div>
                                                         </td>
                                                         <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4323,7 +4330,6 @@
                                         }
                                         
                                         echo "</table>";
-
 
                                         if($numbers > 1)
                                         {
@@ -4476,6 +4482,8 @@
                                                 }
                                             }
                                         }
+
+                                        echo "</div>";
                                     }
                                     break;
                                 case "users":
@@ -5121,6 +5129,23 @@
 
                 if(contentBottom < numbersBottom) {
                     $('#admContent').height(parseInt(numbersBottom - 100))
+                }
+            }
+
+            if(document.getElementById('newAddress')) {
+                var trueHeight = $('#newAddress').offset().top + $('#newAddress').height();
+
+                if($('.container').height() > $('#newAddress').height()) {
+                    $('.container').height($('#newAddress').height());
+
+                    if($('#admContent').height() > $('.container').height()) {
+                        $('#admContent').height($('.container').height() + 70);
+                    }
+                }
+
+                if($('#admContent').height() > trueHeight) {
+                    alert(1);
+                    $('#admContent').height($('#newAddress').height() + 70);
                 }
             }
         });
