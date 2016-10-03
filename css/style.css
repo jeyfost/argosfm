@@ -238,7 +238,7 @@ ol li a {color: #008fe1;}
 #statusRed {position: relative; float:  left; padding-right: 2px; padding-left: 2px; height: 34px; line-height: 34px; background-color: #df4e47; text-align: center; font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal;}
 #statusBlue {position: relative; float:  left; padding-right: 2px; padding-left: 2px; height: 34px; line-height: 32px; background-color: #3084eb; text-align: center; font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal;}
 #admSearchBlock {position: absolute; top: 70px; right: 10px;}
-#newAddress {position: relative; float: right; background-color: #fff7cb; padding: 10px 5px 10px 10px;}
+#newAddress {position: absolute; top: 60px; right: 20px; background-color: #fff7cb; padding: 10px 5px 10px 10px;}
 #clientsList {position: relative; float: left; width: 350px;}
 #admPageNumbers {position: relative; float: left; height: 30px; line-height: 30px;}
 #pageNumbers {position: relative; height: 30px; line-height: 30px; overflow: visible;}

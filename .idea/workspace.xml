@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/admin/sendEmail.php" afterPath="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-195.5">
-              <caret line="299" column="19" selection-start-line="299" selection-start-column="19" selection-end-line="299" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="240" column="39" selection-start-line="240" selection-start-column="39" selection-end-line="240" selection-end-column="39" />
               <folding />
             </state>
           </provider>
@@ -609,10 +609,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendEmail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sendEmail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33380085">
+            <state vertical-scroll-proportion="-9.153846">
               <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
               <folding>
                 <marker date="1475500534457" expanded="true" signature="951:977" placeholder="SELECT COUNT... mail" />
@@ -710,9 +710,9 @@
         <option value="$PROJECT_DIR$/js/ajaxAdmin.js" />
         <option value="$PROJECT_DIR$/scripts/admin/ajaxFailedEmails.php" />
         <option value="$PROJECT_DIR$/js/adminFunctions.js" />
-        <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
         <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
   </component>
@@ -906,12 +906,6 @@
       <created>1456207155890</created>
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
-    </task>
-    <task id="LOCAL-00129" summary="Создана страница помощи по принятию заказа для администратора">
-      <created>1459852011824</created>
-      <option name="number" value="00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1459852011825</updated>
     </task>
     <task id="LOCAL-00130" summary="Изменена страница помощи по принятию заказа для администратора">
       <created>1459921619594</created>
@@ -1201,7 +1195,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472658590161</updated>
     </task>
-    <option name="localTasksCounter" value="178" />
+    <task id="LOCAL-00178" summary="Исправлено экранирование кавычек в рассылке">
+      <created>1475501050037</created>
+      <option name="number" value="00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1475501050177</updated>
+    </task>
+    <option name="localTasksCounter" value="179" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1219,6 +1219,7 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66883963" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1226,7 +1227,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1249,7 +1249,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Исправлен скрипт выбора области" />
     <MESSAGE value="Исправлена страница помощи по изменению пароля для администратора" />
     <MESSAGE value="В статистику email-рассылок добавлен получатель" />
     <MESSAGE value="В систему рассылок была добавлена ajax-валидация email-адреса получателя" />
@@ -1274,7 +1273,8 @@
     <MESSAGE value="1. Добавлена возможность отслеживания адресов, куда рассылка не была доставлена.&#10;2. В рассылке исправлена валидация email-адреса одного получателя." />
     <MESSAGE value="Окно с клиентской базой растянуто на весь экран, изменены размеры ячеек." />
     <MESSAGE value="upd" />
-    <option name="LAST_COMMIT_MESSAGE" value="upd" />
+    <MESSAGE value="Исправлено экранирование кавычек в рассылке" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлено экранирование кавычек в рассылке" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1641,14 +1641,6 @@
             <marker date="1472657146950" expanded="true" signature="9836:9901" placeholder="..." />
             <marker date="1472657146950" expanded="true" signature="10653:10718" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-195.5">
-          <caret line="299" column="19" selection-start-line="299" selection-start-column="19" selection-end-line="299" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2177,7 +2169,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33380085">
+        <state vertical-scroll-proportion="-9.153846">
           <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
           <folding>
             <marker date="1475500534457" expanded="true" signature="951:977" placeholder="SELECT COUNT... mail" />
@@ -2208,6 +2200,14 @@
             <marker date="1475500534457" expanded="true" signature="8654:8685" placeholder="SELECT MAX(i... mail_result" />
             <marker date="1475500534457" expanded="true" signature="8774:8855" placeholder="INSERT INTO mail_failed... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="240" column="39" selection-start-line="240" selection-start-column="39" selection-end-line="240" selection-end-column="39" />
+          <folding />
         </state>
       </provider>
     </entry>
