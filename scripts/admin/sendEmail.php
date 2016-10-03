@@ -10,9 +10,9 @@
 			if(!empty($_POST['emailText']))
 			{
 				$from = "×ÒÓÏ Àðãîñ-ÔÌ <mail@argos-fm.by>";
-				$subject = $_POST['emailTheme'];
+				$subject = stripslashes($_POST['emailTheme']);
 				$reply = "mail@argos-fm.by";
-				$text = $_POST['emailText'];
+				$text = stripslashes($_POST['emailText']);
 				$to = $_POST['emailAddress'];
 
 				$hash = md5(date('r', time()));

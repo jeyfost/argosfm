@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin.php" afterPath="$PROJECT_DIR$/admin/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/admin/sendEmail.php" afterPath="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -41,18 +41,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="11.195122">
+            <state vertical-scroll-proportion="-195.5">
               <caret line="299" column="19" selection-start-line="299" selection-start-column="19" selection-end-line="299" selection-end-column="19" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6423562">
-              <caret line="5145" column="60" selection-start-line="5145" selection-start-column="60" selection-end-line="5145" selection-end-column="60" />
+            <state vertical-scroll-proportion="329.46155">
+              <caret line="5124" column="35" selection-start-line="5124" selection-start-column="35" selection-end-line="5124" selection-end-column="35" />
               <folding>
                 <element signature="e#8867#9817#0#PHP" expanded="false" />
                 <marker date="1472658568144" expanded="true" signature="2122:2182" placeholder="SELECT * FRO... catalogue_new" />
@@ -557,7 +557,7 @@
       <file leaf-file-name="adminFunctions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.888889">
+            <state vertical-scroll-proportion="0.0">
               <caret line="311" column="1" selection-start-line="311" selection-start-column="1" selection-end-line="311" selection-end-column="1" />
               <folding>
                 <marker date="1472657146950" expanded="true" signature="5694:5710" placeholder="..." />
@@ -599,7 +599,7 @@
       <file leaf-file-name="search.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/search.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-14.384615">
               <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
               <folding>
                 <marker date="1467286045992" expanded="true" signature="244:325" placeholder="SELECT COUNT... catalogue_new" />
@@ -609,49 +609,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="g_selectSubcategoryGood.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/g_selectSubcategoryGood.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sendEmail.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="sendEmail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="202" column="139" selection-start-line="202" selection-start-column="139" selection-end-line="202" selection-end-column="139" />
+            <state vertical-scroll-proportion="0.33380085">
+              <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
               <folding>
-                <marker date="1471537822285" expanded="true" signature="923:949" placeholder="SELECT COUNT... mail" />
-                <marker date="1471537822285" expanded="true" signature="923:969" placeholder="SELECT COUNT... mail" />
-                <marker date="1471537822285" expanded="true" signature="1772:1790" placeholder="SELECT * FRO... mail" />
-                <marker date="1471537822285" expanded="true" signature="1772:1810" placeholder="SELECT * FRO... mail" />
-                <marker date="1471537822285" expanded="true" signature="2655:2686" placeholder="SELECT MAX(i... mail_result" />
-                <marker date="1471537822285" expanded="true" signature="2814:2868" placeholder="INSERT INTO mail_failed... " />
-                <marker date="1471537822285" expanded="true" signature="2814:2889" placeholder="INSERT INTO mail_failed... " />
-                <marker date="1471537822285" expanded="true" signature="2814:2907" placeholder="INSERT INTO mail_failed... " />
-                <marker date="1471537822285" expanded="true" signature="2951:3028" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="2951:3171" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="2951:3172" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="3756:3834" placeholder="SELECT COUNT... mail" />
-                <marker date="1471537822285" expanded="true" signature="3756:3852" placeholder="SELECT COUNT... mail" />
-                <marker date="1471537822285" expanded="true" signature="4655:4725" placeholder="SELECT * FRO... mail" />
-                <marker date="1471537822285" expanded="true" signature="4655:4743" placeholder="SELECT * FRO... mail" />
-                <marker date="1471537822285" expanded="true" signature="5588:5613" placeholder="SELECT MAX(i... mail_history" />
-                <marker date="1471537822285" expanded="true" signature="5588:5619" placeholder="SELECT MAX(i... mail_result" />
-                <marker date="1471537822285" expanded="true" signature="5747:5840" placeholder="INSERT INTO mail_failed... " />
-                <marker date="1471537822285" expanded="true" signature="5884:5961" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="5884:6134" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="7950:8180" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="8362:8439" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="8362:8515" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="8362:8580" placeholder="INSERT INTO mail_result... " />
-                <marker date="1471537822285" expanded="true" signature="8626:8651" placeholder="SELECT MAX(i... mail_history" />
-                <marker date="1471537822285" expanded="true" signature="8626:8657" placeholder="SELECT MAX(i... mail_result" />
-                <marker date="1471537822285" expanded="true" signature="8746:8827" placeholder="INSERT INTO mail_failed... " />
+                <marker date="1475500534457" expanded="true" signature="951:977" placeholder="SELECT COUNT... mail" />
+                <marker date="1475500534457" expanded="true" signature="951:997" placeholder="SELECT COUNT... mail" />
+                <marker date="1475500534457" expanded="true" signature="1800:1818" placeholder="SELECT * FRO... mail" />
+                <marker date="1475500534457" expanded="true" signature="1800:1838" placeholder="SELECT * FRO... mail" />
+                <marker date="1475500534457" expanded="true" signature="2683:2714" placeholder="SELECT MAX(i... mail_result" />
+                <marker date="1475500534457" expanded="true" signature="2842:2896" placeholder="INSERT INTO mail_failed... " />
+                <marker date="1475500534457" expanded="true" signature="2842:2917" placeholder="INSERT INTO mail_failed... " />
+                <marker date="1475500534457" expanded="true" signature="2842:2935" placeholder="INSERT INTO mail_failed... " />
+                <marker date="1475500534457" expanded="true" signature="2979:3056" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="2979:3199" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="2979:3200" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="3784:3862" placeholder="SELECT COUNT... mail" />
+                <marker date="1475500534457" expanded="true" signature="3784:3880" placeholder="SELECT COUNT... mail" />
+                <marker date="1475500534457" expanded="true" signature="4683:4753" placeholder="SELECT * FRO... mail" />
+                <marker date="1475500534457" expanded="true" signature="4683:4771" placeholder="SELECT * FRO... mail" />
+                <marker date="1475500534457" expanded="true" signature="5616:5641" placeholder="SELECT MAX(i... mail_history" />
+                <marker date="1475500534457" expanded="true" signature="5616:5647" placeholder="SELECT MAX(i... mail_result" />
+                <marker date="1475500534457" expanded="true" signature="5775:5868" placeholder="INSERT INTO mail_failed... " />
+                <marker date="1475500534457" expanded="true" signature="5912:5989" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="5912:6162" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="7978:8208" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="8390:8467" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="8390:8543" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="8390:8608" placeholder="INSERT INTO mail_result... " />
+                <marker date="1475500534457" expanded="true" signature="8654:8679" placeholder="SELECT MAX(i... mail_history" />
+                <marker date="1475500534457" expanded="true" signature="8654:8685" placeholder="SELECT MAX(i... mail_result" />
+                <marker date="1475500534457" expanded="true" signature="8774:8855" placeholder="INSERT INTO mail_failed... " />
               </folding>
             </state>
           </provider>
@@ -719,10 +709,10 @@
         <option value="$PROJECT_DIR$/scripts/admin/addAddress.php" />
         <option value="$PROJECT_DIR$/js/ajaxAdmin.js" />
         <option value="$PROJECT_DIR$/scripts/admin/ajaxFailedEmails.php" />
-        <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
         <option value="$PROJECT_DIR$/js/adminFunctions.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
+        <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
       </list>
     </option>
   </component>
@@ -766,6 +756,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -860,8 +852,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -916,12 +906,6 @@
       <created>1456207155890</created>
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
-    </task>
-    <task id="LOCAL-00128" summary="Создана страница помощи по изменению цены товара в каталоге для администратора">
-      <created>1459787515385</created>
-      <option name="number" value="00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1459787515385</updated>
     </task>
     <task id="LOCAL-00129" summary="Создана страница помощи по принятию заказа для администратора">
       <created>1459852011824</created>
@@ -1211,7 +1195,13 @@
       <option name="project" value="LOCAL" />
       <updated>1472658474130</updated>
     </task>
-    <option name="localTasksCounter" value="177" />
+    <task id="LOCAL-00177" summary="upd">
+      <created>1472658590161</created>
+      <option name="number" value="00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1472658590161</updated>
+    </task>
+    <option name="localTasksCounter" value="178" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1229,7 +1219,6 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.66883963" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1237,6 +1226,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985657" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1281,10 +1271,10 @@
     <MESSAGE value="Исправлено положение кнопки возврата в разделе добавления новостей" />
     <MESSAGE value="Исправлено редактирование личных данных пользователя" />
     <MESSAGE value="В клиентскую базу добавлены поля телефона и заметок. Введён фильтр областей. Изменён дизайн." />
-    <MESSAGE value="upd" />
     <MESSAGE value="1. Добавлена возможность отслеживания адресов, куда рассылка не была доставлена.&#10;2. В рассылке исправлена валидация email-адреса одного получателя." />
     <MESSAGE value="Окно с клиентской базой растянуто на весь экран, изменены размеры ячеек." />
-    <option name="LAST_COMMIT_MESSAGE" value="Окно с клиентской базой растянуто на весь экран, изменены размеры ячеек." />
+    <MESSAGE value="upd" />
+    <option name="LAST_COMMIT_MESSAGE" value="upd" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1624,17 +1614,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/search.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <marker date="1467286045992" expanded="true" signature="244:325" placeholder="SELECT COUNT... catalogue_new" />
-            <marker date="1467286045992" expanded="true" signature="434:515" placeholder="SELECT COUNT... catalogue_new" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/checkout.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3366059">
@@ -1649,53 +1628,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/g_selectSubcategoryGood.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="202" column="139" selection-start-line="202" selection-start-column="139" selection-end-line="202" selection-end-column="139" />
-          <folding>
-            <marker date="1471537822285" expanded="true" signature="923:949" placeholder="SELECT COUNT... mail" />
-            <marker date="1471537822285" expanded="true" signature="923:969" placeholder="SELECT COUNT... mail" />
-            <marker date="1471537822285" expanded="true" signature="1772:1790" placeholder="SELECT * FRO... mail" />
-            <marker date="1471537822285" expanded="true" signature="1772:1810" placeholder="SELECT * FRO... mail" />
-            <marker date="1471537822285" expanded="true" signature="2655:2686" placeholder="SELECT MAX(i... mail_result" />
-            <marker date="1471537822285" expanded="true" signature="2814:2868" placeholder="INSERT INTO mail_failed... " />
-            <marker date="1471537822285" expanded="true" signature="2814:2889" placeholder="INSERT INTO mail_failed... " />
-            <marker date="1471537822285" expanded="true" signature="2814:2907" placeholder="INSERT INTO mail_failed... " />
-            <marker date="1471537822285" expanded="true" signature="2951:3028" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="2951:3171" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="2951:3172" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="3756:3834" placeholder="SELECT COUNT... mail" />
-            <marker date="1471537822285" expanded="true" signature="3756:3852" placeholder="SELECT COUNT... mail" />
-            <marker date="1471537822285" expanded="true" signature="4655:4725" placeholder="SELECT * FRO... mail" />
-            <marker date="1471537822285" expanded="true" signature="4655:4743" placeholder="SELECT * FRO... mail" />
-            <marker date="1471537822285" expanded="true" signature="5588:5613" placeholder="SELECT MAX(i... mail_history" />
-            <marker date="1471537822285" expanded="true" signature="5588:5619" placeholder="SELECT MAX(i... mail_result" />
-            <marker date="1471537822285" expanded="true" signature="5747:5840" placeholder="INSERT INTO mail_failed... " />
-            <marker date="1471537822285" expanded="true" signature="5884:5961" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="5884:6134" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="7950:8180" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="8362:8439" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="8362:8515" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="8362:8580" placeholder="INSERT INTO mail_result... " />
-            <marker date="1471537822285" expanded="true" signature="8626:8651" placeholder="SELECT MAX(i... mail_history" />
-            <marker date="1471537822285" expanded="true" signature="8626:8657" placeholder="SELECT MAX(i... mail_result" />
-            <marker date="1471537822285" expanded="true" signature="8746:8827" placeholder="INSERT INTO mail_failed... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.888889">
+        <state vertical-scroll-proportion="0.0">
           <caret line="311" column="1" selection-start-line="311" selection-start-column="1" selection-end-line="311" selection-end-column="1" />
           <folding>
             <marker date="1472657146950" expanded="true" signature="5694:5710" placeholder="..." />
@@ -1711,7 +1646,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="11.195122">
+        <state vertical-scroll-proportion="-195.5">
           <caret line="299" column="19" selection-start-line="299" selection-start-column="19" selection-end-line="299" selection-end-column="19" />
           <folding />
         </state>
@@ -1719,8 +1654,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6423562">
-          <caret line="5145" column="60" selection-start-line="5145" selection-start-column="60" selection-end-line="5145" selection-end-column="60" />
+        <state vertical-scroll-proportion="329.46155">
+          <caret line="5124" column="35" selection-start-line="5124" selection-start-column="35" selection-end-line="5124" selection-end-column="35" />
           <folding>
             <element signature="e#8867#9817#0#PHP" expanded="false" />
             <marker date="1472658568144" expanded="true" signature="2122:2182" placeholder="SELECT * FRO... catalogue_new" />
@@ -2217,6 +2152,61 @@
             <marker date="1472658568144" expanded="true" signature="407278:407933" placeholder="..." />
             <marker date="1472658568144" expanded="true" signature="408710:408821" placeholder="..." />
             <marker date="1472658568144" expanded="true" signature="408960:409071" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/g_selectSubcategoryGood.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/search.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.384615">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+          <folding>
+            <marker date="1467286045992" expanded="true" signature="244:325" placeholder="SELECT COUNT... catalogue_new" />
+            <marker date="1467286045992" expanded="true" signature="434:515" placeholder="SELECT COUNT... catalogue_new" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33380085">
+          <caret line="14" column="57" selection-start-line="14" selection-start-column="57" selection-end-line="14" selection-end-column="57" />
+          <folding>
+            <marker date="1475500534457" expanded="true" signature="951:977" placeholder="SELECT COUNT... mail" />
+            <marker date="1475500534457" expanded="true" signature="951:997" placeholder="SELECT COUNT... mail" />
+            <marker date="1475500534457" expanded="true" signature="1800:1818" placeholder="SELECT * FRO... mail" />
+            <marker date="1475500534457" expanded="true" signature="1800:1838" placeholder="SELECT * FRO... mail" />
+            <marker date="1475500534457" expanded="true" signature="2683:2714" placeholder="SELECT MAX(i... mail_result" />
+            <marker date="1475500534457" expanded="true" signature="2842:2896" placeholder="INSERT INTO mail_failed... " />
+            <marker date="1475500534457" expanded="true" signature="2842:2917" placeholder="INSERT INTO mail_failed... " />
+            <marker date="1475500534457" expanded="true" signature="2842:2935" placeholder="INSERT INTO mail_failed... " />
+            <marker date="1475500534457" expanded="true" signature="2979:3056" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="2979:3199" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="2979:3200" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="3784:3862" placeholder="SELECT COUNT... mail" />
+            <marker date="1475500534457" expanded="true" signature="3784:3880" placeholder="SELECT COUNT... mail" />
+            <marker date="1475500534457" expanded="true" signature="4683:4753" placeholder="SELECT * FRO... mail" />
+            <marker date="1475500534457" expanded="true" signature="4683:4771" placeholder="SELECT * FRO... mail" />
+            <marker date="1475500534457" expanded="true" signature="5616:5641" placeholder="SELECT MAX(i... mail_history" />
+            <marker date="1475500534457" expanded="true" signature="5616:5647" placeholder="SELECT MAX(i... mail_result" />
+            <marker date="1475500534457" expanded="true" signature="5775:5868" placeholder="INSERT INTO mail_failed... " />
+            <marker date="1475500534457" expanded="true" signature="5912:5989" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="5912:6162" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="7978:8208" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="8390:8467" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="8390:8543" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="8390:8608" placeholder="INSERT INTO mail_result... " />
+            <marker date="1475500534457" expanded="true" signature="8654:8679" placeholder="SELECT MAX(i... mail_history" />
+            <marker date="1475500534457" expanded="true" signature="8654:8685" placeholder="SELECT MAX(i... mail_result" />
+            <marker date="1475500534457" expanded="true" signature="8774:8855" placeholder="INSERT INTO mail_failed... " />
           </folding>
         </state>
       </provider>
