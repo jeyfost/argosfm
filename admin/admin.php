@@ -5143,6 +5143,14 @@
                     }
                 }
 
+                if($('.container').height() <= $('#newAddress').height()) {
+                    $('.container').height($('#newAddress').height());
+
+                    if($('#admContent').height() <= $('.container').height()) {
+                        $('#admContent').height($('.container').height() + 70);
+                    }
+                }
+
                 if($('#admContent').height() > trueHeight) {
                     $('#admContent').height($('#newAddress').height() + 70);
                 }
