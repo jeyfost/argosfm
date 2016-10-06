@@ -28,7 +28,7 @@
 						$phone = $_POST['newPhone'];
 						$notes = str_replace("\n", "<br>", $_POST['newNotes']);
 
-						if($mysqli->query("INSERT INTO mail (email, name, location, hash, in_send, phone, notes) VALUES ('".$name."', '".htmlspecialchars($_POST['newName'])."', '".$_POST['newLocation']."', '".$hash."', '1', '".$phone."', '".$notes."')"))
+						if($mysqli->query("INSERT INTO mail (email, name, location, hash, in_send, phone, notes) VALUES ('".$name."', '".addslashes($_POST['newName'])."', '".$_POST['newLocation']."', '".$hash."', '1', '".$phone."', '".$notes."')"))
 						{
 							$_SESSION['addAddress'] = "ok";
 
