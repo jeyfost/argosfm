@@ -62,25 +62,53 @@ function editIcon(action, id) {
 	}
 }
 
-function editEmail(id, email, block) {
-	document.getElementById(block).innerHTML = "<form name='editEmail' method='post'><input type='text' name='editEmail' id='editEmailInput' class='admInput' onblur='saveEmail(\"" + id + "\", \"emailBlock" + id + "\")' onkeyup='editClientEmail()' value='" + email + "' /></form>";
-	document.getElementById('editEmailInput').focus();
+function editEmail(id, block) {
+	$.ajax({
+		type: 'POST',
+		data: {"clientID": id},
+		url: '../scripts/admin/ajaxGetClientEmail.php',
+		success: function(response) {
+			document.getElementById(block).innerHTML = "<form name='editEmail' method='post'><input type='text' name='editEmail' id='editEmailInput' class='admInput' onblur='saveEmail(\"" + id + "\", \"emailBlock" + id + "\")' onkeyup='editClientEmail()' value='" + response + "' /></form>";
+			document.getElementById('editEmailInput').focus();
+		}
+	});
 }
 
-function editName(id, name, block) {
-	document.getElementById(block).innerHTML = "<form name='editName' method='post'><input type='text' name='editName' id='editNameInput' class='admInput' onblur='saveName(\"" + id + "\", \"nameBlock" + id + "\")' onkeyup='editClientName()' value='" + name + "' /></form>";
-	document.getElementById('editNameInput').focus();
+function editName(id, block) {
+	$.ajax({
+		type: 'POST',
+		data: {"clientID": id},
+		url: '../scripts/admin/ajaxGetClientName.php',
+		success: function(response) {
+			document.getElementById(block).innerHTML = "<form name='editName' method='post'><input type='text' name='editName' id='editNameInput' class='admInput' onblur='saveName(\"" + id + "\", \"nameBlock" + id + "\")' onkeyup='editClientName()' value='" + response + "' /></form>";
+			document.getElementById('editNameInput').focus();
+		}
+	});
 }
 
-function editPhone(id, phone, block) {
-	document.getElementById(block).innerHTML = "<form name='editPhone' method='post'><input type='text' name='editPhone' id='editPhoneInput' class='admInput' onblur='savePhone(\"" + id + "\", \"phoneBlock" + id + "\")' value='" + phone + "' /></form>";
-	document.getElementById('editPhoneInput').focus();
+function editPhone(id, block) {
+	$.ajax({
+		type: 'POST',
+		data: {"clientID": id},
+		url: '../scripts/admin/ajaxGetClientPhone.php',
+		success: function(response) {
+			document.getElementById(block).innerHTML = "<form name='editPhone' method='post'><input type='text' name='editPhone' id='editPhoneInput' class='admInput' onblur='savePhone(\"" + id + "\", \"phoneBlock" + id + "\")' value='" + response + "' /></form>";
+			document.getElementById('editPhoneInput').focus();
+		}
+	});
 }
 
-function editNotes(id, notes, block) {
-	notes = notes.replace(/<br>/g, "\n")
-	document.getElementById(block).innerHTML = "<form name='editNotes' method='post'><textarea class='admTextarea' name='editNotes' id='editNotesInput' onblur='saveNotes(\"" + id + "\", \"notesBlock" + id + "\")'>" + notes + "</textarea></form>";
-	document.getElementById('editNotesInput').focus();
+function editNotes(id, block) {
+	$.ajax({
+		type: 'POST',
+		data: {"clientID": id},
+		url: '../scripts/admin/ajaxGetClientNotes.php',
+		success: function(response) {
+			response = response.replace(/<br>/g, "\n");
+			document.getElementById(block).innerHTML = "<form name='editNotes' method='post'><textarea class='admTextarea' name='editNotes' id='editNotesInput' onblur='saveNotes(\"" + id + "\", \"notesBlock" + id + "\")'>" + response.replace("\n", "\n") + "</textarea></form>";
+			document.getElementById('editNotesInput').focus();
+		}
+	});
 }
 
 function editLocation(id, location, block) {
