@@ -246,7 +246,7 @@ ol li a {color: #008fe1;}
 #addNewsButton {position: relative; float: right; width: 200px; height: 40px; line-height: 40px; background-color: #df4e47; text-align: center; z-index: 3;}
 #addressSearchResult {position: absolute; padding: 10px; border: 1px solid #787878; background-color: #ffffff; left: 20px; top: 435px; width: 400px; display: none; z-index: 999;}
 #mailHistoryButton {position: absolute; top: 30px; right: 30px;}
-#mailTextBlock {background-color: #dddddd; border: 2px dotted #df4e47; padding: 10px; position: absolute; opacity: 0; max-width: 400px; z-index: 1; display: none; top: 30px; left: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.5);}
+#mailTextBlock {background-color: #dddddd; border: 2px dotted #df4e47; padding: 10px; position: absolute; opacity: 0; max-width: 400px; z-index: 1; display: none; top: 30px; left: 300px; box-shadow: 0 0 10px rgba(0,0,0,0.5); font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal; color: #000000;}
 #findNews {position: absolute; top: 60px; right: 20px;}
 #filters {padding: 10px; width: 310px; background-color: #f8ecff;}
 #activeFilters {padding: 10px; width: 310px; background-color: #e9ffe5;}

@@ -279,7 +279,7 @@ function showMailText(id) {
 		data: {"id": id},
 		cache: false,
 		success: function(response) {
-			$('#mailTextBlock').html('<span class="admLabel">' + response + '</span><br /><br /><span class="basicRed" style="border-bottom: 1px dotted #df4e47; cursor: pointer; float: right;" onclick="hideMailText()">Закрыть</span>');
+			$('#mailTextBlock').html(response + '<br /><br /><span class="basicRed" style="border-bottom: 1px dotted #df4e47; cursor: pointer; float: right;" onclick="hideMailText()">Закрыть</span>');
 			$('#mailTextBlock').css('z-index', '100');
 			$('#mailTextBlock').css('display', 'block');
 			$('#mailTextBlock').css('opacity', '1');

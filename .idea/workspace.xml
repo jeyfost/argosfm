@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin.php" afterPath="$PROJECT_DIR$/admin/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/admin/addAddress.php" afterPath="$PROJECT_DIR$/scripts/admin/addAddress.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/adminFunctions.js" afterPath="$PROJECT_DIR$/js/adminFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/admin/ajaxMailText.php" afterPath="$PROJECT_DIR$/scripts/admin/ajaxMailText.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,16 +44,16 @@
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="254" column="18" selection-start-line="254" selection-start-column="18" selection-end-line="254" selection-end-column="18" />
+              <caret line="253" column="0" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admin.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.9789622">
+            <state vertical-scroll-proportion="192.92308">
               <caret line="4078" column="237" selection-start-line="4078" selection-start-column="237" selection-end-line="4078" selection-end-column="237" />
               <folding>
                 <element signature="e#8867#9817#0#PHP" expanded="false" />
@@ -558,7 +559,7 @@
       <file leaf-file-name="addAddress.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/admin/addAddress.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.730769">
+            <state vertical-scroll-proportion="0.0">
               <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding>
                 <marker date="1475574537805" expanded="true" signature="306:365" placeholder="SELECT * FRO... mail" />
@@ -573,15 +574,27 @@
         <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
+              <caret line="280" column="37" selection-start-line="280" selection-start-column="37" selection-end-line="280" selection-end-column="37" />
               <folding>
-                <marker date="1475505869368" expanded="true" signature="5694:5710" placeholder="..." />
-                <marker date="1475505869368" expanded="true" signature="6400:6416" placeholder="..." />
-                <marker date="1475505869368" expanded="true" signature="7234:7250" placeholder="..." />
-                <marker date="1475505869368" expanded="true" signature="7942:7958" placeholder="..." />
-                <marker date="1475505869368" expanded="true" signature="8460:8476" placeholder="..." />
-                <marker date="1475505869368" expanded="true" signature="9836:9901" placeholder="..." />
-                <marker date="1475505869368" expanded="true" signature="10653:10718" placeholder="..." />
+                <marker date="1475744525696" expanded="true" signature="5694:5710" placeholder="..." />
+                <marker date="1475744525696" expanded="true" signature="6400:6416" placeholder="..." />
+                <marker date="1475744525696" expanded="true" signature="7234:7250" placeholder="..." />
+                <marker date="1475744525696" expanded="true" signature="7942:7958" placeholder="..." />
+                <marker date="1475744525696" expanded="true" signature="8460:8476" placeholder="..." />
+                <marker date="1475744525696" expanded="true" signature="9801:9866" placeholder="..." />
+                <marker date="1475744525696" expanded="true" signature="10618:10683" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ajaxMailText.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxMailText.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.23842917">
+              <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+              <folding>
+                <marker date="1475831267456" expanded="true" signature="71:129" placeholder="SELECT text mail_result" />
               </folding>
             </state>
           </provider>
@@ -677,7 +690,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/scripts/ajaxSearch.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
         <option value="$PROJECT_DIR$/scripts/ajaxCheckLogin.php" />
         <option value="$PROJECT_DIR$/scripts/ajaxCheckPassword.php" />
@@ -724,10 +736,11 @@
         <option value="$PROJECT_DIR$/js/ajaxAdmin.js" />
         <option value="$PROJECT_DIR$/scripts/admin/ajaxFailedEmails.php" />
         <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
-        <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/js/adminFunctions.js" />
         <option value="$PROJECT_DIR$/scripts/admin/addAddress.php" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
+        <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/js/adminFunctions.js" />
+        <option value="$PROJECT_DIR$/scripts/admin/ajaxMailText.php" />
       </list>
     </option>
   </component>
@@ -921,12 +934,6 @@
       <created>1456207155890</created>
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
-    </task>
-    <task id="LOCAL-00132" summary="Создана страница помощи по истории заявок для администратора">
-      <created>1459923279217</created>
-      <option name="number" value="00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1459923279219</updated>
     </task>
     <task id="LOCAL-00133" summary="Создана страница помощи по добавлению новости для администратора">
       <created>1460008545179</created>
@@ -1216,7 +1223,13 @@
       <option name="project" value="LOCAL" />
       <updated>1475505627387</updated>
     </task>
-    <option name="localTasksCounter" value="181" />
+    <task id="LOCAL-00181" summary="Исправлено редактирование названия предприятия">
+      <created>1475740931067</created>
+      <option name="number" value="00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1475740931067</updated>
+    </task>
+    <option name="localTasksCounter" value="182" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1264,7 +1277,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="В систему рассылок была добавлена ajax-валидация email-адреса получателя" />
     <MESSAGE value="В систему рассылок была добавлена ajax-валидация темы письма" />
     <MESSAGE value="Добавлена потоковая валидация при редактировании email-адреса в клиентской базе" />
     <MESSAGE value="Добавлена потоковая валидация при редактировании имени клиента и названия организации в клиентской базе" />
@@ -1289,7 +1301,8 @@
     <MESSAGE value="Исправлено экранирование кавычек в рассылке" />
     <MESSAGE value="Исправлено выравнивание блока добавления новой записи в клиентскую базу" />
     <MESSAGE value="Исправлено выравнивание блока добавления новой записи в клиентскую базу. v2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Исправлено выравнивание блока добавления новой записи в клиентскую базу. v2" />
+    <MESSAGE value="Исправлено редактирование названия предприятия" />
+    <option name="LAST_COMMIT_MESSAGE" value="Исправлено редактирование названия предприятия" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1586,13 +1599,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxMailText.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/orderDetailedInfo.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1690,33 +1696,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="254" column="18" selection-start-line="254" selection-start-column="18" selection-end-line="254" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="69" column="36" selection-start-line="69" selection-start-column="36" selection-end-line="69" selection-end-column="36" />
-          <folding>
-            <marker date="1475505869368" expanded="true" signature="5694:5710" placeholder="..." />
-            <marker date="1475505869368" expanded="true" signature="6400:6416" placeholder="..." />
-            <marker date="1475505869368" expanded="true" signature="7234:7250" placeholder="..." />
-            <marker date="1475505869368" expanded="true" signature="7942:7958" placeholder="..." />
-            <marker date="1475505869368" expanded="true" signature="8460:8476" placeholder="..." />
-            <marker date="1475505869368" expanded="true" signature="9836:9901" placeholder="..." />
-            <marker date="1475505869368" expanded="true" signature="10653:10718" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/admin/addAddress.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.730769">
+        <state vertical-scroll-proportion="0.0">
           <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
           <folding>
             <marker date="1475574537805" expanded="true" signature="306:365" placeholder="SELECT * FRO... mail" />
@@ -1726,9 +1708,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="253" column="0" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.9789622">
+        <state vertical-scroll-proportion="192.92308">
           <caret line="4078" column="237" selection-start-line="4078" selection-start-column="237" selection-end-line="4078" selection-end-column="237" />
           <folding>
             <element signature="e#8867#9817#0#PHP" expanded="false" />
@@ -2226,6 +2216,32 @@
             <marker date="1475740752854" expanded="true" signature="407510:408165" placeholder="..." />
             <marker date="1475740752854" expanded="true" signature="408942:409053" placeholder="..." />
             <marker date="1475740752854" expanded="true" signature="409192:409303" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="280" column="37" selection-start-line="280" selection-start-column="37" selection-end-line="280" selection-end-column="37" />
+          <folding>
+            <marker date="1475744525696" expanded="true" signature="5694:5710" placeholder="..." />
+            <marker date="1475744525696" expanded="true" signature="6400:6416" placeholder="..." />
+            <marker date="1475744525696" expanded="true" signature="7234:7250" placeholder="..." />
+            <marker date="1475744525696" expanded="true" signature="7942:7958" placeholder="..." />
+            <marker date="1475744525696" expanded="true" signature="8460:8476" placeholder="..." />
+            <marker date="1475744525696" expanded="true" signature="9801:9866" placeholder="..." />
+            <marker date="1475744525696" expanded="true" signature="10618:10683" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxMailText.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23842917">
+          <caret line="10" column="35" selection-start-line="10" selection-start-column="35" selection-end-line="10" selection-end-column="35" />
+          <folding>
+            <marker date="1475831267456" expanded="true" signature="71:129" placeholder="SELECT text mail_result" />
           </folding>
         </state>
       </provider>

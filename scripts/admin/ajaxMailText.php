@@ -7,7 +7,8 @@
 
 	if(!empty($mailText[0]))
 	{
-		echo $mailText[0];
+		$mt = str_replace("&lt;", "<", $mailText[0]);
+		$mt = str_replace("&gt;", ">", $mt);
+		$mt = strip_tags($mt, "<br>");
+		echo iconv("cp1251", "utf-8", $mt);
 	}
-
-?>
