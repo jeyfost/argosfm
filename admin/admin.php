@@ -4826,7 +4826,7 @@
                                                     <td class='adminTDDate'>
                                                         <span class='admMenuFont' style='font-size: 14px;'>".$date."</span>
                                                     </td>
-                                                    <td class='adminTDButtons'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                    <td class='adminTDButtonsNews'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                         <a href='admin.php?section=users&action=news&news=".$news['id']."' class='noBorder'><img id='emi".$news['id']."' src='../pictures/system/admEdit.png' class='noBorder' title='Редактировать новость' style='margin-top: 12px;' onmouseover='editIcon(\"1\", \"emi".$news['id']."\")' onmouseout='editIcon(\"0\", \"emi".$news['id']."\")' /></a>
                                                         &nbsp;&nbsp;&nbsp;
                                                         <a href='../scripts/admin/deleteNews.php?id=".$news['id']."' class='noBorder'><img id='mi".$news['id']."' src='../pictures/system/cross.png' class='noBorder' title='Удалить новость' style='margin-top: 12px;' onmouseover='mailIcon(\"1\", \"mi".$news['id']."\")' onmouseout='mailIcon(\"0\", \"mi".$news['id']."\")' /></a>
