@@ -4703,32 +4703,39 @@
 
                                         echo "
                                             <form name='editUserForm' id='editUserForm' method='post' action='../scripts/admin/editUser.php'>
-                                                <label class='admLabel'>Логин:</label>
-                                                <br />
-                                                <input type='text' class='admInput' id='userLoginInput' name='userLogin' value='".$user['login']."' />
+                                                <div class='colorBlock' style='background-color: #c0ffb8;'>
+                                                    <label class='admLabel'>Логин:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' id='userLoginInput' name='userLogin' value='".$user['login']."' />
+                                                    <br /><br />
+                                                    <label class='admLabel'>Причина изменения:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' id='userLoginReasonInput' name='userLoginReason' />
+                                                </div>
                                                 <br /><br />
-                                                <label class='admLabel'>Причина изменения:</label>
-                                                <br />
-                                                <input type='text' class='admInput' id='userLoginReasonInput' name='userLoginReason' />
+                                                <div class='colorBlock' style='background-color: #f9ffb8;'>
+                                                    <label class='admLabel'>Пароль:</label>
+                                                    <br />
+                                                    <span class='admULFont' style='cursor: pointer;' onclick='randomPassword()'>сгенерировать случайный пароль</span>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='userPassword' id='userPasswordInput' />
+                                                    <br /><br />
+                                                    <label class='admLabel'>Причина изменения:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='userPasswordReason' id='userPasswordReasonInput' />
+                                                </div>
                                                 <br /><br />
-                                                <label class='admLabel'>Пароль:</label>
-                                                <br />
-                                                <span class='admULFont' style='cursor: pointer;' onclick='randomPassword()'>сгенерировать случайный пароль</span>
-                                                <br />
-                                                <input type='text' class='admInput' name='userPassword' id='userPasswordInput' />
+                                                <div class='colorBlock' style='background-color: #ffe2b8;'>
+                                                    <label class='admLabel'>E-mail:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='userEmail' id='userEmailInput' value='".$user['email']."' />
+                                                    <br /><br />
+                                                    <label class='admLabel'>Причина изменения:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='userEmailReason' id='userEmailReasonInput' />
+                                                </div>
                                                 <br /><br />
-                                                <label class='admLabel'>Причина изменения:</label>
-                                                <br />
-                                                <input type='text' class='admInput' name='userPasswordReason' id='userPasswordReasonInput' />
-                                                <br /><br />
-                                                <label class='admLabel'>E-mail:</label>
-                                                <br />
-                                                <input type='text' class='admInput' name='userEmail' id='userEmailInput' value='".$user['email']."' />
-                                                <br /><br />
-                                                <label class='admLabel'>Причина изменения:</label>
-                                                <br />
-                                                <input type='text' class='admInput' name='userEmailReason' id='userEmailReasonInput' />
-                                                <br /><br />
+                                                <div class='colorBlock' style='background-color: #ffb8b8;'>
                                         ";
                                         if(!empty($users['organisation']))
                                         {
@@ -4744,21 +4751,24 @@
                                             ";
                                         }
                                         echo "
-                                                <label class='admLabel'>Контактное лицо:</label>
-                                                <br />
-                                                <input type='text' class='admInput' name='userPerson' id='userPersonInput' value='".$user['person']."' />
+                                                    <label class='admLabel'>Контактное лицо:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='userPerson' id='userPersonInput' value='".$user['person']."' />
+                                                    <br /><br />
+                                                    <label class='admLabel'>Причина изменения:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='userPersonReason' id='userPersonReasonInput' />
+                                                </div>
                                                 <br /><br />
-                                                <label class='admLabel'>Причина изменения:</label>
-                                                <br />
-                                                <input type='text' class='admInput' name='userPersonReason' id='userPersonReasonInput' />
-                                                <br /><br />
-                                                <label class='admLabel'>Телефон:</label>
-                                                <br />
-                                                <input type='text' class='admInput' name='userPhone' id='userPhoneInput' value='".$user['phone']."' />
-                                                <br /><br />
-                                                <label class='admLabel'>Причина изменения:</label>
-                                                <br />
-                                                <input type='text' class='admInput' name='userPhoneReason' id='userPhoneReasonInput' />
+                                                <div class='colorBlock' style='background-color: #b8d3ff;'>
+                                                    <label class='admLabel'>Телефон:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='userPhone' id='userPhoneInput' value='".$user['phone']."' />
+                                                    <br /><br />
+                                                    <label class='admLabel'>Причина изменения:</label>
+                                                    <br />
+                                                    <input type='text' class='admInput' name='userPhoneReason' id='userPhoneReasonInput' />
+                                                </div>
                                                 <br /><br />
                                                 <input type='submit' class='admSubmit' value='Редактировать' />
                                             </form>
