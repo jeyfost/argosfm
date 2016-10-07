@@ -4055,7 +4055,7 @@
                                                             <span class='admLabel'>Заметки</span>
                                                         </td>
                                                         <td class='adminTDButtons' style='background-color: #dddddd;'>
-                                                            <span class='admLabel'>Функции</span>
+                                                            <span class='admLabel'>Удаление</span>
                                                         </td>
                                                     </tr>
                                                 ";
@@ -4122,7 +4122,7 @@
                                                             <span class='admLabel'>Дата отписки</span>
                                                         </td>
                                                         <td class='adminTDButtons' style='background-color: #dddddd;'>
-                                                            <span class='admLabel'>Функции</span>
+                                                            <span class='admLabel'>Удаление</span>
                                                         </td>
                                                     </tr>
                                                 ";
@@ -4215,7 +4215,7 @@
                                                         <span class='admLabel'>Заметки</span>
                                                     </td>
                                                     <td class='adminTDButtons' style='background-color: #dddddd;'>
-                                                        <span class='admLabel'>Функции</span>
+                                                        <span class='admLabel'>Удаление</span>
                                                     </td>
                                                 </tr>
                                             ";
@@ -4283,7 +4283,7 @@
                                                         <span class='admLabel'>Дата отписки</span>
                                                     </td>
                                                     <td class='adminTDButtons' style='background-color: #dddddd;'>
-                                                        <span class='admLabel'>Функции</span>
+                                                        <span class='admLabel'>Удаление</span>
                                                     </td>
                                                 </tr>
                                             ";
