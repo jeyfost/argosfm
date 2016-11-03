@@ -200,7 +200,7 @@
 								}
 								else
 								{
-									$mysqli->query("INSERT INTO mail_result (subject, text, send_to, date, count, send) VALUES ('".$subject."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".$htmlspecialchars($to)."', '".date('Y-m-d H:i:s')."', '1', '0')");
+									$mysqli->query("INSERT INTO mail_result (subject, text, send_to, date, count, send) VALUES ('".$subject."', '".str_replace("\n", "<br />", htmlspecialchars($text))."', '".htmlspecialchars($to)."', '".date('Y-m-d H:i:s')."', '1', '0')");
 
 									$mailIDResult = $mysqli->query("SELECT MAX(id) FROM mail_result");
 									$mailID = $mailIDResult->fetch_array(MYSQLI_NUM);

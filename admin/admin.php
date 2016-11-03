@@ -3657,7 +3657,7 @@
                                                     <span class='admLabel'>".$from."</span>
                                                 </td>
                                                 <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
-                                                    <span class='admLabel'>".substr($mail['date'], 0, 10)." â ".substr($mail['date'], 11)."</span>
+                                                    <span class='admLabel'>".substr($mail['date'], 0, 10)."</span>
                                                 </td>
                                                 <td class='adminTDMail'"; if($count % 2 == 0) {echo " style='background-color: #dddddd'";} echo ">
                                                     <span class='admLabel'>".$mail['count']."</span>
