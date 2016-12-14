@@ -25,7 +25,7 @@ html {background-color: #dddddd;}
 .headerStyleHover:hover, .basicHover:hover {color: #df4e47;}
 .catalogueItemTextItalic:hover, .redItalicHover:hover, #content_news_inner a:hover, ul .basicBigRed:hover, .admULFont:hover, .admUL li:hover {text-decoration: underline;}
 .newsEntry:hover, .newsEntryFull:hover {background-color: #e5e5e5;}
-.admSubmit:hover, .windowSubmit:hover {color: #df4e47; background-color: #dddddd;}
+.admSubmit:hover, .windowSubmit:hover, .sendEmailButton:hover {color: #df4e47; background-color: #dddddd;}
 .admSelect:hover, .admInput:hover, .windowInput:hover, #searchField:hover, #inputReadOnly:hover {background-color: #c0c0c0;}
 .hintText:hover {color: #b3413c; border-bottom: 1px dashed #b3413c;}
 #toAdminButton:hover, #backToAdminButton:hover, #settings1Submit:hover, #newPasswordSubmit:hover, #deleteAccountSubmit:hover, #siteSettingsSubmit:hover, #completeOrderSubmit:hover, #clearBasketSubmit:hover, #addNewsSubmit:hover, #backToCurrentNews:hover, #authSubmit:hover, .toCatalogueButton:hover {background-color: #b3413c;}
@@ -251,6 +251,7 @@ ol li a {color: #008fe1;}
 #filters {padding: 10px; width: 310px; background-color: #f8ecff;}
 #activeFilters {padding: 10px; width: 310px; background-color: #e9ffe5;}
 #searchFormBlock {padding: 10px; width: 310px; background-color: #ffe5e5;}
+#responseField {opacity: 0; transition: .3s; font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal;}
 
 /* calendar.php */
 #calendar {position: absolute; top: 100px; right: 10px; width: 262px; background-color: #ffffff;}
@@ -308,6 +309,8 @@ ol li a {color: #008fe1;}
 .searchAddress {position: relative; float: left; text-align: left; width: 100%;}
 .adminMailButton {position: relative; float: left; width: 150px; height: 40px; text-align: center; line-height: 40px; background-color: #df4e47; cursor: pointer;}
 .adminMailButtonActive {position: relative; float: left; width: 150px; height: 40px; text-align: center; line-height: 40px; background-color: #dddddd; cursor: auto;}
+.sendEmailButton, .sendEmailButtonActive {position: relative; float: left; width: 120px; height: 40px; line-height: 40px; color: #fff; background-color: #df4e47; cursor: pointer; text-align: center; font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 15px; font-weight: normal;}
+.sendEmailButtonActive {background-color: #ddd; color: #df4e47; cursor: default;}
 
 
 /* /////////////////////////////////////////////////////// */

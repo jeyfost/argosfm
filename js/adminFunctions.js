@@ -1,3 +1,5 @@
+var files;
+
 function checkboxClick(id) {
 	if(document.getElementById(id).checked) {
 		document.getElementById(id).checked = false;
@@ -23,7 +25,15 @@ function addressGroup() {
 	}
 
 	if(!document.getElementById('addressGroupSelect')) {
-		$('#addressField').html("<br /><br /><label class='admLabel'>Выберите область:</label><br /><select class='admSelect' name='addressGroupSelect' id='addressGroupSelect'><option value='1'>Брестская</option><option value='2'>Витебская</option><option value='3'>Гомельская</option><option value='4'>Гродненская</option><option value='5'>Минская</option><option value='6' selected>Могилёвская</option><option value='7'>Другая</option><option value='8'>Не определено</option></select>");
+		$.ajax({
+			type: "POST",
+			url: "../scripts/admin/ajaxSelectRegion.php",
+			data: {"region": 6},
+			success: function(response) {
+				$('#addressField').html(response);
+				$('.admSubmit').hide();
+			}
+		});
 	}
 }
 
@@ -338,3 +348,116 @@ function showFailedEmails(id) {
 		}
 	});
 }
+
+function sendPartly(parameter, region, id) {
+	var response_field = $('#responseField');
+
+	if($('#emailThemeInput').val() != '') {
+		if($('.nicEdit-main').html() != '' && $('.nicEdit-main').html() != '<br>') {
+			$.ajax({
+				type: "POST",
+				data: {
+					"parameter": parameter,
+					"region": region,
+					"subject": $('#emailThemeInput').val(),
+					"text": $('.nicEdit-main').html(),
+				},
+				url: "../scripts/admin/ajaxSendEmailPartly.php",
+				success: function(response) {
+					switch(response) {
+						case "a":
+							if(response_field.css('opacity') == 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#53acff');
+									response_field.html('Письма были успешно отправлены.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#53acff');
+								response_field.html('Письма были успешно отправлены.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+
+							document.getElementById(id).setAttribute('class', 'sendEmailButtonActive');
+							document.getElementById(id).removeAttribute('onclick');
+							break;
+						case "b":
+							if(response_field.css('opacity') == 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#df4e47');
+									response_field.html('Произошла ошибка. Попробуйте снова.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#df4e47');
+								response_field.html('Произошла ошибка. Попробуйте снова.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+							break;
+						case "c":
+							if(response_field.css('opacity') == 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#df4e47');
+									response_field.html('Не все письма были отправлены.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#df4e47');
+								response_field.html('Не все письма были отправлены.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+							break;
+						default: break;
+					}
+				}
+			});
+		} else {
+			if(response_field.css('opacity') == 1) {
+				response_field.css('opacity', '0');
+				setTimeout(function() {
+					response_field.css('color', '#df4e47');
+					response_field.html('Вы не ввели текст письма.<br /><br />');
+					response_field.css('opacity', '1');
+				}, 300);
+			} else {
+				response_field.css('color', '#df4e47');
+				response_field.html('Вы не ввели текст письма.<br /><br />');
+				response_field.css('opacity', '1');
+			}
+		}
+	} else {
+		if(response_field.css('opacity') == 1) {
+			response_field.css('opacity', '0');
+			setTimeout(function() {
+				response_field.css('color', '#df4e47');
+				response_field.html('Вы не ввели тему письма.<br /><br />');
+				response_field.css('opacity', '1');
+			}, 300);
+		} else {
+			response_field.css('color', '#df4e47');
+			response_field.html('Вы не ввели тему письма.<br /><br />');
+			response_field.css('opacity', '1');
+		}
+	}
+
+	//alert($('.nicEdit-main').html());
+}
+
+function selectRegion() {
+	$.ajax({
+		type: "POST",
+		data: {"region": $('#addressGroupSelect').val()},
+		url: "../scripts/admin/ajaxSelectRegion.php",
+		success: function(response) {
+			$('#addressField').html(response);
+			$('.admSubmit').hide();
+		}
+	});
+}
+
+$('input[type=file]').change(function() {
+	files = this.files;
+});

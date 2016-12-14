@@ -3559,7 +3559,7 @@
                                             <br />
                                             <textarea id='emailText' name='emailText' style='width: 100%;' rows='20'>"; if(!empty($_SESSION['emailText'])) {echo $_SESSION['emailText'];} echo "</textarea>
                                             <br /><br />
-                                            <label class='admLabel'>Прикрепить файл:</label>
+                                            <label class='admLabel'>Прикрепить файлы:</label>
                                             <br />
                                             <input type='file' name='emailFile[]' id='emailFile' class='admFile' multiple />
                                             <br /><br />
