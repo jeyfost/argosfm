@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/admin/admin.php" afterPath="$PROJECT_DIR$/admin/admin.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/adminFunctions.js" afterPath="$PROJECT_DIR$/js/adminFunctions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php" afterPath="$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php" afterPath="$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php" />
     </list>
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,7 +44,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="16.132076">
+            <state vertical-scroll-proportion="0.0">
               <caret line="311" column="19" selection-start-line="311" selection-start-column="19" selection-end-line="311" selection-end-column="19" />
               <folding />
             </state>
@@ -55,8 +54,8 @@
       <file leaf-file-name="admin.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/admin/admin.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="182.6923">
-              <caret line="3561" column="84" selection-start-line="3561" selection-start-column="84" selection-end-line="3561" selection-end-column="84" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="3534" column="57" selection-start-line="3534" selection-start-column="57" selection-end-line="3534" selection-end-column="57" />
               <folding>
                 <element signature="e#8867#9817#0#PHP" expanded="false" />
                 <marker date="1481712073644" expanded="true" signature="2122:2182" placeholder="SELECT * FRO... catalogue_new" />
@@ -569,11 +568,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="adminFunctions.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="442" column="83" selection-start-line="442" selection-start-column="83" selection-end-line="442" selection-end-column="83" />
+              <folding>
+                <marker date="1483964346403" expanded="true" signature="6036:6052" placeholder="..." />
+                <marker date="1483964346403" expanded="true" signature="6742:6758" placeholder="..." />
+                <marker date="1483964346403" expanded="true" signature="7576:7592" placeholder="..." />
+                <marker date="1483964346403" expanded="true" signature="8284:8300" placeholder="..." />
+                <marker date="1483964346403" expanded="true" signature="8802:8818" placeholder="..." />
+                <marker date="1483964346403" expanded="true" signature="10143:10208" placeholder="..." />
+                <marker date="1483964346403" expanded="true" signature="10960:11025" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="sendEmail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="32.73077">
-              <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
               <folding>
                 <marker date="1478163995162" expanded="true" signature="951:997" placeholder="SELECT COUNT... mail" />
                 <marker date="1478163995162" expanded="true" signature="1800:1838" placeholder="SELECT * FRO... mail" />
@@ -594,38 +611,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="adminFunctions.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.0">
-              <caret line="382" column="83" selection-start-line="382" selection-start-column="83" selection-end-line="382" selection-end-column="83" />
-              <folding>
-                <marker date="1481718042649" expanded="true" signature="6036:6052" placeholder="..." />
-                <marker date="1481718042649" expanded="true" signature="6742:6758" placeholder="..." />
-                <marker date="1481718042649" expanded="true" signature="7576:7592" placeholder="..." />
-                <marker date="1481718042649" expanded="true" signature="8284:8300" placeholder="..." />
-                <marker date="1481718042649" expanded="true" signature="8802:8818" placeholder="..." />
-                <marker date="1481718042649" expanded="true" signature="10143:10208" placeholder="..." />
-                <marker date="1481718042649" expanded="true" signature="10960:11025" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="ajaxSendEmailPartly.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.093969144">
-              <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.81065917">
+              <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
               <folding>
-                <marker date="1481717697735" expanded="true" signature="887:944" placeholder="SELECT COUNT... mail" />
-                <marker date="1481717697735" expanded="true" signature="887:962" placeholder="SELECT COUNT... mail" />
-                <marker date="1481717697735" expanded="true" signature="1085:1122" placeholder="SELECT * FRO... mail" />
-                <marker date="1481717697735" expanded="true" signature="1085:1134" placeholder="SELECT * FRO... mail" />
-                <marker date="1481717697735" expanded="true" signature="1085:1170" placeholder="SELECT * FRO... mail" />
-                <marker date="1481717697735" expanded="true" signature="1085:1181" placeholder="SELECT * FRO... mail" />
-                <marker date="1481717697735" expanded="true" signature="1085:1185" placeholder="SELECT * FRO... mail" />
-                <marker date="1481717697735" expanded="true" signature="1085:1187" placeholder="SELECT * FRO... mail" />
+                <marker date="1484041945722" expanded="true" signature="986:1043" placeholder="SELECT COUNT... mail" />
+                <marker date="1484041945722" expanded="true" signature="986:1061" placeholder="SELECT COUNT... mail" />
+                <marker date="1484041945722" expanded="true" signature="986:1094" placeholder="SELECT COUNT... mail" />
+                <marker date="1484041945722" expanded="true" signature="1185:1285" placeholder="SELECT * FRO... mail" />
               </folding>
             </state>
           </provider>
@@ -634,28 +629,15 @@
       <file leaf-file-name="ajaxSelectRegion.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.961538">
-              <caret line="29" column="126" selection-start-line="29" selection-start-column="126" selection-end-line="29" selection-end-column="126" />
+            <state vertical-scroll-proportion="-7.8076925">
+              <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
               <folding>
-                <marker date="1481717921412" expanded="true" signature="128:185" placeholder="SELECT COUNT... mail" />
-                <marker date="1481717921412" expanded="true" signature="128:203" placeholder="SELECT COUNT... mail" />
-                <marker date="1481717921412" expanded="true" signature="340:375" placeholder="SELECT * FRO... locations" />
-                <marker date="1481717921412" expanded="true" signature="820:833" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:845" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:861" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:900" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:915" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:919" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:935" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:939" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:950" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:954" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:961" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:965" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:974" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="820:1045" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="1404:1463" placeholder="..." />
-                <marker date="1481717921412" expanded="true" signature="1495:1507" placeholder="..." />
+                <marker date="1483961421822" expanded="true" signature="128:185" placeholder="SELECT COUNT... mail" />
+                <marker date="1483961421822" expanded="true" signature="128:203" placeholder="SELECT COUNT... mail" />
+                <marker date="1483961421822" expanded="true" signature="340:375" placeholder="SELECT * FRO... locations" />
+                <marker date="1483961421822" expanded="true" signature="876:1101" placeholder="..." />
+                <marker date="1483961421822" expanded="true" signature="1491:1550" placeholder="..." />
+                <marker date="1483961421822" expanded="true" signature="1599:1611" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -723,10 +705,10 @@
         <option value="$PROJECT_DIR$/scripts/admin/ajaxGetClientName.php" />
         <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
         <option value="$PROJECT_DIR$/admin/admin.php" />
-        <option value="$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php" />
-        <option value="$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php" />
         <option value="$PROJECT_DIR$/css/style.css" />
+        <option value="$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php" />
         <option value="$PROJECT_DIR$/js/adminFunctions.js" />
+        <option value="$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php" />
       </list>
     </option>
   </component>
@@ -786,8 +768,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -882,6 +862,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -936,12 +918,6 @@
       <created>1456207155890</created>
       <option name="number" value="Default" />
       <updated>1456207155890</updated>
-    </task>
-    <task id="LOCAL-00139" summary="Создана страница помощи по входу в панель администрирования для администратора">
-      <created>1460100476122</created>
-      <option name="number" value="00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1460100476122</updated>
     </task>
     <task id="LOCAL-00140" summary="Создана страница помощи по структуре панели администрирования для администратора">
       <created>1460120951800</created>
@@ -1231,7 +1207,13 @@
       <option name="project" value="LOCAL" />
       <updated>1478164019568</updated>
     </task>
-    <option name="localTasksCounter" value="188" />
+    <task id="LOCAL-00188" summary="Дообавлена возможность отправки рассылок по 10 адресов">
+      <created>1481718254537</created>
+      <option name="number" value="00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1481718254590</updated>
+    </task>
+    <option name="localTasksCounter" value="189" />
     <servers />
   </component>
   <component name="TodoView">
@@ -1279,7 +1261,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Создана страница помощи по редактированию личных данных пользователя для администратора" />
     <MESSAGE value="Исправлена страница новостей в панели администрирования" />
     <MESSAGE value="Создана страница помощи по странице опубликованных новостей для администратора" />
     <MESSAGE value="Изменено отображение цены в каталоге" />
@@ -1304,7 +1285,8 @@
     <MESSAGE value="Добавлено разбиение полей по цветовым блокам в разделе редактирования данных пользователей" />
     <MESSAGE value="Исправлен размер ячейки с иконками функций управления новостями" />
     <MESSAGE value="UPD" />
-    <option name="LAST_COMMIT_MESSAGE" value="UPD" />
+    <MESSAGE value="Дообавлена возможность отправки рассылок по 10 адресов" />
+    <option name="LAST_COMMIT_MESSAGE" value="Дообавлена возможность отправки рассылок по 10 адресов" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1661,60 +1643,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="16.132076">
+        <state vertical-scroll-proportion="0.0">
           <caret line="311" column="19" selection-start-line="311" selection-start-column="19" selection-end-line="311" selection-end-column="19" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.961538">
-          <caret line="29" column="126" selection-start-line="29" selection-start-column="126" selection-end-line="29" selection-end-column="126" />
-          <folding>
-            <marker date="1481717921412" expanded="true" signature="128:185" placeholder="SELECT COUNT... mail" />
-            <marker date="1481717921412" expanded="true" signature="128:203" placeholder="SELECT COUNT... mail" />
-            <marker date="1481717921412" expanded="true" signature="340:375" placeholder="SELECT * FRO... locations" />
-            <marker date="1481717921412" expanded="true" signature="820:833" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:845" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:861" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:900" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:915" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:919" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:935" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:939" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:950" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:954" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:961" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:965" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:974" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="820:1045" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="1404:1463" placeholder="..." />
-            <marker date="1481717921412" expanded="true" signature="1495:1507" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.0">
-          <caret line="382" column="83" selection-start-line="382" selection-start-column="83" selection-end-line="382" selection-end-column="83" />
-          <folding>
-            <marker date="1481718042649" expanded="true" signature="6036:6052" placeholder="..." />
-            <marker date="1481718042649" expanded="true" signature="6742:6758" placeholder="..." />
-            <marker date="1481718042649" expanded="true" signature="7576:7592" placeholder="..." />
-            <marker date="1481718042649" expanded="true" signature="8284:8300" placeholder="..." />
-            <marker date="1481718042649" expanded="true" signature="8802:8818" placeholder="..." />
-            <marker date="1481718042649" expanded="true" signature="10143:10208" placeholder="..." />
-            <marker date="1481718042649" expanded="true" signature="10960:11025" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/admin/admin.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="182.6923">
-          <caret line="3561" column="84" selection-start-line="3561" selection-start-column="84" selection-end-line="3561" selection-end-column="84" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3534" column="57" selection-start-line="3534" selection-start-column="57" selection-end-line="3534" selection-end-column="57" />
           <folding>
             <element signature="e#8867#9817#0#PHP" expanded="false" />
             <marker date="1481712073644" expanded="true" signature="2122:2182" placeholder="SELECT * FRO... catalogue_new" />
@@ -2228,8 +2166,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="32.73077">
-          <caret line="129" column="0" selection-start-line="129" selection-start-column="0" selection-end-line="129" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
           <folding>
             <marker date="1478163995162" expanded="true" signature="951:997" placeholder="SELECT COUNT... mail" />
             <marker date="1478163995162" expanded="true" signature="1800:1838" placeholder="SELECT * FRO... mail" />
@@ -2249,19 +2187,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="442" column="83" selection-start-line="442" selection-start-column="83" selection-end-line="442" selection-end-column="83" />
+          <folding>
+            <marker date="1483964346403" expanded="true" signature="6036:6052" placeholder="..." />
+            <marker date="1483964346403" expanded="true" signature="6742:6758" placeholder="..." />
+            <marker date="1483964346403" expanded="true" signature="7576:7592" placeholder="..." />
+            <marker date="1483964346403" expanded="true" signature="8284:8300" placeholder="..." />
+            <marker date="1483964346403" expanded="true" signature="8802:8818" placeholder="..." />
+            <marker date="1483964346403" expanded="true" signature="10143:10208" placeholder="..." />
+            <marker date="1483964346403" expanded="true" signature="10960:11025" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.8076925">
+          <caret line="12" column="65" selection-start-line="12" selection-start-column="65" selection-end-line="12" selection-end-column="65" />
+          <folding>
+            <marker date="1483961421822" expanded="true" signature="128:185" placeholder="SELECT COUNT... mail" />
+            <marker date="1483961421822" expanded="true" signature="128:203" placeholder="SELECT COUNT... mail" />
+            <marker date="1483961421822" expanded="true" signature="340:375" placeholder="SELECT * FRO... locations" />
+            <marker date="1483961421822" expanded="true" signature="876:1101" placeholder="..." />
+            <marker date="1483961421822" expanded="true" signature="1491:1550" placeholder="..." />
+            <marker date="1483961421822" expanded="true" signature="1599:1611" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.093969144">
-          <caret line="27" column="24" selection-start-line="27" selection-start-column="24" selection-end-line="27" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.81065917">
+          <caret line="43" column="5" selection-start-line="43" selection-start-column="5" selection-end-line="43" selection-end-column="5" />
           <folding>
-            <marker date="1481717697735" expanded="true" signature="887:944" placeholder="SELECT COUNT... mail" />
-            <marker date="1481717697735" expanded="true" signature="887:962" placeholder="SELECT COUNT... mail" />
-            <marker date="1481717697735" expanded="true" signature="1085:1122" placeholder="SELECT * FRO... mail" />
-            <marker date="1481717697735" expanded="true" signature="1085:1134" placeholder="SELECT * FRO... mail" />
-            <marker date="1481717697735" expanded="true" signature="1085:1170" placeholder="SELECT * FRO... mail" />
-            <marker date="1481717697735" expanded="true" signature="1085:1181" placeholder="SELECT * FRO... mail" />
-            <marker date="1481717697735" expanded="true" signature="1085:1185" placeholder="SELECT * FRO... mail" />
-            <marker date="1481717697735" expanded="true" signature="1085:1187" placeholder="SELECT * FRO... mail" />
+            <marker date="1484041945722" expanded="true" signature="986:1043" placeholder="SELECT COUNT... mail" />
+            <marker date="1484041945722" expanded="true" signature="986:1061" placeholder="SELECT COUNT... mail" />
+            <marker date="1484041945722" expanded="true" signature="986:1094" placeholder="SELECT COUNT... mail" />
+            <marker date="1484041945722" expanded="true" signature="1185:1285" placeholder="SELECT * FRO... mail" />
           </folding>
         </state>
       </provider>

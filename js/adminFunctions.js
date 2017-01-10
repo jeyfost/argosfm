@@ -363,6 +363,18 @@ function sendPartly(parameter, region, id) {
 					"text": $('.nicEdit-main').html(),
 				},
 				url: "../scripts/admin/ajaxSendEmailPartly.php",
+				beforeSend: function() {
+					if(response_field.css('opacity') == 1) {
+						response_field.css('opacity', '0');
+						setTimeout(function() {
+							response_field.html('<img src="../pictures/system/preloader.gif" /><br /><br />');
+							response_field.css('opacity', '1');
+						}, 300);
+					} else {
+						response_field.html('<img src="../pictures/system/preloader.gif" /><br /><br />');
+						response_field.css('opacity', '1');
+					}
+				},
 				success: function(response) {
 					switch(response) {
 						case "a":
@@ -409,8 +421,27 @@ function sendPartly(parameter, region, id) {
 								response_field.html('Не все письма были отправлены.<br /><br />');
 								response_field.css('opacity', '1');
 							}
+
+							document.getElementById(id).setAttribute('class', 'sendEmailButtonActive');
+							document.getElementById(id).removeAttribute('onclick');
 							break;
-						default: break;
+						default:
+							if(response_field.css('opacity') == 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#df4e47');
+									response_field.html('Письма были отправлены.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#df4e47');
+								response_field.html('Письма были отправлены.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+
+							document.getElementById(id).setAttribute('class', 'sendEmailButtonActive');
+							document.getElementById(id).removeAttribute('onclick');
+							break;
 					}
 				}
 			});
