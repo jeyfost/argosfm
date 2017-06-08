@@ -354,14 +354,17 @@ function sendPartly(parameter, region, id) {
 
 	if($('#emailThemeInput').val() != '') {
 		if($('.nicEdit-main').html() != '' && $('.nicEdit-main').html() != '<br>') {
+			var formData = new FormData($('#emailSendForm').get(0));
+			formData.append("text", $('.nicEdit-main').html());
+			formData.append("region", region);
+			formData.append("parameter", parameter);
+
 			$.ajax({
 				type: "POST",
-				data: {
-					"parameter": parameter,
-					"region": region,
-					"subject": $('#emailThemeInput').val(),
-					"text": $('.nicEdit-main').html(),
-				},
+				data: formData,
+				dataType: "json",
+				processData: false,
+				contentType: false,
 				url: "../scripts/admin/ajaxSendEmailPartly.php",
 				beforeSend: function() {
 					if(response_field.css('opacity') == 1) {
@@ -419,6 +422,23 @@ function sendPartly(parameter, region, id) {
 							} else {
 								response_field.css('color', '#df4e47');
 								response_field.html('Не все письма были отправлены.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+
+							document.getElementById(id).setAttribute('class', 'sendEmailButtonActive');
+							document.getElementById(id).removeAttribute('onclick');
+							break;
+						case "files":
+							if(response_field.css('opacity') == 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#df4e47');
+									response_field.html('В файлах найдена ошибка.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#df4e47');
+								response_field.html('В файлах найдена ошибка.<br /><br />');
 								response_field.css('opacity', '1');
 							}
 
