@@ -486,7 +486,7 @@
     <script type='text/javascript' src='../js/jquery-1.8.3.min.js'></script>
     <script type='text/javascript' src='../js/ajaxAdmin.js'></script>
     <script type='text/javascript' src='../js/shadowbox/source/shadowbox.js'></script>
-    <script type='text/javascript' src='http://js.nicedit.com/nicEdit-latest.js'></script>
+    <script type='text/javascript' src='../js/nicEdit/nicEdit-latest.js'></script>
 
     <script type='text/javascript'>
         bkLib.onDomLoaded(function() {
