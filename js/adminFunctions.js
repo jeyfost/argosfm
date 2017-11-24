@@ -37,6 +37,17 @@ function addressGroup() {
 	}
 }
 
+function addressFilter() {
+	$.ajax({
+		type: "POST",
+		url: "../scripts/admin/ajaxFilterSelectRegion.php",
+		success: function(response) {
+			$('#addressField').html(response);
+			$('.admSubmit').hide();
+		}
+	});
+}
+
 function hideField() {
 	if($('#addressFieldInput') || $('#addressGroupSelect')) {
 		$('#addressField').html("");
@@ -176,6 +187,43 @@ function editLocation(id, location, block) {
 
 	document.getElementById(block).innerHTML = content;
 	document.getElementById("editLocationSelect").focus();
+}
+
+function editGroup(id, group, block) {
+	var content = "<select class='admSelect' name='editGroup' id='editGroupSelect' onblur='saveGroup(\"" + id + "\", \"" + block + "\")' onchange='saveGroup(\"" + id + "\", \"" + block + "\")'>";
+
+	$.ajax({
+		type: "POST",
+		data: {"group": group},
+		url: "../scripts/admin/ajaxGroups.php",
+		success: function (response) {
+			content += response + "</select>";
+
+			document.getElementById(block).innerHTML = content;
+			document.getElementById("editGroupSelect").focus();
+		}
+	});
+}
+
+function saveGroup(id, block) {
+	var group = $('#editGroupSelect').val();
+	var name  = $('#editGroupSelect option:selected').text();
+	
+	if(group > 0) {
+		$.ajax({
+			type: "POST",
+			data: {
+				"clientID": id,
+				"filterID": group
+			},
+			url: "../scripts/admin/ajaxSaveGroup.php",
+			success: function (response) {
+				if(response === "a") {
+					document.getElementById(block).innerHTML = "<span class='admULFont' style='cursor: pointer;' title='Изменить группу' onclick='editGroup(\"" + id + "\", \"" + group + "\", \"" + block + "\")'>" + name + "</span>";
+				}
+			}
+		});
+	}
 }
 
 function saveLocation (id, block) {
@@ -493,8 +541,153 @@ function sendPartly(parameter, region, id) {
 			response_field.css('opacity', '1');
 		}
 	}
+}
 
-	//alert($('.nicEdit-main').html());
+function sendFilter(parameter, region, filter, id) {
+	var response_field = $('#responseField');
+
+	if($('#emailThemeInput').val() != '') {
+		if($('.nicEdit-main').html() != '' && $('.nicEdit-main').html() != '<br>') {
+			var formData = new FormData($('#emailSendForm').get(0));
+			formData.append("text", $('.nicEdit-main').html());
+			formData.append("region", region);
+			formData.append("filter", filter);
+			formData.append("parameter", parameter);
+
+			$.ajax({
+				type: "POST",
+				data: formData,
+				dataType: "json",
+				processData: false,
+				contentType: false,
+				url: "../scripts/admin/ajaxSendEmailFilter.php",
+				beforeSend: function() {
+					if(response_field.css('opacity') === 1) {
+						response_field.css('opacity', '0');
+						setTimeout(function() {
+							response_field.html('<img src="../pictures/system/preloader.gif" /><br /><br />');
+							response_field.css('opacity', '1');
+						}, 300);
+					} else {
+						response_field.html('<img src="../pictures/system/preloader.gif" /><br /><br />');
+						response_field.css('opacity', '1');
+					}
+				},
+				success: function(response) {
+					switch(response) {
+						case "a":
+							if(response_field.css('opacity') === 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#53acff');
+									response_field.html('Письма были успешно отправлены.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#53acff');
+								response_field.html('Письма были успешно отправлены.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+
+							document.getElementById(id).setAttribute('class', 'sendEmailButtonActive');
+							document.getElementById(id).removeAttribute('onclick');
+							break;
+						case "b":
+							if(response_field.css('opacity') === 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#df4e47');
+									response_field.html('Произошла ошибка. Попробуйте снова.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#df4e47');
+								response_field.html('Произошла ошибка. Попробуйте снова.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+							break;
+						case "c":
+							if(response_field.css('opacity') === 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#df4e47');
+									response_field.html('Не все письма были отправлены.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#df4e47');
+								response_field.html('Не все письма были отправлены.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+
+							document.getElementById(id).setAttribute('class', 'sendEmailButtonActive');
+							document.getElementById(id).removeAttribute('onclick');
+							break;
+						case "files":
+							if(response_field.css('opacity') === 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#df4e47');
+									response_field.html('В файлах найдена ошибка.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#df4e47');
+								response_field.html('В файлах найдена ошибка.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+
+							document.getElementById(id).setAttribute('class', 'sendEmailButtonActive');
+							document.getElementById(id).removeAttribute('onclick');
+							break;
+						default:
+							if(response_field.css('opacity') === 1) {
+								response_field.css('opacity', '0');
+								setTimeout(function() {
+									response_field.css('color', '#df4e47');
+									response_field.html('Письма были отправлены.<br /><br />');
+									response_field.css('opacity', '1');
+								}, 300);
+							} else {
+								response_field.css('color', '#df4e47');
+								response_field.html('Письма были отправлены.<br /><br />');
+								response_field.css('opacity', '1');
+							}
+
+							document.getElementById(id).setAttribute('class', 'sendEmailButtonActive');
+							document.getElementById(id).removeAttribute('onclick');
+							break;
+					}
+				}
+			});
+		} else {
+			if(response_field.css('opacity') === 1) {
+				response_field.css('opacity', '0');
+				setTimeout(function() {
+					response_field.css('color', '#df4e47');
+					response_field.html('Вы не ввели текст письма.<br /><br />');
+					response_field.css('opacity', '1');
+				}, 300);
+			} else {
+				response_field.css('color', '#df4e47');
+				response_field.html('Вы не ввели текст письма.<br /><br />');
+				response_field.css('opacity', '1');
+			}
+		}
+	} else {
+		if(response_field.css('opacity') === 1) {
+			response_field.css('opacity', '0');
+			setTimeout(function() {
+				response_field.css('color', '#df4e47');
+				response_field.html('Вы не ввели тему письма.<br /><br />');
+				response_field.css('opacity', '1');
+			}, 300);
+		} else {
+			response_field.css('color', '#df4e47');
+			response_field.html('Вы не ввели тему письма.<br /><br />');
+			response_field.css('opacity', '1');
+		}
+	}
 }
 
 function selectRegion() {
@@ -504,6 +697,38 @@ function selectRegion() {
 		url: "../scripts/admin/ajaxSelectRegion.php",
 		success: function(response) {
 			$('#addressField').html(response);
+			$('.admSubmit').hide();
+		}
+	});
+}
+
+function selectRegionFilter() {
+	var region = $('#regionSelect').val();
+
+	$.ajax({
+		type: "POST",
+		data: {"region": region},
+		url: "../scripts/admin/ajaxSelectRegionFilter.php",
+		success: function(response) {
+			$('#addressField').html(response);
+			$('.admSubmit').hide();
+		}
+	});
+}
+
+function selectFilter() {
+	var region = $('#regionSelect').val();
+	var filter = $('#filterSelect').val();
+
+	$.ajax({
+		type: "POST",
+		data: {
+			"region": region,
+			"filter": filter
+		},
+		url: "../scripts/admin/ajaxSelectFilter.php",
+		success: function (response) {
+			$('#buttonsField').html(response);
 			$('.admSubmit').hide();
 		}
 	});

@@ -3546,6 +3546,9 @@
                                             <br />
                                             <input type='radio' name='emailType' id='sendOne' class='admRadio' onclick='addressField()' value='one'"; if($_SESSION['emailType'] == "one") {echo " checked='checked'";} echo " />
                                             <label class='admRadioLabel' for='sendOne' onclick='addressField()'>Отправить одному клиенту</label>
+                                            <br />
+                                            <input type='radio' name='emailType' id='sendFilter' class='admRadio' onclick='addressFilter()' value='filter'"; if($_SESSION['emailType'] == "filter") {echo " checked='checked'";} echo " />
+                                            <label class='admRadioLabel' for='sendFilter' onclick='addressFilter()'>Фильтры</label>
                                             <div id='addressField'>
                                     ";
                                     if($_SESSION['emailAddress'] == "one")
@@ -4051,6 +4054,9 @@
                                                         <td class='adminTDLocation' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Область</span>
                                                         </td>
+                                                        <td class='adminTDGroup' style='background-color: #dddddd; text-align: center;'>
+                                                            <span class='admLabel'>Группа</span>
+                                                        </td>
                                                         <td class='adminTDNotes' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Заметки</span>
                                                         </td>
@@ -4068,6 +4074,9 @@
                                                     $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$address['location']."'");
                                                     $location = $locationResult->fetch_array(MYSQLI_NUM);
 
+                                                    $filterResult = $mysqli->query("SELECT name FROM filters WHERE id = '".$address['filter']."'");
+                                                    $filter = $filterResult->fetch_array(MYSQLI_NUM);
+
                                                     echo "
                                                         <tr>
                                                             <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4084,6 +4093,9 @@
                                                             </td>
                                                             <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
+                                                            </td>
+                                                            <td class='adminTDGroup' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                                <div id='groupBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить группу' onclick='editGroup(\"".$address['id']."\", \"".$address['filter']."\", \"groupBlock".$address['id']."\")'>".$filter[0]."</span></div>
                                                             </td>
                                                             <td class='adminTDNotes'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editNotes(\"".$address['id']."\", \"notesBlock".$address['id']."\")'>
                                                                 <div id='notesBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Редактировать заметки'>".$address['notes']."</span></div>
@@ -4115,6 +4127,9 @@
                                                         <td class='adminTDLocation' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Область</span>
                                                         </td>
+                                                        <td class='adminTDGroup' style='background-color: #dddddd; text-align: center;'>
+                                                            <span class='admLabel'>Группа</span>
+                                                        </td>
                                                         <td class='adminTDNotes' style='background-color: #dddddd; text-align: center;'>
                                                             <span class='admLabel'>Заметки</span>
                                                         </td>
@@ -4135,6 +4150,9 @@
                                                     $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$address['location']."'");
                                                     $location = $locationResult->fetch_array(MYSQLI_NUM);
 
+                                                    $filterResult = $mysqli->query("SELECT name FROM filters WHERE id = '".$address['filter']."'");
+                                                    $filter = $filterResult->fetch_array(MYSQLI_NUM);
+
                                                     echo "
                                                         <tr>
                                                             <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4151,6 +4169,9 @@
                                                             </td>
                                                             <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                                 <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
+                                                            </td>
+                                                            <td class='adminTDGroup' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                                <div id='groupBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить группу' onclick='editGroup(\"".$address['id']."\", \"".$address['filter']."\", \"groupBlock".$address['id']."\")'>".$filter[0]."</span></div>
                                                             </td>
                                                             <td class='adminTDNotes'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editNotes(\"".$address['id']."\", \"notesBlock".$address['id']."\")'>
                                                                 <div id='notesBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Редактировать заметки'>".$address['notes']."</span></div>
@@ -4211,6 +4232,9 @@
                                                     <td class='adminTDLocation' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Область</span>
                                                     </td>
+                                                    <td class='adminTDGroup' style='background-color: #dddddd; text-align: center;'>
+                                                        <span class='admLabel'>Группа</span>
+                                                    </td>
                                                     <td class='adminTDNotes' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Заметки</span>
                                                     </td>
@@ -4230,6 +4254,9 @@
                                                 $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$address['location']."'");
                                                 $location = $locationResult->fetch_array(MYSQLI_NUM);
 
+                                                $filterResult = $mysqli->query("SELECT name FROM filters WHERE id = '".$address['filter']."'");
+                                                $filter = $filterResult->fetch_array(MYSQLI_NUM);
+
                                                 echo "
                                                     <tr>
                                                         <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4245,6 +4272,9 @@
                                                         </td>
                                                         <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
+                                                        </td>
+                                                        <td class='adminTDGroup' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                            <div id='groupBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить группу' onclick='editGroup(\"".$address['id']."\", \"".$address['filter']."\", \"groupBlock".$address['id']."\")'>".$filter[0]."</span></div>
                                                         </td>
                                                         <td class='adminTDNotes'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editNotes(\"".$address['id']."\", \"notesBlock".$address['id']."\")'>
                                                                 <div id='notesBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Редактировать заметки'>".$address['notes']."</span></div>
@@ -4276,6 +4306,9 @@
                                                     <td class='adminTDLocation' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Область</span>
                                                     </td>
+                                                    <td class='adminTDGroup' style='background-color: #dddddd; text-align: center;'>
+                                                        <span class='admLabel'>Группа</span>
+                                                    </td>
                                                     <td class='adminTDNotes' style='background-color: #dddddd; text-align: center;'>
                                                         <span class='admLabel'>Заметки</span>
                                                     </td>
@@ -4298,6 +4331,9 @@
                                                 $locationResult = $mysqli->query("SELECT name FROM locations WHERE id = '".$address['location']."'");
                                                 $location = $locationResult->fetch_array(MYSQLI_NUM);
 
+                                                $filterResult = $mysqli->query("SELECT name FROM filters WHERE id = '".$address['filter']."'");
+                                                $filter = $filterResult->fetch_array(MYSQLI_NUM);
+
                                                 echo "
                                                     <tr>
                                                         <td class='adminTDNumber'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
@@ -4314,6 +4350,9 @@
                                                         </td>
                                                         <td class='adminTDLocation' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
                                                             <div id='locationBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить местоположение' onclick='editLocation(\"".$address['id']."\", \"".$address['location']."\", \"locationBlock".$address['id']."\")'>".$location[0]."</span></div>
+                                                        </td>
+                                                         <td class='adminTDGroup' "; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo ">
+                                                            <div id='groupBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Изменить группу' onclick='editGroup(\"".$address['id']."\", \"".$address['filter']."\", \"groupBlock".$address['id']."\")'>".$filter[0]."</span></div>
                                                         </td>
                                                         <td class='adminTDNotes'"; if($count % 2 == 0) {echo " style='background-color: #dddddd;'";} echo " onclick='editNotes(\"".$address['id']."\",\"notesBlock".$address['id']."\")'>
                                                                 <div id='notesBlock".$address['id']."'><span class='admULFont' style='cursor: pointer;' title='Редактировать заметки'>".$address['notes']."</span></div>
