@@ -3968,6 +3968,21 @@
                                     echo "
                                                     </select>
                                                     <br /><br />
+                                                    <label class='admLabel' for='newGroupSelect'>Выберите группу:</label>
+                                                    <br />
+                                                    <select name='newGroup' id='newGroupSelect' class='admSelect'>
+                                    ";
+
+                                    $filterResult = $mysqli->query("SELECT * FROM filters ORDER BY name");
+                                    while($filter = $filterResult->fetch_assoc()) {
+                                        echo "
+                                            <option value=".$filter['id']." "; if($location['id'] == 1) {echo "selected ";} echo ">".$filter['name']."</option>
+                                        ";
+                                    }
+
+                                    echo "
+                                                    </select>
+                                                    <br /><br />
                                                     <label class='admLabel'>Заметки (опционально):</label>
                                                     <br />
                                                     <textarea class='admTextarea' name='newNotes' id='newNotesInput'"; if(!empty($_SESSION['newNotes'])) {echo " value='".$_SESSION['newNotes']."'";} echo ">"; if(isset($_SESSION['newNotes'])) {echo $_SESSION['newNotes'];} echo "</textarea>

@@ -218,7 +218,7 @@ ol li a {color: #008fe1;}
 #adminCategoryBlock {width: 100%;}
 #priorityBlock {position: absolute; top: 100px; right: 0px; width: 700px;}
 #clientsTable {margin-top: 20px; background-color: #fff; width: 100%;}
-#tableContainer {width: calc(100% - 40px); background-color: #fff; position: absolute; top: 810px; left: 0; box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 10px; margin: auto 10px; z-index: 40;}
+#tableContainer {width: calc(100% - 40px); background-color: #fff; position: absolute; top: 890px; left: 0; box-shadow: 0 0 10px rgba(0,0,0,0.5); padding: 10px; margin: auto 10px; z-index: 40;}
 
 /* new admin.php */
 #admHtml {background: none;}

@@ -39,7 +39,7 @@ if($mailCount[0] > 0) {
 		echo "<div class='sendEmailButton' id='eb".$parameter."' onclick='sendFilter(".$parameter.", ".$region.", ".$filter.", \"eb".$parameter."\")'>".$a." - ".$b."</div><div style='position: relative; float: left; width: 10px; height: 40px; margin-top: 5px;'></div>";
 	}
 
-	echo "<div style='clear: both;'></div><br /><br /><label for='emailThemeInput' class='admLabel'>".iconv("cp1251", "utf8", "Тема письма:")."</label><br /><input name='emailTheme' id='emailThemeInput' class='admInput' />";
+	echo "<div style='clear: both;'></div><br />";
 } else {
 	echo "<br /><br /><span style='color: #df4e47;'>".iconv("cp1251", "utf8", "Предприятий с заданными праметрами не найдено.")."</span>";
 }
