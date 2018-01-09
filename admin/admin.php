@@ -3976,7 +3976,7 @@
                                     $filterResult = $mysqli->query("SELECT * FROM filters ORDER BY name");
                                     while($filter = $filterResult->fetch_assoc()) {
                                         echo "
-                                            <option value=".$filter['id']." "; if($location['id'] == 1) {echo "selected ";} echo ">".$filter['name']."</option>
+                                            <option value=".$filter['id']." "; if($filter['id'] == 1) {echo "selected ";} echo ">".$filter['name']."</option>
                                         ";
                                     }
 

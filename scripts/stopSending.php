@@ -2,30 +2,47 @@
 
 	include('connect.php');
 
-	if(!empty($_REQUEST['hash']))
-	{
-		$emailResult = $mysqli->query("SELECT * FROM mail WHERE hash = '".htmlspecialchars($_REQUEST['hash'])."'");
-		$email = $emailResult->fetch_assoc();
+?>
 
-		if(!empty($email))
+<!doctype html>
+
+<html>
+
+<head>
+	<title>Отпиасьтя от рассылки</title>
+
+	<link rel='shortcut icon' href='../pictures/icons/favicon.ico' type='image/x-icon'>
+	<link rel='icon' href='../pictures/icons/favicon.ico' type='image/x-icon'>
+    <link rel='stylesheet' media='screen' type='text/css' href='../css/style.css'>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script type="text/javascript" src="../js/mail.js"></script>
+	<script type="text/javascript" src="../js/notify.js"></script>
+</head>
+
+<body>
+	<?php
+		if(!empty($_REQUEST['hash']))
 		{
-			if($mysqli->query("UPDATE mail SET in_send = '0', disactivation_date = '".date("Y-m-d")."' WHERE hash = '".htmlspecialchars($_REQUEST['hash'])."'"))
+			$emailResult = $mysqli->query("SELECT * FROM mail WHERE hash = '".$mysqli->real_escape_string($_REQUEST['hash'])."' AND in_send = '1'");
+			$email = $emailResult->fetch_assoc();
+
+			if(!empty($email))
 			{
-				echo "Вы были успешно отписаны от рассылки. Приносим свои извинения за доставленное беспокойство.";
+				echo "
+					<input type='button' id='unsubscribe' onclick='unsubscribe(\"".$email['id']."\")' value='Отписаться от рыссылки ЧТУП &laquo;Аргос-ФМ&raquo;'></button>
+				";
 			}
 			else
 			{
-				echo "К сожалению, из-за неизвестной ошибки система не смогла удалить ваш адрес из базы данных. Для удаления свяжитесь с нами по телефону из письма. Приносим свои извинения за доставленное беспокойство.";
+				echo "<div style='margin-top: 80px; width: 100%; text-align: center;'><span style='font-size: 24px;'>Адрес не был найден в базе данных.</span></div>";
 			}
 		}
 		else
 		{
-			echo "Адрес не был найден в базе данных.";
+			echo "<div style='margin-top: 80px; width: 100%; text-align: center;'><span style='font-size: 24px;'>Адрес не был найден в базе данных.</span></div>";
 		}
-	}
-	else
-	{
-		echo "Адрес не был найден в базе данных.";
-	}
+	?>
+</body>
 
-?>
+</html>

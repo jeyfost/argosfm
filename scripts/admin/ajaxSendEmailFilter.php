@@ -82,7 +82,7 @@ if($filesErrors == 0) {
 	$mailCount = $mailCountResult->fetch_array(MYSQLI_NUM);
 
 	while($mail = $mailResult->fetch_assoc()) {
-		$fullMessage = $baseMessage . "--PHP-mixed-" . $hash . "\n\n" . "--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: https://argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: <a href='https://argos-fm.by/test/scripts/stopSending.php?hash=" . $mail['hash'] . "'>отписаться от рассылки</a>\n";
+		$fullMessage = $baseMessage . "--PHP-mixed-" . $hash . "\n\n" . "--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: https://argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\n--------------------\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: https://argos-fm.by/test/scripts/stopSending.php?hash=" . $mail['hash'] . "\n\n\n";
 
 		$fullMessage .= "--PHP-mixed-" . $hash . "\n";
 		if (mail($mail['email'], $subject, $fullMessage, $headers)) {

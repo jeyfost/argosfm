@@ -33,6 +33,7 @@ html {background-color: #dddddd;}
 #newsFastSearch .searchGreyBG:hover {background-color: #d0d0d0;}
 .basicBlue:hover {color: #0078bc;}
 .partner:hover {box-shadow: 0 0 10px rgba(0,0,0,0.2);}
+#unsubscribe:hover {background-color: #3f3f3f;}
 
 .tableStyle[title]:hover:after {
 	content: attr(title);
@@ -252,6 +253,7 @@ ol li a {color: #008fe1;}
 #activeFilters {padding: 10px; width: 310px; background-color: #e9ffe5;}
 #searchFormBlock {padding: 10px; width: 310px; background-color: #ffe5e5;}
 #responseField {opacity: 0; transition: .3s; font-family: 'Roboto', "Myriad Set Pro", Tahoma, sans-serif, 'Open Sans', "Lucida Grande", "Helvetica Neue", "Helvetica", "Arial", "Verdana", Proxima; font-style:  normal; font-size: 14px; font-weight: normal;}
+#unsubscribe {margin-top: 80px; margin-left: -150px; left: 50%; height: 40px; line-height: 40px; background-color: #df4e47; border-radius: 3px; box-shadow: 0 0 10px rgba(0,0,0,0.5); border: none; width: 300px; font-style: normal; cursor: pointer; transition: .3s; color: #fff;}
 
 /* calendar.php */
 #calendar {position: absolute; top: 100px; right: 10px; width: 262px; background-color: #ffffff;}
