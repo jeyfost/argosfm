@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/01706796-1f69-4ca1-bb31-c6d43bf5842a.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/webServers.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/help/admin_news_search_list.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pictures/system/preloader.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scripts/admin/sendEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/admin/sendEmail.php" afterDir="false" />
-    </list>
+    <list default="true" id="bd960dc9-4c7a-434f-92e3-b7eaa2b4a44c" name="Default" comment="" />
     <ignored path="argosfm.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -66,10 +52,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sendEmail.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sendEmail.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1910">
+            <state relative-caret-position="793">
               <caret line="126" column="653" selection-start-line="126" selection-start-column="653" selection-end-line="126" selection-end-column="653" />
               <folding>
                 <marker date="1569219798308" expanded="true" signature="951:997" ph="..." />
@@ -94,7 +80,7 @@
       <file leaf-file-name="adminFunctions.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="9469">
+            <state relative-caret-position="2771">
               <caret line="557" column="29" selection-start-line="557" selection-start-column="29" selection-end-line="557" selection-end-column="29" />
               <folding>
                 <marker date="1511525667265" expanded="true" signature="6769:6785" ph="..." />
@@ -113,32 +99,32 @@
       <file leaf-file-name="ajaxSendEmailFilter.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSendEmailFilter.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1343">
-              <caret line="84" column="572" selection-start-line="84" selection-start-column="572" selection-end-line="84" selection-end-column="572" />
+            <state relative-caret-position="130">
+              <caret line="84" column="676" selection-start-line="84" selection-start-column="676" selection-end-line="84" selection-end-column="676" />
               <folding>
-                <marker date="1515504682646" expanded="true" signature="2064:2125" ph="SELECT COUNT... mail" />
-                <marker date="1515504682646" expanded="true" signature="2064:2170" ph="SELECT COUNT... mail" />
-                <marker date="1515504682646" expanded="true" signature="2207:2260" ph="SELECT * FRO... mail" />
-                <marker date="1515504682646" expanded="true" signature="2207:2305" ph="SELECT * FRO... mail" />
-                <marker date="1515504682646" expanded="true" signature="2368:2458" ph="SELECT COUNT... mail" />
-                <marker date="1515504682646" expanded="true" signature="2368:2503" ph="SELECT COUNT... mail" />
-                <marker date="1515504682646" expanded="true" signature="2540:2622" ph="SELECT * FRO... mail" />
-                <marker date="1515504682646" expanded="true" signature="2540:2667" ph="SELECT * FRO... mail" />
+                <marker date="1569219897219" expanded="true" signature="2064:2125" ph="SELECT COUNT... mail" />
+                <marker date="1569219897219" expanded="true" signature="2064:2170" ph="SELECT COUNT... mail" />
+                <marker date="1569219897219" expanded="true" signature="2207:2260" ph="SELECT * FRO... mail" />
+                <marker date="1569219897219" expanded="true" signature="2207:2305" ph="SELECT * FRO... mail" />
+                <marker date="1569219897219" expanded="true" signature="2368:2458" ph="SELECT COUNT... mail" />
+                <marker date="1569219897219" expanded="true" signature="2368:2503" ph="SELECT COUNT... mail" />
+                <marker date="1569219897219" expanded="true" signature="2540:2622" ph="SELECT * FRO... mail" />
+                <marker date="1569219897219" expanded="true" signature="2540:2667" ph="SELECT * FRO... mail" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxSendEmailPartly.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ajaxSendEmailPartly.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1190">
-              <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
+            <state relative-caret-position="-102">
+              <caret line="68" column="676" selection-start-line="68" selection-start-column="676" selection-end-line="68" selection-end-column="676" />
               <folding>
-                <marker date="1515504682689" expanded="true" signature="1886:1918" ph="SELECT COUNT... mail" />
-                <marker date="1515504682689" expanded="true" signature="1886:1993" ph="SELECT COUNT... mail" />
-                <marker date="1515504682689" expanded="true" signature="2086:2111" ph="SELECT * FRO... mail" />
-                <marker date="1515504682689" expanded="true" signature="2086:2185" ph="SELECT * FRO... mail" />
+                <marker date="1569219897275" expanded="true" signature="1886:1918" ph="SELECT COUNT... mail" />
+                <marker date="1569219897275" expanded="true" signature="1886:1993" ph="SELECT COUNT... mail" />
+                <marker date="1569219897275" expanded="true" signature="2086:2111" ph="SELECT * FRO... mail" />
+                <marker date="1569219897275" expanded="true" signature="2086:2185" ph="SELECT * FRO... mail" />
               </folding>
             </state>
           </provider>
@@ -147,7 +133,7 @@
       <file leaf-file-name="stopSending.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/stopSending.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="496">
+            <state relative-caret-position="700">
               <caret line="42" column="80" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
               <folding>
                 <marker date="1515504219299" expanded="true" signature="662:746" ph="SELECT * FRO... mail" />
@@ -275,9 +261,9 @@
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/mail.js" />
         <option value="$PROJECT_DIR$/scripts/stopSending.php" />
+        <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
         <option value="$PROJECT_DIR$/scripts/admin/ajaxSendEmailFilter.php" />
         <option value="$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php" />
-        <option value="$PROJECT_DIR$/scripts/admin/sendEmail.php" />
       </list>
     </option>
   </component>
@@ -478,21 +464,7 @@
       <workItem from="1518688969122" duration="962000" />
       <workItem from="1518690950970" duration="693000" />
       <workItem from="1532589691210" duration="29000" />
-      <workItem from="1569219592988" duration="239000" />
-    </task>
-    <task id="LOCAL-00147" summary="Исправлена форма входа в панель администрирования">
-      <created>1460996112754</created>
-      <option name="number" value="00147" />
-      <option name="presentableId" value="LOCAL-00147" />
-      <option name="project" value="LOCAL" />
-      <updated>1460996112754</updated>
-    </task>
-    <task id="LOCAL-00148" summary="Layout не показывается после входа в панель администрирования">
-      <created>1460998096793</created>
-      <option name="number" value="00148" />
-      <option name="presentableId" value="LOCAL-00148" />
-      <option name="project" value="LOCAL" />
-      <updated>1460998096793</updated>
+      <workItem from="1569219592988" duration="433000" />
     </task>
     <task id="LOCAL-00149" summary="Добавлена возможноть рассылок писем по областям">
       <created>1461070633548</created>
@@ -823,11 +795,25 @@
       <option name="project" value="LOCAL" />
       <updated>1515504840340</updated>
     </task>
-    <option name="localTasksCounter" value="196" />
+    <task id="LOCAL-00196" summary="Доработана отправка email-рассылок">
+      <created>1569219840035</created>
+      <option name="number" value="00196" />
+      <option name="presentableId" value="LOCAL-00196" />
+      <option name="project" value="LOCAL" />
+      <updated>1569219840035</updated>
+    </task>
+    <task id="LOCAL-00197" summary="Доработана отправка email-рассылок">
+      <created>1569219902930</created>
+      <option name="number" value="00197" />
+      <option name="presentableId" value="LOCAL-00197" />
+      <option name="project" value="LOCAL" />
+      <updated>1569219902930</updated>
+    </task>
+    <option name="localTasksCounter" value="198" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52783000" />
+    <option name="totallyTimeSpent" value="52977000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -998,14 +984,14 @@
         <state relative-caret-position="1343">
           <caret line="84" column="572" selection-start-line="84" selection-start-column="572" selection-end-line="84" selection-end-column="572" />
           <folding>
-            <marker date="1515504682646" expanded="true" signature="2064:2125" ph="SELECT COUNT... mail" />
-            <marker date="1515504682646" expanded="true" signature="2064:2170" ph="SELECT COUNT... mail" />
-            <marker date="1515504682646" expanded="true" signature="2207:2260" ph="SELECT * FRO... mail" />
-            <marker date="1515504682646" expanded="true" signature="2207:2305" ph="SELECT * FRO... mail" />
-            <marker date="1515504682646" expanded="true" signature="2368:2458" ph="SELECT COUNT... mail" />
-            <marker date="1515504682646" expanded="true" signature="2368:2503" ph="SELECT COUNT... mail" />
-            <marker date="1515504682646" expanded="true" signature="2540:2622" ph="SELECT * FRO... mail" />
-            <marker date="1515504682646" expanded="true" signature="2540:2667" ph="SELECT * FRO... mail" />
+            <marker date="1569219897219" expanded="true" signature="2064:2125" ph="SELECT COUNT... mail" />
+            <marker date="1569219897219" expanded="true" signature="2064:2170" ph="SELECT COUNT... mail" />
+            <marker date="1569219897219" expanded="true" signature="2207:2260" ph="SELECT * FRO... mail" />
+            <marker date="1569219897219" expanded="true" signature="2207:2305" ph="SELECT * FRO... mail" />
+            <marker date="1569219897219" expanded="true" signature="2368:2458" ph="SELECT COUNT... mail" />
+            <marker date="1569219897219" expanded="true" signature="2368:2503" ph="SELECT COUNT... mail" />
+            <marker date="1569219897219" expanded="true" signature="2540:2622" ph="SELECT * FRO... mail" />
+            <marker date="1569219897219" expanded="true" signature="2540:2667" ph="SELECT * FRO... mail" />
           </folding>
         </state>
       </provider>
@@ -1015,10 +1001,10 @@
         <state relative-caret-position="1156">
           <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
           <folding>
-            <marker date="1515504682689" expanded="true" signature="1886:1918" ph="SELECT COUNT... mail" />
-            <marker date="1515504682689" expanded="true" signature="1886:1993" ph="SELECT COUNT... mail" />
-            <marker date="1515504682689" expanded="true" signature="2086:2111" ph="SELECT * FRO... mail" />
-            <marker date="1515504682689" expanded="true" signature="2086:2185" ph="SELECT * FRO... mail" />
+            <marker date="1569219897275" expanded="true" signature="1886:1918" ph="SELECT COUNT... mail" />
+            <marker date="1569219897275" expanded="true" signature="1886:1993" ph="SELECT COUNT... mail" />
+            <marker date="1569219897275" expanded="true" signature="2086:2111" ph="SELECT * FRO... mail" />
+            <marker date="1569219897275" expanded="true" signature="2086:2185" ph="SELECT * FRO... mail" />
           </folding>
         </state>
       </provider>
@@ -1743,23 +1729,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="9469">
-          <caret line="557" column="29" selection-start-line="557" selection-start-column="29" selection-end-line="557" selection-end-column="29" />
-          <folding>
-            <marker date="1511525667265" expanded="true" signature="6769:6785" ph="..." />
-            <marker date="1511525667265" expanded="true" signature="7360:7376" ph="..." />
-            <marker date="1511525667265" expanded="true" signature="8066:8082" ph="..." />
-            <marker date="1511525667265" expanded="true" signature="8900:8916" ph="..." />
-            <marker date="1511525667265" expanded="true" signature="9608:9624" ph="..." />
-            <marker date="1511525667265" expanded="true" signature="10126:10142" ph="..." />
-            <marker date="1511525667265" expanded="true" signature="11467:11532" ph="..." />
-            <marker date="1511525667265" expanded="true" signature="12284:12349" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSelectRegion.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -1812,24 +1781,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSendEmailFilter.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1343">
-          <caret line="84" column="572" selection-start-line="84" selection-start-column="572" selection-end-line="84" selection-end-column="572" />
+        <state relative-caret-position="130">
+          <caret line="84" column="676" selection-start-line="84" selection-start-column="676" selection-end-line="84" selection-end-column="676" />
           <folding>
-            <marker date="1515504682646" expanded="true" signature="2064:2125" ph="SELECT COUNT... mail" />
-            <marker date="1515504682646" expanded="true" signature="2064:2170" ph="SELECT COUNT... mail" />
-            <marker date="1515504682646" expanded="true" signature="2207:2260" ph="SELECT * FRO... mail" />
-            <marker date="1515504682646" expanded="true" signature="2207:2305" ph="SELECT * FRO... mail" />
-            <marker date="1515504682646" expanded="true" signature="2368:2458" ph="SELECT COUNT... mail" />
-            <marker date="1515504682646" expanded="true" signature="2368:2503" ph="SELECT COUNT... mail" />
-            <marker date="1515504682646" expanded="true" signature="2540:2622" ph="SELECT * FRO... mail" />
-            <marker date="1515504682646" expanded="true" signature="2540:2667" ph="SELECT * FRO... mail" />
+            <marker date="1569219897219" expanded="true" signature="2064:2125" ph="SELECT COUNT... mail" />
+            <marker date="1569219897219" expanded="true" signature="2064:2170" ph="SELECT COUNT... mail" />
+            <marker date="1569219897219" expanded="true" signature="2207:2260" ph="SELECT * FRO... mail" />
+            <marker date="1569219897219" expanded="true" signature="2207:2305" ph="SELECT * FRO... mail" />
+            <marker date="1569219897219" expanded="true" signature="2368:2458" ph="SELECT COUNT... mail" />
+            <marker date="1569219897219" expanded="true" signature="2368:2503" ph="SELECT COUNT... mail" />
+            <marker date="1569219897219" expanded="true" signature="2540:2622" ph="SELECT * FRO... mail" />
+            <marker date="1569219897219" expanded="true" signature="2540:2667" ph="SELECT * FRO... mail" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/scripts/stopSending.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="496">
+        <state relative-caret-position="700">
           <caret line="42" column="80" selection-start-line="42" selection-start-column="80" selection-end-line="42" selection-end-column="80" />
           <folding>
             <marker date="1515504219299" expanded="true" signature="662:746" ph="SELECT * FRO... mail" />
@@ -1845,22 +1814,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="68" column="8" selection-start-line="68" selection-start-column="8" selection-end-line="68" selection-end-column="8" />
-          <folding>
-            <marker date="1515504682689" expanded="true" signature="1886:1918" ph="SELECT COUNT... mail" />
-            <marker date="1515504682689" expanded="true" signature="1886:1993" ph="SELECT COUNT... mail" />
-            <marker date="1515504682689" expanded="true" signature="2086:2111" ph="SELECT * FRO... mail" />
-            <marker date="1515504682689" expanded="true" signature="2086:2185" ph="SELECT * FRO... mail" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/scripts/admin/sendEmail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1910">
+        <state relative-caret-position="793">
           <caret line="126" column="653" selection-start-line="126" selection-start-column="653" selection-end-line="126" selection-end-column="653" />
           <folding>
             <marker date="1569219798308" expanded="true" signature="951:997" ph="..." />
@@ -1877,6 +1833,36 @@
             <marker date="1569219798308" expanded="true" signature="8610:8827" ph="..." />
             <marker date="1569219798308" expanded="true" signature="8873:8904" ph="..." />
             <marker date="1569219798308" expanded="true" signature="8993:9074" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/adminFunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2771">
+          <caret line="557" column="29" selection-start-line="557" selection-start-column="29" selection-end-line="557" selection-end-column="29" />
+          <folding>
+            <marker date="1511525667265" expanded="true" signature="6769:6785" ph="..." />
+            <marker date="1511525667265" expanded="true" signature="7360:7376" ph="..." />
+            <marker date="1511525667265" expanded="true" signature="8066:8082" ph="..." />
+            <marker date="1511525667265" expanded="true" signature="8900:8916" ph="..." />
+            <marker date="1511525667265" expanded="true" signature="9608:9624" ph="..." />
+            <marker date="1511525667265" expanded="true" signature="10126:10142" ph="..." />
+            <marker date="1511525667265" expanded="true" signature="11467:11532" ph="..." />
+            <marker date="1511525667265" expanded="true" signature="12284:12349" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/admin/ajaxSendEmailPartly.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-102">
+          <caret line="68" column="676" selection-start-line="68" selection-start-column="676" selection-end-line="68" selection-end-column="676" />
+          <folding>
+            <marker date="1569219897275" expanded="true" signature="1886:1918" ph="SELECT COUNT... mail" />
+            <marker date="1569219897275" expanded="true" signature="1886:1993" ph="SELECT COUNT... mail" />
+            <marker date="1569219897275" expanded="true" signature="2086:2111" ph="SELECT * FRO... mail" />
+            <marker date="1569219897275" expanded="true" signature="2086:2185" ph="SELECT * FRO... mail" />
           </folding>
         </state>
       </provider>
