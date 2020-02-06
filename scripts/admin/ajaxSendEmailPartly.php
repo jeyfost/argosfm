@@ -66,7 +66,7 @@ if($filesErrors == 0) {
 
 	$mailResult = $mysqli->query("SELECT * FROM mail WHERE location = '".$region."' AND in_send = '1' ORDER BY id LIMIT ".$start.", 10");
 	while($mail = $mailResult->fetch_assoc()) {
-		$fullMessage = $baseMessage . "--PHP-mixed-" . $hash . "\n\n" . "--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: https://argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\n--------------------\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: https://argos-fm.by/test/scripts/stopSending.php?hash=" . $mail['hash'] . "\n\nВНИМАНИЕ! Отписка от информационной рассылки повлечёт за собой аннулирование скидки для вашего предприятия!\n\n\n";
+		$fullMessage = $baseMessage . "--PHP-mixed-" . $hash . "\n\n" . "--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: https://argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\n--------------------\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: https://argos-fm.by/personal/unsubscribe.php?hash=" . $mail['hash'] . "\n\nВНИМАНИЕ! Отписка от информационной рассылки повлечёт за собой аннулирование скидки для вашего предприятия!\n\n\n";
 
 		$fullMessage .= "--PHP-mixed-" . $hash . "\n";
 		if (mail($mail['email'], $subject, $fullMessage, $headers)) {
@@ -126,7 +126,7 @@ $mailCount = $mailCountResult->fetch_array(MYSQLI_NUM);
 
 $mailResult = $mysqli->query("SELECT * FROM mail WHERE location = '".$region."' AND in_send = '1' ORDER BY id LIMIT ".$start.", 10");
 while($mail = $mailResult->fetch_assoc()) {
-	$fullMessage = $baseMessage."--PHP-mixed-".$hash."\n\n"."--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: www.argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: www.argos-fm.by/test/scripts/stopSending.php?hash=".$mail['hash']."\n";
+	$fullMessage = $baseMessage."--PHP-mixed-".$hash."\n\n"."--------------------\n\nВесь ассортимент продукции можно посмотреть на нашем сайте: www.argos-fm.by\nА также уточнить наличие по телефону: +375 (222) 707-707 или посетить нас по адресу: Республика Беларусь, г. Могилёв, ул. Залуцкого, д.21\n\nМы всегда рады сотрудничеству с Вами!\n\nЕсли вы не хотите в дальнейшем получать эту рассылку, вы можете отписаться, перейдя по следующей ссылке: www.argos-fm.by/personal/unsubscribe.php?hash=".$mail['hash']."\n";
 
 	$fullMessage .= "--PHP-mixed-".$hash."\n";
 	if(mail($mail['email'], $subject, $fullMessage, $headers)) {
