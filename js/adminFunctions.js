@@ -32,7 +32,10 @@ function addressGroup() {
 			success: function(response) {
 				$('#addressField').html(response);
 				$('.admSubmit').hide();
-			}
+			},
+            error: function(jqXHR, textStatus, errorThrown) {
+                $.notify(textStatus + "; " + errorThrown, "error");
+            }
 		});
 	}
 }
